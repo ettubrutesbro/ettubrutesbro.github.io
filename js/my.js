@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var toggle = false;
 	var mobile;
 	var varHt;
+	var big = false;
 
 	adjust($(window).width());
 
@@ -46,15 +47,52 @@ $(document).ready(function(){
 
 
 $('article a').click(function(){
-
-	var expando = $(this).parents("article");
-	console.log(expando);
 	
-	$('article').not(expando).hide(500, function(){
-		expando.animate({width:"80%", height:"65%", marginLeft:"10%", marginRight:"10%"})
-		
+	var expando = $(this).parents("article").attr('class').split(' ')[0]; //gets the project title class to variable
+	console.log(expando);
+	if(!big){
+		$('article').not('.' + expando).hide(500, function(){
+		$('.' + expando).animate({width:"80%", height:"65%", marginLeft:"10%", marginRight:"10%"});
+		$('.' + expando + ' p').animate({fontSize:"16pt", letterSpacing:"0.1em"});	
 	});
+} else if(big){
+
+		$('.' + expando).stop(true,true).animate({width:"320px", height:"240px", marginLeft:"30px", marginRight:"0px"}, 500, function(){
+			$('article').not('.' + expando).show(500);
+		});
+		$('.' + expando + ' p').stop(true,true).animate({fontSize:"12pt", letterSpacing:"0em"}, {queue:false});	
+}
+big=!big;
+		
+		
+
 })
+
+function itemConceal(target){ //targeted elements will shrink, then disappear (FILTER, UNSELECTED)
+	$(target).animate({width:"0px", height:"0px", margin: "0px", opacity: 0}, 500, function(){
+		$(target).hide();
+	})
+}
+
+function itemShow(target){ //targeted items will re-appear then resize on call, if hidden (FILTER)
+	$(target).show(function(){
+		$(target).animate({width:"320px", height:"240px", margin:"30px 0px 0px 30px", opacity: 1});
+	})
+}
+
+function itemExpand(target){ //targeted element will appear, expand and its accessory text will become visible (SELECT)
+	$(target).show(function(){
+		$(target).animate({width:"80%", height:"700px",opacity:1}, 500, function(){
+			//nested callback
+		})		
+	})
+	
+}
+
+function itemRevert(target){ //targeted element will revert to a normal 320x240 (SELECT 2X, ON FILTER)
+	$(target).stop(true,true).animate({width:"320px", height:"240px", margin:"30px 0px 0px 30px"})
+}
+
 
 
 function aboutExpand(whichOne, ht){
