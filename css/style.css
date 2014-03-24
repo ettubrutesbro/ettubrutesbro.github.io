@@ -38,7 +38,7 @@ nav {
 	text-align: right;
 	letter-spacing: 2px;
 	font-weight: 500;
-	
+
 	font-size: 14pt;
 	height: 60px;
 	vertical-align: text-bottom;
@@ -53,6 +53,8 @@ nav {
 	font-size: 11pt;
 	letter-spacing: 2px;
 	font-weight: 500;
+	width: 300px;
+
 }
 
 #cvp{
