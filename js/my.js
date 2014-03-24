@@ -6,9 +6,7 @@ $(document).ready(function(){
 	var big = false;
 
 	adjust($(window).width());
-
 	
-
 	$(window).resize(function(){
 		adjust($(window).width());
 	})
@@ -22,10 +20,7 @@ $(document).ready(function(){
 		$('.' + hash).animate(
 			{width:"320px", height:"240px", margin:"30px 0px 0px 30px"}
 			, 500, function(){
-
 			});
-
-
 		$('article').not($('.'+ hash)).animate(
 			{width:"0px", height:"0px", margin:"0px"}
 			, 500, function(){
@@ -35,57 +30,48 @@ $(document).ready(function(){
 	})
 	
 
-	$('#abt').click(function(){
-	
+	$('#abt').click(function(){ //about section rolls out when clicked
 			if(!toggle){
 				aboutExpand('.about', varHt);
 			} else {
 				aboutCollapse('.about');
 			}
-		
 	})
 
 
-$('article a').click(function(){
-	
+$('article a').click(function(){ //SELECTION
 	var expando = $(this).parents("article").attr('class').split(' ')[0]; //gets the project title class to variable
-	console.log(expando);
-	if(!big){
-		$('article').not('.' + expando).hide(500, function(){
-		$('.' + expando).animate({width:"80%", height:"65%", marginLeft:"10%", marginRight:"10%"});
-		$('.' + expando + ' p').animate({fontSize:"16pt", letterSpacing:"0.1em"});	
-	});
-} else if(big){
+	
+	if(!big){ //clicked on a regular size article <a>
+		//itemConceal($('article').not('.' + expando));
+		itemExpand('.' + expando);
 
-		$('.' + expando).stop(true,true).animate({width:"320px", height:"240px", marginLeft:"30px", marginRight:"0px"}, 500, function(){
-			$('article').not('.' + expando).show(500);
-		});
-		$('.' + expando + ' p').stop(true,true).animate({fontSize:"12pt", letterSpacing:"0em"}, {queue:false});	
-}
-big=!big;
-		
-		
-
+	} else if(big){ //clicked on an already big size article <a>
+		itemRevert('.' + expando);	
+		itemShow($('article').not('.' + expando));
+	}		
+	
+	big=!big;	
 })
 
 function itemConceal(target){ //targeted elements will shrink, then disappear (FILTER, UNSELECTED)
-	$(target).animate({width:"0px", height:"0px", margin: "0px", opacity: 0}, 500, function(){
+	//$(target).stop(true,true).animate({width:"0px", height:"0px", margin: "0px", opacity: 0}, 500, function(){
 		$(target).hide();
-	})
+	//})
 }
 
 function itemShow(target){ //targeted items will re-appear then resize on call, if hidden (FILTER)
-	$(target).show(function(){
-		$(target).animate({width:"320px", height:"240px", margin:"30px 0px 0px 30px", opacity: 1});
+	$(target).stop(true,true).show(function(){
+		//$(target).animate({width:"320px", height:"240px", margin:"30px 0px 0px 30px", opacity: 1});
 	})
 }
 
 function itemExpand(target){ //targeted element will appear, expand and its accessory text will become visible (SELECT)
-	$(target).show(function(){
-		$(target).animate({width:"80%", height:"700px",opacity:1}, 500, function(){
+	$(target).animate({width:"80%", height:"700px",opacity:1});
+		//$(target).animate({width:"80%", height:"700px",opacity:1}, 500, function(){
 			//nested callback
-		})		
-	})
+		//})		
+	//})
 	
 }
 

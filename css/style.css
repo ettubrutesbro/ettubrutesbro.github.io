@@ -22,6 +22,7 @@ header {
 #jl {
 	font-family: 'Ropa Sans', sans-serif;
 	font-size: 28pt;
+	cursor: pointer;
 }
 #selected{
 	font-weight: 700;
@@ -37,8 +38,12 @@ nav {
 	text-align: right;
 	letter-spacing: 2px;
 	font-weight: 500;
-	border: 0px solid black;
+	
 	font-size: 14pt;
+	height: 60px;
+	vertical-align: text-bottom;
+
+
 }
 
 .mobileNav {
@@ -50,14 +55,49 @@ nav {
 	font-weight: 500;
 }
 
+#cvp{
+	vertical-align: top;
+	display: none;
+	opacity: 0;
+	position: relative;
+	left: 120px;
+	top: 20px;
+	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+
+
+}
 ul {
+	display: inline;
+	position: relative;
+	top: 20px;
+	margin: 0px;
 	list-style: none;
 	padding: 0px 0px 0px 0px;
+	
 }
+
+em{
+	font-size: 11pt;
+	color: gray;
+	font-style: normal;
+	letter-spacing: 0em;
+}
+
+b{
+	font-family: 'Ropa Sans', sans-serif;
+	font-style: normal;
+	color: red;
+	font-size: 12pt;
+	cursor: pointer;
+}
+
 nav ul li {
 	height: 22px;
-	padding-left: 10px;
+	margin-left: 10px;
 	display: inline;
+	
 }
 a:link{
 
@@ -75,6 +115,8 @@ a:visited{
 a:hover{
   color: black;
 }
+
+
 
 
 
@@ -106,7 +148,14 @@ article{
   margin-left: 30px;
   margin-top: 30px;
   float: left;
-  
+  cursor: pointer;
+}
+
+.bigArticle{
+	width: 80%
+	height: 700px;
+	margin-left: 10%
+	margin-right: 10%;
 }
 
 p{
