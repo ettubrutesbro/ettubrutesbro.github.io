@@ -19,6 +19,7 @@ $(document).ready(function(){
 		$('.about').css('text-align', 'right').css('width', '');
 	} else { //if res is mobile or below
 		varHt = 250;
+		$('#cont').css('margin-right', '450px');
 		$('body').css('width', '450');
 		$('nav').addClass('mobileNav');
 		$('.about').css('text-align', 'left').css('width', '320px').css('margin-left', '30px');
@@ -56,14 +57,14 @@ $(document).ready(function(){
 	}
 	
 	if(resolution>1440){
-		editCss(1440, 30);
+		editCss(1440, 30, 380);
 		$('video').css('width', '400px');
 		$('.about').css('font-size', '14pt');
 	}else if(resolution<=1440&&resolution>1150){
-		editCss(1280, 230);
+		editCss(1280, 230, 580);
 		$('video').css('width', '250px');
 	}else if(resolution<=1150&&resolution>700){
-		editCss(900, 200);
+		editCss(900, 200, 550);
 		varHt = 175;
 		if(toggleCv){
 			$('#cvp').css({display:"block",left: "0px", top: "0px"});
@@ -76,10 +77,11 @@ $(document).ready(function(){
 	}
 }
 
-function editCss(body, nav){
+function editCss(body, nav, con){
 	$('body').css('width', body);
 	$('nav').css('margin-right', nav);
 	$('.about').css('margin-right', nav);
+	$('#cont').css('margin-right', con);
 }
 
 
@@ -162,9 +164,24 @@ $('#cv').click(function(){ // CV ROLLOUT
 
 })
 
-$('#cvp b').click(function(){
-		toggleCv=false;
+$('#cvp b').click(function(){ // LIL RED ARROW COLLAPSE
+		//toggleCv=false;
 })
+
+$('#con').click(function(){ //CONTACT ROLLOUT
+	if(!toggleContact){
+		$('#contact').css({display: "block"});
+		$('#contact').animate({opacity: 1, marginTop:"-10px"});
+		toggleContact=true;
+	}else{
+
+		$('#contact').animate({opacity: 0, marginTop:"-30px"}, function(){
+			$('#contact').css({display: "none"});
+			toggleContact=false;
+		});
+	}
+})
+
 
 $('#jl').click(function(){ //clicking my name resets filtering and selection
 	revert();
