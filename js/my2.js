@@ -5,6 +5,7 @@ $(document).ready(function(){
 	var toggleContact = false;
 	var mobile;
 	var varHt;
+	var expando; //last expanded item - re-runs itemExpand on res change, clears value on reversion
 
 	//RESPONSIVE SCREEN FUNCTIONS / etc. -----------------------------------------------------------
 	adjust($(window).width());
@@ -14,6 +15,10 @@ $(document).ready(function(){
 	})
 
 	function adjust(resolution){ 
+	console.log(resolution);
+	if(expando!=""){
+	itemExpand('.' + expando);
+	}
 	if(resolution>700){ //if res is above mobile / minimum
 		$('nav').removeClass('mobileNav');
 		$('.about').css('text-align', 'right').css('width', '');
@@ -184,6 +189,7 @@ $('#con').click(function(){ //CONTACT ROLLOUT
 
 
 $('#jl').click(function(){ //clicking my name resets filtering and selection
+	expando = "";
 	revert();
 	if(toggleAbout){
 		aboutCollapse('.about');
@@ -198,7 +204,7 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 
 
 $('article').click(function(){ //SELECTION (we should replace <a>)
-	var expando = $(this).attr('class').split(' ')[0]; //gets the project title class to variable
+	expando = $(this).attr('class').split(' ')[0]; //gets the project title class to variable
 	revert();	
 	itemExpand('.' + expando);
 	
@@ -210,7 +216,14 @@ function itemShow(target){ //targeted items will re-appear then resize on call, 
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
 	$('#portfolio').prepend($(target));
-	$(target).css({width:"80%", height: "100%"});
+	var resolution = $(window).width(); //tiered resolution conditional will vary expand width 
+	if(resolution>1440){
+		$(target).css({width:"95%", height: "10%", marginRight: "10%"});
+	} else if(resolution<=1440&&resolution>700){
+		$(target).css({width:"80%", height: "10%", marginRight: "10%"});
+	} else if(resolution<=700){
+		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
+	}
 }
 
 function revert(){ 
