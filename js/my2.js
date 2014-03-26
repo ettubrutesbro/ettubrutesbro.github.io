@@ -219,8 +219,10 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	var resolution = $(window).width(); //tiered resolution conditional will vary expand width 
 	if(resolution>1440){
 		$(target).css({width:"95%", height: "10%", marginRight: "10%"});
-	} else if(resolution<=1440&&resolution>700){
+	} else if(resolution<=1440&&resolution>1150){
 		$(target).css({width:"80%", height: "10%", marginRight: "10%"});
+	} else if(resolution<=1150&&resolution>700){
+		$(target).css({width:"75%", height: "10%", marginRight: "10%"});
 	} else if(resolution<=700){
 		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
 	}
