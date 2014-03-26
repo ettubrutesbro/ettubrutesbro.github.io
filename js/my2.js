@@ -211,20 +211,27 @@ $('article').click(function(){ //SELECTION (we should replace <a>)
 })
 
 function itemShow(target){ //targeted items will re-appear then resize on call, if hidden (FILTER)
-		$(target).animate({width:"320px", height:"240px", margin:"30px 0px 0px 30px", opacity: 1});
+		$(target).animate({width:"320px", height:"230px", margin:"30px 0px 0px 30px", opacity: 1});
 }
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
 	$('#portfolio').prepend($(target));
-	var resolution = $(window).width(); //tiered resolution conditional will vary expand width 
+	//get height% from data price? for loop: for each div, get data price and .css height
+	$(target + ' div').css({width: "49%", height: "49%"});
+	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	if(resolution>1440){
-		$(target).css({width:"95%", height: "10%", marginRight: "10%"});
+		$(target).css({width:"95%", height: "750px", marginRight: "10%"});
+		$(target + ' div').css({margin: "5px"});
 	} else if(resolution<=1440&&resolution>1150){
-		$(target).css({width:"80%", height: "10%", marginRight: "10%"});
+		$(target).css({width:"80%", height: "600px", marginRight: "10%"});
+		$(target + ' div').css({margin: "4px"});
 	} else if(resolution<=1150&&resolution>700){
-		$(target).css({width:"75%", height: "10%", marginRight: "10%"});
+		$(target).css({width:"75%", height: "550px", marginRight: "10%"});
+		$(target + ' div').css({margin: "2px"});
 	} else if(resolution<=700){
-		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
+		$(target).css({width:"320px", height: "auto", marginRight: "10%"});
+		$(target + ' div').css({width: "100%", height: "auto", margin: "0px"});
+		
 	}
 }
 
@@ -232,8 +239,10 @@ function revert(){
 	$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
 	}).appendTo('#portfolio');
-		
-	$('article').css({width:"320px", height:"240px", margin:"30px 0px 0px 30px"})
+	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px"})
+	$('article div').css({margin: "0px"})
+	$('.quadOne').css({width: "100%", height: "200px"});
+	$('.quadTwo').css({width: "100%", marginTop: "5px"});
 }
 
 
