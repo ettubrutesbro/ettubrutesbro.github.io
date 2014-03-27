@@ -1,3 +1,8 @@
+
+
+//BIG TO DO: rewrite longwinded conditionals with a switch statement and possibly using
+//custom functions....looking at responsive based shits in particular
+
 $(document).ready(function(){
 
 	var toggleAbout = false;
@@ -16,7 +21,8 @@ $(document).ready(function(){
 
 	function adjust(resolution){ 
 	console.log(resolution);
-	if(expando!=""){
+	if(expando!=undefined&&expando!=""){
+	console.log(expando);
 	itemExpand('.' + expando);
 	}
 	if(resolution>700){ //if res is above mobile / minimum
@@ -216,8 +222,22 @@ function itemShow(target){ //targeted items will re-appear then resize on call, 
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
 	$('#portfolio').prepend($(target));
-	//get height% from data price? for loop: for each div, get data price and .css height
-	$(target + ' div').css({width: "49%", height: "49%"});
+	
+	//$(target + ' div').css({width: "49%", height: "49%"}); //intended default effect after array + loop
+
+
+	var quadDims = new Array();
+	$(target + ' div').each(function(){
+		quadDims.push($(this).data('dimension').split(",")); //populates quadDims into nested array: [0] = quadOne data-dimension
+	})
+
+	for (var i = 0; i < quadDims.length; i++) {
+		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "%"), height: (quadDims[i][1] + "%")});
+		console.log(i);
+	};
+	console.log(quadDims[0][1]); 
+
+
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	if(resolution>1440){
 		$(target).css({width:"95%", height: "750px", marginRight: "10%"});
@@ -229,8 +249,8 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target).css({width:"75%", height: "550px", marginRight: "10%"});
 		$(target + ' div').css({margin: "2px"});
 	} else if(resolution<=700){
-		$(target).css({width:"320px", height: "auto", marginRight: "10%"});
-		$(target + ' div').css({width: "100%", height: "auto", margin: "0px"});
+		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
+		$(target + ' div').css({width: "100%", height: "auto"});
 		
 	}
 }
@@ -240,9 +260,9 @@ function revert(){
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
 	}).appendTo('#portfolio');
 	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px"})
-	$('article div').css({margin: "0px"})
-	$('.quadOne').css({width: "100%", height: "200px"});
-	$('.quadTwo').css({width: "100%", marginTop: "5px"});
+	$('article div').css({margin: "0px"});
+	$('.quad0').css({width: "100%", height: "200px"});
+	$('.quad1').css({width: "100%", marginTop: "5px"});
 }
 
 

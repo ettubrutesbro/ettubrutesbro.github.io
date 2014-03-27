@@ -174,30 +174,32 @@ article{
   overflow: hidden;
 }
 
-.quadOne {
+.quad0 {
 	float: left;
 	width: 100%;
 	height: 200px;
 	border: 1px solid black;
 }
 
-.quadTwo {
+/* instead of applying to just quad1 this styling should be applied to 2nd child of article
+.quad1 {
 	margin-top: 5px;
 	float: right;
 	width: 100%;
 	text-align: center;
 }
-
-.quadThree {
+*/
+.quad2, .quad4, .quad6, .quad8, .quad10 {
 	float: left;
 }
 
-.quadFour {
+.quad1, .quad3, .quad5, .quad7, .quad9 {
 	float: right;
 }
 
 article div{
 	border: 1px solid black;
+	display: block;
 	
 }
 	/* settings for expanded articles....
