@@ -12,11 +12,12 @@ $(document).ready(function(){
 	var varHt;
 	var expando; //last expanded item - re-runs itemExpand on res change, clears value on reversion
 
-	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"}); //initialize
-	//second child of article as title div
+	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
+	revert();
+	adjust($(window).width());
 
 	//RESPONSIVE SCREEN FUNCTIONS / etc. -----------------------------------------------------------
-	adjust($(window).width());
+	
 
 	$(window).resize(function(){
 		adjust($(window).width());
@@ -222,8 +223,8 @@ $('article').click(function(){ //SELECTION (we should replace <a>)
 
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
-	$('#portfolio').prepend($(target));
-	
+	$('#portfolio').prepend($(target)); //shifting the selected article to top of stack
+	$('article div').not('.quad0, .title').show(); //unhiding other divs w/in article 
 	//$(target + ' div').css({width: "49%", height: "49%"}); //intended default effect after array + loop
 
 
@@ -265,6 +266,8 @@ function revert(){
 	$('article div').css({margin: "0px"});
 	$('.quad0').css({width: "100%", height: "200px"});
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
+	//all article divs not .quad0 or .title are display: none? 
+	$('article div').not('.quad0, .title').hide(); 
 	
 }
 
@@ -274,6 +277,7 @@ function revert(){
 // CATEGORICAL FILTERING ----------------------------------------------------------------------
 
 	$(window).on('hashchange', function() { //reads hash value on hash change and puts it in a var
+		revert();
 		var hash = window.location.hash.substr(1);
 		$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
