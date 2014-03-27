@@ -182,9 +182,9 @@ article{
 }
 
 /* instead of applying to just quad1 this styling should be applied to 2nd child of article
+it shouldn't be in itemexpand, maybe init
 .quad1 {
 	margin-top: 5px;
-	float: right;
 	width: 100%;
 	text-align: center;
 }

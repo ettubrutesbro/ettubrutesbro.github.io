@@ -12,6 +12,9 @@ $(document).ready(function(){
 	var varHt;
 	var expando; //last expanded item - re-runs itemExpand on res change, clears value on reversion
 
+	$('article div:nth-child(2)').css({width: "100%", marginTop: "5px", textAlign: "center"}); //initialize
+	//second child of article as title div
+
 	//RESPONSIVE SCREEN FUNCTIONS / etc. -----------------------------------------------------------
 	adjust($(window).width());
 
@@ -216,9 +219,7 @@ $('article').click(function(){ //SELECTION (we should replace <a>)
 	
 })
 
-function itemShow(target){ //targeted items will re-appear then resize on call, if hidden (FILTER)
-		$(target).animate({width:"320px", height:"230px", margin:"30px 0px 0px 30px", opacity: 1});
-}
+
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
 	$('#portfolio').prepend($(target));
@@ -239,6 +240,7 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
+	// try a switch statement here instead of repeating resolution over and over
 	if(resolution>1440){
 		$(target).css({width:"95%", height: "750px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
@@ -262,7 +264,8 @@ function revert(){
 	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px"})
 	$('article div').css({margin: "0px"});
 	$('.quad0').css({width: "100%", height: "200px"});
-	$('.quad1').css({width: "100%", marginTop: "5px"});
+	$('article div:nth-child(2)').css({width: "100%", marginTop: "5px", textAlign: "center"});
+	console.log($('article div:nth-child(2)'));
 }
 
 
