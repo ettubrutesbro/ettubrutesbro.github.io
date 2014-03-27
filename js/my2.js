@@ -12,7 +12,7 @@ $(document).ready(function(){
 	var varHt;
 	var expando; //last expanded item - re-runs itemExpand on res change, clears value on reversion
 
-	$('article div:nth-child(2)').css({width: "100%", marginTop: "5px", textAlign: "center"}); //initialize
+	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"}); //initialize
 	//second child of article as title div
 
 	//RESPONSIVE SCREEN FUNCTIONS / etc. -----------------------------------------------------------
@@ -264,8 +264,8 @@ function revert(){
 	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px"})
 	$('article div').css({margin: "0px"});
 	$('.quad0').css({width: "100%", height: "200px"});
-	$('article div:nth-child(2)').css({width: "100%", marginTop: "5px", textAlign: "center"});
-	console.log($('article div:nth-child(2)'));
+	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
+	
 }
 
 
