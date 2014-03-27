@@ -2,6 +2,7 @@
 
 //BIG TO DO: rewrite longwinded conditionals with a switch statement and possibly using
 //custom functions....looking at responsive based shits in particular
+//potentially re-interpret margins into EM so there's no layout implosion on low brovser zooms <=75%
 
 $(document).ready(function(){
 
@@ -224,7 +225,7 @@ $('article').click(function(){ //SELECTION (we should replace <a>)
 
 function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
 	$('#portfolio').prepend($(target)); //shifting the selected article to top of stack
-	$('article div').not('.quad0, .title').show(); //unhiding other divs w/in article 
+	$(target + ' div').not('.quad0, .title').show(); //unhiding other divs w/in article 
 	//$(target + ' div').css({width: "49%", height: "49%"}); //intended default effect after array + loop
 
 
@@ -237,19 +238,19 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "%"), height: (quadDims[i][1] + "%")});
 		console.log(i);
 	};
-	console.log(quadDims[0][1]); 
+
 
 
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	// try a switch statement here instead of repeating resolution over and over
 	if(resolution>1440){
-		$(target).css({width:"95%", height: "750px", marginRight: "10%"});
+		$(target).css({width:"95%", height: "800px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
 	} else if(resolution<=1440&&resolution>1150){
 		$(target).css({width:"80%", height: "600px", marginRight: "10%"});
 		$(target + ' div').css({margin: "4px"});
 	} else if(resolution<=1150&&resolution>700){
-		$(target).css({width:"75%", height: "550px", marginRight: "10%"});
+		$(target).css({width:"75%", height: "400px", marginRight: "10%"});
 		$(target + ' div').css({margin: "2px"});
 	} else if(resolution<=700){
 		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
@@ -285,11 +286,11 @@ function revert(){
 		$('.' + hash).show();
 		$('.' + hash).animate(
 			{width:"320px", height:"240px", margin:"30px 0px 0px 30px"}
-			, 500, function(){
+			, 350, function(){
 			});
 		$('article').not($('.'+ hash)).animate(
 			{width:"0px", height:"0px", margin:"0px"}
-			, 500, function(){
+			, 350, function(){
 				$('article').not($('.'+ hash)).hide();
 			});
 	})
