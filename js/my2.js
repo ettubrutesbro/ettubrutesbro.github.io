@@ -50,7 +50,7 @@ $(document).ready(function(){
 		}
 	}
 
-	if(resolution>1150){
+	if(resolution>1024){
 		varHt = 100;
 		$('#abouttext').css('width', '');
 		$('video').css('position','absolute');
@@ -64,7 +64,7 @@ $(document).ready(function(){
 		}
 	} 
 
-	if (resolution <=1150){
+	if (resolution <=1024){
 		$('video').css('width', '320px');
 		$('#abouttext').css('width', '320px');
 		
@@ -78,10 +78,10 @@ $(document).ready(function(){
 		editCss(1440, 30, 380);
 		$('video').css('width', '400px');
 		$('.about').css('font-size', '14pt');
-	}else if(resolution<=1440&&resolution>1150){
+	}else if(resolution<=1440&&resolution>1024){
 		editCss(1280, 230, 580);
 		$('video').css('width', '250px');
-	}else if(resolution<=1150&&resolution>700){
+	}else if(resolution<=1024&&resolution>700){
 		editCss(900, 200, 550);
 		varHt = 175;
 		if(toggleCv){
@@ -144,11 +144,11 @@ function aboutCollapse(whichOne){
 $('#cv').click(function(){ // CV ROLLOUT
 	var resolution = $(window).width();
 	if(!toggleCv){
-		if(resolution>1150){ // 4-wide and 3-wide
+		if(resolution>1024){ // 4-wide and 3-wide
 			$('#cvp em').css({display: "inline"})
 			$('#cvp').css({display:"inline"});
 			$('#cvp').animate({opacity: 1, left:"0px"});
-		}else if(resolution<=1150&&resolution>700){ //med. screen width: 2-wide
+		}else if(resolution<=1024&&resolution>700){ //med. screen width: 2-wide
 			$('#cvp em').css({display: "inline"})
 			$('#cvp').css({display:"block",left: "0px"});
 			$('nav ul').css({top:"0px"}, function(){});	
@@ -157,16 +157,16 @@ $('#cv').click(function(){ // CV ROLLOUT
 			//shorten text, rollout to the side
 			$('#cvp em').css({display: "none"}) // special: removes everything but links
 			$('#cvp').css({display:"inline", left: "100px"});	
-			$('#cvp').animate({left: "10px", opacity: 1});
+			$('#cvp').animate({left: "-10px", opacity: 1});
 		}
 	toggleCv=true;
 	}else if(toggleCv){
-		if(resolution>1150){ //4-wide and 3-wide
+		if(resolution>1024){ //4-wide and 3-wide
 			$('#cvp').animate({opacity: 0, left:"120px", top: "20px"}, function(){
 				$('nav ul').css({top:"20px"});
 				$('#cvp').css({display:"none"});
 			});
-		}else if(resolution<=1150&&resolution>700){ //2-wide 
+		}else if(resolution<=1024&&resolution>700){ //2-wide 
 			$('#cvp').animate({opacity: 0, top:"20px"}, function(){
 				$('#cvp').css({display:"none", left:"120px",top:"20px"});
 				$('nav ul').css({top:"20px"});
@@ -189,7 +189,7 @@ $('#cvp b').click(function(){ // LIL RED ARROW COLLAPSE
 $('#con').click(function(){ //CONTACT ROLLOUT
 	if(!toggleContact){
 		$('#contact').css({display: "block"});
-		$('#contact').animate({opacity: 1, marginTop:"-10px"});
+		$('#contact').animate({opacity: 1, marginTop:"-13px"});
 		toggleContact=true;
 	}else{
 
@@ -258,17 +258,17 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target).css({width:"95%", height: "800px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
 		$(target + ' div p').css({fontSize:"12pt", lineHeight: "1.5em"});
-	} else if(resolution<=1440&&resolution>1150){
+	} else if(resolution<=1440&&resolution>1024){
 		$(target).css({width:"80%", height: "800px", marginRight: "10%"}); //aspect ht: 600
 		$(target + ' div').css({margin: "4px"});
 		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
-	} else if(resolution<=1150&&resolution>700){
+	} else if(resolution<=1024&&resolution>700){
 		$(target).css({width:"75%", height: "600px", marginRight: "10%"}); // aspect ht: 400
 		$(target + ' div').css({margin: "2px"});
 		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 
 	} else if(resolution<=700){
-		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
+		$(target).css({width:"320px", height: "auto", marginRight: "10%"});
 		$(target + ' div').css({width: "100%", height: "auto"});
 		
 	}
