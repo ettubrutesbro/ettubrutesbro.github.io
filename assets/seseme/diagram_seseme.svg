@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.2" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	 x="0px" y="0px" width="463.477px" height="716.964px" viewBox="0 0 463.477 716.964" xml:space="preserve">
+<g id="Pedestal">
+	<polygon fill="none" stroke="#000000" stroke-width="2.5" stroke-miterlimit="10" points="119.289,359.264 119.289,614.899 
+		231.342,666.02 343.395,610.615 343.395,359.264 231.342,311.886 	"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2.5" stroke-miterlimit="10" points="119.289,359.264 231.342,413.993 
+		343.395,359.264 	"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2.5" stroke-miterlimit="10" x1="231.342" y1="413.993" x2="231.342" y2="666.02"/>
+</g>
+<g id="Pillar4">
+	<polygon fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="186.085,331.021 186.085,101.871 
+		231.739,79.419 276.599,101.871 276.599,331.021 	"/>
+
+	<polyline fill="none" stroke="red" stroke-width="2" stroke-miterlimit="10" points="186.085,113.469 231.341,136.145 276.599,113.469"></polyline>
+	<polyline fill="none" stroke="red" stroke-width="2" stroke-miterlimit="10" points="186.085,101.871 231.341,123.974	276.599,101.871"></polyline>
+	
+	<line fill="none" stroke="red" stroke-width="2" stroke-miterlimit="10" x1="231.341" y1="123.974" x2="231.341" y2="136.145"> </line>
+
+
+</g>
+<g id="Pillar3">
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="175.314,379.287 130.059,356.909 
+		130.059,161.314 175.314,138.665 220.572,160.769 220.572,172.367 175.315,194.471 	"/>
+	<polyline fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="130.059,161.314 175.315,183.419 
+		220.572,160.769 	"/>
+	
+		<line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="175.315" y1="194.471" x2="175.315" y2="183.419"/>
+</g>
+<g id="Pillar2">
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="287.369,380.063 287.369,281.506 
+		242.112,259.402 242.112,247.803 287.369,225.7 332.625,248.349 332.625,357.685 	"/>
+	<polyline fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="242.112,247.803 287.369,270.454 
+		332.625,248.349 	"/>
+	
+		<line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="287.369" y1="281.506" x2="287.369" y2="270.454"/>
+</g>
+<g id="Pillar1">
+	<polygon fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="186.085,385.053 231.341,406.782 
+		276.598,384.405 276.598,227.385 231.341,204.735 186.085,227.385 	"/>
+	
+		<line fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="231.341" y1="249.489" x2="231.341" y2="406.782"/>
+	
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="231.341" y1="406.782" x2="231.341" y2="249.489"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M255.729,269.885"/>
+	<path fill="#FFFFFF" stroke="#000000" stroke-width="2" stroke-miterlimit="10" d="M276.598,227.385"/>
+	<polyline fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" points="186.085,227.385 231.341,249.489 
+		276.598,227.385 	"/>
+</g>
+</svg>

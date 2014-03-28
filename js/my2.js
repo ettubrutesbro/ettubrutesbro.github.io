@@ -45,6 +45,7 @@ $(document).ready(function(){
 		$('.about').css('text-align', 'left').css('width', '320px').css('margin-left', '30px');
 		$('figure').css('margin-left', '0px');
 		$('video').css('position', 'relative');
+
 		if(toggleCv){
 			$('#cvp em').css({display: "none"});
 			$('nav ul').css({top:"20px"});
@@ -177,7 +178,6 @@ $('#cv').click(function(){ // CV ROLLOUT
 		}else if(resolution<=700){
 			$('#cvp').animate({opacity: 0, left: "100px"}, function(){
 				$('#cvp').css({display:"none"});
-
 			});
 		}
 		toggleCv=false;
@@ -186,14 +186,17 @@ $('#cv').click(function(){ // CV ROLLOUT
 
 })
 
-$('#cvp b').click(function(){ // LIL RED ARROW COLLAPSE
-		//toggleCv=false;
+$('#cvp b').click(function(){ // LIL GREY ARROW COLLAPSE
+	$('#cvp').animate({opacity: 0, left: "100px"}, function(){
+				$('#cvp').css({display:"none"});
+				toggleCv=false;
+			});
 })
 
 $('#con').click(function(){ //CONTACT ROLLOUT
 	if(!toggleContact){
 		$('#contact').css({display: "block"});
-		$('#contact').animate({opacity: 1, marginTop:"-13px"});
+		$('#contact').animate({opacity: 1, marginTop:"-15px"});
 		toggleContact=true;
 	}else{
 
@@ -259,6 +262,7 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	// try a switch statement here instead of repeating resolution over and over
+
 	if(resolution>1440){
 		$(target).css({width:"95%", height: "800px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
@@ -273,8 +277,9 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target + ' div p').css({fontSize:"10.5pt", lineHeight:"1.1em"});
 
 	} else if(resolution<=700){
-		$(target).css({width:"320px", height: "auto", marginRight: "10%"});
+		$(target).css({width:"320px", height: "auto", marginRight: "10%", paddingBottom: "1%"});
 		$(target + ' div').css({width: "100%", height: "auto"});
+		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 		
 	}
 }
@@ -283,7 +288,7 @@ function revert(){
 	$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
 	}).appendTo('#portfolio');
-	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px"})
+	$('article').css({width:"320px", height:"230px", margin:"30px 0px 0px 30px", padding: "0"})
 	$('article div').css({margin: "0px"});
 	$('.quad0').css({width: "100%", height: "200px"});
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
