@@ -160,7 +160,7 @@ section{
 }
 
 .about a:hover {
-	opacity: 0.75;
+	color: red;
 }
 
 article{
@@ -170,7 +170,6 @@ article{
   margin-left: 30px;
   margin-top: 30px;
   float: left;
-  cursor: pointer;
   overflow: hidden;
 }
 
@@ -179,6 +178,7 @@ article{
 	width: 100%;
 	height: 200px;
 	border: 1px solid black;
+	cursor: pointer;
 }
 
 /* instead of applying to just quad1 this styling should be applied to 2nd child of article
@@ -202,6 +202,15 @@ article div{
 	display: block;
 	
 }
+
+article div p {
+	text-align: left;
+	font-size: 12pt;
+	font-weight: 350;
+	letter-spacing: normal;
+	padding: 0% 3% 0% 3%;
+	hyphens: auto;
+}
 	/* settings for expanded articles....
 	width: 49%;
 	margin: 5px;
@@ -216,6 +225,16 @@ article div{
 	float: right;
 }*/
 
+.exit {
+	font-weight: 400;
+	color: grey;
+	position: relative;
+	top: 35px;
+	display: block;
+	float: right;
+	vertical-align: bottom;
+}
+
 .about figure{
 margin: 0;
 padding: 0;
@@ -229,11 +248,18 @@ margin-left: 30px;
 }
 
 #contact .ico {
+	line-height: 0px;
 	display: inline;
 	margin-left: 10px;
 	width: 18px;
 	height: 18px;
-	border: 1px black solid;
+	border: 0px black solid;
+}
+
+a {
+	cursor: pointer;
+	target-name: new;
+	target-new: tab;
 }
 
 h3{
@@ -255,22 +281,8 @@ video{
 	
 }
 
-#int{
-color: darkorange;	
+#int, #anim, #model, #ill{
+
 }
 
-#anim{
-color: magenta;
-}
 
-#model {
-color: blueviolet;
-}
-
-#ill{
-color: darkcyan;
-}
-
-#about a:hover{
-	opacity: 0.6;
-}

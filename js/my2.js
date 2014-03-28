@@ -11,7 +11,7 @@ $(document).ready(function(){
 	var toggleContact = false;
 	var mobile;
 	var varHt;
-	var expando; //last expanded item - re-runs itemExpand on res change, clears value on reversion
+	var expando = new Array; //last expanded item - re-runs itemExpand on res change, clears value on reversion
 
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
 	revert();
@@ -26,10 +26,12 @@ $(document).ready(function(){
 
 	function adjust(resolution){ 
 	console.log(resolution);
-	if(expando!=undefined&&expando!=""){
+
+	if(expando[0]!=undefined&&expando[0]!=""){
 	console.log(expando);
 	itemExpand('.' + expando);
 	}
+
 	if(resolution>700){ //if res is above mobile / minimum
 		$('nav').removeClass('mobileNav');
 		$('.about').css('text-align', 'right').css('width', '');
@@ -200,7 +202,7 @@ $('#con').click(function(){ //CONTACT ROLLOUT
 
 
 $('#jl').click(function(){ //clicking my name resets filtering and selection
-	expando = "";
+	expando.unshift("");
 	revert();
 	if(toggleAbout){
 		aboutCollapse('.about');
@@ -215,10 +217,11 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 
 
 $('article').click(function(){ //SELECTION (we should replace <a>)
-	expando = $(this).attr('class').split(' ')[0]; //gets the project title class to variable
+	expando.unshift($(this).attr('class').split(' ')[0]); //gets the project title class to variable
+	if(expando[0]!=expando[1]){
 	revert();	
-	itemExpand('.' + expando);
-	
+	itemExpand('.' + expando[0]);
+	}
 })
 
 
