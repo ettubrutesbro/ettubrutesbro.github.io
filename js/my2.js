@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	if(expando[0]!=undefined&&expando[0]!=""){
 	console.log(expando);
-	itemExpand('.' + expando);
+	itemExpand('.' + expando[0]);
 	}
 
 	if(resolution>700){ //if res is above mobile / minimum
@@ -202,7 +202,7 @@ $('#con').click(function(){ //CONTACT ROLLOUT
 
 
 $('#jl').click(function(){ //clicking my name resets filtering and selection
-	expando.unshift("");
+	expando.length = 0;
 	revert();
 	if(toggleAbout){
 		aboutCollapse('.about');
@@ -216,12 +216,21 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 
 
 
-$('article').click(function(){ //SELECTION (we should replace <a>)
+$('article').click(function(event){ //SELECTION
+	if($(event.target).attr('class')=="exit"){
+		console.log('exit');
+		revert();
+		expando.length = 0;
+	} else{
 	expando.unshift($(this).attr('class').split(' ')[0]); //gets the project title class to variable
-	if(expando[0]!=expando[1]){
+	console.log(expando);
+if(expando[0]!=expando[1]){
 	revert();	
 	itemExpand('.' + expando[0]);
+	} else {
+		console.log('shit was the same')
 	}
+}
 })
 
 
@@ -239,7 +248,6 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 	for (var i = 0; i < quadDims.length; i++) {
 		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "%"), height: (quadDims[i][1] + "%")});
-		console.log(i);
 	};
 
 
@@ -275,7 +283,12 @@ function revert(){
 	
 }
 
+$('.exit').click(function(){
+	// we want to revert expando without resetting the whole thing so that filtering is preserved
 
+	
+		
+})	
 
 
 // CATEGORICAL FILTERING ----------------------------------------------------------------------

@@ -233,6 +233,11 @@ article div p {
 	display: block;
 	float: right;
 	vertical-align: bottom;
+	cursor: pointer;
+}
+
+.exit:hover{
+	color:red;
 }
 
 .about figure{
