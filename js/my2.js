@@ -212,6 +212,7 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 		aboutCollapse('.about');
 	}
 	$('article').show();
+	window.location.hash = '';
 })
 	
 
