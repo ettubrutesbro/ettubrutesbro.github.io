@@ -257,12 +257,16 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	if(resolution>1440){
 		$(target).css({width:"95%", height: "800px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
+		$(target + ' div p').css({fontSize:"12pt", lineHeight: "1.5em"});
 	} else if(resolution<=1440&&resolution>1150){
-		$(target).css({width:"80%", height: "600px", marginRight: "10%"});
+		$(target).css({width:"80%", height: "800px", marginRight: "10%"}); //aspect ht: 600
 		$(target + ' div').css({margin: "4px"});
+		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 	} else if(resolution<=1150&&resolution>700){
-		$(target).css({width:"75%", height: "400px", marginRight: "10%"});
+		$(target).css({width:"75%", height: "600px", marginRight: "10%"}); // aspect ht: 400
 		$(target + ' div').css({margin: "2px"});
+		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
+
 	} else if(resolution<=700){
 		$(target).css({width:"320px", height: "700px", marginRight: "10%"});
 		$(target + ' div').css({width: "100%", height: "auto"});
