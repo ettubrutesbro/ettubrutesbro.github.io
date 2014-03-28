@@ -283,13 +283,6 @@ function revert(){
 	
 }
 
-$('.exit').click(function(){
-	// we want to revert expando without resetting the whole thing so that filtering is preserved
-
-	
-		
-})	
-
 
 // CATEGORICAL FILTERING ----------------------------------------------------------------------
 
