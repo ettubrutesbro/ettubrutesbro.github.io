@@ -112,7 +112,9 @@ b{
 	font-family: 'Ropa Sans', sans-serif;
 	font-style: normal;
 	font-size: 12pt;
+	color: gray;
 	cursor: pointer;
+	display: none;
 }
 
 nav ul li {
@@ -230,7 +232,7 @@ article div p {
 	font-weight: 400;
 	color: grey;
 	position: relative;
-	top: 35px;
+	top: 1.3em;
 	display: block;
 	float: right;
 	vertical-align: bottom;

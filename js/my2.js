@@ -35,7 +35,9 @@ $(document).ready(function(){
 	if(resolution>700){ //if res is above mobile / minimum
 		$('nav').removeClass('mobileNav');
 		$('.about').css('text-align', 'right').css('width', '');
+		$('b').css('display', 'none');
 	} else { //if res is mobile or below
+		$('b').css({display: "inline"});
 		varHt = 250;
 		$('#cont').css('margin-right', '450px');
 		$('body').css('width', '450');
@@ -46,7 +48,7 @@ $(document).ready(function(){
 		if(toggleCv){
 			$('#cvp em').css({display: "none"});
 			$('nav ul').css({top:"20px"});
-			$('#cvp').css({display:"inline-block", left: "10px", top: "20px"});
+			$('#cvp').css({display:"inline-block", left: "3px", top: "20px"});
 		}
 	}
 
@@ -157,7 +159,8 @@ $('#cv').click(function(){ // CV ROLLOUT
 			//shorten text, rollout to the side
 			$('#cvp em').css({display: "none"}) // special: removes everything but links
 			$('#cvp').css({display:"inline", left: "100px"});	
-			$('#cvp').animate({left: "-10px", opacity: 1});
+			$('#cvp').animate({left: "3px", opacity: 1});
+			$('b').css({display: "inline"});
 		}
 	toggleCv=true;
 	}else if(toggleCv){
@@ -174,6 +177,7 @@ $('#cv').click(function(){ // CV ROLLOUT
 		}else if(resolution<=700){
 			$('#cvp').animate({opacity: 0, left: "100px"}, function(){
 				$('#cvp').css({display:"none"});
+
 			});
 		}
 		toggleCv=false;
@@ -263,9 +267,9 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target + ' div').css({margin: "4px"});
 		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 	} else if(resolution<=1024&&resolution>700){
-		$(target).css({width:"75%", height: "600px", marginRight: "10%"}); // aspect ht: 400
+		$(target).css({width:"75%", height: "900px", marginRight: "10%"}); // aspect ht: 400
 		$(target + ' div').css({margin: "2px"});
-		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
+		$(target + ' div p').css({fontSize:"10.5pt", lineHeight:"1.1em"});
 
 	} else if(resolution<=700){
 		$(target).css({width:"320px", height: "auto", marginRight: "10%"});
@@ -292,6 +296,7 @@ function revert(){
 
 	$(window).on('hashchange', function() { //reads hash value on hash change and puts it in a var
 		revert();
+		expando.length = 0;
 		var hash = window.location.hash.substr(1);
 		$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
