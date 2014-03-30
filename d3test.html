@@ -1,0 +1,29 @@
+
+<html>
+
+		<script type = "text/javascript" src = "js/d3.v3.min.js"></script>
+		<script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
+		
+
+
+<style>
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}
+
+</style>
+
+
+<svg class="chart"></svg>
+
+<script> 
+		var dataset = [30, 80, 40, 70, 90];
+			d3.select(".chart").selectAll("g").data(dataset).enter().append("g").text("fuck you");
+		</script>
