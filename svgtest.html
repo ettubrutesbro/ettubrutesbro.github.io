@@ -10,16 +10,33 @@
         type="image/svg+xml" 
          width="100%" height="100%"></object>
 
+    <script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
     <script>
+        $(document).ready(function(){
+        
+        //can we duplicate this functionality with JQ
+
+
+
         var a = document.getElementById("diagram");
 
         //it's important to add an load event listener to the object, as it will load the svg doc asynchronously
+        /*
         a.addEventListener("load",function(){
             var svgDoc = a.contentDocument; //get the inner DOM of alpha.svg
             var pedestal = svgDoc.getElementById("Pedestal"); //get the inner element by id
             pedestal.addEventListener("mousedown",function(){alert('hello world!')},false);    
             //add behaviour
              },false);
+        */
+        $('#diagram').ready(function(){
+            alert('svg ready');
+            var b = $('#diagram').contentDocument;
+            console.log(b);
+            
+        })
+        })
+
     </script>
 
     </body>
