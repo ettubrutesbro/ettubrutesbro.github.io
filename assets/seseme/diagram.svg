@@ -1019,7 +1019,7 @@
 			type = "scale"
 			from = "1 1" to = "0.75 0.75"
 			additive = "sum"
-			begin = "0" dur = "1.1s"
+			begin = "indefinite" dur = "1.1s"
 			fill = "freeze"
 			/>
 		<animateTransform class = "big" attributeName = "transform"

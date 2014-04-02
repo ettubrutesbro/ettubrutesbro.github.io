@@ -34,29 +34,19 @@
             alert('svg ready');
             var b = a.contentDocument;
             var seseme = b.getElementById("seseme"); 
+            var building = b.getElementById("building");
+            var brains = b.getElementById("brains");
+            var phone = b.getElementById("phone");
+            var social = b.getElementById("social");
 
-            
-            $(seseme).click(function(){
-                //var anim = seseme.getElementById("big");
-                var anim = seseme.getElementsByClassName("big");
-                
-                console.log(anim[0]);
-
+            $(seseme, building, brains, phone, social).click(function(){
+                var anim = $(this).getElementsByClassName("big");
                 for (var i = 0; i < anim.length; i++) {
                     anim[i].beginElement();
-                };
-              
-
-             
-                //start all big anims inside of seseme
-                //if already big then reverse play all big anims adne reverse freeze (possible?)
-                //we need to select the animation elements themselves (use class "big" but w/in the target G)
-                //then use beginElement(); on them 
-                //this would make way more sense as multiple SVGs probably...
-
-
-
+                }
             })
+
+
         })
         })
 
