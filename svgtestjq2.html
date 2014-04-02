@@ -34,11 +34,11 @@
             alert('svg ready');
             var b = a.contentDocument;
             var seseme = b.getElementById("seseme"); 
-            var sesemeBig = seseme.getElementsByClassName("big");
-            console.log(sesemeBig);
+
             
             $(seseme).click(function(){
                 //var anim = seseme.getElementById("big");
+                var anim = seseme.getElementsByClassName("big");
                 console.log(anim);
                 alert('you win');
                 //start all big anims inside of seseme
