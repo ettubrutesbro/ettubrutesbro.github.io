@@ -23,6 +23,7 @@
         //it's important to add an load event listener to the object, as it will load the svg doc asynchronously
         
         a.addEventListener("load",function(){
+            alert('what');
             var svgDoc = a.contentDocument; //get the inner DOM of alpha.svg
             console.log(svgDoc);
             var pedestal = svgDoc.getElementById("Pedestal"); //get the inner element by id
