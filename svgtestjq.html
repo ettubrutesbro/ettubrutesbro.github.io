@@ -33,10 +33,20 @@
         $('#diagram').ready(function(){
             alert('svg ready');
             var b = a.contentDocument;
-            var pedestal = b.getElementById("Pedestal"); 
+            var seseme = b.getElementById("seseme"); 
             
-            $(pedestal).click(function(){
+            $(seseme).click(function(){
+                var anim = seseme.getElementsByClass("big");
+                console.log(anim);
                 alert('you win');
+                //start all big anims inside of seseme
+                //if already big then reverse play all big anims adne reverse freeze (possible?)
+                //we need to select the animation elements themselves (use class "big" but w/in the target G)
+                //then use beginElement(); on them 
+                //this would make way more sense as multiple SVGs probably...
+
+
+
             })
         })
         })
