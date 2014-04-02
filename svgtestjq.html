@@ -33,8 +33,9 @@
         $('#diagram').ready(function(){
             alert('svg ready');
             var b = a.contentDocument;
+            var pedestal = 
             console.log(b);
-            b.$('#Pedestal').click(function(){
+            $( b + ' #Pedestal').click(function(){
                 alert('you win');
             })
         })
