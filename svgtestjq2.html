@@ -38,8 +38,18 @@
             var brains = b.getElementById("brains");
             var phone = b.getElementById("phone");
             var social = b.getElementById("social");
+            var elements = [seseme, building, brains, phone, social]
 
-            
+            elements.forEach(function(element){
+                $(element).click(function(){
+                var domele = getElementById(element);
+                var anim - domele.getElementsByClassName('big');
+                for(var i =0; i< anim.length; i++){
+                    anim[i].beginElement();
+                }
+                })
+            })
+            /*
             $(seseme).click(function(){
                 var anim = seseme.getElementsByClassName("big");
                 for (var i = 0; i < anim.length; i++) {
@@ -59,7 +69,7 @@
                     anim[i].beginElement();
                 };
             })
-/*
+    
             $(seseme, building, brains, phone, social).click(function(){
                 var anim = this.getElementsByClassName("big");
                 for (var i = 0; i < anim.length; i++) {
