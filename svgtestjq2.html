@@ -39,14 +39,33 @@
             var phone = b.getElementById("phone");
             var social = b.getElementById("social");
 
+            
+            $(seseme).click(function(){
+                var anim = seseme.getElementsByClassName("big");
+                for (var i = 0; i < anim.length; i++) {
+                    anim[i].beginElement();
+                };
+            })
+     
+            $(brains).click(function(){
+                var anim = brains.getElementsByClassName("big");
+                for (var i = 0; i < anim.length; i++) {
+                    anim[i].beginElement();
+                };
+            })
+            $(building).click(function(){
+                var anim = building.getElementsByClassName("big");
+                for (var i = 0; i < anim.length; i++) {
+                    anim[i].beginElement();
+                };
+            })
+/*
             $(seseme, building, brains, phone, social).click(function(){
-                console.log($(this));
-                console.log(seseme);
-                var anim = $(this).getElementsByClassName("big");
+                var anim = this.getElementsByClassName("big");
                 for (var i = 0; i < anim.length; i++) {
                     anim[i].beginElement();
                 }
-            })
+            })*/
 
 
         })
