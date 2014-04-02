@@ -12,7 +12,7 @@
 
     <script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
     <script>
-        $(document).ready(function(){
+        
         
         //can we duplicate this functionality with JQ
 
@@ -27,6 +27,7 @@
             var svgDoc = a.contentDocument; //get the inner DOM of alpha.svg
             console.log(svgDoc);
             var pedestal = svgDoc.getElementById("Pedestal"); //get the inner element by id
+            console.log(pedestal);
             pedestal.addEventListener("mousedown",function(){alert('hello world!')},false);    
             //add behaviour
              },false);
@@ -38,7 +39,7 @@
             console.log(b);
         
         })*/
-        })
+        
 
     </script>
 
