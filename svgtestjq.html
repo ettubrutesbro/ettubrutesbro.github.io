@@ -34,10 +34,10 @@
             alert('svg ready');
             var b = a.contentDocument;
             var seseme = b.getElementById("seseme"); 
+            var sesemeBig = seseme.getElementsByClass("big");
             
             $(seseme).click(function(){
-                var anim = seseme.getElementById("big");
-                console.log(anim);
+             
                 alert('you win');
                 //start all big anims inside of seseme
                 //if already big then reverse play all big anims adne reverse freeze (possible?)
