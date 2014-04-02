@@ -767,23 +767,23 @@
 			fill = "freeze"
 			/>
 	<g id="linesetc_1_" opacity = "0" >
-		<animate class = "big" attributeName = "opacity"
+		<animate attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big_building.begin + 0.4s" dur = "1s"
 		fill = "freeze"
 		/>
 			<line id="solarline_1_"  fill="none" stroke="#898989" opacity = "0" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,9" x1="-266.884" y1="388.021" x2="-266.884" y2="388.021">
-					<animate class = "big" attributeName = "opacity"
+					<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 1.6s" dur = "0.2s"
 						fill = "freeze"
 						/>
-					<animate class = "big" attributeName = "x2"
+					<animate attributeName = "x2"
 						to = "-124.68"
 						begin = "big_building.begin + 1.8s" dur = "0.4s"
 						fill = "freeze"
 						/>
-					<animate class = "big" attributeName = "y2"
+					<animate attributeName = "y2"
 						to = "343.523"
 						begin = "big_building.begin + 1.8s" dur = "0.4s"
 						fill = "freeze"
@@ -796,12 +796,12 @@
 					
 				
 					<line fill="none" opacity = "0" stroke="#898989" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.1,9.1821" x1="-11.762" y1="632.852" x2="-11.762" y2="632.852">
-					<animate class = "big" attributeName = "opacity"
+					<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 1.4s" dur = "0.1s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate attributeName = "y1"
 						to = "436.437"
 						begin = "big_building.begin + 1.5s" dur = "0.45s"
 						fill = "freeze"
@@ -811,12 +811,12 @@
 					
 				
 					<line fill="none" opacity = "0" stroke="#898989" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="0.1,9.0306" x1="-112.614" y1="641.443" x2="-112.614" y2="641.443">
-						<animate class = "big" attributeName = "opacity"
+						<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 1.1s" dur = "0.2s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "x2"
+						<animate attributeName = "x2"
 						to = "-10.792"
 						begin = "big_building.begin + 1.2s" dur = "0.3s"
 						fill = "freeze"
@@ -830,7 +830,7 @@
 
 			<path id="_x33__1_" fill="#898989" d="M-101.588,304.307v11.675c50.19,0,91.022,40.833,91.022,91.022H1.109
 				C1.109,350.287-44.87,304.307-101.588,304.307z" opacity = "0">
-						<animate class = "big" attributeName = "opacity"
+						<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 2.6s" dur = "0.3s"
 						fill = "freeze"
@@ -839,7 +839,7 @@
 
 			<path id="_x32__1_" fill="#898989" d="M-101.588,335.606v10.679c33.48,0,60.719,27.238,60.719,60.719h10.679
 				C-30.19,367.635-62.219,335.606-101.588,335.606z" opacity = "0">
-				<animate class = "big" attributeName = "opacity"
+				<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 2.4s" dur = "0.3s"
 						fill = "freeze"
@@ -848,7 +848,7 @@
 
 			<path id="_x31__1_" fill="#898989" d="M-101.588,365.91v9.788c17.262,0,31.306,14.045,31.306,31.307h9.789
 				C-60.493,384.344-78.927,365.91-101.588,365.91z" opacity = "0">
-				<animate class = "big" attributeName = "opacity"
+				<animate attributeName = "opacity"
 						to = "1"
 						begin = "big_building.begin + 2.3s" dur = "0.3s"
 						fill = "freeze"
@@ -859,24 +859,24 @@
 		<g id="grid_1_" >
 			
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-784.88" y1="746.164" x2="-784.88" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate attributeName = "x1"
 						to = "-566.394"
 						begin = "big_building.begin + 1s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate attributeName = "y1"
 						to = "595.443"
 						begin = "big_building.begin + 1s" dur = "0.3s"
 						fill = "freeze"
 						/>
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-620.957" y1="746.164" x2="-620.957" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate attributeName = "x1"
 						to = "-529.762"
 						begin = "big_building.begin  + 0.9s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate attributeName = "y1"
 						to = "641.443"
 						begin = "big_building.begin + 0.9s" dur = "0.3s"
 						fill = "freeze"
@@ -884,36 +884,36 @@
 
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-469.411" y1="746.164" x2="-469.411" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate  attributeName = "x1"
 						to = "-437.019"
 						begin = "big_building.begin + 0.8s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate  attributeName = "y1"
 						to = "641.443"
 						begin = "big_building.begin + 0.8s" dur = "0.3s"
 						fill = "freeze"
 						/>
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-341.762" y1="746.164" x2="-341.762" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate  attributeName = "x1"
 						to = "-341.762"
 						begin = "big_building.begin + 0.7s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate  attributeName = "y1"
 						to = "641.443"
 						begin = "big_building.begin + 0.7s" dur = "0.3s"
 						fill = "freeze"
 						/>
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-214.114" y1="746.164" x2="-214.114" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate  attributeName = "x1"
 						to = "-246.505"
 						begin = "big_building.begin + 0.6s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate  attributeName = "y1"
 						to = "641.443"
 						begin = "big_building.begin + 0.6s" dur = "0.3s"
 						fill = "freeze"
@@ -921,12 +921,12 @@
 
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-62.567" y1="746.164" x2="-62.567" y2="746.164">
-						<animate class = "big" attributeName = "x1"
+						<animate  attributeName = "x1"
 						to = "-153.762"
 						begin = "big_building.begin + 0.5s" dur = "0.3s"
 						fill = "freeze"
 						/>
-						<animate class = "big" attributeName = "y1"
+						<animate  attributeName = "y1"
 						to = "641.443"
 						begin = "big_building.begin + 0.5s" dur = "0.3s"
 						fill = "freeze"
@@ -934,12 +934,12 @@
 					
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="101.359" y1="746.164" x2="101.359" y2="746.164">
-					<animate class = "big" attributeName = "x1"
+					<animate  attributeName = "x1"
 						to = "-117.129"
 						begin = "big_building.begin + 0.4s" dur = "0.3s"
 						fill = "freeze"
 						/>
-					<animate class = "big" attributeName = "y1"
+					<animate  attributeName = "y1"
 						to = "595.443"
 						begin = "big_building.begin + 0.4s" dur = "0.3s"
 						fill = "freeze"
@@ -947,28 +947,28 @@
 				</line>
 			<g id="horizontal_1_">
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-594.762" y1="602.163" x2="-594.762" y2="602.163">
-						<animate class = "big" attributeName = "x2"
+						<animate  attributeName = "x2"
 						to = "-86.762"
 						begin = "big_building.begin + 0.4s" dur = "0.5s"
 						fill = "freeze"
 						/>
 					</line>
 					<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-629.762" y1="619.163" x2="-629.762" y2="619.163">
-						<animate class = "big" attributeName = "x2"
+						<animate  attributeName = "x2"
 						to = "-45.762"
 						begin = "big_building.begin + 0.5s" dur = "0.5s"
 						fill = "freeze"
 						/>
 					</line>
 					<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-675.762" y1="641.443" x2="-675.762" y2="641.443">
-						<animate class = "big" attributeName = "x2"
+						<animate  attributeName = "x2"
 						to = "-117.129"
 						begin = "big_building.begin + 0.6s" dur = "0.5s"
 						fill = "freeze"
 						/>
 					</line>
 					<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-732.788" y1="672.163" x2="-732.788" y2="672.163">
-						<animate class = "big" attributeName = "x2"
+						<animate  attributeName = "x2"
 						to = "45.915"
 						begin = "big_building.begin + 0.7s" dur = "0.5s"
 						fill = "freeze"
@@ -976,7 +976,7 @@
 					</line>
 				
 					<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-811.31" y1="708.163" x2="-811.31" y2="708.163">
-					<animate class = "big" attributeName = "x2"
+					<animate  attributeName = "x2"
 						to = "133.238"
 						begin = "big_building.begin + 0.8s" dur = "0.5s"
 						fill = "freeze"
@@ -985,13 +985,13 @@
 			</g>
 		</g>
 			<text id="solartext" transform="matrix(0.9502 -0.3115 0.3115 0.9502 -268.6494 374.6846) translate(-75, 15)" opacity = "0">
-				<animateTransform class = "big" attributeName = "transform"
+				<animateTransform  attributeName = "transform"
 					type = "translate"
 					additive = "sum" fill = "freeze"
 					from = "0, 0" to = "0, -18"
 					begin = "big_building.begin + 1.9s" dur = "0.5s"
 					/>	
-				<animate class = "big" attributeName = "opacity"
+				<animate  attributeName = "opacity"
 					additive = "sum" fill = "freeze"
 					from = "0" to = "1"
 					begin = "big_building.begin + 1.9s" dur = "0.5s"
@@ -1000,13 +1000,13 @@
 			
 		
 			<text id="gridtext" transform="matrix(-8.979319e-011 1 -1 -8.979319e-011 -59.168 536.5) translate(-103, -40)" opacity = "0">
-				<animateTransform class = "big" attributeName = "transform"
+				<animateTransform  attributeName = "transform"
 					type = "translate"
 					additive = "sum" fill = "freeze"
 					from = "0, 0" to = "0, 15"
 					begin = "big_building.begin + 1.9s" dur = "0.5s"
 					/>	
-				<animate class = "big" attributeName = "opacity"
+				<animate attributeName = "opacity"
 					additive = "sum" fill = "freeze"
 					from = "0" to = "1"
 					begin = "big_building.begin + 1.9s" dur = "0.5s"
@@ -1019,10 +1019,10 @@
 			type = "scale"
 			from = "1 1" to = "0.75 0.75"
 			additive = "sum"
-			begin = "indefinite" dur = "1.1s"
+			begin = "" dur = "1.1s"
 			fill = "freeze"
 			/>
-		<animateTransform class = "big" attributeName = "transform"
+		<animateTransform  attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "-45,-10"
 			additive = "sum"
@@ -1051,7 +1051,7 @@
 			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="-192.007" y1="412.43" x2="-192.007" y2="430.255"/>
 	</g>
 	<g id="windows_1_" opacity = "0">
-				<animate class = "big" attributeName = "opacity"
+				<animate  attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big_building.begin" dur = "2s"
 		fill = "freeze"

@@ -38,12 +38,10 @@
             var brains = b.getElementById("brains");
             var phone = b.getElementById("phone");
             var social = b.getElementById("social");
-            var elements = [seseme, building, brains, phone, social]
+            var elements = [seseme, building, brains, phone, social];
 
             elements.forEach(function(element){
-                $(element).click(function(){
-                    console.log(element);
-                
+                $(element).click(function(){ 
                 var anim = element.getElementsByClassName('big');
                 for(var i =0; i< anim.length; i++){
                     anim[i].beginElement();
