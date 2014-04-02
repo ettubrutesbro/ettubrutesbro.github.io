@@ -40,6 +40,8 @@
             var social = b.getElementById("social");
 
             $(seseme, building, brains, phone, social).click(function(){
+                console.log($(this));
+                console.log(seseme);
                 var anim = $(this).getElementsByClassName("big");
                 for (var i = 0; i < anim.length; i++) {
                     anim[i].beginElement();
