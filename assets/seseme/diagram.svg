@@ -19,6 +19,10 @@
 	}
 </style>
 
+<script>
+
+</script>
+
 <animate
     id            = "blur1"
     attributeName = "stdDeviation"
@@ -46,20 +50,6 @@
 
 <g id="seseme">
 
-	<animateTransform class = "big" attributeName = "transform"
-			type = "translate"
-			from = "0,0" to = "-300,0"
-			additive = "sum"
-			begin = "indefinite" dur = "1s"
-			fill = "freeze"
-			/>
-	<animateTransform class = "big" attributeName = "transform"
-			type = "scale"
-			from = "1 1" to = "1.4 1.4"
-			additive = "sum"
-			begin = "indefinite" dur = "1s"
-			fill = "freeze"
-			/>	
 	<animateTransform class = "small_R" attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "450,100"
@@ -92,7 +82,7 @@
 			<line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="750.554" y1="435.738" x2="750.554" y2="687.763"/>
 	</g>
 	<g id="Pillar4">
-			<animateTransform class = "big" attributeName = "transform"
+			<animateTransform id = "big" class = "big" attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,100"
 			additive = "sum"
