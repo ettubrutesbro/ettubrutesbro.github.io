@@ -42,9 +42,12 @@
                 
                 console.log(anim[0]);
 
-                anim[0].beginElement();
-                
-                alert('you win');
+                for (var i = 0; i < anim.length; i++) {
+                    anim[i].beginElement();
+                };
+              
+
+             
                 //start all big anims inside of seseme
                 //if already big then reverse play all big anims adne reverse freeze (possible?)
                 //we need to select the animation elements themselves (use class "big" but w/in the target G)
