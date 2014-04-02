@@ -33,9 +33,9 @@
         $('#diagram').ready(function(){
             alert('svg ready');
             var b = a.contentDocument;
-            var pedestal = 
-            console.log(b);
-            $( b + ' #Pedestal').click(function(){
+            var pedestal = b.getElementById("Pedestal"); 
+            
+            $(pedestal).click(function(){
                 alert('you win');
             })
         })
