@@ -43,8 +43,8 @@
             elements.forEach(function(element){
                 $(element).click(function(){
                     console.log(element);
-                var domele = getElementById(element);
-                var anim = domele.getElementsByClassName('big');
+                
+                var anim = element.getElementsByClassName('big');
                 for(var i =0; i< anim.length; i++){
                     anim[i].beginElement();
                 }
