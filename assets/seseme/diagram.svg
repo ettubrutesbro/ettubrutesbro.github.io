@@ -84,7 +84,7 @@
 	<g id="Pillar4">
 			<animateTransform id = "big" class = "big" attributeName = "transform"
 			type = "translate"
-			to = "0,100"
+			from = "0,0" to = "0,100"
 			additive = "sum"
 			begin = "indefinite" dur = "3s"
 			fill = "freeze"
@@ -101,7 +101,7 @@
 	<g id="Pillar3">
 		<animateTransform class = "big" attributeName = "transform"
 			type = "translate"
-			to = "0,-50"
+			from = "0,0" to = "0,-50"
 			additive = "sum"
 			begin = "indefinite" dur = "1.5s"
 			fill = "freeze"
@@ -116,7 +116,7 @@
 	<g id="Pillar2">
 		<animateTransform class = "big" attributeName = "transform"
 			type = "translate"
-			to = "0,-100"
+			from = "0,0" to = "0,-100"
 			additive = "sum"
 			begin = "indefinite" dur = "3.5s"
 			fill = "freeze"
@@ -131,7 +131,7 @@
 	<g id="Pillar1">
 		<animateTransform class = "big" attributeName = "transform"
 			type = "translate"
-			to = "0,75"
+			from = "0,0" to = "0,75"
 			additive = "sum"
 			begin = "indefinite" dur = "2s"
 			fill = "freeze"
