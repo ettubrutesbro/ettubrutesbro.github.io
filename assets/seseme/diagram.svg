@@ -43,9 +43,16 @@
     xlink:href    = "#sunblur"
 />
 
+<animate id = "sesemeblur" attributeName = "stdDeviation" from = "0" to ="4"
+	begin = "sightline.end + 1.2s" dur = "0.5s" fill = "freeze" 
+	xlink:href = "#monumentblur" />
+
 
 <filter id = "blurrySun">
 	<feGaussianBlur id = "sunblur" stdDeviation = "0, 0" />
+</filter>
+<filter id = "blurrySeseme">
+	<feGaussianBlur id = "monumentblur" stdDeviation = "0, 0" />
 </filter>
 
 <g id="seseme">
@@ -208,11 +215,11 @@
 	</g>
 	<g id="stepper_1_">
 			<animateTransform class = "big" attributeName = "transform" id = "big_brains"
-			type = "translate"
-			from = "0,0" to = "172.8,0"
-			additive = "sum"
-			begin = "indefinite" dur = "1s"
-			fill = "freeze"
+				type = "translate"
+				from = "0,0" to = "172.8,0"
+				additive = "sum"
+				begin = "indefinite" dur = "1s"
+				fill = "freeze"
 			/>
 		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
 			c-5.68,6.391-21.684,10.264-21.684,10.264v92.145c0,0,13.96,3.218,21.684,10.263c7.723,7.045,10.264,21.684,10.264,21.684h114.518
@@ -725,7 +732,7 @@
 		
 		<animateTransform class = "big" attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "-500,-50"
+			from = "0,0" to = "-300, 0"
 			additive = "sum"
 			begin = "indefinite" dur = "1s"
 			fill = "freeze"
@@ -745,6 +752,13 @@
 			fill = "freeze"
 			/>
 	<g id="guy2">
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "115,0"
+			additive = "sum"
+			begin = "sightline.end + 1s" dur = "0.7s"
+			fill = "freeze"
+			/>
 		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1522.852,444.974c0,4.392,0,189.45,0,189.45
 			c0,10.452-14.388,14.538-14.388,0c0,0-4.239-88.589-4.239-95.858c0-7.269-8.934-7.269-8.934,0l-7.876,95.858
 			c0,14.538-21.807,15.447-21.807,0c0,0-4.544-107.219-4.544-111.762"/>
@@ -753,36 +767,47 @@
 			c4.544-14.536,6.996-18.779,21.531-20.751c0-23.816-2.778-56.335,25.416-56.335c28.193,0,24.56,33.357,24.56,56.335
 			c0,0,15.22,6.618,18.752,17.722c4.239,13.326,5.451,99.344-2.728,102.675c-9.993,3.938-10.6-5.754-10.6-5.754l-0.606-73.297"/>
 	</g>
-	<g id="monument">
-		<rect x="1779.561" y="511.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="88" height="144"/>
-		<rect x="1787.561" y="370.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="141"/>
-		<rect x="1833.561" y="410.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="24" height="99"/>
+	<g id="monument" filter = "url(#blurrySeseme)">
+
+		<rect x="1779.561" y="511.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="88" height="144">
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+		</rect>
+		<rect x="1787.561" y="370.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="141">
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+		</rect>
+		<rect x="1833.561" y="410.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="24" height="99">
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+		</rect>
 		
-			<rect x="1829.561" y="453.799" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="58"/>
+		<rect x="1829.561" y="453.799" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="58">
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+		</rect>
 	</g>
 	<polyline id="dudesphone" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1785.904,465.649 
 		1777.278,460.844 1791.209,431.388 1805.241,438.085 1794.894,460.466 	"/>
+
 	<path id="guy1" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1722.559,454.796
 		c0,4.833,0,208.5,0,208.5c0,17-23.333,16-23.333,0c0,0-7.001-97.497-7.001-105.497s-12-8-12,0l-6.332,105.497
 		c0,16-24.835,17-24.835,0c0,0,0-203.5,0-208.5c0-4-10-2.48-10,5c0,0,0,57.5,0,80.5c0,0,0.377,13.602-4.5,12.5
 		c-15.5-3.5-18.5-47.5-18.5-70s4-40.5,4-40.5c4-15,18.5-28.5,38.5-33c0-26.212-3.059-62,27.971-62s27.029,36.712,27.029,62
 		c17.334,3,38.788,33.552,47.001,51.666c6.499,14.334,14.499,10.334,18.667,8c3.29-1.842,12.666-11.332,19.333-4.666
-		s-0.667,14-6.001,18s-25.5,20.834-37.5,9.5s-17.347-24.838-22.5-34C1728.058,449.796,1722.559,449.963,1722.559,454.796z"/>
-	<g id="sightline" opacity = "0">
-		<circle display="inline" fill="#898989" cx="1501.063" cy="375.982" r="1.4"/>
-		<circle display="inline" fill="#898989" cx="1512.146" cy="375.982" r="1.575"/>
-		<circle display="inline" fill="#898989" cx="1523.23" cy="375.982" r="1.75"/>
-		<circle display="inline" fill="#898989" cx="1534.313" cy="375.982" r="1.925"/>
-		<circle display="inline" fill="#898989" cx="1545.396" cy="375.982" r="2.1"/>
-		<circle display="inline" fill="#898989" cx="1556.48" cy="375.982" r="2.275"/>
-		<circle display="inline" fill="#898989" cx="1567.563" cy="375.982" r="2.45"/>
-		<circle display="inline" fill="#898989" cx="1578.646" cy="375.982" r="2.625"/>
-		<circle display="inline" fill="#898989" cx="1589.73" cy="375.982" r="2.8"/>
-		<circle display="inline" fill="#898989" cx="1600.813" cy="375.982" r="2.975"/>
-		<circle display="inline" fill="#898989" cx="1611.896" cy="375.982" r="3.15"/>
-		<circle display="inline" fill="#898989" cx="1622.98" cy="375.982" r="3.325"/>
-		<circle display="inline" fill="#898989" cx="1634.063" cy="375.982" r="3.5"/>
-	</g>
+		s-0.667,14-6.001,18s-25.5,20.834-37.5,9.5s-17.347-24.838-22.5-34C1728.058,449.796,1722.559,449.963,1722.559,454.796z">
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "15,0"
+			additive = "sum"
+			begin = "sightline.end + 1s" dur = "0.7s"
+			fill = "freeze"
+			/>
+	</path>
+
+<line fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" stroke-dasharray="7" x1="1543.167" y1="378.5" x2="1543.167" y2="378.5">
+	<animate class = "big" attributeName = "x2" from = "1543.167" to = "1639.167"
+		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "sightline" />
+	<animate attributeName = "x1" from = "1543.167" to = "1639.167"
+		fill = "freeze" begin = "sightline.end + 0.7s" dur = "0.25s"/>
+</line>
+
 </g>
 <g id="building">
 		<animateTransform class = "small_L" attributeName = "transform"
