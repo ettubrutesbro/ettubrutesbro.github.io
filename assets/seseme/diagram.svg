@@ -185,9 +185,29 @@
 			fill = "freeze"
 			/>
 
-
+	<g id="nanowifi_1_" opacity = "0">
+		<animate  attributeName = "opacity"
+			from = "0" to = "1"
+			begin = "big_brains.begin" dur = "0.5s"
+			fill = "freeze"
+		/>
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "0,63"
+			additive = "sum"
+			begin = "big_brains.begin + 0.5s" dur = "0.5s"
+			fill = "freeze"
+		/>
+			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
+		
+			<rect x="78.171" y="274.856" display="inline" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="55.281" height="24.666"/>
+		
+			<rect x="94.831" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
+		
+			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
+	</g>
 	<g id="stepper_1_">
-			<animateTransform class = "big" attributeName = "transform"
+			<animateTransform class = "big" attributeName = "transform" id = "big_brains"
 			type = "translate"
 			from = "0,0" to = "172.8,0"
 			additive = "sum"
@@ -221,11 +241,11 @@
 		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M361.074,433.333"/>
 	</g>
 	<g id="bigeasydriver_1_">
-			<animateTransform class = "big" attributeName = "transform"
+			<animateTransform attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "86.4,-0"
 			additive = "sum"
-			begin = "indefinite" dur = "1s"
+			begin = "big_brains.begin" dur = "1s"
 			fill = "freeze"
 			/>
 
@@ -273,28 +293,20 @@
 		c0.015-0.57,0.252-1.125,0.593-1.55c0,0,5.583-5.284,5.6-5.3c0.045-0.043,0.022-0.021,0,0c0.724-0.75,1.339-1.929,1.339-3.053
 		l0-3.996h1.684v-5.021h-5.021v5.021h1.681c0,0-0.002,1.053-0.002,4.045c-0.013,0.572-0.252,1.129-0.593,1.555l-5.279,4.998v-19.385
 		h2.071L105.172,371.133z"> 
-	<animate class = "big" attributeName = "opacity"
+	<animate attributeName = "opacity"
 		from = "0" to = "1"
-		begin = "indefinite" dur = "1s"
+		begin = "big_brains.begin" dur = "1s"
 		fill = "freeze"
 	/>
 	</path>
 </g>
-	<g id="nanowifi_1_" opacity = "0">
-		<animate class = "big" attributeName = "opacity"
+	
+	<g id="I_x2F_O_1_" opacity = "0">
+		<animate  attributeName = "opacity"
 		from = "0" to = "1"
-		begin = "indefinite" dur = "1s"
+		begin = "big_brains.begin" dur = "1s"
 		fill = "freeze"
 		/>
-			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
-		
-			<rect x="78.171" y="274.856" display="inline" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="55.281" height="24.666"/>
-		
-			<rect x="94.831" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
-		
-			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
-	</g>
-	<g id="I_x2F_O_1_" opacity = "0">
 		<g display="inline">
 			<g>
 				<rect x="51.674" y="608.763" fill="#FFFFFF" width="4.854" height="4.854"/>
@@ -625,14 +637,35 @@
 		</g>
 	</g>
 	<g id="power_1_" opacity = "0">
+		<animate attributeName = "opacity"
+		from = "0" to = "1"
+		begin = "big_brains.begin" dur = "1s"
+		fill = "freeze"
+		/>
 		<polyline display="inline" fill="#FFFFFF" points="184.8,636.792 180.049,646.557 187.44,646.557 183.217,656.588 		"/>
 		<polygon display="inline" fill="#898989" points="185.041,655.819 180.6,655.819 184.458,648.538 176.885,648.538 
 			183.021,637.659 187.372,637.659 183.213,644.578 190.422,644.578 		"/>
 	</g>
-	<polyline id="wire1_1_"  opacity = "0" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="
-		217.936,421.19 293.102,421.19 293.102,458.358 	"/>
-	<polyline id="wire2_1_"  opacity = "0" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="
-		293.102,572.458 293.102,671.444 527.074,671.444 527.074,642.3 	"/>
+
+	<polyline id="wire1_1_"  opacity = "1" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="217.936,421.19 293.102,421.19 293.102,458.358" stroke-dasharray = "200,200" stroke-dashoffset = "200">
+
+		<animate attributeName = "stroke-dashoffset"
+		from = "200" to = "0"
+		begin = "big_brains.begin + 1s" dur = "0.7s"
+		fill = "freeze"
+		id = "wire1"
+		/>
+
+	</polyline>
+	<polyline id="wire2_1_"  opacity = "1" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="293.102,572.458 293.102,671.444 527.074,671.444 527.074,642.3" stroke-dasharray = "500,500" stroke-dashoffset = "500">
+		<animate attributeName = "stroke-dashoffset"
+		from = "500" to = "0"
+		begin = "wire1.end" dur = "1.3s"
+		fill = "freeze"
+		id = "wire1"
+		/>
+	</polyline>
+
 </g>
 <g id="phone">
 		<animateTransform class = "small" attributeName = "transform"
