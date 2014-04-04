@@ -18,7 +18,7 @@
 		letter-spacing: 0.3em;
 	}
 
-	#seseme, #building, #brains, #social, #phone {
+	#seseme, #building, #brains, #social, #phone, #guy2 {
 	cursor: pointer;
 	}
 </style>
@@ -225,7 +225,7 @@
 				begin = "indefinite" dur = "1s"
 				fill = "freeze"
 			/>
-		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
+		<path fill="#ffffff" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
 			c-5.68,6.391-21.684,10.264-21.684,10.264v92.145c0,0,13.96,3.218,21.684,10.263c7.723,7.045,10.264,21.684,10.264,21.684h114.518
 			c0,0,3.004-13.651,10.264-21.684s21.683-10.263,21.683-10.263V395.68c0,0-13.865-3.253-21.683-10.264
 			c-7.817-7.012-10.264-21.684-10.264-21.684H303.815z"/>
