@@ -17,6 +17,10 @@
 	#gridtext {
 		letter-spacing: 0.3em;
 	}
+
+	#seseme, #building, #brains, #social, #phone {
+	cursor: pointer;
+	}
 </style>
 
 <script>
@@ -55,7 +59,7 @@
 	<feGaussianBlur id = "monumentblur" stdDeviation = "0, 0" />
 </filter>
 
-<g id="seseme">
+<g id="seseme" pointer-events = "all">
 
 	<animateTransform class = "small_R" attributeName = "transform"
 			type = "translate"
@@ -168,7 +172,7 @@
 </g>
 
 
-<g id="brains">
+<g id="brains" pointer-events = "all">
 
 		<animateTransform class = "small" attributeName = "transform"
 			type = "scale"
@@ -213,7 +217,7 @@
 		
 			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
 	</g>
-	<g id="stepper_1_">
+	<g id="stepper_1_" pointer-events = "all">
 			<animateTransform class = "big" attributeName = "transform" id = "big_brains"
 				type = "translate"
 				from = "0,0" to = "172.8,0"
@@ -247,7 +251,7 @@
 			c0,4.65,4.518,8.42,10.092,8.42c5.573,0,10.091-3.77,10.091-8.42v-30.75"/>
 		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M361.074,433.333"/>
 	</g>
-	<g id="bigeasydriver_1_">
+	<g id="bigeasydriver_1_" pointer-events = "all">
 			<animateTransform attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "86.4,-0"
@@ -308,7 +312,7 @@
 	</path>
 </g>
 	
-	<g id="I_x2F_O_1_" opacity = "0">
+	<g id="I_x2F_O_1_" opacity = "0" >
 		<animate  attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big_brains.begin" dur = "1s"
@@ -643,7 +647,7 @@
 			</g>
 		</g>
 	</g>
-	<g id="power_1_" opacity = "0">
+	<g id="power_1_" opacity = "0" >
 		<animate attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big_brains.begin" dur = "1s"
@@ -674,7 +678,7 @@
 	</polyline>
 
 </g>
-<g id="phone">
+<g id="phone" pointer-events = "all">
 		<animateTransform class = "small" attributeName = "transform"
 			type = "scale"
 			from = "1 1" to = "0.75 0.75"
@@ -728,7 +732,7 @@
 	
 		<text transform="matrix(1 0 0 1 1159.3887 558.7651)" font-size="55.9401">30</text>
 </g>
-<g id="social">
+<g id="social" pointer-events = "all">
 		
 
 		<animateTransform class = "small_R" attributeName = "transform"
@@ -806,7 +810,7 @@
 </line>
 
 </g>
-<g id="building">
+<g id="building" pointer-events = "all">
 		<animateTransform class = "small_L" attributeName = "transform"
 			type = "scale"
 			from = "1 1" to = "0.75 0.75"
