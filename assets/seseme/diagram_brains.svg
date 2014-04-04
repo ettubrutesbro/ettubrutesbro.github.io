@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="750" height="415px" 
+	 xml:space="preserve">
+
+
+<g id="brains" pointer-events = "all" transform = "translate(0,-270)">
+
+
+	<g id="nanowifi_1_" opacity = "0">
+		<animate  attributeName = "opacity"
+			from = "0" to = "1"
+			begin = "big_brains.begin" dur = "0.5s"
+			fill = "freeze"
+		/>
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "0,63"
+			additive = "sum"
+			begin = "big_brains.begin + 0.5s" dur = "0.5s"
+			fill = "freeze"
+		/>
+			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
+		
+			<rect x="78.171" y="274.856" display="inline" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="55.281" height="24.666"/>
+		
+			<rect x="94.831" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
+		
+			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
+	</g>
+	<g id="stepper_1_" pointer-events = "all">
+			<animateTransform class = "big" attributeName = "transform" id = "big_brains"
+				type = "translate"
+				from = "0,0" to = "172.8,0"
+				additive = "sum"
+				begin = "0" dur = "1s"
+				fill = "freeze"
+			/>
+		<path fill="#ffffff" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
+			c-5.68,6.391-21.684,10.264-21.684,10.264v92.145c0,0,13.96,3.218,21.684,10.263c7.723,7.045,10.264,21.684,10.264,21.684h114.518
+			c0,0,3.004-13.651,10.264-21.684s21.683-10.263,21.683-10.263V395.68c0,0-13.865-3.253-21.683-10.264
+			c-7.817-7.012-10.264-21.684-10.264-21.684H303.815z"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M418.333,480.408"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M428.597,502.091"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M271.868,487.825v122.529
+			c0,0,13.96,3.219,21.684,10.264c7.723,7.046,10.264,21.683,10.264,21.683h114.518c0,0,3.004-13.649,10.264-21.683
+			c7.26-8.032,21.683-10.264,21.683-10.264V487.825"/>
+		<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="303.815" y1="519.771" x2="303.815" y2="642.3"/>
+		<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="418.333" y1="519.771" x2="418.333" y2="642.3"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M420.359,441.752
+			c0,27.318-26.542,49.464-59.285,49.464s-59.286-22.146-59.286-49.464"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M361.074,392.288"/>
+		
+			<ellipse fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="361.074" cy="432.248" rx="59.286" ry="49.464"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="301.788" y1="441.752" x2="301.788" y2="432.248"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="420.359" y1="441.752" x2="420.359" y2="432.248"/>
+		
+			<ellipse fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="361.074" cy="406.008" rx="10.091" ry="8.42"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M350.982,406.008v30.75
+			c0,4.65,4.518,8.42,10.092,8.42c5.573,0,10.091-3.77,10.091-8.42v-30.75"/>
+		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M361.074,433.333"/>
+	</g>
+	<g id="bigeasydriver_1_" pointer-events = "all">
+			<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "86.4,-0"
+			additive = "sum"
+			begin = "big_brains.begin" dur = "1s"
+			fill = "freeze"
+			/>
+
+
+			<rect x="182.399" y="441.013" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="134.435" height="152.024"/>
+		
+			<rect x="232.654" y="486.055" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="33.924" height="33.923"/>
+		<circle fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="282.911" cy="549.313" r="15.84"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="206.784" y1="458.358" x2="206.784" y2="478.244"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="206.784" y1="490.287" x2="206.784" y2="525.838"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="206.784" y1="536.905" x2="206.784" y2="572.458"/>
+		
+			<rect x="282.911" y="576.372" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" width="23.832" height="6.188"/>
+		
+			<rect x="282.911" y="449.661" fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" width="23.832" height="6.188"/>
+	</g>
+	<g id="beaglebone_1_">
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M233.921,627.898
+			c0,18.111-11.861,32.795-26.492,32.795H65.042c-14.631,0-26.491-14.684-26.491-32.795V404.203
+			c0-18.111,11.86-32.795,26.491-32.795h142.387c14.631,0,26.492,14.684,26.492,32.795V627.898z"/>
+		
+			<rect x="78.171" y="361.615" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="55.281" height="65.049"/>
+		
+			<rect x="107.416" y="479.707" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="60.307" height="60.307"/>
+		
+			<rect x="97.416" y="584.752" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="60.307" height="86.691"/>
+		
+			<rect x="171.055" y="622.445" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="25.127" height="48.999"/>
+		
+			<rect x="201.435" y="409.523" fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" width="23.667" height="214"/>
+		
+			<rect x="46.768" y="409.523" fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" width="23.667" height="214"/>
+	</g>
+	<g>
+
+	<path id="usb_1_" opacity = "0" fill="#898989" d="M105.172,371.133l-2.899,5.021h2.068v25.66l-5.279-4.997
+		c-0.34-0.425-0.58-0.981-0.593-1.554c0-2.315,0-3.69-0.001-4.196c0.978-0.343,1.683-1.265,1.683-2.36
+		c0-1.386-1.125-2.51-2.511-2.51c-1.387,0-2.511,1.124-2.511,2.51c0,1.096,0.705,2.018,1.682,2.36l-0.001,4.147
+		c0,1.123,0.617,2.301,1.34,3.051c-0.021-0.021-0.044-0.042,0,0c0.018,0.018,5.601,5.302,5.601,5.302
+		c0.34,0.425,0.577,0.98,0.591,1.552v2.903c-1.917,0.385-3.363,2.078-3.363,4.109c0,2.316,1.878,4.193,4.192,4.193
+		c2.316,0,4.193-1.877,4.193-4.193c0-2.031-1.446-3.725-3.365-4.109v-2.852c0-0.009,0-0.016,0-0.022v-6.309
+		c0.015-0.57,0.252-1.125,0.593-1.55c0,0,5.583-5.284,5.6-5.3c0.045-0.043,0.022-0.021,0,0c0.724-0.75,1.339-1.929,1.339-3.053
+		l0-3.996h1.684v-5.021h-5.021v5.021h1.681c0,0-0.002,1.053-0.002,4.045c-0.013,0.572-0.252,1.129-0.593,1.555l-5.279,4.998v-19.385
+		h2.071L105.172,371.133z"> 
+	<animate attributeName = "opacity"
+		from = "0" to = "1"
+		begin = "big_brains.begin" dur = "1s"
+		fill = "freeze"
+	/>
+	</path>
+</g>
+	
+	<g id="I_x2F_O_1_" opacity = "0" >
+		<animate  attributeName = "opacity"
+		from = "0" to = "1"
+		begin = "big_brains.begin" dur = "1s"
+		fill = "freeze"
+		/>
+		<g display="inline">
+			<g>
+				<rect x="51.674" y="608.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,608.763 51.674,608.763 51.674,613.617 56.528,613.617 56.528,608.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="598.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,598.763 51.674,598.763 51.674,603.617 56.528,603.617 56.528,598.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="588.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,588.763 51.674,588.763 51.674,593.617 56.528,593.617 56.528,588.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="578.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,578.763 51.674,578.763 51.674,583.617 56.528,583.617 56.528,578.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="568.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,568.763 51.674,568.763 51.674,573.617 56.528,573.617 56.528,568.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="558.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,558.763 51.674,558.763 51.674,563.617 56.528,563.617 56.528,558.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="548.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,548.763 51.674,548.763 51.674,553.617 56.528,553.617 56.528,548.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="538.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,538.763 51.674,538.763 51.674,543.617 56.528,543.617 56.528,538.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="528.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,528.763 51.674,528.763 51.674,533.617 56.528,533.617 56.528,528.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="518.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,518.763 51.674,518.763 51.674,523.617 56.528,523.617 56.528,518.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="508.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,508.763 51.674,508.763 51.674,513.617 56.528,513.617 56.528,508.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="498.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,498.763 51.674,498.763 51.674,503.617 56.528,503.617 56.528,498.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="488.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,488.763 51.674,488.763 51.674,493.617 56.528,493.617 56.528,488.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="478.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,478.763 51.674,478.763 51.674,483.617 56.528,483.617 56.528,478.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="468.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,468.763 51.674,468.763 51.674,473.617 56.528,473.617 56.528,468.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="458.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,458.763 51.674,458.763 51.674,463.617 56.528,463.617 56.528,458.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="448.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,448.763 51.674,448.763 51.674,453.617 56.528,453.617 56.528,448.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="438.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,438.763 51.674,438.763 51.674,443.617 56.528,443.617 56.528,438.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="428.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,428.763 51.674,428.763 51.674,433.617 56.528,433.617 56.528,428.763 				"/>
+			</g>
+			<g>
+				<rect x="51.674" y="418.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="56.528,418.763 51.674,418.763 51.674,423.617 56.528,423.617 56.528,418.763 				"/>
+			</g>
+		</g>
+		<g display="inline">
+			<g>
+				<rect x="61.008" y="608.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,608.763 61.008,608.763 61.008,613.617 65.862,613.617 65.862,608.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="598.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,598.763 61.008,598.763 61.008,603.617 65.862,603.617 65.862,598.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="588.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,588.763 61.008,588.763 61.008,593.617 65.862,593.617 65.862,588.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="578.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,578.763 61.008,578.763 61.008,583.617 65.862,583.617 65.862,578.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="568.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,568.763 61.008,568.763 61.008,573.617 65.862,573.617 65.862,568.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="558.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,558.763 61.008,558.763 61.008,563.617 65.862,563.617 65.862,558.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="548.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,548.763 61.008,548.763 61.008,553.617 65.862,553.617 65.862,548.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="538.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,538.763 61.008,538.763 61.008,543.617 65.862,543.617 65.862,538.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="528.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,528.763 61.008,528.763 61.008,533.617 65.862,533.617 65.862,528.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="518.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,518.763 61.008,518.763 61.008,523.617 65.862,523.617 65.862,518.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="508.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,508.763 61.008,508.763 61.008,513.617 65.862,513.617 65.862,508.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="498.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,498.763 61.008,498.763 61.008,503.617 65.862,503.617 65.862,498.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="488.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,488.763 61.008,488.763 61.008,493.617 65.862,493.617 65.862,488.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="478.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,478.763 61.008,478.763 61.008,483.617 65.862,483.617 65.862,478.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="468.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,468.763 61.008,468.763 61.008,473.617 65.862,473.617 65.862,468.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="458.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,458.763 61.008,458.763 61.008,463.617 65.862,463.617 65.862,458.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="448.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,448.763 61.008,448.763 61.008,453.617 65.862,453.617 65.862,448.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="438.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,438.763 61.008,438.763 61.008,443.617 65.862,443.617 65.862,438.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="428.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,428.763 61.008,428.763 61.008,433.617 65.862,433.617 65.862,428.763 				"/>
+			</g>
+			<g>
+				<rect x="61.008" y="418.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="65.862,418.763 61.008,418.763 61.008,423.617 65.862,423.617 65.862,418.763 				"/>
+			</g>
+		</g>
+		<g display="inline">
+			<g>
+				<rect x="206.174" y="608.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,608.763 206.174,608.763 206.174,613.617 211.028,613.617 211.028,608.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="598.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,598.763 206.174,598.763 206.174,603.617 211.028,603.617 211.028,598.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="588.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,588.763 206.174,588.763 206.174,593.617 211.028,593.617 211.028,588.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="578.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,578.763 206.174,578.763 206.174,583.617 211.028,583.617 211.028,578.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="568.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,568.763 206.174,568.763 206.174,573.617 211.028,573.617 211.028,568.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="558.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,558.763 206.174,558.763 206.174,563.617 211.028,563.617 211.028,558.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="548.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,548.763 206.174,548.763 206.174,553.617 211.028,553.617 211.028,548.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="538.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,538.763 206.174,538.763 206.174,543.617 211.028,543.617 211.028,538.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="528.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,528.763 206.174,528.763 206.174,533.617 211.028,533.617 211.028,528.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="518.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,518.763 206.174,518.763 206.174,523.617 211.028,523.617 211.028,518.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="508.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,508.763 206.174,508.763 206.174,513.617 211.028,513.617 211.028,508.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="498.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,498.763 206.174,498.763 206.174,503.617 211.028,503.617 211.028,498.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="488.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,488.763 206.174,488.763 206.174,493.617 211.028,493.617 211.028,488.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="478.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,478.763 206.174,478.763 206.174,483.617 211.028,483.617 211.028,478.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="468.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,468.763 206.174,468.763 206.174,473.617 211.028,473.617 211.028,468.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="458.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,458.763 206.174,458.763 206.174,463.617 211.028,463.617 211.028,458.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="448.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,448.763 206.174,448.763 206.174,453.617 211.028,453.617 211.028,448.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="438.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,438.763 206.174,438.763 206.174,443.617 211.028,443.617 211.028,438.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="428.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,428.763 206.174,428.763 206.174,433.617 211.028,433.617 211.028,428.763 				"/>
+			</g>
+			<g>
+				<rect x="206.174" y="418.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="211.028,418.763 206.174,418.763 206.174,423.617 211.028,423.617 211.028,418.763 				"/>
+			</g>
+		</g>
+		<g display="inline">
+			<g>
+				<rect x="215.508" y="608.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,608.763 215.508,608.763 215.508,613.617 220.362,613.617 220.362,608.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="598.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,598.763 215.508,598.763 215.508,603.617 220.362,603.617 220.362,598.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="588.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,588.763 215.508,588.763 215.508,593.617 220.362,593.617 220.362,588.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="578.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,578.763 215.508,578.763 215.508,583.617 220.362,583.617 220.362,578.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="568.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,568.763 215.508,568.763 215.508,573.617 220.362,573.617 220.362,568.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="558.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,558.763 215.508,558.763 215.508,563.617 220.362,563.617 220.362,558.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="548.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,548.763 215.508,548.763 215.508,553.617 220.362,553.617 220.362,548.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="538.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,538.763 215.508,538.763 215.508,543.617 220.362,543.617 220.362,538.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="528.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,528.763 215.508,528.763 215.508,533.617 220.362,533.617 220.362,528.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="518.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,518.763 215.508,518.763 215.508,523.617 220.362,523.617 220.362,518.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="508.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,508.763 215.508,508.763 215.508,513.617 220.362,513.617 220.362,508.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="498.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,498.763 215.508,498.763 215.508,503.617 220.362,503.617 220.362,498.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="488.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,488.763 215.508,488.763 215.508,493.617 220.362,493.617 220.362,488.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="478.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,478.763 215.508,478.763 215.508,483.617 220.362,483.617 220.362,478.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="468.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,468.763 215.508,468.763 215.508,473.617 220.362,473.617 220.362,468.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="458.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,458.763 215.508,458.763 215.508,463.617 220.362,463.617 220.362,458.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="448.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,448.763 215.508,448.763 215.508,453.617 220.362,453.617 220.362,448.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="438.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,438.763 215.508,438.763 215.508,443.617 220.362,443.617 220.362,438.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="428.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,428.763 215.508,428.763 215.508,433.617 220.362,433.617 220.362,428.763 				"/>
+			</g>
+			<g>
+				<rect x="215.508" y="418.763" fill="#FFFFFF" width="4.854" height="4.854"/>
+				<polygon fill="#898989" points="220.362,418.763 215.508,418.763 215.508,423.617 220.362,423.617 220.362,418.763 				"/>
+			</g>
+		</g>
+	</g>
+	<g id="power_1_" opacity = "0" >
+		<animate attributeName = "opacity"
+		from = "0" to = "1"
+		begin = "big_brains.begin" dur = "1s"
+		fill = "freeze"
+		/>
+		<polyline display="inline" fill="#FFFFFF" points="184.8,636.792 180.049,646.557 187.44,646.557 183.217,656.588 		"/>
+		<polygon display="inline" fill="#898989" points="185.041,655.819 180.6,655.819 184.458,648.538 176.885,648.538 
+			183.021,637.659 187.372,637.659 183.213,644.578 190.422,644.578 		"/>
+	</g>
+
+	<polyline id="wire1_1_"  opacity = "1" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="217.936,421.19 293.102,421.19 293.102,458.358" stroke-dasharray = "200,200" stroke-dashoffset = "200">
+
+		<animate attributeName = "stroke-dashoffset"
+		from = "200" to = "0"
+		begin = "big_brains.begin + 1s" dur = "0.7s"
+		fill = "freeze"
+		id = "wire1"
+		/>
+
+	</polyline>
+	<polyline id="wire2_1_"  opacity = "1" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="293.102,572.458 293.102,671.444 527.074,671.444 527.074,642.3" stroke-dasharray = "500,500" stroke-dashoffset = "500">
+		<animate attributeName = "stroke-dashoffset"
+		from = "500" to = "0"
+		begin = "wire1.end" dur = "1.3s"
+		fill = "freeze"
+		id = "wire1"
+		/>
+	</polyline>
+
+</g>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="300" height="600px"
+	 xml:space="preserve">
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400,700' rel='stylesheet' type='text/css' />
+<style>
+	text {
+		font-family: 'Roboto'; sans-serif;
+		font-weight: 700;
+	}
+</style>
+
+
+<g id="phone" pointer-events = "all" transform = "translate(-1000,-200)">
+		
+	<g id="iphone">
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1158.867,671.752h-74.51
+			c-14.556,0-31.144-8.355-31.144-32.789V250.636c0-12.997,9.31-32.69,31.144-32.69h74.51"/>
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1158.662,671.752h74.513
+			c14.554,0,31.142-8.355,31.142-32.789V250.636c0-12.997-9.31-32.69-31.142-32.69h-74.513"/>
+		<g>
+			<polyline fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1158.867,610.892 1066.162,610.892 
+				1066.162,278.188 1158.867,278.188 			"/>
+			<polyline fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1158.662,610.892 1251.368,610.892 
+				1251.368,278.188 1158.662,278.188 			"/>
+			<circle fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="1159.389" cy="639.483" r="16.375"/>
+			<path fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" d="M1177.109,253.193
+				c0,1.585-1.143,2.869-2.551,2.869h-31.379c-1.408,0-2.552-1.284-2.552-2.869l0,0c0-1.584,1.144-2.869,2.552-2.869h31.379
+				C1175.967,250.325,1177.109,251.609,1177.109,253.193L1177.109,253.193z"/>
+			<circle fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" cx="1127.229" cy="253.193" r="3.613"/>
+		</g>
+	</g>
+	<g id="graph">
+		
+			<rect x="1096.264" y="374.318" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="31.078" height="121.197"/>
+		
+			<rect x="1127.342" y="423.964" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="31.078" height="71.551"/>
+		
+			<rect x="1158.905" y="328.011" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="31.078" height="167.504"/>
+		
+			<rect x="1189.983" y="400.656" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="31.077" height="94.859"/>
+	</g>
+	<polyline id="pointerline" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1106.041,495.515 
+		1130.842,530.794 1148.738,530.794 	"/>
+	
+		<text transform="matrix(1 0 0 1 1159.3887 558.7651)" font-size="55.9401">30</text>
+</g>
+
+</svg>

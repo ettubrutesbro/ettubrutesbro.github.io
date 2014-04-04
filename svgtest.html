@@ -3,12 +3,46 @@
     <head>
         <title>SVG Illustrator Test</title> 
     </head>
-    <body>
 
-        <object id="diagram"
-        data="assets/seseme/diagram.svg" 
-        type="image/svg+xml" 
-         width="100%" height="100%"></object>
+    <style> 
+        div {
+            width: 935px;
+            height: 255px;
+            border: 1px black solid;
+        }
+        object {
+            display: inline;
+            width: 20%;
+        }
+
+    </style> 
+    <body>
+        <div>
+            <object id="diagramBuilding"
+                data="assets/seseme/diagram_building.svg" 
+                type="image/svg+xml" 
+             ></object>
+             <object id="diagramBrains"
+                data="assets/seseme/diagram_brains.svg" 
+                type="image/svg+xml" 
+             ></object>
+
+             <object id="diagramSeseme"
+                data="assets/seseme/diagram_seseme.svg" 
+                type="image/svg+xml" 
+             ></object>
+
+            <object id="diagramPhone"
+                data="assets/seseme/diagram_phone.svg" 
+                type="image/svg+xml" 
+             ></object>
+
+            <object id="diagramSocial"
+                data="assets/seseme/diagram_social.svg" 
+                type="image/svg+xml" 
+             ></object>
+
+     </div>
 
     <script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
     <script>
