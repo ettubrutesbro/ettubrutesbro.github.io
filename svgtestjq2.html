@@ -41,11 +41,18 @@
             var elements = [seseme, building, brains, phone, social];
 
             elements.forEach(function(element, i, array){
-                $(element).click(function(){ 
-                var anim = element.getElementsByClassName('big');
-                for(var i =0; i< anim.length; i++){
+                $(element).click(function(){ //element clicked....
+                var anim = element.getElementsByClassName('big'); // populates array with all class big anims in G
+                for(var i =0; i< anim.length; i++){ //for each class big anim, runs it (archaic with dependencies)
                     anim[i].beginElement();
-                }
+                } // the other items in elements[], depending on index > or < element[i], get small_L or small_R activated
+                    elements.forEach(function(element, i, array){
+                        if(array.indexOf(element)!=i){
+                            var anim = array[i].getElementsByClassName('small_R');
+                            for(var i =0; i< anim.length; i++){ 
+                            anim[i].beginElement();
+                        }
+                    })
                 })
             })
             /*
