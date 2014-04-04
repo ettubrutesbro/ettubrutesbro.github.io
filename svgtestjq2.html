@@ -46,13 +46,13 @@
                 for(var i =0; i< anim.length; i++){ //for each class big anim, runs it (archaic with dependencies)
                     anim[i].beginElement();
                 } // the other items in elements[], depending on index > or < element[i], get small_L or small_R activated
-                    elements.forEach(function(element, i, array){
+                    
                         if(array.indexOf(element)!=i){
-                            var anim = array[i].getElementsByClassName('small_R');
+                            var anim = array[i].getElementsByClassName('small');
                             for(var i =0; i< anim.length; i++){ 
-                            anim[i].beginElement();
+                                anim[i].beginElement();
                         }
-                    }}
+                    }
                 )}
             )})
             /*
