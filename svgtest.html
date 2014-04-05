@@ -75,19 +75,21 @@
           var nodelist = document.getElementsByClassName("svgObject");
           var arrsvg = [];
           var arrobj = [];
+          var arrid = []
           for(var i = nodelist.length; i--; arrsvg.unshift(nodelist[i]));
             console.log(arrsvg);
           $('.svgObject').ready(function(){
             arrsvg.forEach(function(element){
                 var b = element.contentDocument;
+                var c = element.attr('id');
                 arrobj.unshift(b);
-                console.log(arrobj);
+                console.log(c);
                 //var b = arrsvg.contentDocument;
                 
             })
 
             arrobj.forEach(function(element){
-                var b = $(element + ":first-child").attr("id");
+                var b = 
                 var c = element.getElementById(b);
                 console.log(c);
             })
