@@ -6,7 +6,7 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big_brains" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 410" to = "0 0 650 410" fill = "freeze" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 410" to = "0 0 650 410" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-270)">
 
@@ -14,14 +14,14 @@
 	<g id="nanowifi_1_" opacity = "0">
 		<animate  attributeName = "opacity"
 			from = "0" to = "1"
-			begin = "big_brains.begin" dur = "0.5s"
+			begin = "big.begin" dur = "0.5s"
 			fill = "freeze"
 		/>
 		<animateTransform attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,63"
 			additive = "sum"
-			begin = "big_brains.begin + 0.5s" dur = "0.5s"
+			begin = "big.begin + 0.5s" dur = "0.5s"
 			fill = "freeze"
 		/>
 			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
@@ -33,11 +33,11 @@
 			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
 	</g>
 	<g id="stepper_1_" pointer-events = "all">
-			<animateTransform class = "big" attributeName = "transform" 
+			<animateTransform  attributeName = "transform" 
 				type = "translate"
 				from = "0,0" to = "172.8,0"
 				additive = "sum"
-				begin = "big_brains.begin" dur = "1s"
+				begin = "big.begin" dur = "1s"
 				fill = "freeze"
 			/>
 		<path fill="#ffffff" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
@@ -71,7 +71,7 @@
 			type = "translate"
 			from = "0,0" to = "86.4,-0"
 			additive = "sum"
-			begin = "big_brains.begin" dur = "1s"
+			begin = "big.begin" dur = "1s"
 			fill = "freeze"
 			/>
 
@@ -121,7 +121,7 @@
 		h2.071L105.172,371.133z"> 
 	<animate attributeName = "opacity"
 		from = "0" to = "1"
-		begin = "big_brains.begin" dur = "1s"
+		begin = "big.begin" dur = "1s"
 		fill = "freeze"
 	/>
 	</path>
@@ -130,7 +130,7 @@
 	<g id="I_x2F_O_1_" opacity = "0" >
 		<animate  attributeName = "opacity"
 		from = "0" to = "1"
-		begin = "big_brains.begin" dur = "1s"
+		begin = "big.begin" dur = "1s"
 		fill = "freeze"
 		/>
 		<g display="inline">
@@ -465,7 +465,7 @@
 	<g id="power_1_" opacity = "0" >
 		<animate attributeName = "opacity"
 		from = "0" to = "1"
-		begin = "big_brains.begin" dur = "1s"
+		begin = "big.begin" dur = "1s"
 		fill = "freeze"
 		/>
 		<polyline display="inline" fill="#FFFFFF" points="184.8,636.792 180.049,646.557 187.44,646.557 183.217,656.588 		"/>
@@ -477,7 +477,7 @@
 
 		<animate attributeName = "stroke-dashoffset"
 		from = "200" to = "0"
-		begin = "big_brains.begin + 1s" dur = "0.7s"
+		begin = "big.begin + 1s" dur = "0.7s"
 		fill = "freeze"
 		id = "wire1"
 		/>

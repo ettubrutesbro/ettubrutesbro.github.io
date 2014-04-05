@@ -8,7 +8,7 @@
 
 
 <animate id = "sesemeblur" attributeName = "stdDeviation" from = "0" to ="4"
-	begin = "sightline.end + 1.2s" dur = "0.5s" fill = "freeze" 
+	begin = "big.end + 1.2s" dur = "0.5s" fill = "freeze" 
 	xlink:href = "#monumentblur" />
 
 <filter id = "blurrySeseme">
@@ -24,7 +24,7 @@
 			type = "translate"
 			from = "0,0" to = "115,0"
 			additive = "sum"
-			begin = "sightline.end + 1s" dur = "0.7s"
+			begin = "big.end + 1s" dur = "0.7s"
 			fill = "freeze"
 			/>
 		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1522.852,444.974c0,4.392,0,189.45,0,189.45
@@ -38,17 +38,17 @@
 	<g id="monument" filter = "url(#blurrySeseme)">
 
 		<rect x="1779.561" y="511.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="88" height="144">
-			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		<rect x="1787.561" y="370.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="141">
-			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		<rect x="1833.561" y="410.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="24" height="99">
-			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		
 		<rect x="1829.561" y="453.799" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="58">
-			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "sightline.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 	</g>
 	
@@ -57,7 +57,7 @@
 			type = "translate"
 			from = "0,0" to = "15,0"
 			additive = "sum"
-			begin = "sightline.end + 1s" dur = "0.7s"
+			begin = "big.end + 1s" dur = "0.7s"
 			fill = "freeze"
 			/>
 	<polyline id="dudesphone" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1785.904,465.649 
@@ -73,10 +73,10 @@
 </g>
 
 <line fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" stroke-dasharray="7" x1="1543.167" y1="378.5" x2="1543.167" y2="378.5">
-	<animate class = "big" attributeName = "x2" from = "1543.167" to = "1639.167"
-		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "sightline" />
+	<animate attributeName = "x2" from = "1543.167" to = "1639.167"
+		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "big" />
 	<animate attributeName = "x1" from = "1543.167" to = "1639.167"
-		fill = "freeze" begin = "sightline.end + 0.7s" dur = "0.25s"/>
+		fill = "freeze" begin = "big.end + 0.7s" dur = "0.25s"/>
 </line>
 
 </g>

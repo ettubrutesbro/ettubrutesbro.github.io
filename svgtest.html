@@ -86,9 +86,13 @@
                 arrid.unshift(c);
             })
 
-            arrobj.forEach(function(element, i){  
+            arrobj.forEach(function(element, i){ 
+                var d =  element.getElementById(arrid[i]);
+                var anim = d.getElementById('big');
                 $(element).click(function(){
                     console.log(arrid[i]);
+                    anim.beginElement();
+
                 })
                 
             })

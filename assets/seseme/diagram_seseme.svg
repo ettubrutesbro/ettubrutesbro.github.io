@@ -17,7 +17,7 @@
 				<line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="750.554" y1="435.738" x2="750.554" y2="687.763"/>
 		</g>
 	<g id="Pillar4">
-			<animateTransform id = "big" class = "big" attributeName = "transform"
+			<animateTransform id = "big" attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,100"
 			additive = "sum"
@@ -34,11 +34,11 @@
 			<line fill="none" stroke="#231F20" stroke-width="5" stroke-miterlimit="10" x1="750.554" y1="167.267" x2="750.554" y2="178.386"/>
 	</g>
 	<g id="Pillar3">
-		<animateTransform class = "big" attributeName = "transform"
+		<animateTransform  attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,-50"
 			additive = "sum"
-			begin = "indefinite" dur = "1.5s"
+			begin = "big.begin" dur = "1.5s"
 			fill = "freeze"
 			/>
 		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="699.367,516.522 658.022,496.079 
@@ -49,11 +49,11 @@
 			<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="699.368" y1="231.673" x2="699.368" y2="221.576"/>
 	</g>
 	<g id="Pillar2">
-		<animateTransform class = "big" attributeName = "transform"
+		<animateTransform  attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,-100"
 			additive = "sum"
-			begin = "indefinite" dur = "3.5s"
+			begin = "big.begin" dur = "3.5s"
 			fill = "freeze"
 			/>
 		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="801.741,525.232 801.741,311.189 
@@ -64,11 +64,11 @@
 			<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="801.741" y1="311.189" x2="801.741" y2="301.092"/>
 	</g>
 	<g id="Pillar1">
-		<animateTransform class = "big" attributeName = "transform"
+		<animateTransform  attributeName = "transform"
 			type = "translate"
 			from = "0,0" to = "0,75"
 			additive = "sum"
-			begin = "indefinite" dur = "2s"
+			begin = "big.begin" dur = "2s"
 			fill = "freeze"
 			/>
 		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="709.208,405.791 750.554,425.643 
