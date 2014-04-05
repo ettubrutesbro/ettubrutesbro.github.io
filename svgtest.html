@@ -81,7 +81,7 @@
           $('.svgObject').ready(function(){
             arrsvg.forEach(function(element){
                 var b = element.contentDocument;
-                var c = element.attr('id');
+                var c = $(element).attr('id');
                 arrobj.unshift(b);
                 console.log(c);
                 //var b = arrsvg.contentDocument;
