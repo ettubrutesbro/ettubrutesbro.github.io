@@ -78,12 +78,17 @@
           for(var i = nodelist.length; i--; arrsvg.unshift(nodelist[i]));
             console.log(arrsvg);
           $('.svgObject').ready(function(){
-            arrsvg.forEach(function(element, i, array){
+            arrsvg.forEach(function(element){
                 var b = element.contentDocument;
                 arrobj.unshift(b);
                 console.log(arrobj);
                 //var b = arrsvg.contentDocument;
-                //console.log(b);
+                
+            })
+
+            arrobj.forEach(function(element){
+                var b = $(element).closest("g[id]");
+                console.log(b);
             })
             
             
