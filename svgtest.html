@@ -78,8 +78,13 @@
             var seseme = b.getElementById("d_build"); 
             console.log(b);
             
+         var arr = document.getElementsByClassName("svgObject");
+         var arrsvg = [];
+         for(var i = arr.length; i--; arrsvg.unshift(arr[i]));
+            console.log(arrsvg);
+
         })
-          console.log(a);
+          
     })
 
         
