@@ -87,7 +87,7 @@
             })
 
             arrobj.forEach(function(element){
-                var b = $(element).closest("g[id]");
+                var b = $(element + ":first-child").attr("id");
                 var c = element.getElementById(b);
                 console.log(c);
             })
