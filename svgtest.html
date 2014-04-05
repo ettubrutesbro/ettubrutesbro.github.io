@@ -3,23 +3,7 @@
     <head>
         <title>SVG Illustrator Test</title> 
     </head>
-    <script src = "js/jquery-2.1.0.min.js"></script>
-
-
-    <script>
-    $(document).ready(function(){
-          var a = document.getElementById("d_build");
-          $('d_build').ready(function(){
-            alert('svg ready');
-            var b = a.contentDocument;
-            var seseme = b.getElementById("building"); 
-            
-        })
-    })
-
-        
-
-    </script>
+  
 
 
     <style> 
@@ -79,6 +63,28 @@
                 <object id = "d_social" class = "svgObject" data = "assets/seseme/diagram_social.svg" type = "image/svg+xml"> </object>
             </div>
         </div>
+
+
+
+          <script src = "js/jquery-2.1.0.min.js"></script>
+
+
+    <script>
+    $(document).ready(function(){
+          var a = document.getElementById("d_build");
+          $('d_build').ready(function(){
+            alert('svg ready');
+            var b = a.contentDocument;
+            var seseme = b.getElementById("d_build"); 
+            console.log(b);
+            
+        })
+          console.log(a);
+    })
+
+        
+
+    </script>
     </body>
 </html>
 
