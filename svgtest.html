@@ -66,21 +66,24 @@
 
 
 
-          <script src = "js/jquery-2.1.0.min.js"></script>
+          <script src = "js/jquery-2.1.0.min.js"></script>  
 
 
     <script>
     $(document).ready(function(){
-          var a = document.getElementById("d_build");
-          var arr = document.getElementsByClassName("svgObject");
-         var arrsvg = [];
-         for(var i = arr.length; i--; arrsvg.unshift(arr[i]));
+          //var a = document.getElementById("d_build");
+          var nodelist = document.getElementsByClassName("svgObject");
+          var arrsvg = [];
+          var arrobj = [];
+          for(var i = nodelist.length; i--; nodelist.unshift(arr[i]));
             console.log(arrsvg);
-          $('d_build').ready(function(){
-            alert('svg ready');
-            var b = a.contentDocument;
-            var seseme = b.getElementById("d_build"); 
-            console.log(b);
+          $('.svgObject').ready(function(){
+            arrsvg.forEach(function(element, i, array){
+                console.log(element);
+                //var b = arrsvg.contentDocument;
+                //console.log(b);
+            })
+            
             
 
 
