@@ -79,10 +79,9 @@
             console.log(arrsvg);
           $('.svgObject').ready(function(){
             arrsvg.forEach(function(element, i, array){
-                console.log(element);
                 var b = element.contentDocument;
                 arrobj.unshift(b);
-                console.log(b);
+                console.log(arrobj);
                 //var b = arrsvg.contentDocument;
                 //console.log(b);
             })
