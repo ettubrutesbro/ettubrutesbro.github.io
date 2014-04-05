@@ -8,16 +8,14 @@
 
     <script>
     $(document).ready(function(){
-         var nl = document.getElementsByClassName("svgObject"); //get objects classes in nodelist
-         var arr = [];
-         var arr_svgContent = [];
-         for (var i = nl.length; i--; arr.unshift(nl[i]));
-            var building = arr[0].contentDocument
-            console.log(building);
-
-    
-
-      })
+          var a = document.getElementById("d_build");
+          $('d_build').ready(function(){
+            alert('svg ready');
+            var b = a.contentDocument;
+            var seseme = b.getElementById("building"); 
+            
+        })
+    })
 
         
 
