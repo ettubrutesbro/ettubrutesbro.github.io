@@ -82,14 +82,14 @@
             arrsvg.forEach(function(element){
                 var b = element.contentDocument;
                 var c = $(element).attr('id');
-
                 arrobj.unshift(b);
                 arrid.unshift(c);
-                //now parse out the d_, put it into array, in the next foreach use it to get elements
-
             })
 
-            arrobj.forEach(function(element){
+            arrobj.forEach(function(element, i){  
+                $(element).click(function(){
+                    console.log(arrid[i]);
+                })
                 
             })
             
