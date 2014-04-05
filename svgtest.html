@@ -48,19 +48,19 @@
     <body>
         <div id = "container">
             <div class = "svgContainers building">
-                <object id = "d_build" class = "svgObject" data = "assets/seseme/diagram_building.svg" type = "image/svg+xml"> </object>
+                <object id = "building" class = "svgObject" data = "assets/seseme/diagram_building.svg" type = "image/svg+xml"> </object>
             </div>
             <div class = "svgContainers brains">
-                <object id = "d_brain" class = "svgObject" data = "assets/seseme/diagram_brains.svg" type = "image/svg+xml"> </object>
+                <object id = "brains" class = "svgObject" data = "assets/seseme/diagram_brains.svg" type = "image/svg+xml"> </object>
             </div>
             <div class = "svgContainers seseme">
-                <object id = "d_seseme" class = "svgObject" data = "assets/seseme/diagram_seseme.svg" type = "image/svg+xml"> </object>
+                <object id = "seseme" class = "svgObject" data = "assets/seseme/diagram_seseme.svg" type = "image/svg+xml"> </object>
             </div>
             <div class = "svgContainers phone">
-                <object id = "d_phone" class = "svgObject" data = "assets/seseme/diagram_phone.svg" type = "image/svg+xml"> </object>
+                <object id = "phone" class = "svgObject" data = "assets/seseme/diagram_phone.svg" type = "image/svg+xml"> </object>
             </div>
             <div class = "svgContainers social">
-                <object id = "d_social" class = "svgObject" data = "assets/seseme/diagram_social.svg" type = "image/svg+xml"> </object>
+                <object id = "social" class = "svgObject" data = "assets/seseme/diagram_social.svg" type = "image/svg+xml"> </object>
             </div>
         </div>
 
@@ -82,14 +82,15 @@
             arrsvg.forEach(function(element){
                 var b = element.contentDocument;
                 var c = $(element).attr('id');
+
                 arrobj.unshift(b);
-                console.log(c);
-                //var b = arrsvg.contentDocument;
-                
+                arrid.unshift(c);
+                //now parse out the d_, put it into array, in the next foreach use it to get elements
+
             })
 
             arrobj.forEach(function(element){
-          
+                
             })
             
             
