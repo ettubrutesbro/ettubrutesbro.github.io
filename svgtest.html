@@ -3,80 +3,84 @@
     <head>
         <title>SVG Illustrator Test</title> 
     </head>
+    <script src = "js/jquery-2.1.0.min.js"></script>
 
-    <style> 
-        div {
-            width: 935px;
-            height: 255px;
-            border: 1px black solid;
-        }
-        object {
-            display: inline;
-            width: 20%;
-        }
 
-    </style> 
-    <body>
-        <div>
-            <object id="diagramBuilding"
-                data="assets/seseme/diagram_building.svg" 
-                type="image/svg+xml" 
-             ></object>
-             <object id="diagramBrains"
-                data="assets/seseme/diagram_brains.svg" 
-                type="image/svg+xml" 
-             ></object>
-
-             <object id="diagramSeseme"
-                data="assets/seseme/diagram_seseme.svg" 
-                type="image/svg+xml" 
-             ></object>
-
-            <object id="diagramPhone"
-                data="assets/seseme/diagram_phone.svg" 
-                type="image/svg+xml" 
-             ></object>
-
-            <object id="diagramSocial"
-                data="assets/seseme/diagram_social.svg" 
-                type="image/svg+xml" 
-             ></object>
-
-     </div>
-
-    <script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
     <script>
-        
-        
-        //can we duplicate this functionality with JQ
+    $(document).ready(function(){
+         var nl = document.getElementsByClassName("svgObject"); //get objects classes in nodelist
+         var arr = [];
+         var arr_svgContent = [];
+         for (var i = nl.length; i--; arr.unshift(nl[i]));
+            var building = arr[0].contentDocument
+            console.log(building);
 
+    
 
+      })
 
-        var a = document.getElementById("diagram");
-
-        //it's important to add an load event listener to the object, as it will load the svg doc asynchronously
-        
-        a.addEventListener("load",function(){
-            alert('what');
-            var svgDoc = a.contentDocument; //get the inner DOM of alpha.svg
-            console.log(svgDoc);
-            var pedestal = svgDoc.getElementById("Pedestal"); //get the inner element by id
-            console.log(pedestal);
-            pedestal.addEventListener("mousedown",function(){alert('hello world!')},false);    
-            //add behaviour
-             },false);
-        
-        /*
-        $('#diagram').ready(function(){
-            alert('svg ready');
-            var b = $('#diagram').contentDocument;
-            console.log(b);
-        
-        })*/
         
 
     </script>
 
+
+    <style> 
+        div {
+            border: 1px black solid;
+        }
+        .svgContainers {
+            width: 220px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #container {
+            width: 935px;
+            height: 255px;
+           
+        }
+        object {
+           display: inline;
+           
+        }
+
+        .building {
+            width: 200px;
+        
+        }
+
+        .brains {
+            width: 200px;
+        
+        }
+
+        .seseme {
+            width: 120px;
+    
+        }
+
+        .phone {
+            width: 120px;
+        }
+
+    </style> 
+    <body>
+        <div id = "container">
+            <div class = "svgContainers building">
+                <object id = "d_build" class = "svgObject" data = "assets/seseme/diagram_building.svg" type = "image/svg+xml"> </object>
+            </div>
+            <div class = "svgContainers brains">
+                <object id = "d_brain" class = "svgObject" data = "assets/seseme/diagram_brains.svg" type = "image/svg+xml"> </object>
+            </div>
+            <div class = "svgContainers seseme">
+                <object id = "d_seseme" class = "svgObject" data = "assets/seseme/diagram_seseme.svg" type = "image/svg+xml"> </object>
+            </div>
+            <div class = "svgContainers phone">
+                <object id = "d_phone" class = "svgObject" data = "assets/seseme/diagram_phone.svg" type = "image/svg+xml"> </object>
+            </div>
+            <div class = "svgContainers social">
+                <object id = "d_social" class = "svgObject" data = "assets/seseme/diagram_social.svg" type = "image/svg+xml"> </object>
+            </div>
+        </div>
     </body>
 </html>
 

@@ -2,9 +2,11 @@
 <!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="750" height="415px" 
+	 viewBox = "0 0 490 410"
 	 xml:space="preserve">
 
+
+	<animate id = "big_brains" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 410" to = "0 0 650 410" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-270)">
 
@@ -31,11 +33,11 @@
 			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
 	</g>
 	<g id="stepper_1_" pointer-events = "all">
-			<animateTransform class = "big" attributeName = "transform" id = "big_brains"
+			<animateTransform class = "big" attributeName = "transform" 
 				type = "translate"
 				from = "0,0" to = "172.8,0"
 				additive = "sum"
-				begin = "0" dur = "1s"
+				begin = "big_brains.begin" dur = "1s"
 				fill = "freeze"
 			/>
 		<path fill="#ffffff" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
