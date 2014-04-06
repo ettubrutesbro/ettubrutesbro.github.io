@@ -91,7 +91,9 @@
                 $(element).click(function(){
                     anim.beginElement();
                     console.log(arrid[i]); //get and eventually modify width of parent object's parent div 
-                    $(".building").animate({width: "500px"},1500);
+                    //$(".building").animate({width: "500px"},1500); //replicate this functionality for all
+                    var dicks = $("." + arrid[i] + "").css('width');
+                    console.log(dicks);
                 })
                 
             })
