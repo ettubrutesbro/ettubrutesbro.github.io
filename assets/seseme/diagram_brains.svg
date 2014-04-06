@@ -6,13 +6,13 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 408" fill = "freeze" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
 		<animateTransform attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "0,-20"
+			from = "0,0" to = "0,-40"
 			additive  = "sum" fill = "freeze"
 			begin = "big.begin" dur = "0.96s"
 			/>
