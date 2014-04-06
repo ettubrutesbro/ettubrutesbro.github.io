@@ -6,7 +6,7 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 450" fill = "freeze" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 420" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
