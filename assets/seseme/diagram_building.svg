@@ -42,7 +42,7 @@
 />
 
 
-<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.95s" from = "0 0 490 390" to = "0 0 950 560" fill = "freeze" calcMode = "paced" />
+<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.95s" from = "0 0 490 390" to = "0 0 950 580" fill = "freeze" calcMode = "paced" />
 
 <filter id = "blurrySun">
 	<feGaussianBlur id = "sunblur" stdDeviation = "0, 0" />
