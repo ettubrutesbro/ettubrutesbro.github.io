@@ -88,12 +88,9 @@
 
             arrobj.forEach(function(element, i){ 
                 var anim =  element.getElementById('big');
-              
-                //var anim = d.getElementById('big');
                 $(element).click(function(){
-                    console.log(arrid[i]);
                     anim.beginElement();
-                    
+                    console.log($(element).attr('width'));
                 })
                 
             })
