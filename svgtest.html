@@ -95,7 +95,7 @@
                     var wid = parseInt($("." + arrid[i] + "").css("width"), 10) * 2;
                     console.log(wid);
                     $("." + arrid[i] + "").animate({width: wid},1000, "swing");
-                    $(".svgContainers").not("." + arrid[i] + "").toggle("scale", {percent: 30});
+                    $(".svgContainers").not("." + arrid[i] + "").toggle("scale", {percent: 30}, 2000);
 
                 })
                 
