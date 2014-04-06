@@ -105,11 +105,15 @@
                     if(wid>ht){
                         $("." + arrid[i] + "").animate({width: wid*2, marginRight: "20%"},1000, "swing");
                     }
-                    $(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
+                    //$(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
                     //if any .svgContainer has greater height than width, then....
 
                     $(".svgContainers").each(function(){
-                        console.log($(this).width());
+                        if($(this).width() > $(this).height()){
+                            $(this).animate({width: "75px"});
+                        }else{
+                            $(this).animate({height: "75px"});
+                        }
                     })
 
                 })
