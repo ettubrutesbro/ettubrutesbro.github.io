@@ -95,7 +95,7 @@
                     //$(".building").animate({width: "500px"},1500); //replicate this functionality for all
                     var wid = parseInt($("." + arrid[i] + "").css("width"), 10) * 2;
                     console.log(wid);
-                    $("." + arrid[i] + "").animate({width: wid, marginRight: "30%"},1000, "swing");
+                    $("." + arrid[i] + "").animate({width: wid},1000, "swing");
                     $(".svgContainers").not("." + arrid[i] + "").animate({width: ($(this).width()/3), height: ($(this).height()/3)});
 
                 })
