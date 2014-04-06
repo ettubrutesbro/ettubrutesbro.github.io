@@ -108,11 +108,11 @@
                     //$(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
                     //if any .svgContainer has greater height than width, then....
 
-                    $(".svgContainers").each(function(){
-                        if($(this).width() > $(this).height()){
+                    $(".svgContainers").not("." + arrid[i] + "").each(function(){ //each of the non-selections do
+                        if($(this).width() > $(this).height()){ //if fat
                             $(this).animate({width: "75px"});
-                        }else{
-                            $(this).animate({height: "75px"});
+                        }else{ //if tall
+                            $(this).animate({width: "45px"});
                         }
                     })
 
