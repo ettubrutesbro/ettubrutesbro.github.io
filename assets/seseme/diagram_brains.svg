@@ -14,7 +14,7 @@
 			type = "translate"
 			from = "0,0" to = "0,-40"
 			additive  = "sum" fill = "freeze"
-			begin = "big.begin" dur = "0.6s"
+			begin = "big.begin" dur = "0.1s"
 			/>
 
 
