@@ -99,11 +99,13 @@
                     anim.beginElement();
                     console.log(arrid[i]); //get and eventually modify width of parent object's parent div 
                     //$(".building").animate({width: "500px"},1500); //replicate this functionality for all
-                    var wid = parseInt($("." + arrid[i] + "").css("width"), 10);
+                    var wid = $("." + arrid[i] + "").width();
                     var ht = $("." + arrid[i] + "").height();
                     console.log(wid);
                     if(wid>ht){
                         $("." + arrid[i] + "").animate({width: wid*2, marginRight: "20%"},1000, "swing");
+                    } else{
+                        $("." + arrid[i] + "").animate({width: wid*1.1, marginRight: "20%"},1000, "swing");
                     }
                     //$(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
                     //if any .svgContainer has greater height than width, then....
