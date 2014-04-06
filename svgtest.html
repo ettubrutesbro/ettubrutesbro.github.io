@@ -90,7 +90,7 @@
                 var anim =  element.getElementById('big');
                 $(element).click(function(){
                     anim.beginElement();
-                    console.log($(element).attr('width'));
+                    console.log($(element).closest('div').attr('width')); //get and eventually modify width of parent object's parent div 
                 })
                 
             })
