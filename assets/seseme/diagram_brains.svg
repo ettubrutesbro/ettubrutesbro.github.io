@@ -6,9 +6,9 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 450" to = "0 0 650 450" fill = "freeze" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 480" to = "0 0 650 480" fill = "freeze" />
 
-<g id="brains" pointer-events = "all" transform = "translate(0,-270)">
+<g id="brains" pointer-events = "all" transform = "translate(0,-280)">
 
 
 	<g id="nanowifi_1_" opacity = "0">
