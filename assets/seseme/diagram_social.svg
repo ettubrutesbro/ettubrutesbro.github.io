@@ -5,7 +5,7 @@
 	 viewBox = "0 0 500 365"
 	 xml:space="preserve">
 
-<animate attributeName = "viewBox" begin = "big.end + 1s" dur = "0.96s" from = "0 0 500 365" to = "0 0 370 365" fill = "freeze" />
+<animate attributeName = "viewBox" begin = "big.end + 1s" dur = "0.96s" from = "0 0 500 365" to = "0 0 400 365" fill = "freeze" />
 
 
 <animate id = "sesemeblur" attributeName = "stdDeviation" from = "0" to ="4"
@@ -17,11 +17,11 @@
 </filter>
 
 
-<g id="social" pointer-events = "all" transform = "translate(-1400, -310)">
+<g id="social" pointer-events = "all" transform = "translate(-1400, -325)">
 
 <animateTransform attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "-200,-20"
+			from = "0,0" to = "-200, 0"
 			additive  = "sum" fill = "freeze"
 			begin = "big.end + 1s" dur = "0.96s"
 			/>		
