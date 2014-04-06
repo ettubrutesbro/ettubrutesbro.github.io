@@ -21,7 +21,7 @@
 
 <animateTransform attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "-200, 0"
+			from = "0,0" to = "0, 0"
 			additive  = "sum" fill = "freeze"
 			begin = "big.end + 1s" dur = "0.96s"
 			/>		
