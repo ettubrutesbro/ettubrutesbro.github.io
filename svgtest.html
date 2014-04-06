@@ -108,6 +108,10 @@
                     $(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
                     //if any .svgContainer has greater height than width, then....
 
+                    $(".svgContainers").each(function(){
+                        console.log($(this).width);
+                    })
+
                 })
                 
             })
