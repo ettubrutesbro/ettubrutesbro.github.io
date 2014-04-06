@@ -17,7 +17,7 @@
 </filter>
 
 
-<g id="social" pointer-events = "all" transform = "translate(-1400, -335)">
+<g id="social" pointer-events = "all" transform = "translate(-1400, -345)">
 
 <animateTransform attributeName = "transform"
 			type = "translate"
