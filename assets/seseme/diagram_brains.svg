@@ -8,7 +8,7 @@
 
 	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 490 420" to = "0 0 650 420" fill = "freeze" />
 
-<g id="brains" pointer-events = "all" transform = "translate(0,-270)">
+<g id="brains" pointer-events = "all" transform = "translate(0,-290)">
 
 
 	<g id="nanowifi_1_" opacity = "0">
