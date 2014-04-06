@@ -98,14 +98,14 @@
             arrobj.forEach(function(element, i){ 
                 var anim =  element.getElementById('big');
                 $(element).click(function(){
-                    anim.beginElement();
                     console.log(arrid[i]); //get and eventually modify width of parent object's parent div 
-                    //$(".building").animate({width: "500px"},1500); //replicate this functionality for all
-                    var wid = $("." + arrid[i] + "").width();
-                    var ht = $("." + arrid[i] + "").height();
+                    
                     if(arrid[i]==whichBig){ //if selection is already expanded
 
                     }else{ //if selection is NOT already expanded....
+                        var wid = $("." + arrid[i] + "").width();
+                        var ht = $("." + arrid[i] + "").height();
+                        anim.beginElement();
                         whichBig = arrid[i];
                         //depending on aspect, make selection larger
                         if(wid>ht){
