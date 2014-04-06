@@ -82,7 +82,9 @@
           var nodelist = document.getElementsByClassName("svgObject");
           var arrsvg = [];
           var arrobj = [];
-          var arrid = []
+          var arrid = [];
+          var whichBig;
+
           for(var i = nodelist.length; i--; arrsvg.unshift(nodelist[i]));
             console.log(arrsvg);
           $('.svgObject').ready(function(){
@@ -101,33 +103,30 @@
                     //$(".building").animate({width: "500px"},1500); //replicate this functionality for all
                     var wid = $("." + arrid[i] + "").width();
                     var ht = $("." + arrid[i] + "").height();
-                    console.log(wid);
-                    if(wid>ht){
-                        $("." + arrid[i] + "").animate({width: wid*2, marginRight: "20%"},1000, "swing");
-                    } else{
-                        $("." + arrid[i] + "").animate({marginRight: "33%"},1000, "swing");
-                    }
-                    //$(".svgContainers").not("." + arrid[i] + "").animate({width: "75px"});
-                    //if any .svgContainer has greater height than width, then....
+                    if(arrid[i]==whichBig){ //if selection is already expanded
 
-                    $(".svgContainers").not("." + arrid[i] + "").each(function(){ //each of the non-selections do
-                        if($(this).width() > $(this).height()){ //if fat
-                            $(this).animate({width: "75px"});
-                        }else{ //if tall
-                            $(this).animate({width: "45px"});
+                    }else{ //if selection is NOT already expanded....
+                        whichBig = arrid[i];
+                        //depending on aspect, make selection larger
+                        if(wid>ht){
+                            $("." + arrid[i] + "").animate({width: wid*2, marginRight: "20%"},1000, "swing");
+                        } else{
+                            $("." + arrid[i] + "").animate({marginRight: "33%"},1000, "swing");
                         }
-                    })
-
-                })
-                
-            })
-            
-            
-
-
-        })
-          
-    })
+                        //now, make all other objects smaller, depending on aspect also
+                        $(".svgContainers").not("." + arrid[i] + "").each(function(){ 
+                            if($(this).width() > $(this).height()){ //if fat
+                                $(this).animate({width: "75px"});
+                            }else{ //if tall
+                                $(this).animate({width: "45px"});
+                            }
+                        }) //end .each svgContainers function
+                        
+                    } // end selection expansion conditional
+                }) // end click function
+            }) // end forEach function
+        }) // end on svg obj ready
+    }) // end document.ready
 
         
 
