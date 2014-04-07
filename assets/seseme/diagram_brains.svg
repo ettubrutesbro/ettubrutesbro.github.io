@@ -47,7 +47,7 @@
 		/>
 		<animateTransform attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "0,-63"
+			from = "0,63" to = "0,0"
 			additive = "sum"
 			begin = "reverse.begin" dur = "0.5s"
 			fill = "freeze"
@@ -70,7 +70,7 @@
 			/>
 			<animateTransform  attributeName = "transform" 
 				type = "translate"
-				from = "0,0" to = "-172.8,0"
+				from = "172.8,0" to = "0,0"
 				additive = "sum"
 				begin = "wire2.end" dur = "0.45s"
 				fill = "freeze"
@@ -113,7 +113,7 @@
 			/>
 			<animateTransform attributeName = "transform"
 			type = "translate"
-			from = "0,0" to = "-86.4,-0"
+			from = "86.4,0" to = "0,0"
 			additive = "sum"
 			begin = "wire2.end" dur = "0.45s"
 			fill = "freeze"
