@@ -72,8 +72,7 @@
 		
 			<animateMotion
 				
-				from = "0,0"
-				to = "-172.8,0"
+				by = "-172.8,0"
 				additive = "sum"
 				begin = "reverse.begin" dur = "0.45s"
 				fill = "freeze"
