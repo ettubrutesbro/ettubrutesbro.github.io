@@ -69,14 +69,7 @@
 				fill = "freeze"
 				id = "expandstepper"
 			/>
-			<animateTransform  attributeName = "transform" 
-				type = "translate"
-				from = "0,0" to = "0,0"
-				additive = "sum"
-				begin = "expandstepper.end" dur = "0s"
-				calcMode = "discrete"
-				fill = "freeze"
-			/>
+		
 			<animateTransform  attributeName = "transform" 
 				type = "translate"
 				from = "0,0" to = "-172.8,0"
@@ -87,7 +80,7 @@
 			/>
 			<animateTransform  attributeName = "transform" 
 				type = "translate"
-				from = "0,0" to = "0,0"
+				from = "-172.8,0" to = "0,0"
 				additive = "sum"
 				begin = "revertstepper.end" dur = "0s"
 				calcMode = "discrete"
