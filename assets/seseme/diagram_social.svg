@@ -13,7 +13,7 @@
 	xlink:href = "#monumentblur" />
 
 <animate id = "sesemeblurReverse" attributeName = "stdDeviation" from = "4" to ="0"
-	begin = "reverse.end + 1.2s" dur = "0.5s" fill = "freeze" 
+	begin = "reverse.begin" dur = "0.5s" fill = "freeze" 
 	xlink:href = "#monumentblur" />
 
 <filter id = "blurrySeseme">
@@ -33,7 +33,7 @@
 			type = "translate"
 			from = "0,0" to = "125, 0"
 			additive  = "sum" fill = "freeze"
-			begin = "reverse.end + 1s" dur = "0.7s"
+			begin = "reverse.begin" dur = "0.7s"
 			/>		
 
 	<g id="guy2">
@@ -48,7 +48,7 @@
 			type = "translate"
 			from = "0,0" to = "-115,0"
 			additive = "sum"
-			begin = "reverse.end + 1s" dur = "0.7s"
+			begin = "reverse.begin" dur = "0.7s"
 			fill = "freeze"
 			/>
 
@@ -64,16 +64,20 @@
 
 		<rect x="1779.561" y="511.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="88" height="144">
 			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#898989" to = "#000000" begin = "reverse.begin" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		<rect x="1787.561" y="370.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="141">
 			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#898989" to = "#000000" begin = "reverse.begin" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		<rect x="1833.561" y="410.799" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="24" height="99">
 			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#898989" to = "#000000" begin = "reverse.begin" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 		
 		<rect x="1829.561" y="453.799" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" width="32" height="58">
 			<animate attributeName = "stroke" from = "#000000" to = "#898989" begin = "big.end + 1s" dur = "0.7s" fill = "freeze" additive = "sum" /> 
+			<animate attributeName = "stroke" from = "#898989" to = "#000000" begin = "reverse.begin" dur = "0.7s" fill = "freeze" additive = "sum" /> 
 		</rect>
 	</g>
 	
@@ -89,7 +93,7 @@
 			type = "translate"
 			from = "0,0" to = "-15,0"
 			additive = "sum"
-			begin = "reverse.end + 1s" dur = "0.7s"
+			begin = "reverse.begin" dur = "0.7s"
 			fill = "freeze"
 			/>
 
@@ -111,7 +115,7 @@
 		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "big"/>
 	<animate attributeName = "x1" from = "1543.167" to = "1639.167"
 		fill = "freeze" begin = "big.end + 0.7s" dur = "0.25s"/>
-		
+
 	<animate attributeName = "x2" from = "1639.167" to = "1543.167"
 		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "reverse"/>
 	<animate attributeName = "x1" from = "1639.167" to = "1543.167"
