@@ -105,9 +105,9 @@
                         var arrwidth = [220, 120, 120, 200, 200];
                         $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}); 
                         //restore the shrunken icons to normal size
-                        $(".svgContainers").forEach(function(element, i){
-                            $(this).animate({width: arrwidth[i]});
-                            console.log($(element).attr('id') + ' restored');
+                        $(".svgContainers").each(function(index){
+                            $(this).animate({width: arrwidth[index]});
+                           
                         })
             
                        
