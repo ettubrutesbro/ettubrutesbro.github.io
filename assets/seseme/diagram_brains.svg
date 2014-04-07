@@ -65,7 +65,7 @@
 				type = "translate"
 				by = "172.8,0"
 				additive = "sum"
-				begin = "big.begin" dur = "1s"
+				begin = "0;revertstepper.end" dur = "1s"
 				fill = "freeze"
 				id = "expandstepper"
 			/>
@@ -73,8 +73,8 @@
 			<animateTransform  attributeName = "transform" 
 				type = "translate"
 				by = "-172.8,0"
-				additive = "sum"
-				begin = "wire2.end" dur = "0.45s"
+				additive = "remove"
+				begin = "expandstepper.end" dur = "0.45s"
 				fill = "freeze"
 				id = "revertstepper"
 			/>
