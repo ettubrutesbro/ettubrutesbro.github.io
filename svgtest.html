@@ -96,12 +96,14 @@
             })
 
             arrobj.forEach(function(element, i){ 
-                var anim =  element.getElementById('big');
+                
+                
                 $(element).click(function(){
-                    console.log(arrid[i]); //get and eventually modify width of parent object's parent div 
+                    //conditional checks if selected element is already expanded
                     
                     if(arrid[i]==whichBig){ //if selection is already expanded
-                        // test function to shrink items to original size
+                        var revert = element.getElementById('reverse'); 
+                        revert.beginElement();
                         var arrwidth = [200, 200, 120, 120, 220];
                         $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}); 
                         //restore the shrunken icons to normal size
@@ -112,6 +114,7 @@
             
                        
                     }else{ //if selection is NOT already expanded....
+                        var anim =  element.getElementById('big');
                         var wid = $("." + arrid[i] + "").width();
                         var ht = $("." + arrid[i] + "").height();
                         anim.beginElement();

@@ -12,6 +12,10 @@
 	begin = "big.end + 1.2s" dur = "0.5s" fill = "freeze" 
 	xlink:href = "#monumentblur" />
 
+<animate id = "sesemeblurReverse" attributeName = "stdDeviation" from = "4" to ="0"
+	begin = "reverse.end + 1.2s" dur = "0.5s" fill = "freeze" 
+	xlink:href = "#monumentblur" />
+
 <filter id = "blurrySeseme">
 	<feGaussianBlur id = "monumentblur" stdDeviation = "0, 0" />
 </filter>
@@ -24,6 +28,12 @@
 			from = "0,0" to = "-125, 0"
 			additive  = "sum" fill = "freeze"
 			begin = "big.end + 1s" dur = "0.7s"
+			/>
+<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "125, 0"
+			additive  = "sum" fill = "freeze"
+			begin = "reverse.end + 1s" dur = "0.7s"
 			/>		
 
 	<g id="guy2">
@@ -34,6 +44,14 @@
 			begin = "big.end + 1s" dur = "0.7s"
 			fill = "freeze"
 			/>
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "-115,0"
+			additive = "sum"
+			begin = "reverse.end + 1s" dur = "0.7s"
+			fill = "freeze"
+			/>
+
 		<path fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1522.852,444.974c0,4.392,0,189.45,0,189.45
 			c0,10.452-14.388,14.538-14.388,0c0,0-4.239-88.589-4.239-95.858c0-7.269-8.934-7.269-8.934,0l-7.876,95.858
 			c0,14.538-21.807,15.447-21.807,0c0,0-4.544-107.219-4.544-111.762"/>
@@ -67,6 +85,15 @@
 			begin = "big.end + 1s" dur = "0.7s"
 			fill = "freeze"
 			/>
+	<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "-15,0"
+			additive = "sum"
+			begin = "reverse.end + 1s" dur = "0.7s"
+			fill = "freeze"
+			/>
+
+
 	<polyline id="dudesphone" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1785.904,465.649 
 		1777.278,460.844 1791.209,431.388 1805.241,438.085 1794.894,460.466 	"/>
 	<path id="guy_1" fill="#FFFFFF" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M1722.559,454.796
@@ -84,6 +111,13 @@
 		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "big"/>
 	<animate attributeName = "x1" from = "1543.167" to = "1639.167"
 		fill = "freeze" begin = "big.end + 0.7s" dur = "0.25s"/>
+		
+	<animate attributeName = "x2" from = "1639.167" to = "1543.167"
+		fill = "freeze" begin = "indefinite" dur = "0.4s" id = "reverse"/>
+	<animate attributeName = "x1" from = "1639.167" to = "1543.167"
+		fill = "freeze" begin = "reverse" dur = "0.4s"/>
+
+
 </line>
 
 </g>

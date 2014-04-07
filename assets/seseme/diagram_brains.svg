@@ -8,6 +8,8 @@
 
 	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" />
 
+	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
+
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
 		<animateTransform attributeName = "transform"
@@ -15,6 +17,12 @@
 			from = "0,0" to = "0,-40"
 			additive  = "sum" fill = "freeze"
 			begin = "big.begin" dur = "0.96s"
+			/>	
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "0,40"
+			additive  = "sum" fill = "freeze"
+			begin = "reverse.begin" dur = "0.96s"
 			/>
 
 
@@ -29,6 +37,19 @@
 			from = "0,0" to = "0,63"
 			additive = "sum"
 			begin = "big.begin + 0.5s" dur = "0.5s"
+			fill = "freeze"
+		/>	
+
+		<animate  attributeName = "opacity"
+			from = "1" to = "0"
+			begin = "reverse.begin" dur = "0.5s"
+			fill = "freeze"
+		/>
+		<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "0,-63"
+			additive = "sum"
+			begin = "reverse.begin + 0.5s" dur = "0.5s"
 			fill = "freeze"
 		/>
 			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
@@ -47,6 +68,15 @@
 				begin = "big.begin" dur = "1s"
 				fill = "freeze"
 			/>
+			<animateTransform  attributeName = "transform" 
+				type = "translate"
+				from = "0,0" to = "-172.8,0"
+				additive = "sum"
+				begin = "reverse.begin" dur = "1s"
+				fill = "freeze"
+			/>
+
+
 		<path fill="#ffffff" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M303.815,363.733c0,0-4.584,15.292-10.264,21.684
 			c-5.68,6.391-21.684,10.264-21.684,10.264v92.145c0,0,13.96,3.218,21.684,10.263c7.723,7.045,10.264,21.684,10.264,21.684h114.518
 			c0,0,3.004-13.651,10.264-21.684s21.683-10.263,21.683-10.263V395.68c0,0-13.865-3.253-21.683-10.264
@@ -79,6 +109,13 @@
 			from = "0,0" to = "86.4,-0"
 			additive = "sum"
 			begin = "big.begin" dur = "1s"
+			fill = "freeze"
+			/>
+			<animateTransform attributeName = "transform"
+			type = "translate"
+			from = "0,0" to = "-86.4,-0"
+			additive = "sum"
+			begin = "reverse.begin" dur = "1s"
 			fill = "freeze"
 			/>
 
@@ -131,6 +168,12 @@
 		begin = "big.begin" dur = "1s"
 		fill = "freeze"
 	/>
+	<animate attributeName = "opacity"
+		from = "1" to = "0"
+		begin = "reverse.begin" dur = "1s"
+		fill = "freeze"
+	/>
+
 	</path>
 </g>
 	
@@ -138,6 +181,11 @@
 		<animate  attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big.begin" dur = "1s"
+		fill = "freeze"
+		/>	
+		<animate  attributeName = "opacity"
+		from = "1" to = "0"
+		begin = "reverse.begin" dur = "1s"
 		fill = "freeze"
 		/>
 		<g display="inline">
@@ -474,7 +522,14 @@
 		from = "0" to = "1"
 		begin = "big.begin" dur = "1s"
 		fill = "freeze"
+		/>	
+		<animate attributeName = "opacity"
+		from = "1" to = "0"
+		begin = "reverse.begin" dur = "1s"
+		fill = "freeze"
 		/>
+
+
 		<polyline display="inline" fill="#FFFFFF" points="184.8,636.792 180.049,646.557 187.44,646.557 183.217,656.588 		"/>
 		<polygon display="inline" fill="#898989" points="185.041,655.819 180.6,655.819 184.458,648.538 176.885,648.538 
 			183.021,637.659 187.372,637.659 183.213,644.578 190.422,644.578 		"/>
@@ -488,6 +543,12 @@
 		fill = "freeze"
 		id = "wire1"
 		/>
+		<animate attributeName = "stroke-dashoffset"
+		from = "0" to = "200"
+		begin = "reverse.begin + 1s" dur = "0.7s"
+		fill = "freeze"
+		id = "wire2"
+		/>
 
 	</polyline>
 	<polyline id="wire2_1_"  opacity = "1" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="293.102,572.458 293.102,671.444 527.074,671.444 527.074,642.3" stroke-dasharray = "500,500" stroke-dashoffset = "500">
@@ -495,7 +556,13 @@
 		from = "500" to = "0"
 		begin = "wire1.end" dur = "1.3s"
 		fill = "freeze"
-		id = "wire1"
+		
+		/>	
+		<animate attributeName = "stroke-dashoffset"
+		from = "0" to = "500"
+		begin = "wire2.end" dur = "1.3s"
+		fill = "freeze"
+	
 		/>
 	</polyline>
 
