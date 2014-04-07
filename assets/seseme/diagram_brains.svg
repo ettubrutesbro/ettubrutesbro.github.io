@@ -6,11 +6,9 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" additive = 
-		"sum" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" />
 
-	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" 
-		additive = "sum"/>
+	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
@@ -69,7 +67,7 @@
 				additive = "sum"
 				begin = "big.begin" dur = "1s"
 				fill = "freeze"
-				
+				id = "expandstepper"
 			/>
 		
 			<animateTransform  attributeName = "transform" 
@@ -78,7 +76,7 @@
 				additive = "sum"
 				begin = "wire2.end" dur = "0.45s"
 				fill = "freeze"
-			
+				id = "revertstepper"
 			/>
 		
 
