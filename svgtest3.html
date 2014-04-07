@@ -1,7 +1,7 @@
 <svg height="200" width="100">
   <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red">
-  	<animateMotion from = "0,0" to = "0,100" dur = "1s" begin = "0;second.end" fill = "freeze" id = "first"/>
-  	<animateMotion from = "0,100" to = "0,0" dur = "1s" begin = "first.end" fill = "freeze" id = "second"/>
+  	<animateMotion from = "0,0" to = "0,100" dur = "1s" begin = "0;second.end" additive = "sum" fill = "freeze" id = "first"/>
+  	<animateMotion from = "0,100" to = "0,0" dur = "1s" begin = "first.end + 1s" additive = "sum" fill = "freeze" id = "second"/>
 
   </circle>
 </svg>
