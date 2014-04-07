@@ -61,8 +61,8 @@
 			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
 	</g>
 	<g id="stepper_1_" pointer-events = "all">
-			<animateTransform  attributeName = "transform" 
-				type = "translate"
+			<animateMotion 
+				from = "0,0"
 				by = "172.8,0"
 				additive = "sum"
 				begin = "0;revertstepper.end" dur = "1s"
@@ -70,10 +70,10 @@
 				id = "expandstepper"
 			/>
 		
-			<animateTransform  attributeName = "transform" 
-				type = "translate"
+			<animateMotion
+				from = "0,0"
 				by = "-172.8,0"
-				additive = "remove"
+				additive = "sum"
 				begin = "expandstepper.end" dur = "0.45s"
 				fill = "freeze"
 				id = "revertstepper"
