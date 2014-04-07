@@ -101,7 +101,10 @@
                     console.log(arrid[i]); //get and eventually modify width of parent object's parent div 
                     
                     if(arrid[i]==whichBig){ //if selection is already expanded
-
+                        // test function to shrink items to original size
+                        var arrwidth = [220, 120, 120, 200, 200];
+                        $("." + arrid[i] + "").animate({width: arrwidth[i]); //does it need +px? 
+                       
                     }else{ //if selection is NOT already expanded....
                         var wid = $("." + arrid[i] + "").width();
                         var ht = $("." + arrid[i] + "").height();
