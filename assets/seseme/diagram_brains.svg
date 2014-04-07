@@ -66,14 +66,32 @@
 				from = "0,0" to = "172.8,0"
 				additive = "sum"
 				begin = "big.begin" dur = "1s"
-				fill = "remove"
+				fill = "freeze"
+				id = "expandstepper"
+			/>
+			<animateTransform  attributeName = "transform" 
+				type = "translate"
+				from = "0,0" to = "0,0"
+				additive = "sum"
+				begin = "expandstepper.end" dur = "0s"
+				calcMode = "discrete"
+				fill = "freeze"
 			/>
 			<animateTransform  attributeName = "transform" 
 				type = "translate"
 				from = "0,0" to = "-172.8,0"
 				additive = "sum"
 				begin = "wire2.end" dur = "0.45s"
-				fill = "remove"
+				fill = "freeze"
+				id = "revertstepper"
+			/>
+			<animateTransform  attributeName = "transform" 
+				type = "translate"
+				from = "0,0" to = "0,0"
+				additive = "sum"
+				begin = "revertstepper.end" dur = "0s"
+				calcMode = "discrete"
+				fill = "freeze"
 			/>
 
 
