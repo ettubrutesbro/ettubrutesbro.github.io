@@ -105,10 +105,10 @@
                         var revert = element.getElementById('reverse'); 
                         revert.beginElement();
                         var arrwidth = [200, 200, 120, 120, 220];
-                        $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}); 
+                        $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
                         //restore the shrunken icons to normal size
                         $(".svgContainers").each(function(index){
-                            $(this).animate({width: arrwidth[index]});
+                            $(this).animate({width: arrwidth[index]}, 800);
                            
                         })
             

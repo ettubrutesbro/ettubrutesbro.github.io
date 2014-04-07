@@ -8,7 +8,7 @@
 
 	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" />
 
-	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
+	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.8s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
@@ -22,7 +22,7 @@
 			type = "translate"
 			from = "0,0" to = "0,40"
 			additive  = "sum" fill = "freeze"
-			begin = "reverse.begin" dur = "0.96s"
+			begin = "reverse.begin" dur = "0.8s"
 			/>
 
 
@@ -49,7 +49,7 @@
 			type = "translate"
 			from = "0,0" to = "0,-63"
 			additive = "sum"
-			begin = "reverse.begin + 0.5s" dur = "0.5s"
+			begin = "reverse.begin" dur = "0.5s"
 			fill = "freeze"
 		/>
 			<rect x="84.768" y="299.522" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="7" stroke-miterlimit="10" width="42" height="42.602"/>
@@ -72,7 +72,7 @@
 				type = "translate"
 				from = "0,0" to = "-172.8,0"
 				additive = "sum"
-				begin = "reverse.begin" dur = "1s"
+				begin = "wire2.end" dur = "0.45s"
 				fill = "freeze"
 			/>
 
@@ -115,7 +115,7 @@
 			type = "translate"
 			from = "0,0" to = "-86.4,-0"
 			additive = "sum"
-			begin = "reverse.begin" dur = "1s"
+			begin = "wire2.end" dur = "0.45s"
 			fill = "freeze"
 			/>
 
@@ -170,7 +170,7 @@
 	/>
 	<animate attributeName = "opacity"
 		from = "1" to = "0"
-		begin = "reverse.begin" dur = "1s"
+		begin = "reverse.begin" dur = "0.3s"
 		fill = "freeze"
 	/>
 
@@ -185,7 +185,7 @@
 		/>	
 		<animate  attributeName = "opacity"
 		from = "1" to = "0"
-		begin = "reverse.begin" dur = "1s"
+		begin = "reverse.begin" dur = "0.3s"
 		fill = "freeze"
 		/>
 		<g display="inline">
@@ -525,7 +525,7 @@
 		/>	
 		<animate attributeName = "opacity"
 		from = "1" to = "0"
-		begin = "reverse.begin" dur = "1s"
+		begin = "reverse.begin" dur = "0.3s"
 		fill = "freeze"
 		/>
 
@@ -545,7 +545,7 @@
 		/>
 		<animate attributeName = "stroke-dashoffset"
 		from = "0" to = "200"
-		begin = "reverse.begin + 1s" dur = "0.7s"
+		begin = "reverse.begin" dur = "0.3s"
 		fill = "freeze"
 		id = "wire2"
 		/>
@@ -560,7 +560,7 @@
 		/>	
 		<animate attributeName = "stroke-dashoffset"
 		from = "0" to = "500"
-		begin = "wire2.end" dur = "1.3s"
+		begin = "reverse.begin" dur = "0.3s"
 		fill = "freeze"
 	
 		/>
