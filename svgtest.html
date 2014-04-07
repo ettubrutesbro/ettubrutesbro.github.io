@@ -100,11 +100,11 @@
                 
                 $(element).click(function(){
                     //conditional checks if selected element is already expanded
-                    
+                     var arrwidth = [200, 200, 120, 120, 220];
                     if(arrid[i]==whichBig){ //if selection is already expanded
                         var revert = element.getElementById('reverse'); 
                         revert.beginElement();
-                        var arrwidth = [200, 200, 120, 120, 220];
+                       
                         $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
                         //restore the shrunken icons to normal size
                         $(".svgContainers").each(function(index){
