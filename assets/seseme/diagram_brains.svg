@@ -69,7 +69,7 @@
 				additive = "sum"
 				begin = "big.begin" dur = "1s"
 				fill = "freeze"
-				id = "expandstepper"
+				
 			/>
 		
 			<animateTransform  attributeName = "transform" 
@@ -78,7 +78,7 @@
 				additive = "sum"
 				begin = "wire2.end" dur = "0.45s"
 				fill = "freeze"
-				id = "revertstepper"
+			
 			/>
 		
 
