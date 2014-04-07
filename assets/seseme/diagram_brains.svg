@@ -61,7 +61,8 @@
 			<rect x="113.609" y="325.918" display="inline" fill="#FFFFFF" stroke="#898989" stroke-width="5" stroke-miterlimit="10" width="3.208" height="3.208"/>
 	</g>
 	<g id="stepper_1_" pointer-events = "all">
-			<animateMotion 
+			<animateTransform attributeName = "transform"
+			type = "translate"
 				from = "0,0"
 				to = "172.8,0"
 				
@@ -70,7 +71,8 @@
 				id = "expandstepper"
 			/>
 		
-			<animateMotion
+			<animateTransform attributeName = "transform"
+			type = "translate"
 				from = "172.8,0"
 				to = "0,0"
 				
