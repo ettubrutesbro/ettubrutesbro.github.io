@@ -71,8 +71,8 @@
 			/>
 		
 			<animateMotion
-				
-				by = "-172.8,0"
+				from = "172.8,0"
+				by = "0,0"
 				
 				begin = "reverse.begin" dur = "0.45s"
 				fill = "freeze"
