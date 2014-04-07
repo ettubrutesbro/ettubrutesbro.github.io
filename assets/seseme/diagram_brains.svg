@@ -65,7 +65,7 @@
 				
 				by = "172.8,0"
 				additive = "sum"
-				begin = "wire1.end" dur = "1s"
+				begin = "big.begin" dur = "1s"
 				fill = "freeze"
 				id = "expandstepper"
 			/>
@@ -75,7 +75,7 @@
 				from = "172.8,0"
 				to = "0,0"
 				additive = "sum"
-				begin = "wire2.end" dur = "0.45s"
+				begin = "reverse.begin" dur = "0.45s"
 				fill = "freeze"
 				id = "revertstepper"
 			/>
