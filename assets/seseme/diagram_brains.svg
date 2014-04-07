@@ -63,17 +63,17 @@
 	<g id="stepper_1_" pointer-events = "all">
 			<animateMotion 
 				from = "0,0"
-				by = "172.8,0"
-				additive = "sum"
+				to = "172.8,0"
+				
 				begin = "big.begin" dur = "1s"
 				fill = "freeze"
 				id = "expandstepper"
 			/>
 		
 			<animateMotion
-				from = "0,0"
-				by = "-172.8,0"
-				additive = "sum"
+				from = "172.8,0"
+				by = "0,0"
+				
 				
 				begin = "reverse.begin" dur = "0.45s"
 				fill = "freeze"
