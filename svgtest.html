@@ -106,7 +106,7 @@
                         $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}); //does it need +px? 
                         //restore the shrunken icons to normal size
                         arrid.forEach(function(element, i){
-                            $(this).animate({width: arrwidth[i]});
+                            $(element).animate({width: arrwidth[i]});
                             console.log($(this).attr('id') + ' restored');
                         })
             
