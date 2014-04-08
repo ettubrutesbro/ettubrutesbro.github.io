@@ -12,16 +12,14 @@
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
-		<animateTransform attributeName = "transform"
-			type = "translate"
+		<animateMotion
 			from = "0,0" to = "0,-40"
-			additive  = "sum" fill = "freeze"
+			fill = "freeze"
 			begin = "big.begin" dur = "0.96s"
 			/>	
-		<animateTransform attributeName = "transform"
-			type = "translate"
-			from = "0,0" to = "0,40"
-			additive  = "sum" fill = "freeze"
+		<animateMotion
+			from = "0,-40" to = "0,0"
+			fill = "freeze"
 			begin = "reverse.begin" dur = "1s"
 			/>
 
