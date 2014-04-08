@@ -111,7 +111,7 @@
                         //restore the shrunken icons to normal size
                         $(".svgContainers").not("." + arrid[i] + "").each(function(index){
                             $(this).animate({width: arrwidth[index]}, 800); 
-                            console.log(index);
+                            console.log(index + " vs " + i);
                             console.log(arrwidth[index]);
                         })
 
