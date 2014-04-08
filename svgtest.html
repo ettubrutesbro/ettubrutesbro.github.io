@@ -107,13 +107,15 @@
                         var revert = element.getElementById('reverse'); 
                         revert.beginElement();
                        
-                        $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
+                        
                         //restore the shrunken icons to normal size
                         $(".svgContainers").each(function(index){
                             $(this).animate({width: arrwidth[index]}, 800); 
                             console.log(index + " vs " + i);
                             console.log(arrwidth[index]);
                         })
+
+                        $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
 
                         whichBig = null;
                        
