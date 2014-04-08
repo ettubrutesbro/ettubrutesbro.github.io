@@ -107,11 +107,14 @@
                         var revert = element.getElementById('reverse'); 
                         revert.beginElement();
                        
-                        //$("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
+                        $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
                         //restore the shrunken icons to normal size
-                        $(".svgContainers").not("." + arrid[i] + "").each(function(index){
+                        $(".svgContainers").each(function(index){
                             $(this).animate({width: arrwidth[index]}, 800); 
+                            console.log($(this).attr('id'));
+                            console.log(arrwidth[index]);
                         })
+
                         whichBig = null;
                        
                     }else{ //if selection is NOT already expanded....
