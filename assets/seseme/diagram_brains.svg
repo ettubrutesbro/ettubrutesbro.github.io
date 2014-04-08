@@ -8,7 +8,7 @@
 
 	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 450" to = "0 0 650 390" fill = "freeze" />
 
-	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.3s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
+	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.1s" from = "0 0 650 390" to = "0 0 490 450" fill = "freeze" />
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-250)">
 
