@@ -112,7 +112,7 @@
                         $(".svgContainers").each(function(index){
                             if(index == i){
                                 console.log('');
-                                $("." + arrid[i] + "").animate({marginRight: ""}, 400);
+                                $("." + arrid[i] + "").animate({marginRight: ""}, 200);
                             }
                             $(this).animate({width: arrwidth[index]}, 800); 
                             
@@ -127,6 +127,7 @@
                         var arrwidth = [220, 120, 120, 200, 200];
                         var anim =  element.getElementById('big');
                         var wid = arrwidth[i];//$("." + arrid[i] + "").width();
+                        console.log(wid)
 
                         var ht = $("." + arrid[i] + "").height();
                         anim.beginElement();
