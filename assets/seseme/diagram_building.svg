@@ -44,6 +44,8 @@
 
 <animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.95s" from = "0 0 490 390" to = "0 0 950 580" fill = "freeze" calcMode = "paced" />
 
+<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "0.95s" from = "0 0 950 580" to = "0 0 490 390" fill = "freeze" calcMode = "paced" />
+
 <filter id = "blurrySun">
 	<feGaussianBlur id = "sunblur" stdDeviation = "0, 0" />
 </filter>
@@ -52,11 +54,15 @@
 
 
 <g id="building" pointer-events = "all" transform = "translate(580,-300)">
-		<animateTransform attributeName = "transform"
-			type = "translate"
+		<animateMotion
 			from = "0,0" to = "200,100"
-			additive  = "sum" fill = "freeze"
+			fill = "freeze"
 			begin = "big.begin" dur = "0.95s"
+			/>
+		<animateMotion
+			from = "200,100" to = "0,0"
+			fill = "freeze"
+			begin = "reverse.begin" dur = "0.25s"
 			/>
 
 		
@@ -64,6 +70,11 @@
 		<animate attributeName = "opacity"
 		from = "0" to = "1"
 		begin = "big.begin + 0.4s" dur = "1s"
+		fill = "freeze"
+		/>
+		<animate attributeName = "opacity"
+		from = "1" to = "0"
+		begin = "reverse.begin + 0.15s" dur = ".25s"
 		fill = "freeze"
 		/>
 			<line id="solarline_1_"  fill="none" stroke="#898989" opacity = "0" stroke-width="5" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1,9" x1="-266.884" y1="388.021" x2="-266.884" y2="388.021">
@@ -81,6 +92,21 @@
 						to = "343.523"
 						begin = "big.begin + 1.8s" dur = "0.4s"
 						fill = "freeze"
+						/>	
+					<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + .4s" dur = "0.25s"
+						fill = "freeze"
+						/>
+					<animate attributeName = "x2"
+						to = "-266.884"
+						begin = "reverse.begin + .4s" dur = "0.25s"
+						fill = "freeze"
+						/>
+					<animate attributeName = "y2"
+						to = "388.021"
+						begin = "reverse.begin + .4s" dur = "0.25s"
+						fill = "freeze"
 						/>
 			</line>
 		
@@ -95,11 +121,23 @@
 						begin = "big.begin + 1.4s" dur = "0.1s"
 						fill = "freeze"
 						/>
-						<animate attributeName = "y1"
+					<animate attributeName = "y1"
 						to = "436.437"
 						begin = "big.begin + 1.5s" dur = "0.45s"
 						fill = "freeze"
 						/>
+					<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + .4s" dur = "0.15s"
+						fill = "freeze"
+						/>
+					<animate attributeName = "y1"
+						to = "632.852"
+						begin = "reverse.begin + .5s" dur = "0.15s"
+						fill = "freeze"
+						/>
+
+
 					</line>
 				
 					
@@ -113,6 +151,16 @@
 						<animate attributeName = "x2"
 						to = "-10.792"
 						begin = "big.begin + 1.2s" dur = "0.3s"
+						fill = "freeze"
+						/>
+						<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + 0.4s" dur = "0.15s"
+						fill = "freeze"
+						/>
+						<animate attributeName = "x2"
+						to = "-112.614"
+						begin = "reverse.begin + 0.4s" dur = "0.15s"
 						fill = "freeze"
 						/>
 					</line>
@@ -129,6 +177,11 @@
 						begin = "big.begin + 2.6s" dur = "0.3s"
 						fill = "freeze"
 						/>
+						<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + 0.4s" dur = "0.15s"
+						fill = "freeze"
+						/>
 			</path>
 
 			<path id="_x32__1_" fill="#898989" d="M-101.588,335.606v10.679c33.48,0,60.719,27.238,60.719,60.719h10.679
@@ -138,6 +191,11 @@
 						begin = "big.begin + 2.4s" dur = "0.3s"
 						fill = "freeze"
 						/>
+					<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + .4s" dur = "0.15s"
+						fill = "freeze"
+						/>
 			</path>
 
 			<path id="_x31__1_" fill="#898989" d="M-101.588,365.91v9.788c17.262,0,31.306,14.045,31.306,31.307h9.789
@@ -145,6 +203,11 @@
 				<animate attributeName = "opacity"
 						to = "1"
 						begin = "big.begin + 2.3s" dur = "0.3s"
+						fill = "freeze"
+						/>
+				<animate attributeName = "opacity"
+						to = "0"
+						begin = "reverse.begin + .4s" dur = "0.25s"
 						fill = "freeze"
 						/>
 			</path>
@@ -163,8 +226,30 @@
 						begin = "big.begin + 1s" dur = "0.3s"
 						fill = "freeze"
 						/>
+
+						<animate attributeName = "x1"
+						to = "-566.394"
+						begin = "big.begin + 1s" dur = "0.3s"
+						fill = "freeze"
+						/>
+						<animate attributeName = "y1"
+						to = "595.443"
+						begin = "big.begin + 1s" dur = "0.3s"
+						fill = "freeze"
+						/>
 				</line>
 				<line fill="none" stroke="#898989" stroke-width="5" stroke-miterlimit="10" x1="-620.957" y1="746.164" x2="-620.957" y2="746.164">
+						<animate attributeName = "x1"
+						to = "-529.762"
+						begin = "big.begin  + 0.9s" dur = "0.3s"
+						fill = "freeze"
+						/>
+						<animate attributeName = "y1"
+						to = "641.443"
+						begin = "big.begin + 0.9s" dur = "0.3s"
+						fill = "freeze"
+						/>
+						
 						<animate attributeName = "x1"
 						to = "-529.762"
 						begin = "big.begin  + 0.9s" dur = "0.3s"
