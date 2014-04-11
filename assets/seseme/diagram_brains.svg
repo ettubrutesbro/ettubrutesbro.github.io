@@ -13,12 +13,12 @@
 <g id="brains" pointer-events = "all" transform = "translate(0,-320)">
 
 		<animateMotion
-			from = "0,0" to = "0,20"
+			from = "0,0" to = "0,30"
 			fill = "freeze"
 			begin = "big.begin" dur = "0.96s"
 			/>	
 		<animateMotion
-			from = "0,20" to = "0,0"
+			from = "0,30" to = "0,0"
 			fill = "freeze"
 			begin = "reverse.begin" dur = "1s"
 			/>
