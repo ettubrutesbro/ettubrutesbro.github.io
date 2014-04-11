@@ -100,11 +100,13 @@
                 
                 $(element).click(function(){
                     //conditional checks if selected element is already expanded
-                     
+                     var revert = element.getElementById('reverse'); 
+                    var anim =  element.getElementById('big');
+
                     if(arrid[i]==whichBig){ //if selection is already expanded
                         console.log('reverting');
                         var arrwidth = [200, 200, 120, 120, 220];
-                        var revert = element.getElementById('reverse'); 
+                        anim.endElement();
                         revert.beginElement();
                        
                         
@@ -120,16 +122,17 @@
 
                        // $("." + arrid[i] + "").animate({width: arrwidth[i], marginRight: ""}, 800); 
 
-                        whichBig = null;
+                        whichBig = "";
                        
                     }else{ //if selection is NOT already expanded....
                         console.log('expanding');
                         var arrwidth = [220, 120, 120, 200, 200];
-                        var anim =  element.getElementById('big');
+                       
                         var wid = arrwidth[i];//$("." + arrid[i] + "").width();
                         console.log(wid)
 
                         var ht = $("." + arrid[i] + "").height();
+                        revert.endElement();
                         anim.beginElement();
                         whichBig = arrid[i];
                         //depending on aspect, make selection larger
