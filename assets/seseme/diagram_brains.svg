@@ -6,9 +6,9 @@
 	 xml:space="preserve">
 
 
-	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 390" to = "0 0 650 390" fill = "freeze" />
+	<animate id = "big" attributeName = "viewBox" begin = "indefinite" dur = "0.96s" from = "0 0 490 390" to = "0 0 650 390" fill = "freeze" additive = "sum" />
 
-	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 650 390" to = "0 0 490 390" fill = "freeze" />
+	<animate id = "reverse" attributeName = "viewBox" begin = "indefinite" dur = "1s" from = "0 0 650 390" to = "0 0 490 390" fill = "freeze" additive = "sum"/>
 
 <g id="brains" pointer-events = "all" transform = "translate(0,-320)">
 
