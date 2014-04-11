@@ -104,17 +104,13 @@
 		<path fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" d="M361.074,433.333"/>
 	</g>
 	<g id="bigeasydriver_1_" pointer-events = "all">
-			<animateTransform attributeName = "transform"
-			type = "translate"
+			<animateMotion 
 			from = "0,0" to = "86.4,-0"
-			additive = "sum"
 			begin = "big.begin" dur = "1s"
 			fill = "freeze"
 			/>
-			<animateTransform attributeName = "transform"
-			type = "translate"
-			from = "0,0" to = "-86.4,0"
-			additive = "sum"
+			<animateMotion 
+			from = "86.4,0" to = "0,0"
 			begin = "wire2.end" dur = "0.45s"
 			fill = "freeze"
 			/>
