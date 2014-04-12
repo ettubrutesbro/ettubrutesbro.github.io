@@ -128,7 +128,7 @@
 						/>
 					<animate attributeName = "opacity"
 						to = "0"
-						begin = "reverse.begin + .4s" dur = "0.15s"
+						begin = "reverse.begin + .8s" dur = "0.3s"
 						fill = "freeze"
 						/>
 					<animate attributeName = "y1"
