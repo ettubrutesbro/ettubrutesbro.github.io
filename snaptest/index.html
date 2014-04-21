@@ -1,0 +1,913 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Narrative Diagram (Linear)</title>
+<script src="snap.svg-min.js"></script>
+<script src="jquery-2.1.0.min.js"></script>
+
+<style>
+	div {
+		display: inline;
+	
+	
+		
+
+	}
+</style>
+
+</head>
+
+<body>
+
+<div style = "margin-left: 0px">
+		<svg id = "one" width = "200px"></svg>
+</div>
+<div style = "margin-left: -50px">
+	<svg id = "two" width = "140px"></svg>
+</div>
+<div style = "margin-left: -10px">
+	<svg id = "three" width = "120px"></svg>
+</div>
+<div style = "margin-left: -10px">
+	<svg id = "four" width = "100px"></svg>
+</div>
+<div style = "margin-left: 0px">
+	<svg id = "five" width = "190px"> </svg>
+</div>
+
+
+<script>
+window.onload = function () {
+
+	var first, second, third, fourth, fifth;
+	first = second = third = fourth = fifth = false;
+
+	/*$(document).click(function(){
+		console.log(first + " " + second + " " + third + " " + fourth + " " + fifth);
+	}
+		)*/
+
+	//custom function for changing 5 div svg widths
+	function reWidth(aW, bW, cW, dW, eW) {
+		for(var i = 0; i < arguments.length; i++){
+			$('div:nth-of-type(' + (i+1) +')').children('svg').animate({width: arguments[i] + 'px'},450);
+		}
+	}
+	//custom function for changing 5 div margin-lefts
+	function reMargin(aM, bM, cM, dM, eM){
+		for(var i = 0; i < arguments.length; i++){
+			$('div:nth-of-type(' + (i+1) +')').animate({marginLeft: arguments[i] + 'px'},450);
+		}
+	}
+
+	//jquery div and dimension manipulation animations
+	
+	$('div:first').hover(function(){
+		if(!first && !second && !third && !fourth && !fifth){
+			$(this).children('svg').animate({width: '300px'});
+		}
+	}, function(){
+		if(!first && !second && !third && !fourth && !fifth){
+			$(this).children('svg').animate({width: '200px'});
+			}	
+	})
+	
+	$('div:nth-of-type(2)').hover(function(){
+		if(!first && !second && !third && !fourth && !fifth){
+			$(this).children('svg').animate({width: '280px'});
+			$(this).animate({marginLeft: '-110px'});
+		}
+	}, function(){
+		if(!first && !second && !third && !fourth && !fifth){
+			$(this).children('svg').animate({width: '140px'});
+			$(this).animate({marginLeft: '-50px'});
+			}	
+	})
+	
+
+
+	$('div:first').click(function(){
+		second = third = fourth = fifth = false;
+		if(!first){
+			console.log('expand');
+			reWidth(300,70,35,40,100);
+			reMargin(0, 170, 0, 0, 0);
+		}else{
+			reWidth(200,140,120,100,190);
+			reMargin(0, -50, -10, -10, 0);
+		}
+		first = !first;
+		
+
+	})
+
+	$('div:nth-of-type(2)').click(function(){
+		first = third = fourth = fifth = false;
+		if(!second){
+			reWidth(110,280,35,40,100);
+			reMargin(0,-90,250,0,0);
+		} else{
+			reWidth(200,140,120,100,190);
+			reMargin(0, -50, -10, -10, 0);
+		}
+		second = !second;
+		
+	})
+
+	$('div:nth-of-type(3)').click(function(){	
+		second = first = fourth = fifth = false;
+		if(!third){
+			reWidth(110,70,150,40,100);
+			reMargin(0,-30,140,140,0);
+		}else{
+			reWidth(200,140,120,100,190);
+			reMargin(0, -50, -10, -10, 0);
+		}
+		third = !third;
+		
+	})
+
+	$('div:nth-of-type(4)').click(function(){	
+		second = third = first = fifth = false;
+		if(!fourth){
+			reWidth(110,70,35,100,100);
+			reMargin(0,-30,0,280,0);
+		}else{
+			reWidth(200,140,120,100,190);
+			reMargin(0, -50, -10, -10, 0);
+		}
+		fourth = !fourth;
+		
+	})
+
+	$('div:nth-of-type(5)').click(function(){	
+		second = third = fourth = first = false;
+		if(!fifth){
+			reWidth(110,70,35,40,250);
+			reMargin(0,-30,0,0,300);
+		}else{
+			reWidth(200,140,120,100,190);
+			reMargin(0, -50, -10, -10, 0);
+		}
+		fifth = !fifth;	
+		
+	})
+
+
+	
+
+
+	//intra-svg animation functions
+	var s1 = Snap("#one");
+	Snap.load("diagram_building.svg", function(f){
+		var g;
+		g = f.select("svg");
+		s1.append(g);
+		var all = g.select('#building'),
+				grid_l = g.select('#gridline'),
+				gridline = grid_l.path("M -113 641").attr({
+					stroke: "#898989",
+					strokeWidth: 10,
+					fill: "none",
+					strokeLinecap: "round",
+					strokeDasharray: "0.1, 20"
+				}),
+
+				solar_l = g.select('#linesetc'),
+				solarline = solar_l.path("M -267 388").attr({
+					stroke: "#898989",
+					strokeWidth: 10,
+					fill: "none",
+					strokeLinecap: "round",
+					strokeDasharray: "0.1, 20"
+				}),
+				wifi1 = g.select('#wifi1'),
+				wifi2 = g.select('#wifi2'),
+				wifi3 = g.select('#wifi3'),
+				grid = g.select("#grid"),
+				d1 = grid.path("M-785 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d2 = grid.path("M-621 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d3 = grid.path("M-469 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d4 = grid.path("M-341 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d5 = grid.path("M-214 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d6 = grid.path("M-62 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				d7 = grid.path("M101 746").attr("stroke","#898989").attr("strokeWidth","5"),
+				/*diag_lines = [d1, d2, d3, d4, d5, d6, d7],
+				diag_x1 = [-785, -621, -469, -341, -214, -62, 101],
+				diag_x2 = [-566, -530, -437, -341, -247, -153, -117],*/
+				h1 = grid.path("M -595 602").attr("stroke","#898989").attr("strokeWidth","5"),
+				h2 = grid.path("M -630 619").attr("stroke","#898989").attr("strokeWidth","5"),
+				h3 = grid.path("M -675 641").attr("stroke","#898989").attr("strokeWidth","5"),
+				h4 = grid.path("M -733 672").attr("stroke","#898989").attr("strokeWidth","5"),
+				h5 = grid.path("M -811 708").attr("stroke","#898989").attr("strokeWidth","5"),
+				sol = g.select('#sun'),
+				windows = g.select('#windows'),
+				f = g.select('#gausBlur');
+
+				var timeOutA, timeOutB, timeOutC, timeOutD, timeOutE;
+
+				$("#one").mouseover(function(){
+					if(!first && !second && !third && !fourth && !fifth){
+						open();
+					}
+				});
+
+				$("#one").mouseout(function(){
+					if(!first){
+						close();
+					}
+				})
+
+				$("#one").click(function(){
+					open();
+				})
+
+
+					// listener / handler 
+
+				setInterval(function(){ // there has got to be a better solution
+					if(second || third || fourth || fifth){
+					console.log('closing time');
+					close();
+				}
+				}, 500);
+
+				function open(){
+					console.log('mousedover');
+
+					function delayA(d) {
+						timeOutA = window.setTimeout(function(){ //everything that waits 300 starts here
+							console.log('timeouta');
+							gridline.animate({
+								path: "M -113 641 L -32 641"
+							}, 200)
+
+						}, d)
+					}
+
+					function delayB(d) {
+						timeOutB = window.setTimeout(function(){ //everything that waits 600 starts here
+							console.log('timeoutb');
+							gridline.animate({
+									path: "M -113 641 L -32 641 L -32 436"
+								}, 200)
+						}, d)
+					}
+
+					function delayC(d){
+						timeOutC = window.setTimeout(function(){
+						wifi1.animate({opacity:1},100)
+					}, d)
+					}
+
+					function delayD(d){
+						timeOutD = window.setTimeout(function(){
+						wifi2.animate({opacity:1},100)					
+					}, d)
+					}
+
+					function delayE(d){
+						timeOutE = window.setTimeout(function(){
+						wifi3.animate({opacity:1},100)
+					}, d)
+					}
+
+					window.clearTimeout(timeOutA);
+					window.clearTimeout(timeOutB);
+					window.clearTimeout(timeOutC);
+					window.clearTimeout(timeOutD);
+					window.clearTimeout(timeOutE);
+				
+					delayA(120);
+					delayB(300);
+					delayC(400);
+					delayD(500);
+					delayE(600);
+					
+					
+
+					solarline.animate({
+						path: "M -267 388 L -125 344"
+					}, 300)
+
+					sol.animate({
+						transform: "t 80 -100 s 0.75",
+						opacity: 0.75
+					}, 300)
+
+					f.animate({
+						stdDeviation: "8"
+					}, 300)
+
+					windows.animate({
+						opacity: 1
+					}, 300)
+
+					d1.animate({
+						path: "M -785 746 L-566 595"
+					}, 300)
+
+					d2.animate({
+						path: "M -621 746 L-530 641"
+					}, 300)
+
+					d3.animate({
+						path: "M -469 746 L-437 641"
+					}, 300)
+
+					d4.animate({
+						path: "M -341 746 L-341 641"
+					}, 300)
+
+					d5.animate({
+						path: "M -214 746 L-247 641"
+					}, 300)
+
+					d6.animate({
+						path: "M -62 746 L-153 641"
+					}, 300)
+
+					d7.animate({
+						path: "M 101 746 L-117 590"
+					}, 300)
+
+					h1.animate({
+						path: "M -595 602 L -87 602"
+					}, 300)
+					h2.animate({
+						path: "M -630 619 L -46 619"
+					}, 300)
+					h3.animate({
+						path: "M -675 641 L -117 641"
+					}, 300)
+										
+											
+											
+					h4.animate({
+						path: "M -733 672 L 46 672"
+					}, 300)
+					h5.animate({
+						path: "M -811 708 L 133 708"
+					}, 300)
+
+
+
+				}
+
+				function close(){
+					window.clearTimeout(timeOutA);
+					window.clearTimeout(timeOutB);
+					window.clearTimeout(timeOutC);
+					window.clearTimeout(timeOutD);
+					window.clearTimeout(timeOutE);
+					wifi1.animate({
+						opacity: 0
+					}, 300)
+					wifi2.animate({
+						opacity: 0
+					}, 300)
+					wifi3.animate({
+						opacity: 0
+					}, 300)
+					solarline.animate({
+						path: "M -267 388"
+					}, 300)
+
+					gridline.animate({
+						path: "M -113 641"
+					}, 200)
+
+
+					sol.animate({
+						transform: "t 0 0 s 1",
+						opacity: 1
+					}, 300)
+
+					f.animate({
+						stdDeviation: 0
+					}, 300)
+
+
+					windows.animate({
+						opacity: 0
+					}, 300)
+
+					d1.animate({
+						path: "M -785 746"
+					}, 300)
+
+					d2.animate({
+						path: "M -621 746"
+					}, 300)
+
+					d3.animate({
+						path: "M -469 746"
+					}, 300)
+
+					d4.animate({
+						path: "M -341 746"
+					}, 300)
+
+					d5.animate({
+						path: "M -214 746"
+					}, 300)
+
+					d6.animate({
+						path: "M -62 746"
+					}, 300)
+
+					d7.animate({
+						path: "M 101 746"
+					}, 300)
+
+					h1.animate({
+						path: "M -595 602"
+					}, 300)
+					h2.animate({
+						path: "M -630 619"
+					}, 300)
+					h3.animate({
+						path: "M -675 641"
+					}, 300)
+					h4.animate({
+						path: "M -733 672"
+					}, 300)
+					h5.animate({
+						path: "M -811 708"
+					}, 300)
+
+				}
+
+
+
+
+				
+	})
+
+	var s2 = Snap("#two");
+	Snap.load("diagram_brains.svg", function(f){
+		var g;
+		g = f.select("svg");
+		s2.append(g);
+		var pwr = g.select('#power'),
+		brains = g.select('#brains'),
+		wire1 = brains.path('M 218,421').attr("stroke","#000").attr("strokeWidth","7").attr("fill","none"),
+		wire2 = brains.path('M 293,572').attr("stroke","#000").attr("strokeWidth","7").attr("fill","none"),
+		
+		usb = g.select('#usb'),
+		io = g.select('#IO'),
+		beaglebone = g.select('#beaglebone'),
+		bigeasydriver = g.select('#bigeasydriver'),
+		stepper = g.select('#stepper'),
+		nanowifi = g.select('#nanowifi'),
+		all = g.select('#brains');
+
+		var timeOutA, timeOutB, timeOutC, timeOutD, timeOutE;
+
+		
+		$("#two").mouseover(function(){
+			if(!first && !second && !third && !fourth && !fifth){
+				open();
+			}
+		});
+		$("#two").mouseout(function(){
+			if(!first && !second && !third && !fourth && !fifth){
+				close();
+			}	
+		});
+
+		$("#two").click(function(){
+			open();
+		})
+
+		setInterval(function(){ // there has got to be a better solution
+					if(first || third || fourth || fifth){
+					console.log('closing time');
+					close();
+				}
+				}, 500);
+
+		function open(){
+			function delayA(d){
+				timeOutA = window.setTimeout(function(){
+				wire1.animate({
+					path: "M 218,421 L 293,421"
+				}, 100)
+			}, d)
+			}
+			function delayB(d){
+				timeOutB = window.setTimeout(function(){
+				wire1.animate({
+					path: "M 218,421 L 293,421 L 293,458"
+				}, 100)
+				}, d)
+			}
+			function delayC(d){
+				timeOutC = window.setTimeout(function(){
+				wire2.animate({
+					path: "M 293,572 L 293,671"
+				}, 100)
+				}, d)
+			}
+			function delayD(d){
+				timeOutD = window.setTimeout(function(){
+				wire2.animate({
+					path: "M 293,572 L 293,671 L 527,671"
+				}, 100)
+				}, d)
+			}
+			function delayE(d){
+				timeOutE = window.setTimeout(function(){
+				wire2.animate({
+					path: "M 293,572 L 293,671 L 527,671 L 527,642"
+				}, 100)
+				}, d)
+			}
+
+			clearTimeout(timeOutA); //get rid of window
+			clearTimeout(timeOutB);
+			window.clearTimeout(timeOutC);
+			window.clearTimeout(timeOutD);
+			window.clearTimeout(timeOutE);
+
+			delayA(200); delayB(300); delayC(500); delayD(600); delayE(700);
+
+			bigeasydriver.animate({
+				transform: "t 86 0"
+			}, 300)
+			stepper.animate({
+				transform: "t 173 0"
+			}, 300)
+
+				io.animate({
+					opacity: 1
+				}, 300)
+				usb.animate({
+					opacity: 1
+				}, 300)
+				nanowifi.animate({
+					opacity: 1,
+					transform: "t 0 63"
+				}, 300)
+				pwr.animate({
+					opacity: 1
+				}, 300)
+
+			
+		}
+
+		function close(){
+			window.clearTimeout(timeOutA);
+			window.clearTimeout(timeOutB);
+			window.clearTimeout(timeOutC);
+			window.clearTimeout(timeOutD);
+			window.clearTimeout(timeOutE);
+
+			wire1.animate({
+				path: "M 218,421"
+			}, 150)
+			wire2.animate({
+				path: "M 293,572"
+			}, 150)
+			bigeasydriver.animate({
+				transform: "t 0 0"
+			}, 300)
+			stepper.animate({
+				transform: "t 0 0"
+			}, 300)
+			io.animate({
+				opacity: 0
+			}, 300)
+			usb.animate({
+				opacity: 0
+			}, 300)
+			nanowifi.animate({
+				opacity: 0,
+				transform: "t 0 0"
+				}, 300)		
+			pwr.animate({
+				opacity: 0
+			}, 300)
+		}
+
+
+	})
+
+	var s3 = Snap("#three");
+	Snap.load("diagram_seseme.svg", function(f){
+		var g;
+		g = f.select("svg");
+		s3.append(g);
+		var p1 = g.select("#Pillar1"),
+			p2 = g.select("#Pillar2"),
+			p3 = g.select("#Pillar3"),
+			p4 = g.select("#Pillar4"),
+			running;
+			
+			//g.hover(open, close); //maybe mouseon = constant randomization by interval and mouseoff = 0 
+
+		$("#three").mouseover(function(){
+			if(!first && !second && !third && !fourth && !fifth){
+				open();
+			}
+		});
+		$("#three").mouseout(function(){
+			if(!first && !second && !third && !fourth && !fifth){
+				close();
+			}	
+		});
+
+		$("#three").click(function(){
+					//open();
+				})
+
+		setInterval(function(){ // there has got to be a better solution
+					if(second || first || fourth || fifth){
+					console.log('closing time');
+					close();
+				}
+				}, 500);
+
+			function open(){
+
+				running = setInterval(function(){
+					var min = -50,
+					max = 70,
+					h1 = Math.floor(Math.random()*(max - min + 15)) + min, 
+					h2 = Math.floor(Math.random()*(max - min + 15)) + min, 
+					h3 = Math.floor(Math.random()*(max - min + 15)) + min, 
+					h4 = Math.floor(Math.random()*(max - min + 15)) + min;
+
+					console.log(h1 + " " + h2 + " " + h3 + " " + h4);
+
+					p1.animate({
+						transform: "t 0 " +h1 
+					}, 500)
+					p2.animate({
+						transform: "t 0 " + h2
+					}, 500)
+					p3.animate({
+						transform: "t 0 " + h3
+					}, 500)
+					p4.animate({
+						transform: "t 0 " +h4
+					}, 500)
+				}, 800)
+
+			} // end function open
+
+			function close(){
+				clearInterval(running);
+				p1.animate({
+					transform: "t 0 0"
+				}, 300)
+				p2.animate({
+					transform: "t 0 0"
+				}, 300)
+				p3.animate({
+					transform: "t 0 0"
+				}, 300)
+				p4.animate({
+					transform: "t 0 0"
+				}, 300)
+			} // end function close
+
+
+	})
+
+	var s4 = Snap("#four");
+	Snap.load("diagram_phone.svg", function(f){
+		var g;
+		g = f.select("svg");
+		s4.append(g);
+		var text1 = g.select("#text_a"),
+		text2 = g.select("#text_b"),
+		text3 = g.select("#text_c"),
+		text4 = g.select("#text_d"),
+		text5 = g.select("#text_e"),
+		text6 = g.select("#text_f"),
+		text7 = g.select("#text_g"),
+		text8 = g.select("#text_h"),
+		phone = g.select("#phone"),
+		line = phone.path("M 1106,485 L 1131,521 L 1149,521").attr({
+			stroke: "#000",
+			strokeWidth: "7",
+			fill: "none"
+		});
+
+		$("#four").mouseover(function(){
+				if(!first && !second && !third && !fourth && !fifth){
+					open();
+				}
+			});
+		$("#four").mouseout(function(){
+				if(!first && !second && !third && !fourth && !fifth){
+				close();
+				}
+		})
+
+		$("#four").click(function(){
+					open();
+				})
+
+		setInterval(function(){ // there has got to be a better solution
+					if(second || third || first || fifth){
+					console.log('closing time');
+					close();
+				}
+				}, 500);
+	
+
+		function open(){
+			text1.animate({
+				transform: "matrix(0.5 0 0 0.5 1195 515)",
+			}, 300)
+			text2.animate({
+				opacity: "1"
+			}, 300)
+			text3.animate({
+				opacity: "1"
+			}, 300)
+			text4.animate({
+				opacity: "1"
+			}, 300)
+			line.animate({
+				path: "M 1106,495 L 1150,515 L 1168,515",
+				opacity: 0
+			}, 275)
+			text5.animate({
+				opacity: 1,
+				transform: "matrix(1 0 0 1 1095 515)"
+			}, 300)
+			text6.animate({
+				opacity: 1,
+				transform: "matrix(1 0 0 1 1095 540)"
+			}, 300)
+			text7.animate({
+				opacity: 1,
+				transform: "matrix(1 0 0 1 1095 565)"
+			}, 300)
+			text8.animate({
+				opacity: 1,
+				transform: "matrix(1 0 0 1 1095 590)"
+			}, 300)
+		}
+
+		function close(){
+			text1.animate({
+				transform: "matrix(1 0 0 1 1170 545)",
+			}, 300)
+			text2.animate({
+				opacity: "0"
+			}, 300)
+			text3.animate({
+				opacity: "0"
+			}, 300)
+			text4.animate({
+				opacity: "0"
+			}, 300)
+			line.animate({
+				path: "M 1106,485 L 1131,521 L 1149,521",
+				opacity: 1
+			}, 275)
+			text5.animate({
+				opacity: 0,
+				transform: "matrix(1 0 0 1 1075 515)"
+			}, 300)
+			text6.animate({
+				opacity: 0,
+				transform: "matrix(1 0 0 1 1075 540)"
+			}, 300)
+			text7.animate({
+				opacity: 0,
+				transform: "matrix(1 0 0 1 1075 565)"
+			}, 300)
+			text8.animate({
+				opacity: 0,
+				transform: "matrix(1 0 0 1 1075 590)"
+			}, 300)
+		}
+
+
+	})
+
+	var s5 = Snap("#five");
+	Snap.load("diagram_social.svg", function(f){ //things to do with this svg happen in here: 
+		
+		g = f.select("svg");
+		s5.append(g);
+		var phoneGuy = g.select("#guy1"),
+			otherGuy = g.select("#guy2"),
+			seseme = g.select("#monument"),
+			social = g.select("#social"),
+			sightline = social.path("M 1543,378").attr({
+				stroke: "#000",
+				strokeWidth: 10,
+				strokeDasharray: 10,
+			}),
+			f = g.select("#gausBlur");
+
+		var timeOutA, timeOutB;
+			
+			$("#five").mouseover(function(){
+				if(!first && !second && !third && !fourth && !fifth){
+					open();
+				}
+			});
+			$("#five").mouseout(function(){
+				if(!first && !second && !third && !fourth && !fifth){
+				close();
+				}
+			})
+
+			$("#five").click(function(){
+					open();
+				})
+
+			setInterval(function(){ // there has got to be a better solution
+					if(second || third || fourth || first){
+					console.log('closing time');
+					close();
+				}
+				}, 500);
+
+
+			function open(){	
+				window.clearTimeout(timeOutA);
+				window.clearTimeout(timeOutB);
+				sightline.animate({
+					path: "M 1543,378 L 1635,378",
+					opacity: 1
+				}, 300);
+
+				function delayA(d){
+					timeOutA = window.setTimeout(function(){
+						sightline.animate({
+							path: "M 1543 378"
+						},300)
+						//collapse sightline after 1500ms
+					}, d) 
+				}
+
+				function delayB(d){
+					timeOutB = window.setTimeout(function(){
+						//initiate character movement and potentially monument blurring? 
+						phoneGuy.animate({
+							transform: "t 15 0"
+						}, 400)
+
+						otherGuy.animate({
+							transform: "t 100 0"
+						}, 400)
+					}, d)
+				}	
+
+				delayA(1200);
+				delayB(1500);
+
+				f.animate({
+					stdDeviation: 5
+				}, 300)
+				seseme.animate({
+					opacity: 0.65
+				}, 300)
+
+				
+			}
+
+			function close(){
+				window.clearTimeout(timeOutA);
+				window.clearTimeout(timeOutB);
+				sightline.animate({
+					opacity: 0
+				}, 300)
+
+				phoneGuy.animate({
+					transform: "t 0 0"
+				}, 300)
+
+				otherGuy.animate({
+					transform: "t 0 0"
+				}, 300)
+
+				seseme.animate({
+					opacity: 1
+				}, 301),
+
+				f.animate({
+					stdDeviation: 0
+				}, 301)
+
+			}
+	})// end callback function of snap.load diagram_social
+
+
+
+} // end window.onload
+
+               // blah = item.select("#nestedelement"),
+                
+</script>
+	</body>
