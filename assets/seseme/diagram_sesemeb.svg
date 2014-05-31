@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="935px" height="255px" viewBox="0 0 935 255" enable-background="new 0 0 935 255" xml:space="preserve">
+<g id="seseme" transform="translate(-600, -100)" pointer-events="all">
+	<g id="Pedestal">
+		<polygon fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="1020.113,219.428 1020.113,328.074 
+			1067.735,349.799 1115.357,326.252 1115.357,219.428 1067.735,199.293 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="1020.113,219.428 1067.735,242.688 
+			1115.357,219.428 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="1067.735" y1="242.688" x2="1067.735" y2="349.799"/>
+	</g>
+	<g id="Pillar4">
+		
+			<animateTransform  type="translate" fill="freeze" restart="always" calcMode="linear" accumulate="none" dur="3s" begin="indefinite" additive="sum" to="0,100" from="0,0" attributeName="transform" id="big">
+			</animateTransform>
+		<polygon fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1050.163,208.981 1050.163,120.006 
+			1067.89,111.289 1085.309,120.006 1085.309,208.981 		"/>
+		<polyline fill="none" stroke="#231F20" stroke-width="5" stroke-miterlimit="10" points="1050.163,124.509 1067.735,133.314 
+			1085.309,124.509 		"/>
+		<polyline fill="none" stroke="#231F20" stroke-width="5" stroke-miterlimit="10" points="1050.163,120.006 1067.735,128.588 
+			1085.309,120.006 		"/>
+		
+			<line fill="none" stroke="#231F20" stroke-width="5" stroke-miterlimit="10" x1="1067.735" y1="128.588" x2="1067.735" y2="133.314"/>
+	</g>
+	<g id="Pillar3">
+		
+			<animateTransform  type="translate" fill="freeze" restart="always" calcMode="linear" accumulate="none" dur="1.5s" begin="big.begin" additive="sum" to="0,-50" from="0,0" attributeName="transform">
+			</animateTransform>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1045.98,277.021 1028.409,268.334 
+			1028.409,143.086 1045.98,134.292 1063.554,142.875 1063.554,147.378 1045.981,155.961 		"/>
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1028.409,143.086 1045.981,151.67 
+			1063.554,142.875 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1045.981" y1="155.961" x2="1045.981" y2="151.67"/>
+	</g>
+	<g id="Pillar2">
+		
+			<animateTransform  type="translate" fill="freeze" restart="always" calcMode="linear" accumulate="none" dur="3.5s" begin="big.begin" additive="sum" to="0,-100" from="0,0" attributeName="transform">
+			</animateTransform>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1089.49,280.724 1089.49,189.755 
+			1071.918,181.173 1071.918,176.669 1089.49,168.087 1107.063,176.881 1107.063,272.035 		"/>
+		<polyline fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1071.918,176.669 1089.49,185.464 
+			1107.063,176.881 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1089.49" y1="189.755" x2="1089.49" y2="185.464"/>
+	</g>
+	<g id="Pillar1">
+		
+			<animateTransform  type="translate" fill="freeze" restart="always" calcMode="linear" accumulate="none" dur="2s" begin="big.begin" additive="sum" to="0,75" from="0,0" attributeName="transform">
+			</animateTransform>
+		<polygon fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1050.163,294.919 1067.735,303.356 
+			1085.308,294.667 1085.308,168.741 1067.735,159.946 1050.163,168.741 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1067.735" y1="177.324" x2="1067.735" y2="238.398"/>
+		<line fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" x1="1067.735" y1="302" x2="1067.735" y2="177.324"/>
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M1077.205,185.243"/>
+		<path fill="#FFFFFF" stroke="#000000" stroke-width="5" stroke-miterlimit="10" d="M1085.308,168.741"/>
+		<polyline fill="none" stroke="#000000" stroke-width="5" stroke-miterlimit="10" points="1050.163,168.741 1067.735,177.324 
+			1085.308,168.741 		"/>
+	</g>
+	<g id="HideLayer">
+		<polygon fill="#FFFFFF" points="1027.289,218.366 1025.871,328.338 1067.735,347.676 1110.446,326.426 1108.48,218.976 
+			1067.735,238.398 		"/>
+		<polyline fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="1020.113,219.428 1067.735,242.688 
+			1115.357,219.428 		"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" x1="1067.735" y1="242.688" x2="1067.735" y2="349.799"/>
+		<polygon points="1067.743,239.59 1049.087,230.334 1049.087,227.722 1067.727,236.754 1086.327,228.287 1086.327,230.572 		"/>
+		<polygon points="1047.015,229.317 1027.332,219.567 1027.332,217.282 1047.015,227.032 		"/>
+		<polygon points="1088.41,229.596 1088.41,227.31 1108.108,217.709 1108.108,219.995 		"/>
+	</g>
+</g>
+</svg>
