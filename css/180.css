@@ -1,0 +1,31 @@
+
+*{
+	background-repeat:no-repeat;
+	background-position: center;
+}
+
+.museum .quad0{
+	background-image: url(../assets/180/oculus_small.png);
+}
+
+.museum .quad1{
+	background-image: url(../assets/180/gallery_small.png); 
+}
+
+.museum .quad3{
+	background-image: url(../assets/180/exterior_small.png); 
+}
+
+
+.museum .quad6{
+	background-image: url(../assets/180/diagrams_small.png); 
+}
+.museum .quad7{
+	background-image: url(../assets/180/l0iso_small.png); 
+}
+.museum .quad8{
+	background-image: url(../assets/180/floorplan_small.png); 
+}
+.museum .quad10{
+	background-image: url(../assets/180/sketch_small.png); 
+}

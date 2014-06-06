@@ -254,21 +254,22 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		quadDims.push($(this).data('dimension').split(",")); //populates quadDims into nested array: [0] = quadOne data-dimension
 	})
 
+	var itemHeight = parseInt($(target).data('itemheight')); //get itemheight attribute and expand height appropriately...for optimal screensizes
+	//what's the behavior at smaller resolutions? 
+	
 	for (var i = 0; i < quadDims.length; i++) {
-		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "%"), height: (quadDims[i][1] + "%")});
+		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px")});
 	};
-
-
 
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	// try a switch statement here instead of repeating resolution over and over
 
-	if(resolution>1440){
-		$(target).css({width:"95%", height: "800px", marginRight: "10%"});
+	if(resolution>1440){ // here is where i need to grab supplied height rather than use a default
+		$(target).css({width:"95%", height: itemHeight + "px", marginRight: "10%"});
 		$(target + ' div').css({margin: "5px"});
 		$(target + ' div p').css({fontSize:"12pt", lineHeight: "1.5em"});
 	} else if(resolution<=1440&&resolution>1024){
-		$(target).css({width:"80%", height: "800px", marginRight: "10%"}); //aspect ht: 600
+		$(target).css({width:"95%", height: "800px", marginRight: "10%"}); //aspect ht: 600
 		$(target + ' div').css({margin: "4px"});
 		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 	} else if(resolution<=1024&&resolution>700){
