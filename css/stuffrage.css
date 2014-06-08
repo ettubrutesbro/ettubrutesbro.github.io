@@ -1,0 +1,9 @@
+.stuffrage .quad0 {
+	background-image: url(../assets/stuffragethumb.png);
+}
+iframe{
+	display: none;
+}
+.expanded iframe{
+	display: block;
+}

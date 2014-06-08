@@ -225,6 +225,7 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 
 
 $('article').click(function(event){ //SELECTION
+	console.log(this);
 	if($(event.target).attr('class')=="exit"){
 		console.log('exit');
 		revert();
@@ -232,6 +233,7 @@ $('article').click(function(event){ //SELECTION
 	} else{
 	expando.unshift($(this).attr('class').split(' ')[0]); //gets the project title class to variable
 	console.log(expando);
+
 if(expando[0]!=expando[1]){
 	revert();	
 	itemExpand('.' + expando[0]);
@@ -248,7 +250,7 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	$(target + ' div').not('.quad0, .title').show(); //unhiding other divs w/in article 
 	//$(target + ' div').css({width: "49%", height: "49%"}); //intended default effect after array + loop
 
-
+	console.log(target);
 	var quadDims = new Array();
 	$(target + ' div').each(function(){
 		quadDims.push($(this).data('dimension').split(",")); //populates quadDims into nested array: [0] = quadOne data-dimension
@@ -260,6 +262,8 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	for (var i = 0; i < quadDims.length; i++) {
 		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px")});
 	};
+
+	$(target + ' .quad0').addClass('expanded'); //facilitates bg-img changes on expansion
 
 	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
 	// try a switch statement here instead of repeating resolution over and over
@@ -283,9 +287,16 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
 		
 	}
+
+	//for videos:
+	if($(target + ' .quad0').html().length > 0){
+		$(target + ' .quad0 video').get(0).play();
+	} 
 }
 
 function revert(){ 
+	$('.quad0').removeClass('expanded');
+
 	$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
 	}).appendTo('#portfolio');
@@ -295,6 +306,22 @@ function revert(){
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
 	//all article divs not .quad0 or .title are display: none? 
 	$('article div').not('.quad0, .title').hide(); 
+
+	//video reversion behaviors
+
+	var sources = $('.quad0 video source').get();
+	sources.forEach(function(element){
+		console.log(element.src);
+		
+	})
+	
+	
+		
+
+	
+		
+	
+
 	
 }
 

@@ -277,10 +277,10 @@ h3{
 	line-height: 0px;
 }
 
-video{
+.about video{
 	position: absolute;
 	z-index: -1;
-	
+	width: 400px;
 }
 
 
