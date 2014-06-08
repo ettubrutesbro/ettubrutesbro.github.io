@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+<!-- portfolio website written by Jack Leng with JQuery, Snap.svg and Slimbox2  !-->
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,10 +15,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400,700' rel='stylesheet' type='text/css'>
 
-  <!-- modular stylesheets for individual item styling !-->
+  <!-- project stylesheets for individual item styles !-->
   <link rel = "stylesheet" href="css/180.css" media="screen" type="text/css" />
   <link rel = "stylesheet" href="css/stuffrage.css" media="screen" type="text/css" />
   <link rel = "stylesheet" href="css/walmart.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/tempr.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/sos.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/fnric.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/eclipse.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/seseme.css" media="screen" type="text/css" />
 
 </head>
 <body>
@@ -47,7 +55,7 @@
   <source src="assets/about/mebw.flv" type = "video/flv" />
   <source src="assets/about/mebw.mov" type = "video/quicktime" />
   <source src="assets/about/mebw.mp4" type="video/mp4" />
-  <img src = "assets/about/backup.png" title = "HTML5 video won't work in your browser, so here's a pic of me instead." alt = "jack leng" />
+  <img src = "assets/about/backup.png" title = "HTML5 video won't work in your browser, so here's an image of me instead." alt = "jack leng" />
 </video>
 
 </figure><div id = "abouttext"> I <a id = "int" href = "#interactive">design and code interfaces</a>, <a id = "model" href = "#3d">model in 3 dimensions</a>, <a id = "ill" href = "#illustration">illustrate in 2</a>, and <a id = "anim" href = "#animation">animate</a>. <br>I'm at my happiest when I get to do many things for one project. <br> I play basketball whenever I can and I'm passionate about video games.</div> 
@@ -56,11 +64,10 @@
 
   <section id = "portfolio">
 
-<!-- CONTENT ADDITION: a new article with 1. specific title 2. filtration categories for classes
+<!-- MODULAR CONTENT ADDITION: a new article with 1. specific title 2. filtration categories for classes
       - divs class quad0-x with "x,y" data-dimension attribute
       - even numbered quads are floated left, odd numbered quads are floated right
-      - total dimensions should add up to 98, 98
-      - quad0 is always the title image (specific styling)....2nd child div of article is named title (?)
+      - quad0 is always the title image (specific styling)....title and text classes for text divs
   !-->
 
     <article class = "seseme interactive 3d" data-sort="8" data-itemheight="800">
@@ -117,7 +124,7 @@
        
       </div>
       <div class = "quad3" data-dimension = "670,360"></div>
-      <div class = "quad4 title text" data-dimension = "670,215">180A: UC Davis Art Museum Design
+      <div class = "quad4 title text" data-dimension = "670,215">180A: Art Museum Design
          <p>
         Art museum design proposal & renderings, for institutional interior architecture class project. The design is formed from the intersection of a 30-60-90 and an equilateral triangle, with large columns functioning as structural support, marker of progress through the space, and solar chimneys. </p>
         <p>Renders created with Mental Ray and Photoshop. </p> <span class = "exit"> back to index &nbsp;<img src = "assets/index.svg" /></span>   </div>
@@ -129,13 +136,23 @@
       <div class = "quad10" data-dimension = "1350,260"></div>
      
     </article>
-    <article class = "stuffrage interactive animation illustration" data-sort="2" data-itemheight = "800">
+    <article class = "stuffrage interactive animation illustration" data-sort="2" data-itemheight = "900">
       <div class = "quad0" data-dimension = "900,507">
-        <iframe src="http://player.vimeo.com/video/63406830?title=0&amp;byline=0&amp;portrait=0&amp;color=ea3c24" width="900" height="507" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+        <iframe src="http://player.vimeo.com/video/63406830?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="900" height="507" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> 
       </div>
-      <div class = "quad1 title text" data-dimension = "49,49">Stuffrage UI and Animation</div>
-      <div class = "quad2" data-dimension = "49,49">two</div>
-      <div class = "quad3" data-dimension = "49,49">three</div>
+      <div class = "quad1" data-dimension = "400,120">
+        <p>
+      </div>
+      <div class = "quad2 title text" data-dimension = "440,170">Stuffrage UI and Animation
+        <p>
+          Promotional animation and UI prototypes for a now-defunct social goods/services reviews startup.
+        </p>
+        <span class = "exit"> back to index &nbsp;<img src = "assets/index.svg" /></span>
+      </div>
+      <div class = "quad3" data-dimension = "400,515"></div>
+      <div class = "quad4" data-dimension = "292,315"></div>
+      <div class = "quad5" data-dimension = "640,350"></div>
+  
     </article>
 
 
@@ -158,7 +175,7 @@
      
    <div class = "quad2 title text" data-dimension  = "570,305"> 37: Black Friday Simulator
         <p>
-          An interactive Processing sketch, created for an intro class in my second year.  Inspired by videos captured from various Wal-Marts on Black Friday, stories of Foxconn (Chinese manufacturer of electronic goods) workers commiting suicide, and the game design work of Jonatan Söderström (Hotline Miami, Norrland). Click to create goods and generate demand - consumers consume, workers work harder. </p><p> Try it here (running on processing.js). 
+          An interactive faux-simulation, created for an intro to Processing class in my second year.  Inspired by videos captured from various Wal-Marts on Black Friday, stories of Foxconn (Chinese manufacturer of electronic goods) workers commiting suicide, and the game design work of Jonatan Söderström (Hotline Miami, Norrland). Click to create goods and generate demand - consumers consume, workers work harder. </p><p> Try it here (running on processing.js). 
         </p>
 
         <span class = "exit"> back to index &nbsp;<img src = "assets/index.svg" /></span> 

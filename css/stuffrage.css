@@ -1,9 +1,23 @@
 .stuffrage .quad0 {
 	background-image: url(../assets/stuffragethumb.png);
 }
+
+.stuffrage .quad0.expanded{
+	background: none;
+}
 iframe{
 	display: none;
 }
 .expanded iframe{
 	display: block;
+}
+
+.stuffrage .quad3 {
+	background-image: url(../assets/stuffrage/landing_small.png);
+}
+.stuffrage .quad4 {
+	background-image: url(../assets/stuffrage/mockup9_small.png);
+}
+.stuffrage .quad5 {
+	background-image: url(../assets/stuffrage/mockup6_small.png);
 }

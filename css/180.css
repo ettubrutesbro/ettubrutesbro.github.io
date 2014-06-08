@@ -4,7 +4,11 @@
 	background-position: center;
 }
 
-.museum .quad0{
+.museum .quad0 {
+	background-image: url(../assets/180thumb3.png);
+}
+
+.museum .quad0.expanded{
 	background-image: url(../assets/180/oculus_small.png);
 }
 
