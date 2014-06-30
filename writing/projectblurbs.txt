@@ -1,0 +1,46 @@
+
+Walmart processing
+An interactive Processing sketch, created for an intro class in my second year.  Inspired by videos captured from various Wal-Marts on Black Friday, stories of Foxconn (Chinese manufacturer of electronic goods) workers commiting suicide, and the game design work of Jonatan Söderström (Hotline Miami, Norrland). 
+
+
+Stuffrage
+Promotional animation and UI prototypes for a now-defunct social goods/services reviews startup.
+
+
+180A
+Art museum design proposal & renderings, for institutional interior architecture class project. The design is formed a 3-D intersection of a 30-60-90 and an equilateral triangle, with large columns functioning as structural support, marker of progress through the space, and solar chimneys.
+Renders created with Mental Ray and Photoshop. 
+
+Tempr 
+Second-year interactive design project: smartphone app proposal for a social climate control and energy consumption feedback system. It would enable members of a university community to provide feedback about air conditioning to building administrators, who could then make energy-saving or comfort improving adjustments accordingly. 
+The design aims to make submitting feedback intuitive and easy... 
+
+...while enabling and encouraging further exploration of energy usage data and the implications of A/C energy use. 
+Small in-app rewards allow personalization of the experience and incentivize repeat usage
+
+Comparing buildings and efficiency leaderboards introduce an element of social competition (i.e. engineers vs. artists vs. administrators) and community involvement / interest
+ 
+Whimsical elements, like crowd-sourced "fun metrics" and "building announcements" or self-referential (UC Davis is known for its cow scent) graphics express an levity atypical of comparatively sterile utilities apps 
+
+Used jQuery and inline SVG with SMIL animations, among other things.
+
+
+SOS
+Group research project investigating how social media can help working class laborers organize and build solidarity: we proposed a web based service that would lower barriers for workers with stories to tell by making the submission of stories simple and secure across multiple platforms, from SMS to iOS. Stories would then be displayed as points on a navigable map, allowing users to see labor activity and sentiment at varying location and scale while supplementing the experience with contextually-appropriate data.  
+
+role: I participated in the hackathon that gave rise to the original concept, helping define interface, user narrative and visual identity, and helped program the first interactive mockup (used a lot of masonry.js in particular) we presented at the UCLA labor symposium. Later, after other members turned the prototype into a functional service, I rejoined the team to help present the project at the 2013 AFL-CIO convention and designed an informational poster, on display now at CITRIS (Sutardja Dai Hall) in UC Berkeley.   
+
+
+FNRIC
+Sample of graphic design and illustration work from my time at the UC Fruit and Nut Research and Information Center. 
+
+
+Eclipse
+3D & 2D animation explaining design & progression for a 2018 mission to Mars, from spacecraft module selection to radiation shielding physics. Created in concert with a multidisciplinary team of students in aeronautical & mechanical engineering, physics, biology, etc. from UC Davis Eclipse Rocketry club. As a narrative video accompanying a 50-page proposal, helped the club become finalist in international mission design contest. Now being converted to a controllable visual presentation for final competition at the 17th Annual Int'l Mars Society Convention in Houston, TX (August 7-10, 2014).   
+
+Used V-Ray for 3D rendering. 
+
+Solrmatic?
+
+
+  
