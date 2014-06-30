@@ -37,9 +37,9 @@ recognition.onresult = function(evt) {
         final_transcript += evt.results[i][0].transcript;
       } 
     }
-    final_transcript = final_transcript.replace(/\s/g, '');
-    if(final_transcript.indexOf('jack') > -1){ //if anywhere in the string there's a "jack"
-    	alert("do not take the Lord's name in vain.");
+    //final_transcript = final_transcript.replace(/\s/g, ''); //removes spaces
+    if(final_transcript.match(/jack/i)){ //if anywhere in the string there's a "jack"
+    	console.log('somebody said my name');
   	}
     speech.innerHTML = final_transcript;
   };
