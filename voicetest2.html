@@ -36,7 +36,7 @@ recognition.onresult = function(evt) {
       } 
     }
     final_transcript = final_transcript.replace(/\s/g, '');
-    speech.innerHTML(final_transcript);
+    speech.innerHTML = final_transcript;
   };
 
 
