@@ -11,11 +11,10 @@ var final_transcript = '';
 
 var recognition = new webkitSpeechRecognition(), //master variable with built-ins
 
+recognition.continuous = true;
+
 recognizing = false; //boolean state for if we're listening
 
-window.onload = function() {
-	recognition.start; //automatically start this shit
-}
 
 
 recognition.onstart = function() {
@@ -28,7 +27,6 @@ recognition.onend = function() {
 }
 
 recognition.onresult = function(evt) {
-	var interim_transcript = '';
     if (typeof(evt.results) == 'undefined') {
       recognition.onend = null;
       recognition.stop();
@@ -37,20 +35,12 @@ recognition.onresult = function(evt) {
     for (var i = evt.resultIndex; i < evt.results.length; ++i) {
       if (evt.results[i].isFinal) {
         final_transcript += evt.results[i][0].transcript;
-      } else {
-        interim_transcript += evt.results[i][0].transcript;
-      }
+      } 
     }
-    speech.innerHTML = linebreak(final_transcript);
-    interim_span.innerHTML = linebreak(interim_transcript);
+    final_transcript = final_transcript.replace(/\s/g, '');
+    speech.innerHTML(final_transcript);
   };
 
-
-var two_line = /\n\n/g;
-var one_line = /\n/g;
-function linebreak(s) {
-  return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
-}
 
 function beginRecording(evt){
 	console.log('what');
