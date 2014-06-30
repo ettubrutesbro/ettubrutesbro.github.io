@@ -36,6 +36,9 @@ recognition.onresult = function(evt) {
       } 
     }
     final_transcript = final_transcript.replace(/\s/g, '');
+    if(final_transcript.indexOf('jack') > -1){ //if anywhere in the string there's a "jack"
+    	alert("do not take the Lord's name in vain.");
+  	}
     speech.innerHTML = final_transcript;
   };
 
