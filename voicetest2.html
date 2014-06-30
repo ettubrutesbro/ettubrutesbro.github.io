@@ -37,24 +37,16 @@ recognition.onresult = function(evt) {
         final_transcript += evt.results[i][0].transcript;
       } 
     }
-    //final_transcript = final_transcript.replace(/\s/g, ''); //removes spaces
-    /*
+    
     if(final_transcript.match(/jack/i)){ //if anywhere in the string there's a "jack"
     	console.log('somebody said my name');
-  	}
+  	} 
   	if(final_transcript.match(/justin/i){
   		console.log('somebody said that other dudes name');
   	}) 
-	*/
+	
 
-  	switch(final_transcript.match()){
-  		case /jack/i:
-  			console.log('somebody said my name');
-  			break;
-  		case /justin/i:
-  			console.log('somebody said that other guys name');
-  			break;
-  	}
+
 
     speech.innerHTML = final_transcript;
   };
