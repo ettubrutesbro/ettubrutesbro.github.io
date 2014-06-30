@@ -11,10 +11,10 @@ var final_transcript = '';
 
 var recognition = new webkitSpeechRecognition(), //master variable with built-ins
 
-recognition.continuous = true;
-recognition.interimResults = false;
 recognizing = false; //boolean state for if we're listening
 
+recognition.continuous = true;
+recognition.interimResults = false;
 
 
 recognition.onstart = function() {
