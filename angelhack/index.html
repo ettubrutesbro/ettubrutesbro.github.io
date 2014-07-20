@@ -10,7 +10,7 @@
 		svg {
 			width: 100%;
 			display: inline;
-
+			height: 710px;
 		}
 	</style>
 </head>
@@ -18,8 +18,45 @@
 <body>
 <svg id = "backdrop"></svg>
 <div id = "all">
-	<div class = "blocks" id = "header"><div id = "navleft" class = "nav">< record</div> <div id = "navright" class = "nav">peeps ></div></div>
-	<div class = "blocks" id = "middle">hold to record</div>
+	<header><div id = "navL"> &nbsp;&nbsp;&nbsp;< record</div> <div id = "navR">peeps >&nbsp;&nbsp;&nbsp;</div></header>
+	<div class = "blocks" id = "header">
+	<div class = "blocks" id = "middle">push to record</div>
+	<div class = "blocks" id = "record_additional"></div>
+
+	<div class = "blocks" id = "alarms_list"> 
+		<ul>
+			<li>4:20<span id ="ap">AM</span>
+				<span id = "days">
+					<ul><li>S</li> <li>M</li> <li style = "opacity:1">T</li> <li>W</li> <li>R</li> <li>F</li> <li>S</li></ul>
+				</span></li>
+			<li>7:30<span id ="ap">AM</span>
+				<span id = "days">
+					<ul><li>S</li> <li>M</li> <li>T</li> <li>W</li> <li style = "opacity:1">R</li> <li style = "opacity:1">F</li> <li>S</li></ul>
+				</span></li>
+			<li>7:45<span id ="ap">AM</span>
+				<span id = "days">
+					<ul><li>S</li> <li style = "opacity:1">M</li> <li>T</li> <li style = "opacity:1">W</li> <li>R</li> <li>F</li> <li>S</li></ul>
+				</span></li> 
+			
+		</ul>
+		<div id = "addalarm">+</div>
+	</div>
+
+	<div class = "blocks" id = "peeps_list"> 
+		<div id = "user_profile">
+			ettubrutesbro <b><img src = "assets/heart.png" /> 362</b>
+		</div>
+		<ul>
+			<li>CHOBBERONI</li>
+			<li>moscaddie</li>
+			<li>monteiro</li>
+			<li>TeddyDief</li>
+			<li>caraellison</li>
+			<li><img src = "assets/magglass.svg" width = "50px"></li>
+		</ul>
+	</div>
+
+
 	<div class = "blocks" id = "interaction">
 		<div id = "mtwrf">
 			<ul>
@@ -31,19 +68,30 @@
 				<li>F</li>
 				<li>S</li>
 		</div>
-		<div id = "time">4:18</div> <div class = "subdiv" id = "ampm"><ul><li id = "am">AM</li><li id = "pm">PM</li></div>
+		<div id = "time">
+			<input id = "newalarm" type = "tel" value = "_:__" maxlength = "4"></input>
+		</div>
+
+			 <div class = "subdiv" id = "ampm"><ul><li id = "am">AM</li><li id = "pm">PM</li></div>
 		<div id = "setbutton"><img src = "assets/button.png" width = "50%"/></div>
 	</div>
 </div>
 
-
+<script src="js/recorderjs/recorder.js"></script>
+<script src="js/corey.js"></script>
 <script>
 $(document).ready(function(){
+
+	var whichstate = 1;
 
 	var windowHeight = $(window).height(),
      windowWidth = $(window).width();
 
 	var b = Snap("#backdrop")
+
+	setInterval(function(){
+		console.log(whichstate);
+	},500);
 
 	Snap.load("assets/heroimg.svg", function(f){
 		var x = f.select("svg")
@@ -60,8 +108,112 @@ $(document).ready(function(){
 		sunblur = x.select("#sunBlur"),
 		frontblur = x.select("#frontBlur")
 
-		$('#navleft').click(function(){
+
+		$('#navL').click(function(){
+			if(whichstate==1){
+				goToZero()
+				
+			} if(whichstate==2){
+				goToOne()
+				
+			}
+		}) //GOING LEFT
+	
+
+		$('#setbutton').click(function(){ //GOING BACK TO ONE FROM ONE A
+			goToOne();
+		})
+		
+
+		$("#navR").click(function(){
+			if(whichstate==0){
+				goToOne()
+				
+			} if(whichstate==1){
+				goToTwo()
+				
+			}
+		}) // GOING RIGHT
+		
+		
+
+			
+
+
+		$("#am").click(function(){
+				$("#am").animate({
+					opacity: 1
+				},300)
+				$("#pm").animate({
+					opacity: 0.3
+				},300)
+		})
+		$("#pm").click(function(){
+				$("#pm").animate({
+					opacity: 1
+				},300)
+				$("#am").animate({
+					opacity: 0.3
+				},300)
+		})
+
+		$("#addalarm").click(function(){ //GOING IN
+
+			$('#alarms_list').animate({
+				opacity: 0
+			}, 300)
+			$('#alarms_list').hide();
+
+			$('header').css({
+				color: 'black'
+			})
+
+				front.animate({
+					transform: "t 0 0 s 1"
+				}, 500, mina.easeinout)
+
+				frontblur.animate({
+					stdDeviation: "0"
+				}, 500)
+
+				sunblur.animate({
+					stdDeviation: "4"
+				}, 500)
+
+				blackover.animate({
+					opacity: 0
+				}, 300)
+
+				$('#interaction').show();
+				$('#interaction').fadeIn();
+
+		})
+
+		function goToZero(){
+			console.log('going to 0')
+			$('#peeps_list').animate({
+				opacity:0
+			},300, function(){
+				$('#peeps_list').hide();
+			})
+			$('#alarms_list').animate({
+				opacity: 0
+			}, 300)
+			$('#alarms_list').hide();
 			$('#interaction').fadeOut()
+			$('#interaction').hide()
+
+			$('#navL').animate({
+				opacity: 0
+			},300)
+			$('#navR').animate({
+				opacity: 0.5
+			},300)
+			$('#navR').prepend('alarms, ')
+			$('header').css({
+				color: 'black'
+			})
+
 			blackover.animate({
 				opacity: 0
 			}, 300)
@@ -78,72 +230,120 @@ $(document).ready(function(){
 				$('#middle').animate({
 					opacity: 0.7
 				}, 1000)
+				whichstate=0
 				
 			})
+			sunblur.animate({
+				stdDeviation: "0"
+			}, 500)
 
-			$('div .nav').css({
-			'color': 'black'
-		})
+			frontblur.animate({
+				stdDeviation: "0"
+			}, 500)
+		}
 
+		function goToOne(){ //removes peep list, middle text, restores sun, filters, front transforms, rerenders alarm display with appropriate navs
+			console.log('going to one')
+			$('#interaction').fadeOut();
+			$('#interaction').hide();
+			$('#peeps_list').fadeOut();
+			$('#peeps_list').hide();
+			$('#middle').animate({
+				opacity: 0
+			}, 300)
 
-		})
-		/* animation for record 
-		
-		*/
+			$('#navL').animate({
+				opacity: 0.5
+			},300)
+			$('#navR').animate({
+				opacity: 0.5
+			},300)
+			$('header').css({
+				color: 'white'
+			})
+			$('#navR').text(' peeps >\xa0\xa0\xa0')
+			$('#navL').text('\xa0\xa0\xa0< record')
 
-		/* animation for set */
-
-		$('#setbutton').click(function(){
-
+			sun.animate({
+				fill: "FFFFFF"
+			}, 400) 
+			sun.animate({
+				transform: "t 0 0 s 1"
+			}, 400)
 			front.animate({
 				transform: "t 120 -300 s 0.45"
 			}, 500, mina.easeinout)
-
+			frontblur.animate({
+				stdDeviation: "8"
+			}, 500)
+			sunblur.animate({
+				stdDeviation: "11"
+			}, 500)
 			setTimeout(function(){
 				blackover.animate({
 					transform: "t 0 50 s 1.15",
 					opacity: 1
-				}, 250)
-			},200)
-			
-		$('div .nav').css({
-			'color': 'white'
-		})
-		$('#interaction').fadeOut();
+				}, 250, function(){
+					$('#alarms_list').show();
+					$('#alarms_list').animate({
+						opacity: 1
+					}, 300)
+					whichstate=1
+					
+				})
+			},200)		
+		}
 
-			//animate the text / interactive set
-		})
-		
+		function goToTwo(){
+			console.log('going to two')
 
-		$("#navright").click(function(){
-			front.animate({
-				transform: "t -360 6250 s 10"
-			}, 800, mina.easeinout)
-		$('#interaction').fadeOut();
-		blackover.animate({
+			$('#interaction').fadeOut();
+			$('#interaction').hide();
+			$('#alarms_list').fadeOut();
+			$('#alarms_list').hide();
+			blackover.animate({
 				opacity: 0
 			}, 300)
-		$('div .nav').css({
-			'color': 'white'
+
+			$('header').css({
+				color: 'white'
+			})
+			$('#navR').animate({
+				opacity: 0
+			},300)
+			$('#navL').animate({
+				opacity: 0.5
+			},300)
+			$('#navL').append(', alarms')
+
+			front.animate({
+				transform: "t -360 6250 s 10"
+			}, 800, mina.easeinout, function(){
+				$('#peeps_list').show();
+				$('#peeps_list').animate({
+					opacity: 1
+				}, 300)
+				whichstate=2
+			})
+			frontblur.animate({
+				stdDeviation: "0"
+			}, 250)
+			sunblur.animate({
+				stdDeviation: "4"
+			}, 250)
+		} //END OF GO TO TWO
+
+		sun.click(function(){
+			if(whichstate==0){
+				startRecording(this)
+			}
 		})
-		})
 
-
-		
-
-
-
-
-
-
-
-	})
-
-
-
-})
+}) })
 
 
 </script>
+
+
 
 </body>

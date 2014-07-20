@@ -1,14 +1,16 @@
 html {
 	background-color: black;
 }
-
+svg {
+	z-index: -100;
+}
 body {
 	width: 400px;
 	height: 711px;
 	border: 1px black solid;
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	background-color: white;
 }
 
@@ -30,6 +32,18 @@ body {
 	width: 100%;
 }
 
+header {
+position: absolute;
+width: 400px;
+font-family: 'bryreg';
+font-size: 18pt;
+top: 20px;
+}
+
+header div {
+	display: inline;
+}
+
 div .blocks {
 	width: 100%;
 	text-align: center;
@@ -37,14 +51,24 @@ div .blocks {
 	color: white;
 }
 
-
-
-#header {
-	height: 8%;
+#navL {
+	float: left;
+	text-align: left;
+	opacity: 0.45;
+	cursor: pointer;
+	
 }
 
+#navR {
+	float: right;
+	text-align: right;
+	opacity: 0.45;
+	cursor: pointer;
+}
+
+
 #middle {
-	margin-top: 30%;
+	margin-top: 45%;
 	height: 20%;
 	color: black;
 	font-family: 'bryreg';
@@ -71,22 +95,35 @@ div .blocks {
 
 #mtwrf li {
 	display: inline;
-	padding: 3.2%;
+	padding: 3%;
 	opacity: 0.6;
 
 }
 
 #time {
-	font-family: 'brymedcon';
-	letter-spacing: 0.1em;
-	font-size: 72pt;
-	width: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-right: 0.4em;
 	display: inline;
-	line-height: 1.1em;
+	
 
+}
+
+#header {
+	height: 100%;
+}
+
+input[type="tel"]{
+	line-height: 1.1em;
+	padding-right: 0.6em;
+	text-align: right;
+	font-family: 'brymedcon';
+	letter-spacing: 0.06em;
+	font-size: 72pt;
+	width: 300px;
+	border: none;
+	background-color: transparent;
+	color: white;
 }
 
 #ampm {
@@ -94,6 +131,7 @@ div .blocks {
 	font-size: 21pt;
 	letter-spacing: 0.05em;	
 	display: inline;
+	cursor: pointer;
 }
 
 #ampm ul {
@@ -103,7 +141,7 @@ div .blocks {
 }
 
 #am {
-	opacity: 0.4;
+	opacity: 0.3;
 }
 
 #setbutton {
@@ -119,15 +157,114 @@ div .nav {
 }
 
 #navleft {
-	margin-right: 23%;
+	padding-left: 1em;
+	float: left;
 	cursor: pointer;
 }
 
 #navright {
-	margin-left: 23%;
+	padding-right: 1em;
+	float: right;
 	cursor: pointer;
 }
 
 
+#record_additional {
+	display: none;
+}
 
+#alarms_list{
+	margin-top: 2%;
+	font-family: 'brymedcon';
+	text-align: left;
+	display: none;
+	opacity: 0;
+}
 
+#alarms_list ul{
+	list-style: none;
+}
+
+#alarms_list ul li{
+width: 180px;
+padding: 3.5%;
+font-size: 21pt;
+line-height: 0.9em;
+}
+
+#days {
+	
+}
+
+#days ul {
+	padding: 0;
+	
+	z-index: 40;
+}
+
+#days ul li {
+	display: inline;
+	font-size: 12pt;
+	padding: 1%;
+	line-height: 0.2em;
+	opacity: 0.4;
+}
+
+#alarms_list ul li #is_on{
+	float: right;
+}
+
+#alarms_list ul li #ap {
+	font-family: 'bryreg';
+	font-size: 11pt;
+	padding: 2%;
+}
+
+#peeps_list {
+	display: none;
+	opacity: 0;
+}
+
+#peeps_list ul {
+	list-style: none;
+	margin-left: -7%;
+	margin-top: 15%;
+}
+
+#peeps_list ul li {
+	padding: 4%;
+	font-family: 'brymedcon';
+	font-size: 30pt;
+	letter-spacing: 0.12em;
+	opacity: 0.8;
+
+}
+
+#addalarm {
+	font-family: 'bryreg';
+	font-size: 64pt;
+	text-align: center;
+	margin-bottom: 10%;
+	cursor: pointer;
+}
+
+li .d_s {
+	opacity: 1;
+}
+
+#user_profile {
+	font-family: 'bryreg';	
+	font-size: 18pt;
+	letter-spacing: 0.1em;
+	margin-top: -60%;
+}
+
+#user_profile b {
+	letter-spacing: 0em;
+	font-size: 12pt;
+	font-family: 'brymedcon';
+}
+
+#user_profile img {
+	margin-left: 30px;
+}
