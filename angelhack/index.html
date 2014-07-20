@@ -1,0 +1,149 @@
+
+<html>
+
+<head>
+	<link rel = "stylesheet" href = "css/style.css" />
+	<script src="js/snap.svg-min.js"></script>
+	<script src="js/jquery-2.1.0.min.js"></script>
+
+	<style>
+		svg {
+			width: 100%;
+			display: inline;
+
+		}
+	</style>
+</head>
+
+<body>
+<svg id = "backdrop"></svg>
+<div id = "all">
+	<div class = "blocks" id = "header"><div id = "navleft" class = "nav">< record</div> <div id = "navright" class = "nav">peeps ></div></div>
+	<div class = "blocks" id = "middle">hold to record</div>
+	<div class = "blocks" id = "interaction">
+		<div id = "mtwrf">
+			<ul>
+				<li>S</li>
+				<li>M</li>
+				<li>T</li>
+				<li>W</li>
+				<li>R</li>
+				<li>F</li>
+				<li>S</li>
+		</div>
+		<div id = "time">4:18</div> <div class = "subdiv" id = "ampm"><ul><li id = "am">AM</li><li id = "pm">PM</li></div>
+		<div id = "setbutton"><img src = "assets/button.png" width = "50%"/></div>
+	</div>
+</div>
+
+
+<script>
+$(document).ready(function(){
+
+	var windowHeight = $(window).height(),
+     windowWidth = $(window).width();
+
+	var b = Snap("#backdrop")
+
+	Snap.load("assets/heroimg.svg", function(f){
+		var x = f.select("svg")
+		b.append(x)
+
+		b.attr({
+				width: windowWidth + "px",
+				height: windowHeight + "px",
+			})
+
+		var front = x.select('#front'),
+		blackover = x.select('#Layer_4'),
+		sun = x.select('#sun'),
+		sunblur = x.select("#sunBlur"),
+		frontblur = x.select("#frontBlur")
+
+		$('#navleft').click(function(){
+			$('#interaction').fadeOut()
+			blackover.animate({
+				opacity: 0
+			}, 300)
+			front.animate({
+				transform: "t 370 910 s 1.2"
+			}, 800, mina.easeinout)	
+
+			sun.animate({
+				transform: "t 210 -150 s 0.5"
+			}, 800, mina.easeinout, function(){
+				sun.animate({
+					fill: "#FF0000"
+				}, 800)
+				$('#middle').animate({
+					opacity: 0.7
+				}, 1000)
+				
+			})
+
+			$('div .nav').css({
+			'color': 'black'
+		})
+
+
+		})
+		/* animation for record 
+		
+		*/
+
+		/* animation for set */
+
+		$('#setbutton').click(function(){
+
+			front.animate({
+				transform: "t 120 -300 s 0.45"
+			}, 500, mina.easeinout)
+
+			setTimeout(function(){
+				blackover.animate({
+					transform: "t 0 50 s 1.15",
+					opacity: 1
+				}, 250)
+			},200)
+			
+		$('div .nav').css({
+			'color': 'white'
+		})
+		$('#interaction').fadeOut();
+
+			//animate the text / interactive set
+		})
+		
+
+		$("#navright").click(function(){
+			front.animate({
+				transform: "t -360 6250 s 10"
+			}, 800, mina.easeinout)
+		$('#interaction').fadeOut();
+		blackover.animate({
+				opacity: 0
+			}, 300)
+		$('div .nav').css({
+			'color': 'white'
+		})
+		})
+
+
+		
+
+
+
+
+
+
+
+	})
+
+
+
+})
+
+
+</script>
+
+</body>

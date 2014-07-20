@@ -1,0 +1,133 @@
+html {
+	background-color: black;
+}
+
+body {
+	width: 400px;
+	height: 711px;
+	border: 1px black solid;
+	margin-left: auto;
+	margin-right: auto;
+	
+	background-color: white;
+}
+
+@font-face {
+    font-family: bryreg;
+    src: url('../assets/bryreg.otf');
+}
+@font-face {
+    font-family: brybolcon;
+    src: url('../assets/brybolcon.otf');
+}
+@font-face {
+    font-family: brymedcon;
+    src: url('../assets/brymedcon.otf');
+}
+
+#all {
+	margin-top: -180%;
+	width: 100%;
+}
+
+div .blocks {
+	width: 100%;
+	text-align: center;
+	z-index: 3;
+	color: white;
+}
+
+
+
+#header {
+	height: 8%;
+}
+
+#middle {
+	margin-top: 30%;
+	height: 20%;
+	color: black;
+	font-family: 'bryreg';
+	font-size: 28pt;
+	margin-left: 2%;
+	opacity: 0;
+}
+
+#interaction {
+	margin-top: 35%;
+
+}
+
+#mtwrf {
+	top: 30px;
+	line-height: 0.35em;
+}
+
+#mtwrf ul {
+	font-family: 'bryreg';
+	margin-left: -10%;
+	font-size: 21pt;
+}
+
+#mtwrf li {
+	display: inline;
+	padding: 3.2%;
+	opacity: 0.6;
+
+}
+
+#time {
+	font-family: 'brymedcon';
+	letter-spacing: 0.1em;
+	font-size: 72pt;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 0.4em;
+	display: inline;
+	line-height: 1.1em;
+
+}
+
+#ampm {
+	font-family: 'brybolcon';
+	font-size: 21pt;
+	letter-spacing: 0.05em;	
+	display: inline;
+}
+
+#ampm ul {
+	list-style: none;
+	margin-left: 200px;
+	margin-top: -85px;
+}
+
+#am {
+	opacity: 0.4;
+}
+
+#setbutton {
+	cursor: pointer;
+}
+
+div .nav {
+	color: black;
+	font-family: 'brymedcon';
+	font-size: 19pt;
+	display: inline;
+	opacity: 0.5;
+}
+
+#navleft {
+	margin-right: 23%;
+	cursor: pointer;
+}
+
+#navright {
+	margin-left: 23%;
+	cursor: pointer;
+}
+
+
+
+
