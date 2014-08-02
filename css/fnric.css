@@ -2,3 +2,11 @@
 .fnric .quad0 {
 	background-image: url(../assets/fnricthumb.png);
 }
+
+.fnric .title, .fnric p {
+	text-align: right;
+}
+
+.fnric p {
+	padding: 0;
+}

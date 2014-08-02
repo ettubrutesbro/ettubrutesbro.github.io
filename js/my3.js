@@ -253,47 +253,64 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	console.log(target);
 	var quadDims = new Array();
 	$(target + ' div').each(function(){
-		quadDims.push($(this).data('dimension').split(",")); //populates quadDims into nested array: [0] = quadOne data-dimension
+		quadDims.push($(this).data('dimension').split(",")) //populates quadDims into nested array: [0] = quadOne data-dimension
 	})
-
-	var allItemHeights = new Array(); //testing out using itemheights instead to automate responsive height...replace itemheight
-	allItemHeights.push($(target).data('itemheights').split(","));
-	console.log(allItemHeights[0][0]);
 	
 
-	//var itemHeight = parseInt($(target).data('itemheight')); //get itemheight attribute and expand height appropriately...for optimal screensizes
-	//what's the behavior at smaller resolutions? 
+	var itemHeights = new Array() //testing out using itemheights instead to automate responsive height...replace itemheight
+	itemHeights.push($(target).data('itemheights').split(","));
+
+	var quadMargins = new Array()
+	$(target + ' div').each(function(){
+		quadMargins.push($(this).data('margin').split(","))
+	})
 	
-	for (var i = 0; i < quadDims.length; i++) {
-		$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px")});
-	};
+	for (var i = 0; i < quadMargins.length; i++) {
+		var shit = quadMargins[i].length
+		for (var d = 0; d < shit; d++){
+			quadMargins[i][d] = quadMargins[i][d].split(/\s+/).map(Number)
+		}
+	}
+
+	console.log(quadMargins[0][1])
+
+	//$('article .title').css({width: "", marginTop: "", textAlign: ""});
+	
+	
 
 	$(target + ' .quad0').addClass('expanded'); //facilitates bg-img changes on expansion
 
-	var resolution = $(window).width(); //responsive: tiered resolution conditional will vary expand width 
+	var resolution = $(window).width(); //window width determines article height, quad sizes
 	// try a switch statement here instead of repeating resolution over and over
 
-	if(resolution>1440){ // here is where i need to grab supplied height rather than use a default
-		$(target).css({width:"1380px", height: allItemHeights[0][0] + "px", marginRight: "10%"});
-		$(target + ' div').css({margin: "5px"});
-		$(target + ' div p').css({fontSize:"12pt", lineHeight: "1.5em"});
-	} else if(resolution<=1440&&resolution>1024){
-		$(target).css({width:"1100px", height: allItemHeights[0][1] + "px", marginRight: "10%"}); //aspect ht: 600
-		$(target + ' div').css({margin: "4px"});
-		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
-	} else if(resolution<=1024&&resolution>700){
-		$(target).css({width:"800px", height: allItemHeights[0][2] + "px", marginRight: "10%"}); // aspect ht: 400
-		$(target + ' div').css({margin: "2px"});
-		$(target + ' div p').css({fontSize:"10.5pt", lineHeight:"1.1em"});
+	if(resolution>1440){ 
+		$(target).css({width:"1380px", height: itemHeights[0][0] + "px", marginRight: "10%"});
+		for (var i = 0; i < quadDims.length; i++) {
+			$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px"), 
+			margin: (quadMargins[i][0][0]+"px "+quadMargins[i][0][1]+"px "+quadMargins[i][0][2]+"px "+quadMargins[i][0][3]+"px ")
+		})
 
+	};
+	} else if(resolution<=1440&&resolution>1024){
+		$(target).css({width:"1100px", height: itemHeights[0][1] + "px", marginRight: "10%"});
+		for (var i = 0; i < quadDims.length; i++) {
+			$(target + ' .quad' + i).css({width: (quadDims[i][2] + "px"), height: (quadDims[i][3] + "px"),
+			margin: (quadMargins[i][1][0]+"px "+quadMargins[i][1][1]+"px "+quadMargins[i][1][2]+"px "+quadMargins[i][1][3]+"px ")
+		})
+	};
+	} else if(resolution<=1024&&resolution>700){
+		$(target).css({width:"800px", height: itemHeights[0][2] + "px", marginRight: "10%"});
+		for (var i = 0; i < quadDims.length; i++) {
+			$(target + ' .quad' + i).css({width: (quadDims[i][4] + "px"), height: (quadDims[i][5] + "px"),
+			margin: (quadMargins[i][2][0]+"px "+quadMargins[i][2][1]+"px "+quadMargins[i][2][2]+"px "+quadMargins[i][2][3]+"px ")
+		})
+		}
 	} else if(resolution<=700){
-		$(target).css({width:"350px", height: allItemHeights[0][3] + "px", marginRight: "10%", paddingBottom: "1%"});
-		$(target + ' div').css({width: "100%", height: "auto"});
-		$(target + ' div p').css({fontSize:"11pt", lineHeight:"1.3em"});
-		
+		$(target).css({width:"400px", height: itemHeights[0][3] + "px", marginRight: "10%", paddingBottom: "1%"});
+		$(target + ' div').css({width: "400px", height: "auto", margin: "0px 0px 0px 0px"});
 	}
 
-	//for videos:
+	//for videos: check if there is any html content inside quad0 - if yes, then play (hacky)
 	if($(target + ' .quad0').html().length > 0){
 		$(target + ' .quad0 video').get(0).play();
 	} 
