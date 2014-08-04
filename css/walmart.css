@@ -1,16 +1,17 @@
 
 
-.blkfriday .quad6 {
+.blkfriday .quad2 {
 	background-image: url("../assets/walmart/screencap.png");
 	background-size: contain;
 }
-.blkfriday .quad8 {
+.blkfriday .quad4 {
 	background-image: url("../assets/walmart/shit.png");
 }
 
-.blkfriday video {
-	width: 654px !important;
+.blkfriday .quad0 video {
+	position: relative;
 	display: none;
+	
 }	
 
 .blkfriday .quad0 {

@@ -44,7 +44,7 @@ $(document).ready(function(){
 		$('nav').addClass('mobileNav');
 		$('.about').css('text-align', 'left').css('width', '320px').css('margin-left', '30px');
 		$('figure').css('margin-left', '0px');
-		$('video').css('position', 'relative');
+		$('.about video').css('position', 'relative');
 
 		if(toggleCv){
 			$('#cvp em').css({display: "none"});
@@ -56,7 +56,7 @@ $(document).ready(function(){
 	if(resolution>1024){
 		varHt = 100;
 		$('#abouttext').css('width', '');
-		$('video').css('position','absolute');
+		$('.about video').css('position','absolute');
 		if(parseInt($('.about').css('height'), 10) > 100){
 			$('.about').css('height','100px');
 		}
@@ -68,7 +68,7 @@ $(document).ready(function(){
 	} 
 
 	if (resolution <=1024){
-		$('video').css('width', '320px');
+		$('.about video').css('width', '320px');
 		$('#abouttext').css('width', '320px');
 		
 	}
@@ -79,11 +79,11 @@ $(document).ready(function(){
 	
 	if(resolution>1440){
 		editCss(1440, 30, 380);
-		$('video').css('width', '400px');
+		$('.about video').css('width', '400px');
 		$('.about').css('font-size', '14pt');
 	}else if(resolution<=1440&&resolution>1024){
 		editCss(1280, 230, 580);
-		$('video').css('width', '250px');
+		$('.about video').css('width', '250px');
 	}else if(resolution<=1024&&resolution>700){
 		editCss(900, 200, 550);
 		varHt = 175;
@@ -272,6 +272,8 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		}
 	}
 
+	
+
 	//$('article .title').css({width: "", marginTop: "", textAlign: ""});
 	
 	$(target + ' .quad0').addClass('expanded'); //facilitates bg-img changes on expansion
@@ -306,10 +308,21 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		$(target + ' div').css({width: "400px", height: "auto", margin: "0px 0px 0px 0px"});
 	}
 
-	//for videos: check if there is any html content inside quad0 - if yes, then play (hacky)
+	//for videos: check if there is any} html content inside quad0 - if yes, then play (hacky)
 	if($(target + ' .quad0').hasClass("playme")){
 		$(target + ' .quad0 video').get(0).play();
 	} 
+
+		//array gets all videos within article divs, then sets their widths to match the parent div width
+
+		var vidArray = new Array()
+		$(target + ' video').each(function(){
+			vidArray.push($(this))
+		})
+		for (var i = 0; i < vidArray.length; i++){
+			var parentWidth = ($(vidArray[i]).parent().css('width'))
+			$(vidArray[i]).css({width: parentWidth})
+		}
 }
 
 function revert(){ 
