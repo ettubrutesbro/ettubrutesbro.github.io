@@ -272,12 +272,8 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		}
 	}
 
-	console.log(quadMargins[0][1])
-
 	//$('article .title').css({width: "", marginTop: "", textAlign: ""});
 	
-	
-
 	$(target + ' .quad0').addClass('expanded'); //facilitates bg-img changes on expansion
 
 	var resolution = $(window).width(); //window width determines article height, quad sizes
@@ -311,7 +307,7 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	}
 
 	//for videos: check if there is any html content inside quad0 - if yes, then play (hacky)
-	if($(target + ' .quad0').html().length > 0){
+	if($(target + ' .quad0').hasClass("playme")){
 		$(target + ' .quad0 video').get(0).play();
 	} 
 }
