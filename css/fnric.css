@@ -7,6 +7,26 @@
 	text-align: right;
 }
 
+.fnric .quad0.expanded {
+	background-image: url(../assets/fnric/almond.png);
+}
+
+.fnric .quad2 {
+	background-image: url(../assets/fnric/cover.png);
+}
+
 .fnric p {
 	padding: 0;
+}
+
+.fnric .quad3 {
+	background-image: url(../assets/fnric/walnut.png);
+}
+
+.fnric .quad4 {
+	background-image: url(../assets/fnric/brochure.png);
+}
+
+.fnric p {
+	text-align: center;
 }

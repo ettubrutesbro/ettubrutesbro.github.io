@@ -1,3 +1,31 @@
 .eclipse .quad0 {
 	background-image: url(../assets/eclipsethumb3.png);
 }
+
+.eclipse .quad0.expanded{
+	background: none;
+}
+
+.eclipse .quad5 {
+	background-image: url(../assets/eclipse/traj.png);
+}
+
+.eclipse .quad4 {
+	background-image: url(../assets/eclipse/fescstats.png);
+}
+
+.eclipse .quad6 {
+	background-image: url(../assets/eclipse/iss.png);
+}
+
+.eclipse .quad7 {
+	background-image: url(../assets/eclipse/axial.png);
+}
+
+.eclipse .quad8 {
+	background-image: url(../assets/eclipse/ack.png);
+}
+
+.eclipse .quad9 {
+	background-image: url(../assets/eclipse/reentry.png);
+}

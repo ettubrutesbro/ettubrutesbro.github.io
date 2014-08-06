@@ -129,6 +129,8 @@ function aboutExpand(whichOne, ht){
 			toggleAbout=true;
 		}
 	})
+	$('.about video').get(0).play();
+
 }
 
 function aboutCollapse(whichOne){
@@ -142,6 +144,10 @@ function aboutCollapse(whichOne){
 			toggleAbout=false;
 		}
 	})
+	setTimeout(function(){
+		$('.about video').get(0).pause()	
+	},500)
+	
 }
 
 $('#cv').click(function(){ // CV ROLLOUT
