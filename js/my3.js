@@ -148,17 +148,17 @@ $('#cv').click(function(){ // CV ROLLOUT
 	var resolution = $(window).width();
 	if(!toggleCv){
 		if(resolution>1024){ // 4-wide and 3-wide
-			$('#cvp em').css({display: "inline"})
+
 			$('#cvp').css({display:"inline"});
 			$('#cvp').animate({opacity: 1, left:"0px"});
 		}else if(resolution<=1024&&resolution>700){ //med. screen width: 2-wide
-			$('#cvp em').css({display: "inline"})
+
 			$('#cvp').css({display:"block",left: "0px"});
 			$('nav ul').css({top:"0px"}, function(){});	
 			$('#cvp').animate({opacity: 1, top: "0px"});
 		}else if(resolution<=700){ //mobile screen width 1-wide
 			//shorten text, rollout to the side
-			$('#cvp em').css({display: "none"}) // special: removes everything but links
+			
 			$('#cvp').css({display:"inline", left: "100px"});	
 			$('#cvp').animate({left: "3px", opacity: 1});
 			$('b').css({display: "inline"});
@@ -309,8 +309,8 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 	}
 
 	//for videos: check if there is any} html content inside quad0 - if yes, then play (hacky)
-	if($(target + ' .quad0').hasClass("playme")){
-		$(target + ' .quad0 video').get(0).play();
+	if($(target + ' div').hasClass("playme")){
+		$(target + ' div video').get(0).play();
 	} 
 
 		//array gets all videos within article divs, then sets their widths to match the parent div width

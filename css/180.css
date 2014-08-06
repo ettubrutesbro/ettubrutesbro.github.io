@@ -2,6 +2,7 @@
 *{
 	background-repeat:no-repeat;
 	background-position: center;
+	background-size: contain;
 }
 
 .museum .quad0 {
@@ -9,24 +10,23 @@
 }
 
 .museum .quad0.expanded{
-	background-image: url(../assets/180/oculus_small.png);
+	background-image: url(../assets/180/gallery_small.png);
 }
 
 .museum .quad1{
-	background-image: url(); 
+	background-image: url(../assets/180/l1iso_small.png); 
 }
 
 .museum .quad3{
-	background-image: url(); 
+	background-image: url(../assets/180/l0iso_small.png); 
 }
 
+.museum .quad4 {
+	background-image: url(../assets/180/floorplan_small.png)
+}
 
+.museum .quad5{
+	background-image: url(../assets/180/diagrams_small.png); 
+}
 .museum .quad6{
-	background-image: url(); 
-}
-.museum .quad7{
-	background-image: url(); 
-}
-.museum .quad8{
-	background-image: url(); 
-}
+	background-image: url(../assets/180/sketch_small.png); 

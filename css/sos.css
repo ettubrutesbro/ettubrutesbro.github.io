@@ -2,3 +2,36 @@
 .sos .quad0 {
 	background-image: url(../assets/sosthumb.png);
 }
+
+.sos .quad0.expanded {
+	background-image: url(../assets/sos/fullposter.jpg);
+}
+
+.sos .quad3 {
+	background-image: url(../assets/sos/storyview.png);
+}
+
+.sos .quad4 {
+	background-image: url(../assets/sos/old.png);
+}
+
+.sos .quad5 {
+	background-image: url(../assets/sos/hackathon.png);
+}
+
+.sos .quad6 {
+	text-align: right;
+}
+
+.sos .quad7 {
+	background-image: url(../assets/sos/grittv.jpg);
+}
+
+.sos a {
+	font-weight: 400;
+	color: darkorange;
+}
+
+.sos a:hover {
+	color: chocolate;
+}
