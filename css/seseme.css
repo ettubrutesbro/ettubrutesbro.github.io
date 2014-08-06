@@ -1,3 +1,15 @@
 .seseme .quad0 {
 	background-image: url(../assets/sesemethumb.png);
 }
+
+.seseme .quad0.expanded {
+	background: none;
+}
+
+.seseme video {
+	display: none;
+}
+
+.seseme .expanded video {
+	display: block;
+}
