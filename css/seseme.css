@@ -13,3 +13,30 @@
 .seseme .expanded video {
 	display: block;
 }
+
+.seseme .quad2 {
+	background-image: url(../assets/seseme/iphone5.png);
+}
+
+.seseme .quad3 {
+	background-image: url(../assets/seseme/sketch2.png);
+}
+
+.seseme .quad6 {
+	background-image: url(../assets/seseme/diagram_static.svg);
+}
+
+.seseme .quad7 {
+	background-image: url(../assets/seseme/sesemejosh.png);
+}
+
+.seseme ul{
+top: 0;
+padding: none;
+}
+
+
+.seseme li{
+	display: inline;
+	margin: 8px 0px 0px 10px;
+}
