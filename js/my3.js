@@ -316,8 +316,13 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 	//for videos: check if there is any} html content inside quad0 - if yes, then play (hacky)
 	if($(target + ' div').hasClass("playme")){
-		$(target + ' div video').get(0).play();
+			$(target + ' div.playme video').each(function(i,ele,arr){
+				$(target + ' div.playme video').get(i).play()
+			})
 	} 
+
+
+
 
 		//array gets all videos within article divs, then sets their widths to match the parent div width
 
