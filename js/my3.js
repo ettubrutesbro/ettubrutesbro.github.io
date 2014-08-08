@@ -321,7 +321,17 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 			})
 	} 
 
+		//background-image slideshow functionality
+		//series of images on top of bg image that fade in and out
 
+		var imgArray = new Array()
+
+		$(target + ' div.imgArray img').each(function){
+			imgArray.push($(this))
+		}
+		setInterval(function(){
+			if(i>imgArray.length)
+		},5000)
 
 
 		//array gets all videos within article divs, then sets their widths to match the parent div width
@@ -339,12 +349,14 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		}
 
 		//every 5 seconds play one of the vids
+		if(vidqueue>0){
 		setInterval(function(){
 			var rand = parseInt(Math.random() * (vidqueue.length))
 			console.log(rand)
 			$(vidqueue[rand]).css({display: 'block'})
-			$(vidqueue[rand]).get(0).play()
+			$(vidqueue[rand]).get(0).play()		
 		},8000)
+	}
 
 }
 
