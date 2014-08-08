@@ -326,11 +326,11 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 		var imgArray = new Array()
 
-		$(target + ' div.imgArray img').each(function){
+		$(target + ' div.imgArray img').each(function(){
 			imgArray.push($(this))
-		}
+		})
 		setInterval(function(){
-			if(i>imgArray.length)
+			if(i>imgArray.length){}
 		},5000)
 
 
