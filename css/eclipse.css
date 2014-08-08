@@ -29,3 +29,7 @@
 .eclipse .quad9 {
 	background-image: url(../assets/eclipse/reentry.png);
 }
+
+.eclipse video {
+	display: none;
+}

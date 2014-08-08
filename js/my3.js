@@ -311,7 +311,7 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		}
 	} else if(resolution<=700){
 		$(target).css({width:"400px", height: itemHeights[0][3] + "px", marginRight: "10%", paddingBottom: "1%"});
-		$(target + ' div').css({width: "400px", height: "auto", margin: "0px 0px 0px 0px"});
+		$(target + ' div').css({width: "400px", height: (quadDims[i][6] + "px"), margin: "0px 0px 0px 0px"});
 	}
 
 	//for videos: check if there is any} html content inside quad0 - if yes, then play (hacky)
@@ -325,15 +325,27 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 
 
 		//array gets all videos within article divs, then sets their widths to match the parent div width
-
+		var vidqueue = new Array()
 		var vidArray = new Array()
 		$(target + ' video').each(function(){
 			vidArray.push($(this))
+			if($(this).parent().hasClass('vidqueue')){
+				vidqueue.push($(this))
+			}
 		})
 		for (var i = 0; i < vidArray.length; i++){
 			var parentWidth = ($(vidArray[i]).parent().css('width'))
 			$(vidArray[i]).css({width: parentWidth})
 		}
+
+		//every 5 seconds play one of the vids
+		setInterval(function(){
+			var rand = parseInt(Math.random() * (vidqueue.length))
+			console.log(rand)
+			$(vidqueue[rand]).css({display: 'block'})
+			$(vidqueue[rand]).get(0).play()
+		},8000)
+
 }
 
 function revert(){ 
