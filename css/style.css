@@ -139,6 +139,9 @@ a:hover{
   color: black;
 }
 
+a.filter {
+	font-weight: 500;
+}
 
 
 

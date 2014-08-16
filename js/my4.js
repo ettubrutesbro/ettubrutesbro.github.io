@@ -1,8 +1,5 @@
 
-
-//BIG TO DO: rewrite longwinded conditionals with a switch statement and possibly using
-//custom functions....looking at responsive based shits in particular
-//potentially re-interpret margins into EM so there's no layout implosion on low brovser zooms <=75%
+//my4.js: attempt with velocity .js and blast.js, rewriting shitty old functions
 
 $(document).ready(function(){
 
