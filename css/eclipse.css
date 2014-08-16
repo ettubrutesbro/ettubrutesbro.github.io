@@ -6,27 +6,27 @@
 	background: none;
 }
 
-.eclipse .quad5 {
+.eclipse .quad3 {
 	background-image: url(../assets/eclipse/traj.png);
 }
 
-.eclipse .quad4 {
+.eclipse .quad2 {
 	background-image: url(../assets/eclipse/fescstats.png);
 }
 
-.eclipse .quad6 {
+.eclipse .quad4 {
 	background-image: url(../assets/eclipse/iss.png);
 }
 
-.eclipse .quad7 {
+.eclipse .quad5 {
 	background-image: url(../assets/eclipse/axial.png);
 }
 
-.eclipse .quad8 {
+.eclipse .quad6 {
 	background-image: url(../assets/eclipse/ack.png);
 }
 
-.eclipse .quad9 {
+.eclipse .quad7 {
 	background-image: url(../assets/eclipse/reentry.png);
 }
 

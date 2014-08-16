@@ -6,12 +6,18 @@
 
 $(document).ready(function(){
 
-	var toggleAbout = false;
-	var toggleCv = false;
-	var toggleContact = false;
-	var mobile;
-	var varHt;
-	var expando = new Array; //last expanded item - re-runs itemExpand on res change, clears value on reversion
+	var toggleAbout = false
+	var toggleCv = false
+	var toggleContact = false
+	var mobile
+	var varHt
+	var expando = window.location.hash.substring(1)
+
+	if(expando === ""){
+		
+	}else{
+		itemExpand('.'+expando)
+	}
 
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
 	revert();
@@ -27,9 +33,9 @@ $(document).ready(function(){
 	function adjust(resolution){ 
 	
 
-	if(expando[0]!=undefined&&expando[0]!=""){
+	if(expando!=undefined&&expando!=""){
 	console.log(expando);
-	itemExpand('.' + expando[0]);
+	itemExpand('.' + expando);
 	}
 
 	if(resolution>700){ //if res is above mobile / minimum
@@ -151,42 +157,42 @@ function aboutCollapse(whichOne){
 }
 
 $('#cv').click(function(){ // CV ROLLOUT
-	var resolution = $(window).width();
+	var resolution = $(window).width()
 	if(!toggleCv){
 		if(resolution>1024){ // 4-wide and 3-wide
 
-			$('#cvp').css({display:"inline"});
-			$('#cvp').animate({opacity: 1, left:"0px"});
+			$('#cvp').css({display:"inline"})
+			$('#cvp').animate({opacity: 1, left:"0px"})
 		}else if(resolution<=1024&&resolution>700){ //med. screen width: 2-wide
 
-			$('#cvp').css({display:"block",left: "0px"});
-			$('nav ul').css({top:"0px"}, function(){});	
-			$('#cvp').animate({opacity: 1, top: "0px"});
+			$('#cvp').css({display:"block",left: "0px"})
+			$('nav ul').css({top:"0px"}, function(){})
+			$('#cvp').animate({opacity: 1, top: "0px"})
 		}else if(resolution<=700){ //mobile screen width 1-wide
 			//shorten text, rollout to the side
 			
-			$('#cvp').css({display:"inline", left: "100px"});	
-			$('#cvp').animate({left: "3px", opacity: 1});
-			$('b').css({display: "inline"});
+			$('#cvp').css({display:"inline", left: "100px"})
+			$('#cvp').animate({left: "3px", opacity: 1})
+			$('b').css({display: "inline"})
 		}
 	toggleCv=true;
 	}else if(toggleCv){
 		if(resolution>1024){ //4-wide and 3-wide
 			$('#cvp').animate({opacity: 0, left:"120px", top: "20px"}, function(){
-				$('nav ul').css({top:"20px"});
-				$('#cvp').css({display:"none"});
+				$('nav ul').css({top:"20px"})
+				$('#cvp').css({display:"none"})
 			});
 		}else if(resolution<=1024&&resolution>700){ //2-wide 
 			$('#cvp').animate({opacity: 0, top:"20px"}, function(){
-				$('#cvp').css({display:"none", left:"120px",top:"20px"});
-				$('nav ul').css({top:"20px"});
+				$('#cvp').css({display:"none", left:"120px",top:"20px"})
+				$('nav ul').css({top:"20px"})
 			})
 		}else if(resolution<=700){
 			$('#cvp').animate({opacity: 0, left: "100px"}, function(){
-				$('#cvp').css({display:"none"});
+				$('#cvp').css({display:"none"})
 			});
 		}
-		toggleCv=false;
+		toggleCv=false
 
 	}
 
@@ -194,34 +200,34 @@ $('#cv').click(function(){ // CV ROLLOUT
 
 $('#cvp b').click(function(){ // LIL GREY ARROW COLLAPSE
 	$('#cvp').animate({opacity: 0, left: "100px"}, function(){
-				$('#cvp').css({display:"none"});
-				toggleCv=false;
+				$('#cvp').css({display:"none"})
+				toggleCv=false
 			});
 })
 
 $('#con').click(function(){ //CONTACT ROLLOUT
 	if(!toggleContact){
-		$('#contact').css({display: "block"});
+		$('#contact').css({display: "block"})
 		$('#contact').animate({opacity: 1, marginTop:"-15px"});
-		toggleContact=true;
+		toggleContact=true
 	}else{
 
 		$('#contact').animate({opacity: 0, marginTop:"-30px"}, function(){
-			$('#contact').css({display: "none"});
-			toggleContact=false;
+			$('#contact').css({display: "none"})
+			toggleContact=false
 		});
 	}
 })
 
 
 $('#jl').click(function(){ //clicking my name resets filtering and selection
-	expando.length = 0;
-	revert();
+	expando = ""
+	revert()
 	if(toggleAbout){
-		aboutCollapse('.about');
+		aboutCollapse('.about')
 	}
 	$('article').show();
-	window.location.hash = '';
+	window.location.hash = ''
 })
 	
 
@@ -229,65 +235,65 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 // to do: unselection? returning to unfiltered or filtered state without one thing being big
 
 
+$('a.filter').click(function(){ //clicked filter
+	var filter = $(this).attr('class').replace("filter","")
+	console.log(filter)	
+	window.location.hash = filter //hash becomes the targeted filter 
+	//revert()
+	$('article').sort(function (prev, next) {
+   		return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
+	}).appendTo('#portfolio');
+		
+		$('.' + filter).show();
+		$('article').not($('.'+ filter)).hide();
 
-$('article').click(function(event){ //SELECTION
-	console.log(this);
-	if($(event.target).attr('class')=="exit"){
-		console.log('exit');
-		revert();
-		expando.length = 0;
-	} else{
-	expando.unshift($(this).attr('class').split(' ')[0]); //gets the project title class to variable
-	console.log(expando);
+})
 
-if(expando[0]!=expando[1]){
-	revert();	
-	itemExpand('.' + expando[0]);
-	} else {
-		console.log('shit was the same')
+$('article').click(function(event){ //clicked a project
+	expando = ($(this).attr('class').split(' ')[0])
+	window.location.hash = expando //hash becomes the targeted project
+})
+
+$(window).on('hashchange', function(){
+	expando = window.location.hash.substring(1)
+	revert()
+
+	if(expando === ""){
+	}else{
+		itemExpand('.' + expando)
 	}
-}
 })
 
 
-
-function itemExpand(target){ //targeted element will appear, prepend, expand and its text will show (SELECT)
-	$('#portfolio').prepend($(target)); //shifting the selected article to top of stack
+function itemExpand(target){ 
+	$('#portfolio').prepend($(target)); //shifting the selected article to top of stack / first
 	$(target + ' div').not('.quad0, .title').show(); //unhiding other divs w/in article 
-	//$(target + ' div').css({width: "49%", height: "49%"}); //intended default effect after array + loop
 
-	console.log(target);
-	var quadDims = new Array();
+	//array definition supports precise responsive layout conditions - w, h, margin
+	var quadDims = new Array(); //getting dimension data from HTML and populating arr
 	$(target + ' div').each(function(){
 		quadDims.push($(this).data('dimension').split(",")) //populates quadDims into nested array: [0] = quadOne data-dimension
 	})
 	
-
-	var itemHeights = new Array() //testing out using itemheights instead to automate responsive height...replace itemheight
+	var itemHeights = new Array() //getting heights data from HTML, populating arr
 	itemHeights.push($(target).data('itemheights').split(","));
 
-	var quadMargins = new Array()
+	var quadMargins = new Array() //getting margins data from HTML, populating arr
 	$(target + ' div').each(function(){
 		quadMargins.push($(this).data('margin').split(","))
 	})
 	
 	for (var i = 0; i < quadMargins.length; i++) {
-		var shit = quadMargins[i].length
-		for (var d = 0; d < shit; d++){
+		for (var d = 0; d < (quadMargins[i].length); d++){
 			quadMargins[i][d] = quadMargins[i][d].split(/\s+/).map(Number)
 		}
 	}
-
 	
+	$(target + ' .quad0').addClass('expanded'); //title image changes once item is expanded
 
-	//$('article .title').css({width: "", marginTop: "", textAlign: ""});
-	
-	$(target + ' .quad0').addClass('expanded'); //facilitates bg-img changes on expansion
-
-	var resolution = $(window).width(); //window width determines article height, quad sizes
-	// try a switch statement here instead of repeating resolution over and over
-
-	if(resolution>1440){ 
+	//resolution-responsive
+	var resolution = $(window).width();
+	if(resolution>1440){ //4 wide
 		$(target).css({width:"1380px", height: itemHeights[0][0] + "px", marginRight: "10%"});
 		for (var i = 0; i < quadDims.length; i++) {
 			$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px"), 
@@ -295,35 +301,69 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		})
 
 	};
-	} else if(resolution<=1440&&resolution>1024){
+	} else if(resolution<=1440&&resolution>1024){ //3 wide
 		$(target).css({width:"1100px", height: itemHeights[0][1] + "px", marginRight: "10%"});
 		for (var i = 0; i < quadDims.length; i++) {
 			$(target + ' .quad' + i).css({width: (quadDims[i][2] + "px"), height: (quadDims[i][3] + "px"),
 			margin: (quadMargins[i][1][0]+"px "+quadMargins[i][1][1]+"px "+quadMargins[i][1][2]+"px "+quadMargins[i][1][3]+"px ")
 		})
 	};
-	} else if(resolution<=1024&&resolution>700){
+	} else if(resolution<=1024&&resolution>700){ //2 wide
 		$(target).css({width:"800px", height: itemHeights[0][2] + "px", marginRight: "10%"});
 		for (var i = 0; i < quadDims.length; i++) {
 			$(target + ' .quad' + i).css({width: (quadDims[i][4] + "px"), height: (quadDims[i][5] + "px"),
 			margin: (quadMargins[i][2][0]+"px "+quadMargins[i][2][1]+"px "+quadMargins[i][2][2]+"px "+quadMargins[i][2][3]+"px ")
 		})
 		}
-	} else if(resolution<=700){
-		$(target).css({width:"400px", height: itemHeights[0][3] + "px", marginRight: "10%", paddingBottom: "1%"});
-		$(target + ' div').css({width: "400px", height: (quadDims[i][6] + "px"), margin: "0px 0px 0px 0px"});
-	}
+	} else if(resolution<=700){ //mobile
+		$(target).css({width:"400px", height: itemHeights[0][3] + "px", marginRight: "10%", paddingBottom: "1%"})
+		for (var i = 0; i < quadDims.length; i++){
+		console.log('quad' + i)
+		console.log(quadDims[i][6])
+		$(target + ' .quad' + i).css({width: "400px", height: (quadDims[i][6] + "px"), 
+			margin: (quadMargins[i][3][0]+"px "+quadMargins[i][3][1]+"px "+quadMargins[i][3][2]+"px "+quadMargins[i][3][3]+"px ")})
+		if($(target + ' .quad' + i).hasClass('nonsize')){
+			console.log(i)
+			console.log(quadDims[i][7])
+				$(target + ' .quad' + i).css({width: (quadDims[i][7] + "px")})
+			}
+		}
 
-	//for videos: check if there is any} html content inside quad0 - if yes, then play (hacky)
+
+}
+
+
+	//triggered autoplay for videos that begin right away and loop
 	if($(target + ' div').hasClass("playme")){
 			$(target + ' div.playme video').each(function(i,ele,arr){
 				$(target + ' div.playme video').get(i).play()
 			})
 	} 
 
+	//random or sequential playing of videos, one at a time, within body of project (eclipse)
+	//array gets all videos within article divs, then sets their widths to match the parent div width
+		var vidqueue = new Array() 
+		var vidArray = new Array()
+		$(target + ' video').each(function(){
+			vidArray.push($(this)) // all videos within body of project
+			if($(this).parent().hasClass('vidqueue')){
+				vidqueue.push($(this)) //videos that will play sequential / randomly
+			}
+		})
+		for (var i = 0; i < vidArray.length; i++){
+			var parentWidth = ($(vidArray[i]).parent().css('width')) //videos are always width of container
+			$(vidArray[i]).css({width: parentWidth})
+		}
+
+		if(vidqueue.length>0){ //vidqueue random: randomly play vidqueued 
+		setInterval(function(){
+			var rand = parseInt(Math.random() * (vidqueue.length))
+			$(vidqueue[rand]).css({display: 'block'})
+			$(vidqueue[rand]).get(0).play()		
+		},8000)
+
 		//background-image slideshow functionality
 		//series of images on top of bg image that fade in and out
-
 		var imgArray = new Array()
 
 		$(target + ' div.imgArray img').each(function(){
@@ -332,37 +372,13 @@ function itemExpand(target){ //targeted element will appear, prepend, expand and
 		setInterval(function(){
 			if(i>imgArray.length){}
 		},5000)
-
-
-		//array gets all videos within article divs, then sets their widths to match the parent div width
-		var vidqueue = new Array()
-		var vidArray = new Array()
-		$(target + ' video').each(function(){
-			vidArray.push($(this))
-			if($(this).parent().hasClass('vidqueue')){
-				vidqueue.push($(this))
-			}
-		})
-		for (var i = 0; i < vidArray.length; i++){
-			var parentWidth = ($(vidArray[i]).parent().css('width'))
-			$(vidArray[i]).css({width: parentWidth})
-		}
-
-		//every 5 seconds play one of the vids
-		if(vidqueue>0){
-		setInterval(function(){
-			var rand = parseInt(Math.random() * (vidqueue.length))
-			console.log(rand)
-			$(vidqueue[rand]).css({display: 'block'})
-			$(vidqueue[rand]).get(0).play()		
-		},8000)
+		
 	}
 
 }
 
 function revert(){ 
 	$('.quad0').removeClass('expanded');
-
 	$('article').sort(function (prev, next) {
     return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
 	}).appendTo('#portfolio');
@@ -372,35 +388,21 @@ function revert(){
 	$('article .title').css({width: "100%", marginTop: "5px", textAlign: "center"});
 	//all article divs not .quad0 or .title are display: none? 
 	$('article div').not('.quad0, .title').hide(); 
-
-	//video reversion behaviors
-
-	var sources = $('.quad0 video source').get();
-	sources.forEach(function(element){
-		console.log(element.src);
-		
-	})
 	
-	
-		
-
-	
-		
-	
-
-	
+	//video stopping...
 }
 
 
 // CATEGORICAL FILTERING ----------------------------------------------------------------------
 
+	/*
 	$(window).on('hashchange', function() { //reads hash value on hash change and puts it in a var
 		revert();
 		expando.length = 0;
 		var hash = window.location.hash.substr(1);
 		$('article').sort(function (prev, next) {
-    return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
-	}).appendTo('#portfolio');
+    		return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
+			}).appendTo('#portfolio');
 		$('.' + hash).show();
 		$('.' + hash).css(
 			{width:"320px", height:"240px", margin:"30px 0px 0px 30px"}
@@ -409,6 +411,6 @@ function revert(){
 			$('article').not($('.'+ hash)).hide();
 			
 	})
-
+*/
 
 	})

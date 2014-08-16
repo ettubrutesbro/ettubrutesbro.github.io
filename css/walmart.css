@@ -15,7 +15,11 @@
 }	
 
 .blkfriday .quad0 {
-	background-image: url("../assets/37thumb.png")
+	background-image: url("../assets/37thumb.png");
+}
+
+.blkfriday .quad0.expanded{
+	background-image: none;
 }
 
 .blkfriday .expanded video{
