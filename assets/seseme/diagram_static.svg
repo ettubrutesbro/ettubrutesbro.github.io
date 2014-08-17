@@ -4,6 +4,17 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="2817.467px" height="720.887px" viewBox="-730.495 66.164 2817.467 720.887"
 	 enable-background="new -730.495 66.164 2817.467 720.887" xml:space="preserve">
+
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400,700' rel='stylesheet' type='text/css' />
+
+	<style>
+		text{
+		font-family: 'Roboto'; sans-serif;
+		}
+	</style>
+
+
+
 <g id="seseme">
 	<g id="extraneous2">
 		<polygon fill="none" stroke="#000000" stroke-width="6" stroke-miterlimit="10" points="638.501,381.008 638.501,636.644 
@@ -519,7 +530,7 @@
 	<polyline id="pointerline" fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" points="1106.041,495.515 
 		1130.842,530.794 1148.738,530.794 	"/>
 	
-		<text transform="matrix(1 0 0 1 1159.3887 558.7651)" fill="#231F20" font-family="'Roboto-Medium'" font-size="55.9401" letter-spacing="-2">30</text>
+		<text transform="matrix(1 0 0 1 1159.3887 558.7651)" fill="#231F20" font-size="55.9401" letter-spacing="-2">30</text>
 </g>
 <g id="social">
 	<g id="guy2">
@@ -979,11 +990,11 @@
 			</g>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 -567.6279 736.1626)" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">NETWORKED BUILDING DATA</text>
-	<text transform="matrix(1 0 0 1 17.3721 736.1626)" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">COMPUTING &amp; ELECTRONICS</text>
-	<text transform="matrix(1 0 0 1 612.3711 736.1626)"><tspan x="0" y="0" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">TAN</tspan><tspan x="64.77" y="0" font-family="'Forza-Medium'" font-size="30" letter-spacing="3">G</tspan><tspan x="88.109" y="0" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">IBLE DESIGN</tspan></text>
-	<text transform="matrix(1 0 0 1 998.3721 736.1626)" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">DATA VISUALIZATION</text>
-	<text transform="matrix(1 0 0 1 1443.3721 736.1626)" font-family="'Forza-Medium'" font-size="30" letter-spacing="1">COMMUNITY ENGAGEMENT</text>
+	<text transform="matrix(1 0 0 1 -567.6279 736.1626)" font-size="30" letter-spacing="1">NETWORKED BUILDING DATA</text>
+	<text transform="matrix(1 0 0 1 17.3721 736.1626)"  font-size="30" letter-spacing="1">COMPUTING &amp; ELECTRONICS</text>
+	<text transform="matrix(1 0 0 1 612.3711 736.1626)"><tspan x="0" y="0" font-size="30" letter-spacing="1">TANGIBLE DESIGN</tspan></text>
+	<text transform="matrix(1 0 0 1 998.3721 736.1626)" font-size="30" letter-spacing="1">DATA VISUALIZATION</text>
+	<text transform="matrix(1 0 0 1 1443.3721 736.1626)" font-size="30" letter-spacing="1">COMMUNITY ENGAGEMENT</text>
 </g>
 <g id="text">
 </g>
