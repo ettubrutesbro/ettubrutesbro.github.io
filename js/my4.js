@@ -1,5 +1,5 @@
 
-//my4.js: attempt with velocity .js and blast.js, rewriting shitty old functions
+//my4.js: attempt with velocity.js and blast.js, rewriting shitty old functions
 
 $(document).ready(function(){
 
@@ -11,6 +11,8 @@ $(document).ready(function(){
 	var expando = window.location.hash.substring(1)
 	var filters = ["animation", "3d", "illustration","interactive"]
 	var hashArr = new Array()
+
+	var resolutionBreakPoints = [1440,1280,900,640]
 
 	content()
 
@@ -118,10 +120,9 @@ $('#abt').click(function(){ //about section rolls out when clicked
 
 function aboutExpand(whichOne, ht){
 	$(whichOne).css('display', 'block');
-	$(whichOne).animate({
+	$(whichOne).velocity({
 		height: ht,
-		opacity: 1,
-		paddingTop: '20px'
+		opacity: 1
 	}, 400, function(){
 		if (whichOne == '.about'){
 			toggleAbout=true;
@@ -132,7 +133,7 @@ function aboutExpand(whichOne, ht){
 }
 
 function aboutCollapse(whichOne){
-	$(whichOne).animate({
+	$(whichOne).velocity({
 		height: 0,
 		opacity: 0,
 		paddingTop: '0px'
@@ -154,33 +155,33 @@ $('#cv').click(function(){ // CV ROLLOUT
 		if(resolution>1024){ // 4-wide and 3-wide
 
 			$('#cvp').css({display:"inline"})
-			$('#cvp').animate({opacity: 1, left:"0px"})
+			$('#cvp').velocity({opacity: 1, left:"0px"})
 		}else if(resolution<=1024&&resolution>700){ //med. screen width: 2-wide
 
 			$('#cvp').css({display:"block",left: "0px"})
 			$('nav ul').css({top:"0px"}, function(){})
-			$('#cvp').animate({opacity: 1, top: "0px"})
+			$('#cvp').velocity({opacity: 1, top: "0px"})
 		}else if(resolution<=700){ //mobile screen width 1-wide
 			//shorten text, rollout to the side
 			
 			$('#cvp').css({display:"inline", left: "100px"})
-			$('#cvp').animate({left: "3px", opacity: 1})
+			$('#cvp').velocity({left: "3px", opacity: 1})
 			$('b').css({display: "inline"})
 		}
 	toggleCv=true;
 	}else if(toggleCv){
 		if(resolution>1024){ //4-wide and 3-wide
-			$('#cvp').animate({opacity: 0, left:"120px", top: "20px"}, function(){
+			$('#cvp').velocity({opacity: 0, left:"120px", top: "20px"}, function(){
 				$('nav ul').css({top:"20px"})
 				$('#cvp').css({display:"none"})
 			});
 		}else if(resolution<=1024&&resolution>700){ //2-wide 
-			$('#cvp').animate({opacity: 0, top:"20px"}, function(){
+			$('#cvp').velocity({opacity: 0, top:"20px"}, function(){
 				$('#cvp').css({display:"none", left:"120px",top:"20px"})
 				$('nav ul').css({top:"20px"})
 			})
 		}else if(resolution<=700){
-			$('#cvp').animate({opacity: 0, left: "100px"}, function(){
+			$('#cvp').velocity({opacity: 0, left: "100px"}, function(){
 				$('#cvp').css({display:"none"})
 			});
 		}
@@ -191,7 +192,7 @@ $('#cv').click(function(){ // CV ROLLOUT
 })
 
 $('#cvp b').click(function(){ // LIL GREY ARROW COLLAPSE
-	$('#cvp').animate({opacity: 0, left: "100px"}, function(){
+	$('#cvp').velocity({opacity: 0, left: "100px"}, function(){
 				$('#cvp').css({display:"none"})
 				toggleCv=false
 			});
@@ -200,11 +201,11 @@ $('#cvp b').click(function(){ // LIL GREY ARROW COLLAPSE
 $('#con').click(function(){ //CONTACT ROLLOUT
 	if(!toggleContact){
 		$('#contact').css({display: "block"})
-		$('#contact').animate({opacity: 1, marginTop:"-15px"});
+		$('#contact').velocity({opacity: 1, marginTop:"-15px"});
 		toggleContact=true
 	}else{
 
-		$('#contact').animate({opacity: 0, marginTop:"-30px"}, function(){
+		$('#contact').velocity({opacity: 0, marginTop:"-30px"}, function(){
 			$('#contact').css({display: "none"})
 			toggleContact=false
 		});
@@ -303,15 +304,15 @@ function itemExpand(target){
 			$(target + ' .quad' + i).css({width: (quadDims[i][0] + "px"), height: (quadDims[i][1] + "px"), 
 			margin: (quadMargins[i][0][0]+"px "+quadMargins[i][0][1]+"px "+quadMargins[i][0][2]+"px "+quadMargins[i][0][3]+"px ")
 		})
-
-	};
+	
+	}
 	} else if(resolution<=1440&&resolution>1024){ //3 wide
 		$(target).css({width:"1100px", height: itemHeights[0][1] + "px", marginRight: "10%"});
 		for (var i = 0; i < quadDims.length; i++) {
 			$(target + ' .quad' + i).css({width: (quadDims[i][2] + "px"), height: (quadDims[i][3] + "px"),
 			margin: (quadMargins[i][1][0]+"px "+quadMargins[i][1][1]+"px "+quadMargins[i][1][2]+"px "+quadMargins[i][1][3]+"px ")
 		})
-	};
+	}
 	} else if(resolution<=1024&&resolution>700){ //2 wide
 		$(target).css({width:"800px", height: itemHeights[0][2] + "px", marginRight: "10%"});
 		for (var i = 0; i < quadDims.length; i++) {
