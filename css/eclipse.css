@@ -5,7 +5,7 @@
 .eclipse .quad0.expanded{
 	background: none;
 }
-
+/*
 .eclipse .quad3 {
 	background-image: url(../assets/eclipse/traj.png);
 }
@@ -29,7 +29,7 @@
 .eclipse .quad7 {
 	background-image: url(../assets/eclipse/reentry.png);
 }
-
+*/
 .eclipse video {
-	display: none;
+
 }

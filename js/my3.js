@@ -1,9 +1,5 @@
 
 
-//BIG TO DO: rewrite longwinded conditionals with a switch statement and possibly using
-//custom functions....looking at responsive based shits in particular
-//potentially re-interpret margins into EM so there's no layout implosion on low brovser zooms <=75%
-
 $(document).ready(function(){
 
 	var toggleAbout = false
@@ -22,7 +18,6 @@ $(document).ready(function(){
 	adjust($(window).width());
 
 	//RESPONSIVE SCREEN FUNCTIONS / etc. -----------------------------------------------------------
-	
 
 	$(window).resize(function(){
 		adjust($(window).width());
@@ -30,7 +25,6 @@ $(document).ready(function(){
 
 	function adjust(resolution){ 
 	
-
 	content() //this would be better if it only ran this when there was an actual change of tiers
 
 	if(resolution>700){ //if res is above mobile / minimum
@@ -105,9 +99,6 @@ function editCss(body, nav, con){
 	$('.about').css('margin-right', nav);
 	$('#cont').css('margin-right', con);
 }
-
-
-	
 
 //TOP EXPANDING/COLLAPSING ELEMENTS: ABOUT, CV, CONTACT -----------------------------------------------
 
@@ -227,19 +218,9 @@ $('#jl').click(function(){ //clicking my name resets filtering and selection
 	
 
 // ITEM SELECTION ---------------------------------------------------------------------------
-// to do: unselection? returning to unfiltered or filtered state without one thing being big
-
 
 $('a.filter').click(function(){ //clicked filter
 	window.location.hash = $(this).attr('class').replace("filter","")
-/*
-	$('article').sort(function (prev, next) {
-   		return parseInt(next.dataset.sort) - parseInt(prev.dataset.sort);
-	}).appendTo('#portfolio');
-		
-		$('.' + filter).show();
-		$('article').not($('.'+ filter)).hide();
-*/
 })
 
 $('article').click(function(event){ //clicked project item
@@ -345,27 +326,17 @@ function itemExpand(target){
 			})
 	} 
 
-	//random or sequential playing of videos, one at a time, within body of project (eclipse)
 	//array gets all videos within article divs, then sets their widths to match the parent div width
-		var vidqueue = new Array() 
+		
 		var vidArray = new Array()
 		$(target + ' video').each(function(){
 			vidArray.push($(this)) // all videos within body of project
-			if($(this).parent().hasClass('vidqueue')){
-				vidqueue.push($(this)) //videos that will play sequential / randomly
-			}
+	
 		})
 		for (var i = 0; i < vidArray.length; i++){
 			var parentWidth = ($(vidArray[i]).parent().css('width')) //videos are always width of container
 			$(vidArray[i]).css({width: parentWidth})
 		}
-
-		if(vidqueue.length>0){ //vidqueue random: randomly play vidqueued 
-		setInterval(function(){
-			var rand = parseInt(Math.random() * (vidqueue.length))
-			$(vidqueue[rand]).css({display: 'block'})
-			$(vidqueue[rand]).get(0).play()		
-		},8000)
 
 		//background-image slideshow functionality
 		//series of images on top of bg image that fade in and out
@@ -378,7 +349,6 @@ function itemExpand(target){
 			if(i>imgArray.length){}
 		},5000)
 		
-	}
 
 }
 

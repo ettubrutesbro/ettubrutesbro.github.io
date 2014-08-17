@@ -136,11 +136,11 @@ a.filter {
 }
 
 #cvp a {
-	color: firebrick;
+	color: red;
 }
 
 #cvp a:hover {
-	color: red;
+	color: firebrick;
 }
 
 
