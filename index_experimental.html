@@ -1,0 +1,85 @@
+
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8" />
+	<title></title>
+	<style>
+		body {
+			width: 1680px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1.5%;
+		}
+		.left {
+			float: left;
+		}
+
+		.right {
+			float: right;
+		}
+
+		header {
+			height: 3em;
+		}
+
+		#nav_list li, #nav_list{
+			display: inline;
+		}
+
+		section{
+			display: block;
+			margin-top: 2em;
+		}
+
+		article {
+			width: 320px;
+			height: 240px;
+			border: 1px black solid;
+			display: inline;
+			float: left;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!--header is omnipresent nav element
+		sections are major content sections
+		articles are items within sections
+		divs are sub-item blocks !-->
+
+	<header>
+		<div class = "left" id = "jl">JACK LENG</div>
+		<div class = "right" id = "nav">
+			<ul id = "nav_list">
+				<li>cv</li>
+				<li>about</li>
+				<li>contact</li>
+			</ul>
+		</div>
+	</header>
+
+	<section id = "portfolio">
+		<article></article>
+		<article></article>
+		<article></article>
+		<article></article>
+		<article></article>
+		<article></article>
+		<article></article>
+	</section>
+
+	<script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
+	<script type = "text/javascript" src = "js/jquery.velocity.min.js"></script>
+	<script type = "text/javascript" src = "js/jquery.blast.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#jl').click(function(){
+			console.log('you did it')
+			$('section').velocity({
+				translateY: '100px'
+			},500)
+		})
+	})
+	</script>
+</body>
