@@ -11,6 +11,8 @@
 	<script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
   <script type = "text/javascript" src = "js/my3.js"></script>
   <script type = "text/javascript" src = "js/sweet-justice.min.js"></script>
+  <script type = "text/javascript" src = "js/snap.svg-min.js"></script>
+  <script type = "text/javascript" src = "js/seseme_diagram.js"></script>
  
 	<link rel = "stylesheet" href="css/style.css" media="screen" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
@@ -89,7 +91,7 @@
       <div class = "quad5 text" data-dimension = "280,300,250,300,370,300" data-margin = "30 20 0 0,20 35 0 0,-360 60 0 0,[]">
       <p class = "sweet-justice">We believe SESEME can be a more emotive, engaging energy experience and capture the attentions of people otherwise disinterested in energy/environment while enlivening public spaces on campus. Progress is currently underway, requiring extensive web and database programming, mechanical design, and behavioral / experimental study. It is slated for installation at the UC Davis Student Community Center during Fall 2014.</p>
       </div>   
-      <div class = "quad6" data-dimension = "1230,380,1090,320,795,270" data-margin = "-50 0 0 90,[],-120 0 0 -30,[]"></div>
+      <div class = "quad6" data-dimension = "1230,380,1090,320,795,270" data-margin = "-50 0 0 90,[],-120 0 0 -30,[]"<svg id = "diagram_big"></svg></div>
       <div class = "quad7" data-dimension = "450,350,450,337,350,300,300" data-margin = "0 140 0 0,0 50 0 0,0 40 0 0,30 0 0 0"></div>
       <div class = "quad8" data-dimension = "540,380,540,380,340,450" data-margin = "20 0 0 180,0 0 0 40,0 0 0 20,[]"> <p class = "sweet-justice"> I lead the team with Justin Woodjack and work on conceptual, industrial, and experiential design. We will be speaking about the design and the experimental results it produces at the 2014 Behavior, Energy, and Climate Change conference in Washington, D.C. in December. </p>
         <p class = "sweet-justice">
@@ -126,42 +128,23 @@
       </p>
         <br> </div>
     
-      <div class = "quad2 vidqueue" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,30 0 0 0,80 0 0 18,0 0 0 0">
-          <video id = "fescstats" controls poster = "assets/eclipse/FESCstats.png">
-              <source src = "assets/eclipse/fescstats.webm" type = "video/webm">
-              <source src = "assets/eclipse/fescstats.mp4" type = "video/mp4">
-          </video>
+      <div class = "quad2" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,30 0 0 0,80 0 0 18,0 0 0 0">
+          
       </div>
-      <div class = "quad3 vidqueue" data-dimension = "660,390,500,281,640,360,225" data-margin = "-30 0 0 0,30 50 0 0,40 140 0 0,20 0 0 0">
-       <video id = "frt" controls poster = "assets/eclipse/traj.png">
-          <source src = "assets/eclipse/traj.webm" type = "video/webm">
-          <source src = "assets/eclipse/traj.mp4" type = "video/mp4">
-       </video>
+      <div class = "quad3" data-dimension = "660,390,500,281,640,360,225" data-margin = "-30 0 0 0,30 50 0 0,40 140 0 0,20 0 0 0">
+    
      </div>
-      <div class = "quad4 vidqueue" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 0 0 0,40 0 0 18,20 0 0 0">
-           <video id = "iss" controls poster = "assets/eclipse/iss.png">
-              <source src = "assets/eclipse/iss.webm" type = "video/webm">
-              <source src = "assets/eclipse/iss.mp4" type = "video/mp4">
-           </video>
+      <div class = "quad4" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 0 0 0,40 0 0 18,20 0 0 0">
+           
       </div>
-      <div class = "quad5 vidqueue" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 50 0 0,40 140 0 0,20 0 0 0">
-           <video id = "axial" controls poster = "assets/eclipse/axial.png">
-              <source src = "assets/eclipse/axial.webm" type = "video/webm">
-              <source src = "assets/eclipse/axial.mp4" type = "video/mp4">
-           </video>
+      <div class = "quad5" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 50 0 0,40 140 0 0,20 0 0 0">
+       
       </div>
       <div class = "quad6" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 0 0 0,40 0 0 18,20 0 0 0">
-           <video id = "commarr" controls poster = "assets/eclipse/ack.png">
-              <source src = "assets/eclipse/commarray.webm" type = "video/webm">
-              <source src = "assets/eclipse/commarray.mp4" type = "video/mp4">
-           </video>
+    
            
       </div>
       <div class = "quad7" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 50 0 0,40 140 0 0,20 0 0 0">
-             <video id = "reentry" controls poster = "assets/eclipse/reentry.png">
-              <source src = "assets/eclipse/reentry.webm" type = "video/webm">
-              <source src = "assets/eclipse/reentry.mp4" type = "video/mp4">
-           </video>
            
       </div>
       
