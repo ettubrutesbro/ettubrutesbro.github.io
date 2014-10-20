@@ -297,4 +297,15 @@ h3{
 
 }
 
+#reel {
+	letter-spacing: 0.1em;
+	color: red;
+	padding-left: 0.2em;
+	padding-right: 0em;
+}
+
+#reel:hover {
+	color: blue;
+}
+
 
