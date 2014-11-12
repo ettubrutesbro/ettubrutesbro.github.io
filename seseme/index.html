@@ -16,10 +16,21 @@
 	}
 
 	ul {
-		width: 42%;
 		float: left;
 		border: 2px black solid;
+		list-style: none;
 	}
+
+	#names {
+		width: 55%;
+		height: 130px;
+	}
+	#values {
+		width: 35%;
+		margin-left: 2%;
+		height: 130px;
+	}
+
 
 </style>
 </head>
@@ -44,6 +55,7 @@
 
 	<input id = "dataChanger" type = "submit" value = "state"></input>
 </section>
+<br>
 	<svg id = "mainSvg" width = "900px" height = "1600px"></svg>
 
 	<script src="/static/socket.io/socket.io.js"></script>

@@ -25,7 +25,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		viewBox: "0 0 "+ ht + " " + wid
 	})*/
 	g.attr({
-		viewBox: "-50 " + ht/4 + " 1080 1920"
+		viewBox: "-50 " + ht/3.8 + " 1080 1920"
 	})
 
 
@@ -107,10 +107,8 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 			transform: "t 0 " + -amount
 		},(amount*2.5)+500,mina.easeinout)
 
-
 	}
 
-	
 
 	$("#dataChanger").click(function(){
 	if(currentSet==stateArray.length-1){
@@ -120,6 +118,11 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	}
 	console.log(currentSet + ": " + stateArray[currentSet])
 	moveToData(stateArray[currentSet])
+	if(currentSet==4){
+		$("#metric").text('trending tweets per day')
+	}else{
+		$("#metric").text('scc energy breakdown')
+	}
 })
 
 	
