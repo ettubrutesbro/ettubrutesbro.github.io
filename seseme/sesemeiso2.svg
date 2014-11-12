@@ -4,7 +4,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewbox = "-50 250 1080 1920"
 >
 
-
+<style>
+	#a, #b, #c, #d {
+	cursor: pointer;
+	}
+</style>
 
 
 <linearGradient id="D_body_1_" gradientUnits="userSpaceOnUse" x1="540.1694" y1="491.5615" x2="540.1694" y2="1019.3979">

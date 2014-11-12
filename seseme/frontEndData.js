@@ -135,25 +135,25 @@ dataTweets.push({
 	name:'Sustainability',
 	value: '87k', 
 	metric: '',
-	height: 56} )
+	height: 46} )
 
 dataTweets.push({
 	pillar:'b',
 	name:'Hot Dogs',
 	value: '72k', 
 	metric: '',
-	height: 46} )
+	height: 20} )
 
 dataTweets.push({
 	pillar:'c',
 	name:'University of California',
 	value: '18k', 
 	metric: '',
-	height: 11} )
+	height: 0} )
 
 dataTweets.push({
 	pillar:'d',
 	name:'Net Neutrality',
 	value: '155k', 
 	metric: '',
-	height: 100} )
+	height: 80} )

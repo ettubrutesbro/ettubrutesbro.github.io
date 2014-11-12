@@ -25,7 +25,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		viewBox: "0 0 "+ ht + " " + wid
 	})*/
 	g.attr({
-		viewBox: "-50 " + 0 + " 1080 1920"
+		viewBox: "-50 " + 0 + " 700 1920"
 	})
 
 
@@ -45,7 +45,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	})	
 
 	g.attr({
-		transform: "t 30 100 s 1.5"
+		transform: "t -150 30 s 1.3"
 	})
 
 	moveToData(stateArray[currentSet])
