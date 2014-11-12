@@ -15,10 +15,56 @@ var wid = window.screen.availWidth
 
 
 
+
 Snap.load("sesemeiso2.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g)
+
+	myElement = document.getElementById('mainSvg')
+
+	var mc = new Hammer(myElement)
+
+	mc.on("swipeleft", function(ev){
+		//+1
+		if(currentSet==stateArray.length-1){
+		currentSet = 0
+	} else{
+	currentSet+=1
+	}
+	console.log(currentSet + ": " + stateArray[currentSet])
+	moveToData(stateArray[currentSet])
+	if(currentSet==4){
+		$("#metric").text('trending tweets / day')
+	}else{
+		$("#metric").text('scc energy breakdown')
+	}
+
+	var listSelect = $("#dataSetIcons li").get(currentSet)
+	$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
+	$(listSelect).css('border','3px red solid')
+	})
+
+	mc.on("swiperight", function(ev){
+	//-1
+		if(currentSet==0){
+		currentSet = 4
+	} else{
+	currentSet-=1
+	}
+	console.log(currentSet + ": " + stateArray[currentSet])
+	moveToData(stateArray[currentSet])
+	if(currentSet==4){
+		$("#metric").text('trending tweets / day')
+	}else{
+		$("#metric").text('scc energy breakdown')
+	}
+
+	var listSelect = $("#dataSetIcons li").get(currentSet)
+	$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
+	$(listSelect).css('border','3px red solid')
+	})
+
 
 
 	/*g.attr({ //scale viewbox to available screen res
