@@ -50,25 +50,33 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		selectPillar(d, 450)
 	})
 
+
+
 	function unselectPillars(speed){
-		selectedPillar.animate({
-			strokeDashoffset: oldOffsetValue
-		}, speed)
+	
+		strokerArray = [a.select('#a_body'),b.select('#b_body'),c.select('#c_body'),d.select('#d_body')]
+		offsetArray = [-1600,-1600,1600,1600]
+		strokerArray.forEach(function(ele,i){
+			ele.animate({
+				strokeDashoffset: offsetArray[i]
+			}, 450)			
+		})
+
+	
 	}
 
 	function selectPillar(pillar, speed){
 
 		var ltr = pillar.attr('id')
 
-		if (selectedPillar!=undefined){
-			unselectPillars(450)
-		}
+		unselectPillars(450)
+		
 
 		
 		
+		
 		var stroker = pillar.select('#' + ltr + '_body')
-		oldOffsetValue = stroker.attr('strokeDashoffset')
-		console.log(oldOffsetValue)
+		
 		stroker.animate({
 			strokeDashoffset: 0
 		}, speed)
@@ -92,6 +100,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 
 	}
+
 	
 })
 
