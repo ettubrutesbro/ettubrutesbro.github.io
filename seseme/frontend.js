@@ -25,7 +25,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		viewBox: "0 0 "+ ht + " " + wid
 	})*/
 	g.attr({
-		viewBox: "-50 " + ht/3.8 + " 1080 1920"
+		viewBox: "-50 " + 0 + " 1080 1920"
 	})
 
 

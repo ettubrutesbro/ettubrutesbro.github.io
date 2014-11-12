@@ -4,11 +4,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewbox = "-50 250 1080 1920"
 >
 
-<linearGradient id="bggradient" gradientUnits="userSpaceOnUse" x1="540.1689" y1="0" x2="540.1689" y2="1911.6676">
-	<stop  offset="0" style="stop-color:#FFFFFF"/>
-	<stop  offset="0.5" style="stop-color:#1A1A1A"/>
-</linearGradient>
-<rect x="-50" y = "250" fill="url(#bggradient)" width="1080" height="1920"/>
+
 
 
 <linearGradient id="D_body_1_" gradientUnits="userSpaceOnUse" x1="540.1694" y1="491.5615" x2="540.1694" y2="1019.3979">
