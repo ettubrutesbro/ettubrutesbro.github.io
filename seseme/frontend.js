@@ -32,7 +32,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		var body = a.select("#A_body")
 		body.animate({
 			strokeDashoffset: 0
-		},1000)
+		},600)
 	})
 
 	function movePillar(pillar, mask, amount, delay){
