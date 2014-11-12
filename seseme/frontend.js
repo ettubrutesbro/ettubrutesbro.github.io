@@ -13,6 +13,12 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	g = svgFile.select("svg")
 	mainSvg.append(g)
 
+	/*g.attr({ //scale viewbox to available screen res
+		viewBox: "0 0 "+ ht + " " + wid
+	})*/
+
+
+
 	var a = g.select("#A_pillar")
 	var b = g.select("#B_pillar")
 	var c = g.select("#C_pillar")
@@ -27,15 +33,12 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	var maskc = g.select("#maskc").select("#maskC")
 	var maskd = g.select("#maskd").select("#maskD")
 
-	g.attr({
-		viewBox: "0 0 "+ ht + " " + wid
-	})
 
 
-	//movePillar(a, maska, 500, 30)
-	movePillar(b, maskb, 300, 30)
-	movePillar(c, maskc, 100, 30)
-	movePillar(d, maskd, 200, 30)
+
+	movePillar(a, maska, 500, 30)
+	selectPillar(a, "#A_body", 600)
+	
 
 	a.click(function(){
 		console.log(body)
@@ -44,6 +47,13 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 			strokeDashoffset: 0
 		},600)
 	})
+
+	function selectPillar(pillar, body, speed){
+		var stroker = pillar.select(body)
+		stroker.animate({
+			strokeDashoffset: 0
+		}, speed)
+	}
 
 	function movePillar(pillar, mask, amount, delay){
 		//set delay 
