@@ -98,6 +98,49 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		}, speed)
 
 		selectedPillar = stroker
+
+		//hacky workaround --------------------------------------
+		if(ltr=='a'){
+			console.log('lets go')
+			var listHilight1 = $('#names li').get(0)
+			var listHilight2 = $('#values li').get(0)
+			$('#names li').css('background-color','rgba(255,0,0,0)')
+			$('#values li').css('background-color','rgba(255,0,0,0)')
+			$(listHilight1).css('background-color','#34A849')
+			$(listHilight2).css('background-color','#34A849')
+		}
+
+		if(ltr=='b'){
+					console.log('lets go')
+					var listHilight1 = $('#names li').get(1)
+					var listHilight2 = $('#values li').get(1)
+					$('#names li').css('background-color','rgba(255,0,0,0)')
+					$('#values li').css('background-color','rgba(255,0,0,0)')
+					$(listHilight1).css('background-color','#0FA1C5')
+					$(listHilight2).css('background-color','#0FA1C5')
+				}
+
+		if(ltr=='c'){
+					console.log('lets go')
+					var listHilight1 = $('#names li').get(2)
+					var listHilight2 = $('#values li').get(2)
+					$('#names li').css('background-color','rgba(255,0,0,0)')
+					$('#values li').css('background-color','rgba(255,0,0,0)')
+					$(listHilight1).css('background-color','#F8A71A')
+					$(listHilight2).css('background-color','#F8A71A')
+				}
+
+		if(ltr=='d'){
+					console.log('lets go')
+					var listHilight1 = $('#names li').get(3)
+					var listHilight2 = $('#values li').get(3)
+					$('#names li').css('background-color','rgba(255,0,0,0)')
+					$('#values li').css('background-color','rgba(255,0,0,0)')
+					$(listHilight1).css('background-color','rgba(255,255,255,0.1)')
+					$(listHilight2).css('background-color','rgba(255,255,255,0.1)')
+				}
+
+
 	}
 
 	function movePillar(pillar, amount, delay){
@@ -125,10 +168,15 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	console.log(currentSet + ": " + stateArray[currentSet])
 	moveToData(stateArray[currentSet])
 	if(currentSet==4){
-		$("#metric").text('trending tweets per day')
+		$("#metric").text('trending tweets / day')
 	}else{
 		$("#metric").text('scc energy breakdown')
 	}
+
+	var listSelect = $("#dataSetIcons li").get(currentSet)
+	$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
+	$(listSelect).css('border','3px red solid')
+
 })
 
 	
