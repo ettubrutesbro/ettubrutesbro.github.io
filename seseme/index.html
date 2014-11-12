@@ -1,32 +1,52 @@
 
 <html>
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css'>
 <style>
 	body {
-		width: 110%;
-		height: 110%;
-		border: 3px black solid;
+		color: white;
 		background-image: url(background.svg);
+		background-size: cover;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 	#topdata{
-		border: 1px green solid;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 24pt;
-		width: 80%;
+		padding: 2%;
+		font-size: 20pt;
+		width: 100%;
 		position: absolute;
+		font-weight: 400;
+		letter-spacing: 0.13em;
 
+	}
+
+	#metric{
+		font-size: 28pt;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
 	}
 
 	ul {
 		float: left;
 		border: 2px black solid;
 		list-style: none;
+		padding: 0;
+		margin: 20 0 0 0;
+	}
+
+	ul li {
+		
 	}
 
 	#names {
 		width: 55%;
 		height: 130px;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 20pt;
+		letter-spacing: 0.05em;
 	}
 	#values {
 		width: 35%;
@@ -41,7 +61,7 @@
 <body>
 	<section id = "topdata">
 	now displaying <div id  = "metric">
-		blah shit blah
+		scc energy breakdown
 	</div>
 	<ul id = "names">
 		<li></li>

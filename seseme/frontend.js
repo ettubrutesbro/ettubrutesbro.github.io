@@ -44,6 +44,8 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		})
 	})	
 
+	moveToData(stateArray[currentSet])
+
 	function moveToData(dataSet){
 
 		var lightv = 0
@@ -75,7 +77,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 	function unselectPillars(speed){
 		strokerArray = [a.select('#a_body'),b.select('#b_body'),c.select('#c_body'),d.select('#d_body')]
-		offsetArray = [-1600,-1600,1600,1600]
+		offsetArray = [1600,1600,1600,1600]
 		strokerArray.forEach(function(ele,i){
 			ele.attr({
 				strokeDashoffset: offsetArray[i]
