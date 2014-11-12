@@ -1,7 +1,9 @@
 
+//var socket = io(':5000')
 
 var stateArray = [dataMorning, dataNoon, dataEvening, dataMidnight, dataTweets]
 var currentSet = 1
+var valueArray = [[500],[500],[500],[500]]
 
 var mainSvg = Snap("#mainSvg")
 
@@ -11,9 +13,6 @@ var wid = window.screen.availWidth
 
 
 
-
-$('#metric').text('height ' + ht)
-$('#targeted').text('width ' + wid)
 
 
 Snap.load("sesemeiso2.svg", function(svgFile){
@@ -46,10 +45,31 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	})	
 
 	function moveToData(dataSet){
+
+		var lightv = 0
+
 		pillarArray.forEach(function(ele,i){
-			console.log(dataSet[i])
-			movePillar(ele,(dataSet[i].height)*5,0)
+			//console.log(dataSet[i])
+			valueArray[i].unshift(500-((dataSet[i].height)*5))
+			var translation = valueArray[i][0]
+			movePillar(ele,translation,0)
+			var nameSlot =  $('#names li').get(i)
+			$(nameSlot).text(dataSet[i].name)
+
+			var valSlot =  $('#values li').get(i)
+			$(valSlot).text(dataSet[i].value+ " " + dataSet[i].metric)
+
+			lightv += dataSet[i].height
 		})
+
+		
+		var jsonData = {
+				height: dataSet[0].height,
+				lightValue: Math.round(lightv/100)
+			}
+		console.log(JSON.stringify(jsonData))
+			
+		//socket.emit('demo shit', JSON.stringify(jsonData))
 
 	}
 
@@ -81,11 +101,11 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 		pillar.animate({
 			transform: "t 0 " + amount
-		},(amount*1.5)+150,mina.easeinout)
+		},(amount*2.5)+500,mina.easeinout)
 		
 		mask.animate({
 			transform: "t 0 " + -amount
-		},(amount*1.5)+150,mina.easeinout)
+		},(amount*2.5)+500,mina.easeinout)
 
 
 	}

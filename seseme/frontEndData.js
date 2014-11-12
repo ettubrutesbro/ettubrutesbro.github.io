@@ -53,7 +53,7 @@ dataNoon.push({
 	name:'SCC Heating',
 	value: 588, 
 	metric:'Btu',
-	height: 153} )
+	height: 53} )
 
 dataNoon.push({
 	pillar:'d',
