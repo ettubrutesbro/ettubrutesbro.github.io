@@ -1,5 +1,5 @@
 
-//var socket = io(':5000')
+var socket = io('10.0.1.241:5000')
 
 var stateArray = [dataMorning, dataNoon, dataEvening, dataMidnight, dataTweets]
 var currentSet = 1
@@ -75,7 +75,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 			}
 		console.log(JSON.stringify(jsonData))
 			
-		//socket.emit('demo shit', JSON.stringify(jsonData))
+		socket.emit('demo shit', JSON.stringify(jsonData))
 
 	}
 
