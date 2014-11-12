@@ -1,6 +1,13 @@
 
 var mainSvg = Snap("#mainSvg")
 
+var ht = window.screen.availHeight
+var wid = window.screen.availWidth
+
+$('#metric').text('height ' + ht)
+$('#targeted').text('width ' + wid)
+
+
 Snap.load("sesemeiso2.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
@@ -20,6 +27,9 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	var maskc = g.select("#maskc").select("#maskC")
 	var maskd = g.select("#maskd").select("#maskD")
 
+	g.attr({
+		viewBox: "0 0 "+ ht + " " + wid
+	})
 
 
 	//movePillar(a, maska, 500, 30)
