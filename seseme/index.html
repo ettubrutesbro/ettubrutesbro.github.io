@@ -6,7 +6,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 <style>
 	body {
-		width: 100%;
+		
 		height: 110%;
 		color: white;
 		background-image: url(background.svg);
@@ -77,6 +77,19 @@
 		margin: 6 0;
 		font-size: 36pt;
 	}
+	#dataSetIcons{
+		position: absolute;
+		margin-left: 60%;
+		margin-top: -9%;
+		width: 300px;
+	}
+	#dataSetIcons li{
+		display: inline;
+		width: 25px;
+		height: 25px;
+		border: 1px white solid;
+		
+	}
 
 
 </style>
@@ -84,7 +97,16 @@
 
 <body>
 	<section id = "topdata">
-	now displaying <div id  = "metric">
+	now displaying 
+	<ul id = "dataSetIcons">
+		<li>a</li>
+		<li>b</li>
+		<li>c</li>
+		<li>d</li>
+		<li>e</li>
+	</ul>
+
+	<div id  = "metric">
 		scc energy breakdown
 	</div>
 </section>
