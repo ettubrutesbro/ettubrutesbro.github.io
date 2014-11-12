@@ -22,21 +22,29 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 
 
-	movePillar(a, maska, 500, 600, 30)
-	movePillar(b, maskb, 300, 600, 30)
-	movePillar(c, maskc, 100, 600, 30)
-	movePillar(d, maskd, 200, 600, 30)
+	//movePillar(a, maska, 500, 30)
+	movePillar(b, maskb, 300, 30)
+	movePillar(c, maskc, 100, 30)
+	movePillar(d, maskd, 200, 30)
 
-	function movePillar(pillar, mask, amount, speed, delay){
+	a.click(function(){
+		console.log(body)
+		var body = a.select("#A_body")
+		body.animate({
+			strokeDashoffset: 0
+		},1000)
+	})
+
+	function movePillar(pillar, mask, amount, delay){
 		//set delay 
 	
 		pillar.animate({
 			transform: "t 0 " + amount
-		},speed)
+		},(amount*1.5)+150,mina.easeinout)
 		
 		mask.animate({
 			transform: "t 0 " + -amount
-		},speed)
+		},(amount*1.5)+150,mina.easeinout)
 
 
 	}
