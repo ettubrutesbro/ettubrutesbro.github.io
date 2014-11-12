@@ -44,6 +44,10 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		})
 	})	
 
+	g.attr({
+		transform: "t 0 50 s 1.3"
+	})
+
 	moveToData(stateArray[currentSet])
 
 	function moveToData(dataSet){
