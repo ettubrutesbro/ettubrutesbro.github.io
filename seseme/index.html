@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 <style>
 	body {
 		color: white;
@@ -12,17 +14,27 @@
 	#topdata{
 		margin-left: auto;
 		margin-right: auto;
-		padding: 2%;
-		font-size: 20pt;
+		padding-left: 15%;
+		padding-top: 10%;
+		font-size: 31pt;
 		width: 100%;
 		position: absolute;
 		font-weight: 400;
 		letter-spacing: 0.13em;
+	}
 
+	#bottomdata{
+		margin-top: 1120px;
+		padding: 27%;
+		font-size: 31pt;
+		width: 100%;
+		position: absolute;
+		font-weight: 400;
+		letter-spacing: 0.13em;
 	}
 
 	#metric{
-		font-size: 28pt;
+		font-size: 40pt;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
@@ -36,22 +48,30 @@
 		margin: 20 0 0 0;
 	}
 
-	ul li {
-		
-	}
 
 	#names {
-		width: 55%;
+		
 		height: 130px;
 		font-weight: 600;
 		text-transform: uppercase;
-		font-size: 20pt;
+		font-size: 25pt;
 		letter-spacing: 0.05em;
 	}
+
+	#names li {
+		padding: 14 0;
+	}
 	#values {
-		width: 35%;
-		margin-left: 2%;
+		font-size: 25pt;
+		margin-left: 4%;
 		height: 130px;
+		font-family: 'Open Sans Condensed', sans-serif;
+
+	}
+
+	#values li {
+		padding: 2 0;
+		font-size: 36pt;
 	}
 
 
@@ -63,12 +83,15 @@
 	now displaying <div id  = "metric">
 		scc energy breakdown
 	</div>
+</section>
+<section id = "bottomdata">
 	<ul id = "names">
 		<li></li>
 		<li></li>
 		<li></li>
 		<li></li>
 	</ul>
+
 	<ul id = "values">
 		<li></li>
 		<li></li>

@@ -4,28 +4,28 @@
 var dataMorning = [];
 dataMorning.push({
 	pillar:'a',
-	name:'SCC Power',
+	name:'Power',
 	value: 40, 
 	metric:'kW',
 	height: 48} )
 
 dataMorning.push({
 	pillar:'b',
-	name:'SCC Gas',
+	name:'Gas',
 	value: 181, 
 	metric:'BTU',
 	height: 55} )
 
 dataMorning.push({
 	pillar:'c',
-	name:'SCC Heating',
+	name:'Heating',
 	value: 1111, 
 	metric:'BTU',
 	height: 100} )
 
 dataMorning.push({
 	pillar:'d',
-	name:'SCC Cooling',
+	name:'Cooling',
 	value: 1875, 
 	metric:'BTU',
 	height: 7} )
@@ -36,28 +36,28 @@ dataMorning.push({
 var dataNoon = [];
 dataNoon.push({
 	pillar:'a',
-	name:'SCC Power',
+	name:'Power',
 	value: 76, 
 	metric:'kW',
 	height: 93} )
 
 dataNoon.push({
 	pillar:'b',
-	name:'SCC Gas',
+	name:'Gas',
 	value: 333, 
 	metric:'BTU',
 	height: 100} )
 
 dataNoon.push({
 	pillar:'c',
-	name:'SCC Heating',
+	name:'Heating',
 	value: 588, 
 	metric:'BTU',
 	height: 53} )
 
 dataNoon.push({
 	pillar:'d',
-	name:'SCC Cooling',
+	name:'Cooling',
 	value: 27368, 
 	metric:'BTU',
 	height: 100} )
@@ -68,28 +68,28 @@ dataNoon.push({
 var dataEvening = [];
 dataEvening.push({
 	pillar:'a',
-	name:'SCC Power',
+	name:'Power',
 	value: 83, 
 	metric:'kW',
 	height: 100} )
 
 dataEvening.push({
 	pillar:'b',
-	name:'SCC Gas',
+	name:'Gas',
 	value: 266, 
 	metric:'BTU',
 	height: 80} )
 
 dataEvening.push({
 	pillar:'c',
-	name:'SCC Heating',
+	name:'Heating',
 	value: 434, 
 	metric:'BTU',
 	height: 39} )
 
 dataEvening.push({
 	pillar:'d',
-	name:'SCC Cooling',
+	name:'Cooling',
 	value: 5945, 
 	metric:'BTU',
 	height: 22} )
@@ -100,28 +100,28 @@ dataEvening.push({
 var dataMidnight = [];
 dataMidnight.push({
 	pillar:'a',
-	name:'SCC Power',
+	name:'Power',
 	value: 67, 
 	metric:'kW',
 	height: 81} )
 
 dataMidnight.push({
 	pillar:'b',
-	name:'SCC Gas',
+	name:'Gas',
 	value: 73, 
 	metric:'BTU',
 	height: 22} )
 
 dataMidnight.push({
 	pillar:'c',
-	name:'SCC Heating',
+	name:'Heating',
 	value: 908, 
 	metric:'BTU',
 	height: 82} )
 
 dataMidnight.push({
 	pillar:'d',
-	name:'SCC Cooling',
+	name:'Cooling',
 	value: 1875, 
 	metric:'BTU',
 	height: 20} )
