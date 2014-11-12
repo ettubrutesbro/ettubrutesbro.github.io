@@ -58,13 +58,14 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 	function selectPillar(pillar, speed){
 
-		
+		var ltr = pillar.attr('id')
 
 		if (selectedPillar!=undefined){
 			unselectPillars(450)
 		}
 
-		var ltr = pillar.attr('id')
+		
+		
 		var stroker = pillar.select('#' + ltr + '_body')
 		oldOffsetValue = stroker.attr('strokeDashoffset')
 		console.log(oldOffsetValue)
@@ -73,6 +74,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		}, speed)
 
 		selectedPillar = stroker
+		
 	}
 
 	function movePillar(pillar, amount, delay){
