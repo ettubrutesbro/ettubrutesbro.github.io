@@ -75,7 +75,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 			}
 		console.log(JSON.stringify(jsonData))
 			
-		socket.emit('demo shit', JSON.stringify(jsonData))
+		socket.emit('demo shit', jsonData)
 
 	}
 
