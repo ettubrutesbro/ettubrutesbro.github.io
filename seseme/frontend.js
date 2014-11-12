@@ -4,6 +4,9 @@ var mainSvg = Snap("#mainSvg")
 var ht = window.screen.availHeight
 var wid = window.screen.availWidth
 
+
+
+
 $('#metric').text('height ' + ht)
 $('#targeted').text('width ' + wid)
 
@@ -16,7 +19,9 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	/*g.attr({ //scale viewbox to available screen res
 		viewBox: "0 0 "+ ht + " " + wid
 	})*/
-
+	g.attr({
+		viewBox: "-50 " + ht/4 + " 1080 1920"
+	})
 
 
 	var a = g.select("#a")
@@ -57,9 +62,9 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		strokerArray = [a.select('#a_body'),b.select('#b_body'),c.select('#c_body'),d.select('#d_body')]
 		offsetArray = [-1600,-1600,1600,1600]
 		strokerArray.forEach(function(ele,i){
-			ele.animate({
+			ele.attr({
 				strokeDashoffset: offsetArray[i]
-			}, 450)			
+			})			
 		})
 
 	
