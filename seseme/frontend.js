@@ -36,8 +36,14 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	moveToData(stateArray[currentSet])
 	if(currentSet==4){
 		$("#metric").text('trending tweets / day')
-	}else{
-		$("#metric").text('scc energy breakdown')
+	}else if(currentSet==0){
+		$("#metric").text('scc energy - morning')
+	}else if(currentSet==1){
+		$("#metric").text('scc energy - afternoon')
+	}else if(currentSet==2){
+		$("#metric").text('scc energy - evening')
+	}else if(currentSet==3){
+		$("#metric").text('scc energy - midnight')
 	}
 
 	var listSelect = $("#dataSetIcons li").get(currentSet)
@@ -56,8 +62,14 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	moveToData(stateArray[currentSet])
 	if(currentSet==4){
 		$("#metric").text('trending tweets / day')
-	}else{
-		$("#metric").text('scc energy breakdown')
+	}else if(currentSet==0){
+		$("#metric").text('scc energy - morning')
+	}else if(currentSet==1){
+		$("#metric").text('scc energy - afternoon')
+	}else if(currentSet==2){
+		$("#metric").text('scc energy - evening')
+	}else if(currentSet==3){
+		$("#metric").text('scc energy - midnight')
 	}
 
 	var listSelect = $("#dataSetIcons li").get(currentSet)
@@ -95,6 +107,9 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	})
 
 	moveToData(stateArray[currentSet])
+
+	var firstRed = $("#dataSetIcons li").get(currentSet)
+	$(firstRed).css('border','3px red solid')
 
 	function moveToData(dataSet){
 
@@ -215,8 +230,14 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	moveToData(stateArray[currentSet])
 	if(currentSet==4){
 		$("#metric").text('trending tweets / day')
-	}else{
-		$("#metric").text('scc energy breakdown')
+	}else if(currentSet==0){
+		$("#metric").text('scc energy - morning')
+	}else if(currentSet==1){
+		$("#metric").text('scc energy - afternoon')
+	}else if(currentSet==2){
+		$("#metric").text('scc energy - evening')
+	}else if(currentSet==3){
+		$("#metric").text('scc energy - midnight')
 	}
 
 	var listSelect = $("#dataSetIcons li").get(currentSet)
