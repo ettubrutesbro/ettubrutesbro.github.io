@@ -1,8 +1,13 @@
 
+
+var stateArray = [dataMorning, dataNoon, dataEvening, dataMidnight, dataTweets]
+var currentSet = 1
+
 var mainSvg = Snap("#mainSvg")
 
 var ht = window.screen.availHeight
 var wid = window.screen.availWidth
+
 
 
 
@@ -15,6 +20,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g)
+
 
 	/*g.attr({ //scale viewbox to available screen res
 		viewBox: "0 0 "+ ht + " " + wid
@@ -29,36 +35,25 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	var c = g.select("#c")
 	var d = g.select("#d")
 
-	
+	var pillarArray = [a,b,c,d]
 
 	//amount, speed, delay...finally modifies a global value var per pillar
-
-
-	var oldOffsetValue
-	var selectedPillar
-
-
 	
-	
-	
-	a.click(function(){
-		selectPillar(a, 450)
-	})
-	
-	b.click(function(){
-		selectPillar(b, 450)
+	pillarArray.forEach(function(ele,i){
+		ele.click(function(){
+			selectPillar(ele,450)
+		})
 	})	
-	c.click(function(){
-		selectPillar(c, 450)
-	})	
-	d.click(function(){
-		selectPillar(d, 450)
-	})
 
+	function moveToData(dataSet){
+		pillarArray.forEach(function(ele,i){
+			console.log(dataSet[i])
+			movePillar(ele,(dataSet[i].height)*5,0)
+		})
 
+	}
 
 	function unselectPillars(speed){
-	
 		strokerArray = [a.select('#a_body'),b.select('#b_body'),c.select('#c_body'),d.select('#d_body')]
 		offsetArray = [-1600,-1600,1600,1600]
 		strokerArray.forEach(function(ele,i){
@@ -66,28 +61,17 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 				strokeDashoffset: offsetArray[i]
 			})			
 		})
-
-	
 	}
 
 	function selectPillar(pillar, speed){
-
 		var ltr = pillar.attr('id')
-
 		unselectPillars(450)
-		
-
-		
-		
-		
 		var stroker = pillar.select('#' + ltr + '_body')
-		
 		stroker.animate({
 			strokeDashoffset: 0
 		}, speed)
 
 		selectedPillar = stroker
-		
 	}
 
 	function movePillar(pillar, amount, delay){
@@ -105,6 +89,18 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 
 	}
+
+	
+
+	$("#dataChanger").click(function(){
+	if(currentSet==stateArray.length-1){
+		currentSet = 0
+	} else{
+	currentSet+=1
+	}
+	console.log(currentSet + ": " + stateArray[currentSet])
+	moveToData(stateArray[currentSet])
+})
 
 	
 })
