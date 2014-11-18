@@ -38,7 +38,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	myElement = document.getElementById('mainSvg')
 	//mc.x for touch functions
 	var mc = new Hammer(myElement)
-	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+
 	//the pillars and their masks
 	var a = g.select("#a"), b = g.select("#b"), c = g.select("#c"), d = g.select("#d")
 	var pillarArray = [a,b,c,d]
