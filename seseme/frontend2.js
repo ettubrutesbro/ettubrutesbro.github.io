@@ -3,9 +3,25 @@ var socket = io('10.0.1.241:5000')
 
 var tag = [tagMorn, tagNoon, tagNite, tagLate], building = [buildingMorn, buildingNoon, buildingNite, buildingLate], school = [schoolMorn, schoolNoon, schoolNite, schoolLate]
 var scaleSet = [tag, building, school]
+var currentScale = 0, currentTime
 
-var stateArray = [dataMorning, dataNoon, dataEvening, dataMidnight]
-var currentSet = 1
+switch(new Date().getHours()) { //currentTime depends on current hour
+	case 0: case 1: case 2: case 3: case 4: case 5:
+		currentTime = 3
+		break;
+	case 6: case 7: case 8: case 9: case 10: case 11:
+		currentTime = 0
+		break;
+	case 12: case 13: case 14: case 15: case 16: case 17: case 18:
+		currentTime = 1
+		break;
+	case 19: case 20: case 21: case 22: case 23:
+		currentTime = 2
+		break;
+}
+
+//console.log(scaleSet[currentScale][currentTime][0].value)
+
 var valueArray = [[500],[500],[500],[500]]
 
 var mainSvg = Snap("#mainSvg")
@@ -22,12 +38,13 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	myElement = document.getElementById('mainSvg')
 	//mc.x for touch functions
 	var mc = new Hammer(myElement)
+	mc.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 	//the pillars and their masks
 	var a = g.select("#a"), b = g.select("#b"), c = g.select("#c"), d = g.select("#d")
 	var pillarArray = [a,b,c,d]
 	var themasks = g.select("#themasks")
 	//icon highlighting for dataset
-	var firstRed = $("#dataSetIcons li").get(currentSet)
+	var firstRed = $("#dataSetIcons li").get(currentTime)
 	$(firstRed).css('border','3px red solid')
 
 
@@ -38,8 +55,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	themasks.attr({ //these are just off, so this transform fixes their positioning
 		transform: "t 200 120"
 	})
+	moveToData(scaleSet[currentScale][currentTime]) //right away, go to dataset
 
-	moveToData(stateArray[currentSet]) //right away, go to dataset
 
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
 		ele.click(function(){
@@ -49,44 +66,70 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	//swiping in directions changes the displayed data set
 	mc.on("swipeleft", function(ev){
-		metricSwipe("left")
+		timeChange("later")
 	})
 	mc.on("swiperight", function(ev){
-		metricSwipe("right")
+		timeChange("earlier")
+	})
+	mc.on("swipeup", function(ev){
+		scaleChange("smaller")
+	})
+	mc.on("swipedown", function(ev){
+		scaleChange("bigger")
 	})
 
+	function scaleChange(direction){
+		if(direction == "bigger"){
+			if(currentScale==scaleSet.length-1){
+				currentScale=0
+			}else{
+				currentScale+=1
+			}
+			
+		}else if(direction == "smaller"){
+			if(currentScale==0){
+				currentScale=scaleSet.length-1
+			}else{
+				currentScale-=1
+			}
+		} // end direction conditionals
 
-	function metricSwipe(direction){  
-		if(direction=="right"){ //-1
-			console.log("right")
-			if(currentSet==0){
-				currentSet = stateArray.length-1
+		timeChange("none")
+	}
+
+	function timeChange(direction){  
+		//supply "none" to direction to run shit without affecting time
+		if(direction=="earlier"){ //-1
+			console.log("earlier")
+			if(currentTime==0){
+				currentTime = scaleSet[currentScale].length-1
 			} else{
-			currentSet-=1
+			currentTime-=1
 			}
 		}
-		else if(direction=="left"){ //+1
-			console.log("left" + currentSet)
-			if(currentSet==stateArray.length-1){
-				currentSet = 0
+		else if(direction=="later"){ //+1
+			console.log("later")
+			if(currentTime==scaleSet[currentScale].length-1){
+				currentTime = 0
 			} else{
-			currentSet+=1
-			console.log(currentSet)
+			currentTime+=1
+			console.log(currentTime)
 			}
 		} //end of direction conditionals
 
-		moveToData(stateArray[currentSet])
-		if(currentSet==0){
-				$("#metric").text('scc energy - morning')
-			}else if(currentSet==1){
-				$("#metric").text('scc energy - afternoon')
-			}else if(currentSet==2){
-				$("#metric").text('scc energy - evening')
-			}else if(currentSet==3){
-				$("#metric").text('scc energy - midnight')
+		moveToData(scaleSet[currentScale][currentTime])
+
+		if(currentTime==0){
+				$("#metric").text('morning')
+			}else if(currentTime==1){
+				$("#metric").text('afternoon')
+			}else if(currentTime==2){
+				$("#metric").text('evening')
+			}else if(currentTime==3){
+				$("#metric").text('midnight')
 			}
 
-		var listSelect = $("#dataSetIcons li").get(currentSet) //highlights icons
+		var listSelect = $("#dataSetIcons li").get(currentTime) //highlights icons
 		$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
 		$(listSelect).css('border','3px red solid')
 	

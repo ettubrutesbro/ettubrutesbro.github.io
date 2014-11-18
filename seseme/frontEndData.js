@@ -1,29 +1,29 @@
 // ****
-// Morning Data
+// TAG: Morn data 
 // ####
-var dataMorning = [];
-dataMorning.push({
+var tagMorn = [];
+tagMorn.push({
 	pillar:'a',
 	name:'Power',
 	value: 40, 
 	metric:'kW',
 	height: 48} )
 
-dataMorning.push({
+tagMorn.push({
 	pillar:'b',
 	name:'Gas',
 	value: 181, 
 	metric:'BTU',
 	height: 55} )
 
-dataMorning.push({
+tagMorn.push({
 	pillar:'c',
 	name:'Heating',
 	value: 1111, 
 	metric:'BTU',
 	height: 100} )
 
-dataMorning.push({
+tagMorn.push({
 	pillar:'d',
 	name:'Cooling',
 	value: 1875, 
@@ -31,31 +31,31 @@ dataMorning.push({
 	height: 7} )
 
 // ****
-// Noon Data
+// TAG: Noon data 
 // ####
-var dataNoon = [];
-dataNoon.push({
+var tagNoon = [];
+tagNoon.push({
 	pillar:'a',
 	name:'Power',
 	value: 76, 
 	metric:'kW',
 	height: 93} )
 
-dataNoon.push({
+tagNoon.push({
 	pillar:'b',
 	name:'Gas',
 	value: 333, 
 	metric:'BTU',
 	height: 100} )
 
-dataNoon.push({
+tagNoon.push({
 	pillar:'c',
 	name:'Heating',
 	value: 588, 
 	metric:'BTU',
 	height: 53} )
 
-dataNoon.push({
+tagNoon.push({
 	pillar:'d',
 	name:'Cooling',
 	value: 27368, 
@@ -63,31 +63,31 @@ dataNoon.push({
 	height: 100} )
 
 // ****
-// Evening Data
+// TAG: Nite data 
 // ####
-var dataEvening = [];
-dataEvening.push({
+var tagNite = [];
+tagNite.push({
 	pillar:'a',
 	name:'Power',
 	value: 83, 
 	metric:'kW',
 	height: 100} )
 
-dataEvening.push({
+tagNite.push({
 	pillar:'b',
 	name:'Gas',
 	value: 266, 
 	metric:'BTU',
 	height: 80} )
 
-dataEvening.push({
+tagNite.push({
 	pillar:'c',
 	name:'Heating',
 	value: 434, 
 	metric:'BTU',
 	height: 39} )
 
-dataEvening.push({
+tagNite.push({
 	pillar:'d',
 	name:'Cooling',
 	value: 5945, 
@@ -95,31 +95,31 @@ dataEvening.push({
 	height: 22} )
 
 // ****
-// Midnight Data
+// TAG: Late data 
 // ####
-var dataMidnight = [];
-dataMidnight.push({
+var tagLate = [];
+tagLate.push({
 	pillar:'a',
 	name:'Power',
 	value: 67, 
 	metric:'kW',
 	height: 81} )
 
-dataMidnight.push({
+tagLate.push({
 	pillar:'b',
 	name:'Gas',
 	value: 73, 
 	metric:'BTU',
 	height: 22} )
 
-dataMidnight.push({
+tagLate.push({
 	pillar:'c',
 	name:'Heating',
 	value: 908, 
 	metric:'BTU',
 	height: 82} )
 
-dataMidnight.push({
+tagLate.push({
 	pillar:'d',
 	name:'Cooling',
 	value: 1875, 
@@ -127,33 +127,260 @@ dataMidnight.push({
 	height: 20} )
 
 // ****
-// twitter Data
+// BUILDING: Morn data 
 // ####
-var dataTweets = [];
-dataTweets.push({
+var buildingMorn = [];
+buildingMorn.push({
 	pillar:'a',
-	name:'Sustainability',
-	value: '87k', 
-	metric: '',
-	height: 46} )
+	name:'Sierra',
+	value: 40, 
+	metric:'EUI',
+	height: 48} )
 
-dataTweets.push({
+buildingMorn.push({
 	pillar:'b',
-	name:'Hot Dogs',
-	value: '72k', 
-	metric: '',
+	name:'Hotel',
+	value: 181, 
+	metric:'EUI',
+	height: 55} )
+
+buildingMorn.push({
+	pillar:'c',
+	name:'India',
+	value: 1111, 
+	metric:'EUI',
+	height: 100} )
+
+buildingMorn.push({
+	pillar:'d',
+	name:'Tango',
+	value: 1875, 
+	metric:'EUI',
+	height: 7} )
+
+// ****
+// BUILDING: Noon data 
+// ####
+var buildingNoon = [];
+buildingNoon.push({
+	pillar:'a',
+	name:'Sierra',
+	value: 76, 
+	metric:'EUI',
+	height: 93} )
+
+buildingNoon.push({
+	pillar:'b',
+	name:'Hotel',
+	value: 333, 
+	metric:'EUI',
+	height: 100} )
+
+buildingNoon.push({
+	pillar:'c',
+	name:'India',
+	value: 588, 
+	metric:'EUI',
+	height: 53} )
+
+buildingNoon.push({
+	pillar:'d',
+	name:'Tango',
+	value: 27368, 
+	metric:'EUI',
+	height: 100} )
+
+// ****
+// BUILDING: Nite data 
+// ####
+var buildingNite = [];
+buildingNite.push({
+	pillar:'a',
+	name:'Sierra',
+	value: 83, 
+	metric:'EUI',
+	height: 100} )
+
+buildingNite.push({
+	pillar:'b',
+	name:'Hotel',
+	value: 266, 
+	metric:'EUI',
+	height: 80} )
+
+buildingNite.push({
+	pillar:'c',
+	name:'India',
+	value: 434, 
+	metric:'EUI',
+	height: 39} )
+
+buildingNite.push({
+	pillar:'d',
+	name:'Tango',
+	value: 5945, 
+	metric:'EUI',
+	height: 22} )
+
+// ****
+// BUILDING: Late data 
+// ####
+var buildingLate = [];
+buildingLate.push({
+	pillar:'a',
+	name:'Sierra',
+	value: 67, 
+	metric:'EUI',
+	height: 81} )
+
+buildingLate.push({
+	pillar:'b',
+	name:'Hotel',
+	value: 73, 
+	metric:'EUI',
+	height: 22} )
+
+buildingLate.push({
+	pillar:'c',
+	name:'India',
+	value: 908, 
+	metric:'EUI',
+	height: 82} )
+
+buildingLate.push({
+	pillar:'d',
+	name:'Tango',
+	value: 1875, 
+	metric:'EUI',
 	height: 20} )
 
-dataTweets.push({
-	pillar:'c',
-	name:'University of California',
-	value: '18k', 
-	metric: '',
-	height: 0} )
 
-dataTweets.push({
+// ****
+// school: Morn data 
+// ####
+var schoolMorn = [];
+schoolMorn.push({
+	pillar:'a',
+	name:'Berkeley',
+	value: 40, 
+	metric:'EUI',
+	height: 48} )
+
+schoolMorn.push({
+	pillar:'b',
+	name:'Davis',
+	value: 181, 
+	metric:'EUI',
+	height: 55} )
+
+schoolMorn.push({
+	pillar:'c',
+	name:'Santa Cruz',
+	value: 1111, 
+	metric:'EUI',
+	height: 100} )
+
+schoolMorn.push({
 	pillar:'d',
-	name:'Net Neutrality',
-	value: '155k', 
-	metric: '',
+	name:'Merced',
+	value: 1875, 
+	metric:'EUI',
+	height: 7} )
+
+// ****
+// school: Noon data 
+// ####
+var schoolNoon = [];
+schoolNoon.push({
+	pillar:'a',
+	name:'Berkeley',
+	value: 76, 
+	metric:'EUI',
+	height: 93} )
+
+schoolNoon.push({
+	pillar:'b',
+	name:'Davis',
+	value: 333, 
+	metric:'EUI',
+	height: 100} )
+
+schoolNoon.push({
+	pillar:'c',
+	name:'Santa Cruz',
+	value: 588, 
+	metric:'EUI',
+	height: 53} )
+
+schoolNoon.push({
+	pillar:'d',
+	name:'Merced',
+	value: 27368, 
+	metric:'EUI',
+	height: 100} )
+
+// ****
+// school: Nite data 
+// ####
+var schoolNite = [];
+schoolNite.push({
+	pillar:'a',
+	name:'Berkeley',
+	value: 83, 
+	metric:'EUI',
+	height: 100} )
+
+schoolNite.push({
+	pillar:'b',
+	name:'Davis',
+	value: 266, 
+	metric:'EUI',
 	height: 80} )
+
+schoolNite.push({
+	pillar:'c',
+	name:'Santa Cruz',
+	value: 434, 
+	metric:'EUI',
+	height: 39} )
+
+schoolNite.push({
+	pillar:'d',
+	name:'Merced',
+	value: 5945, 
+	metric:'EUI',
+	height: 22} )
+
+// ****
+// school: Late data 
+// ####
+var schoolLate = [];
+schoolLate.push({
+	pillar:'a',
+	name:'Berkeley',
+	value: 67, 
+	metric:'EUI',
+	height: 81} )
+
+schoolLate.push({
+	pillar:'b',
+	name:'Davis',
+	value: 73, 
+	metric:'EUI',
+	height: 22} )
+
+schoolLate.push({
+	pillar:'c',
+	name:'Santa Cruz',
+	value: 908, 
+	metric:'EUI',
+	height: 82} )
+
+schoolLate.push({
+	pillar:'d',
+	name:'Merced',
+	value: 1875, 
+	metric:'EUI',
+	height: 20} )
+
+
