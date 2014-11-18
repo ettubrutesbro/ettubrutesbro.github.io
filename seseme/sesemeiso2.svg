@@ -39,6 +39,8 @@
 </linearGradient>
 
 <g id = "c" clip-path = "url(#maskc)">
+<polygon id="c_stroker" points="809.383,643.948 693.971,577.315 578.56,643.95 693.971,710.582 
+	693.538,1243.701 809.208,1176.918 " stroke = "#F8A71A" stroke-width = "10" stroke-dasharray = "1600" stroke-dashoffset = "1600"/>
 <polygon id="c_body" fill="url(#C_body_1_)" points="809.383,643.948 693.971,577.315 578.56,643.95 693.971,710.582 
 	693.538,1243.701 809.208,1176.918 " stroke = "#F8A71A" stroke-width = "10" stroke-dasharray = "1600" stroke-dashoffset = "1600"/>
 <polygon id="C_top" opacity="0.2" fill="#FFFFFF" points="578.561,643.855 693.973,577.221 809.383,643.854 693.973,710.487 "/>
@@ -76,6 +78,29 @@
 <polygon id="mc" points="811.802,1182.914 693.528,1251.201 569.664,1251.201 569.664,643.667 693.971,569.721 
 	811.979,637.854 "/>
 </clipPath>
+
+
+	<linearGradient id="strokemaskgradient" x1="433.9526" y1="351" x2="433.9526" y2="969.9704">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#000000"/>
+	</linearGradient>
+
+<mask id = "strokemask1"> 
+	<rect x="297.453" y="351" fill="url(#strokemaskgradient)" width="273" height="621.668"/>
+</mask>
+
+<mask id = "strokemask2">
+<rect x="141" y="439" fill="url(#strokemaskgradient)" width="292.953" height="694"/>
+</mask>
+
+<mask id = "strokemask3">
+<rect x="432.279" y="439" fill="url(#strokemaskgradient)" width="292.953" height="694"/>
+</mask>
+
+<mask id = "strokemask4">
+<rect x="297.453" y="532.033" fill="url(#strokemaskgradient)" width="273" height="688.543"/>
+</mask>
+</svg>
 
 
 </svg>

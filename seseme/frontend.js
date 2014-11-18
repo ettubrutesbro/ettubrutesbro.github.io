@@ -16,7 +16,7 @@ var wid = window.screen.availWidth
 
 
 
-Snap.load("sesemeiso2.svg", function(svgFile){
+Snap.load("sesemeiso3.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g)
@@ -93,6 +93,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	var d = g.select("#d")
 
 	var pillarArray = [a,b,c,d]
+	var themasks = g.select("#themasks")
 
 	//amount, speed, delay...finally modifies a global value var per pillar
 	
@@ -104,6 +105,10 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 
 	g.attr({
 		transform: "t 0 30 s 1.1"
+	})
+
+	themasks.attr({
+		transform: "t 200 120"
 	})
 
 	moveToData(stateArray[currentSet])
@@ -141,7 +146,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	}
 
 	function unselectPillars(speed){
-		strokerArray = [a.select('#a_body'),b.select('#b_body'),c.select('#c_body'),d.select('#d_body')]
+		strokerArray = [a.select('#a_stroker'),b.select('#b_stroker'),c.select('#c_stroker'),d.select('#d_stroker')]
 		offsetArray = [1600,1600,1600,1600]
 		strokerArray.forEach(function(ele,i){
 			ele.attr({
@@ -153,12 +158,10 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 	function selectPillar(pillar, speed){
 		var ltr = pillar.attr('id')
 		unselectPillars(450)
-		var stroker = pillar.select('#' + ltr + '_body')
+		var stroker = pillar.select('#' + ltr + '_stroker')
 		stroker.animate({
 			strokeDashoffset: 0
 		}, speed)
-
-		selectedPillar = stroker
 
 		//hacky workaround --------------------------------------
 		if(ltr=='a'){
@@ -208,6 +211,7 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 		//set delay 
 		var ltr = pillar.attr('id')
 		var mask = g.select("#mask" + ltr ).select("#m" + ltr)
+		var strokemask = themasks.select("#strokemask" + ltr).select('rect')
 
 		pillar.animate({
 			transform: "t 0 " + amount
@@ -217,34 +221,11 @@ Snap.load("sesemeiso2.svg", function(svgFile){
 			transform: "t 0 " + -amount
 		},(amount*2.5)+500,mina.easeinout)
 
+		strokemask.animate({
+			transform: "t 0 " + -amount
+		},(amount*2.5)+500,mina.easeinout)
 	}
 
-
-	$("#dataChanger").click(function(){
-	if(currentSet==stateArray.length-1){
-		currentSet = 0
-	} else{
-	currentSet+=1
-	}
-	console.log(currentSet + ": " + stateArray[currentSet])
-	moveToData(stateArray[currentSet])
-	if(currentSet==4){
-		$("#metric").text('trending tweets / day')
-	}else if(currentSet==0){
-		$("#metric").text('scc energy - morning')
-	}else if(currentSet==1){
-		$("#metric").text('scc energy - afternoon')
-	}else if(currentSet==2){
-		$("#metric").text('scc energy - evening')
-	}else if(currentSet==3){
-		$("#metric").text('scc energy - midnight')
-	}
-
-	var listSelect = $("#dataSetIcons li").get(currentSet)
-	$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
-	$(listSelect).css('border','3px red solid')
-
-})
 
 	
 })
