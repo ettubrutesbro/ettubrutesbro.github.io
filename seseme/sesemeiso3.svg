@@ -10,7 +10,6 @@
 	}
 </style>
 
-
 <linearGradient id="D_body_1_" gradientUnits="userSpaceOnUse" x1="540.1694" y1="491.5615" x2="540.1694" y2="1019.3979">
 	<stop  offset="0" style="stop-color:#999999"/>
 	<stop  offset="1" style="stop-color:#1a1a1a"/>
@@ -83,7 +82,7 @@
 </clipPath>
 
 
-	<linearGradient id="strokemaskgradient" gradientUnits = userSpaceOnUse x1="433.9526" y1="351" x2="433.9526" y2="969.9704">
+	<linearGradient id="strokemaskgradient" gradientUnits = "userSpaceOnUse" x1="433.9526" y1="351" x2="433.9526" y2="969.9704">
 			<stop  offset="0" style="stop-color:#FFFFFF"/>
 			<stop  offset="0.5" style="stop-color:#FFFFFF"/>
 
@@ -107,8 +106,6 @@
 </mask>
 
 </g>
-
-
 
 </svg>
 
