@@ -8,13 +8,15 @@ html {
 		font-family: 'Montserrat', sans-serif;
 	}
 	#topdata{
-		margin-left: 15%;
+		margin-left: auto;
+		margin-right: auto;
 		margin-top: 10%;
 		font-size: 31pt;
 		position: absolute;
 		font-weight: 400;
 		letter-spacing: 0.13em;
 		border: 1px white dashed;
+		width: 90%;
 	}
 
 	#bottomdata{
