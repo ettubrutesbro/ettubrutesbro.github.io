@@ -55,26 +55,29 @@ html {
 		list-style-type: none;
 	}
 	#metrics {
-		font-size: 20pt;
+		font-size: 22pt;
 		font-weight: 400;
 		letter-spacing: 3px;
-		margin-top: 40px;
+		margin-top: 45px;
 	}
 	#metrics li{
-		padding-top: 27;
+		padding-top: 53%;
+	}
+	#valuesz {
+		margin-top: 50px;
 	}
 	#valuesz li{
 		text-align: right;
 		font-family: 'Archivo Narrow', sans-serif;
-		padding: 4 0;
-		font-size: 36pt;
+		padding: 8% 0;
+		font-size: 48pt;
 		font-weight: 200;
 		letter-spacing: 0.05em;
 		margin-left: -10px;
 	}
 	#units {
 		font-family: 'Archivo Narrow', sans-serif;
-		font-size: 22pt;
+		font-size: 28pt;
 		margin-left: 8px;
 		margin-top: 40px;
 		padding: 0;
@@ -82,7 +85,7 @@ html {
 		letter-spacing: 0.1em;
 	}
 	#units li {
-		padding-top: 25;
+		padding-top: 71%;
 	}
 	figure{
 		width: 150px;
