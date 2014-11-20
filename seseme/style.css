@@ -38,10 +38,14 @@ html {
 
 	#leftcol {
 		float: left;
+		margin-left: 60px;
 		border: 0px red solid;
 		transform: skew(0deg,-30deg);
+		text-align: center;
+
 	}
 	#rightcol {
+		margin-right: 60px;
 		float: right;
 		border: 0px blue solid;
 		transform: skew(0deg,30deg);
@@ -81,9 +85,14 @@ html {
 		padding-top: 25;
 	}
 	figure{
-		width: 100px;
-		height: 100px;
+		width: 150px;
+		height: 150px;
 		background-color: green;
+		padding: 0;
+		margin: 0;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		margin-right: 30px;
 	}
 
 	#
