@@ -50,7 +50,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
 		viewBox: "220 120 550 1920",
-		transform: "t 0 500 s 1.5"
+		transform: "t 0 0 s 1"
 	})
 	themasks.attr({ //these are just off, so this transform fixes their positioning
 		transform: "t 200 120"
