@@ -49,11 +49,11 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	setTimeout(function(){
 
+		g.animate({
+			transform: "t 0 200 s 1"
+			},800,mina.easeinout)
 
-	g.animate({
-		transform: "t 0 200 s 1"
-	},800,mina.easeinout)
-		}, 1800)
+	}, 1800)
 
 
 	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
