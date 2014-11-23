@@ -63,7 +63,9 @@ html {
 		margin-top: 45px;
 	}
 	#metrics li{
-		padding-top: 53%;
+		padding: 7%;
+		width: auto;
+		background-color: red;
 	}
 	#valuesz {
 		margin-top: 50px;
@@ -78,7 +80,7 @@ html {
 		margin-left: -10px;
 	}
 	#units {
-		font-family: 'Archivo Narrow', sans-serif;
+		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 28pt;
 		margin-left: 8px;
 		margin-top: 40px;
