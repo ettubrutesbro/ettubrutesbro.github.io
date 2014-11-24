@@ -2,7 +2,8 @@ html {
 	background-color: black;
 }
 	body {
-		height: 110%;
+		width: 150%;
+		height: 150%;
 		color: white;
 		background-image: url(background.svg);
 		font-family: 'Montserrat', sans-serif;
