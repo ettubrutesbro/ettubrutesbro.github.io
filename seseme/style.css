@@ -102,6 +102,8 @@ html {
 		margin-right: 30px;
 	}
 
-	#
+#svgInside {
+	overflow: hidden;
+}
 
 
