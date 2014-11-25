@@ -53,7 +53,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		viewBox: "430 250 550 2040"
 	})
 
-	all.attr({ 
+	all.animate({
+		transform: "t 0 300 s 2" 
 		
 	})
 
