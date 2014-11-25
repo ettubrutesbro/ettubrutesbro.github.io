@@ -1,12 +1,13 @@
 html {
 	background-color: black;
+	overflow: hidden;
 }
 	body {
 		height: 100%;
 		color: white;
 		background-image: url(background.svg);
 		font-family: 'Montserrat', sans-serif;
-		
+		overflow: hidden;
 	}
 
 	#dataoverlay{
