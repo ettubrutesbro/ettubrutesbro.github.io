@@ -47,14 +47,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	var firstRed = $("#dataSetIcons li").get(currentTime)
 	$(firstRed).css('border','3px red solid')
 
-	setTimeout(function(){
-
-		g.animate({
-			transform: "t 0 200 s 1"
-			},800,mina.easeinout)
-
-	}, 1800)
-
 
 	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
 		viewBox: "430 120 550 1920"//,
