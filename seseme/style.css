@@ -42,7 +42,7 @@ html {
 		float: left;
 		margin-left: 60px;
 		border: 0px red solid;
-		transform: skew(0deg,-30deg);
+		
 		text-align: center;
 
 	}
@@ -51,7 +51,7 @@ html {
 		margin-right: 30px;
 		float: right;
 		border: 0px blue solid;
-		transform: skew(0deg,30deg);
+		
 	}
 	#overall_data ul { display: inline; border: 0px green solid; float: left;}
 	#overall_data ul li {

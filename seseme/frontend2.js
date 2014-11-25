@@ -54,7 +54,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	})
 
 	all.attr({ 
-		transform: "t 50 300 s 1.7"
+		transform: "t 150 300 s 1.85"
 	})
 
 
