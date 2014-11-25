@@ -51,7 +51,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 
 	g.attr({
-		x: 0,
+		x: -100,
 		y: 80
 	})
 
