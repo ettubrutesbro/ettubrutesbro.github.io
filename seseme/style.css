@@ -58,44 +58,31 @@ html {
 		list-style-type: none;
 	}
 	#metrics {
-		font-size: 22pt;
 		font-weight: 400;
-		letter-spacing: 3px;
-		margin-top: 45px;
 	}
 	#metrics li{
-		margin-top: 40px;
-		padding: 7%;
+		margin-top: 20px;
 		width: auto;
-		background-color: red;
+		color: red;
 	}
 	#valuesz {
-		margin-top: 50px;
 	}
 	#valuesz li{
 		text-align: right;
-		font-family: 'Archivo Narrow', sans-serif;
-		padding: 8% 0;
-		font-size: 48pt;
-		font-weight: 200;
-		letter-spacing: 0.05em;
-		margin-left: -10px;
+		margin-top: 20px;
+		margin-left: 40px;
 	}
 	#units {
-		font-family: 'Open Sans Condensed', sans-serif;
-		font-size: 28pt;
-		margin-left: 12px;
-		margin-top: 40px;
-		padding: 0;
-		letter-spacing: 0.1em;
+		padding-left: 0;
+		margin-left: 25px;
 	}
 	#units li {
-		margin-top: 45px;
+		margin-top: 20px;
+		font-weight: 200;
 	}
 	figure{
 		width: 150px;
 		height: 150px;
-		background-color: red;
 		padding: 0;
 		margin: 0;
 		margin-top: 20px;
