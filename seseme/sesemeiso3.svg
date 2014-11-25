@@ -10,10 +10,29 @@
 	}
 </style>
 
+<defs>
 <linearGradient id="D_body_1_" gradientUnits="userSpaceOnUse" x1="540.1694" y1="491.5615" x2="540.1694" y2="1019.3979">
 	<stop  offset="0" style="stop-color:#999999"/>
 	<stop  offset="1" style="stop-color:#1a1a1a"/>
 </linearGradient>
+<linearGradient id="a_body_1_" gradientUnits="userSpaceOnUse" x1="386.0298" y1="580.8135" x2="386.0298" y2="1323.4932">
+	<stop  offset="0" style="stop-color:#808080"/>
+	<stop  offset="1" style="stop-color:#333333"/>
+</linearGradient>
+<linearGradient id="sidepillar" gradientUnits="userSpaceOnUse" x1="693.9707" y1="582.3525" x2="693.9706" y2="1330.5909">
+	<stop  offset="0" style="stop-color:#808080"/>
+	<stop  offset="1" style="stop-color:#333333"/>
+</linearGradient>
+<linearGradient id="strokemaskgradient" gradientUnits = "userSpaceOnUse" x1="433.9526" y1="351" x2="433.9526" y2="969.9704">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="0.5" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#4F4F4F"/>
+</linearGradient>
+</defs>
+
+<g id = "all">
+
+
 
 <g id = "d" clip-path = "url(#maskd)">
 
@@ -23,10 +42,7 @@
 <polygon id="d_stroker" fill = "none" points="655.583,554.861 540.17,488.526 424.757,554.863 424.758,1087.926 
 	540.17,1021.59 655.067,1087.926 " stroke = "#FFFFFF" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" mask = "url(#strokemaskd)"/>
 </g>
-<linearGradient id="a_body_1_" gradientUnits="userSpaceOnUse" x1="386.0298" y1="580.8135" x2="386.0298" y2="1323.4932">
-	<stop  offset="0" style="stop-color:#808080"/>
-	<stop  offset="1" style="stop-color:#333333"/>
-</linearGradient>
+
 
 <g id = "a" clip-path = "url(#maska)">
 
@@ -38,10 +54,7 @@
 	386.288,1243.701 270.618,1176.918 " stroke = "#34A849" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "-1600" mask = "url(#strokemaska)"/>
 </g>
 
-<linearGradient id="sidepillar" gradientUnits="userSpaceOnUse" x1="693.9707" y1="582.3525" x2="693.9706" y2="1330.5909">
-	<stop  offset="0" style="stop-color:#808080"/>
-	<stop  offset="1" style="stop-color:#333333"/>
-</linearGradient>
+
 
 <g id = "c" clip-path = "url(#maskc)">
 <polygon id="c_body" fill="url(#sidepillar)" points="809.383,643.948 693.971,577.315 578.56,643.95 693.971,710.582 
@@ -82,12 +95,6 @@
 </clipPath>
 
 
-	<linearGradient id="strokemaskgradient" gradientUnits = "userSpaceOnUse" x1="433.9526" y1="351" x2="433.9526" y2="969.9704">
-			<stop  offset="0" style="stop-color:#FFFFFF"/>
-			<stop  offset="0.5" style="stop-color:#FFFFFF"/>
-
-	<stop  offset="1" style="stop-color:#4F4F4F"/>
-	</linearGradient>
 
 <g id = "themasks">
 <mask id = "strokemaskd">
@@ -105,6 +112,7 @@
 <rect x="397" y="532" fill="url(#strokemaskgradient)" width="273" height="800"/>
 </mask>
 
+</g>
 </g>
 
 </svg>

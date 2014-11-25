@@ -39,6 +39,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	//mc.x for touch functions
 	var mc = new Hammer(myElement)
 
+	var all = g.select('#all') //entirety select
 	//the pillars and their masks
 	var a = g.select("#a"), b = g.select("#b"), c = g.select("#c"), d = g.select("#d")
 	var pillarArray = [a,b,c,d]
@@ -49,9 +50,13 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 
 	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
-		viewBox: "430 120 550 1920",
+		viewBox: "430 120 550 1920"
+	})
+
+	all.attr({
 		transform: "t 50 0 s 1.3"
 	})
+
 	themasks.attr({ //these are just off, so this transform fixes their positioning
 		transform: "t 200 120"
 	})
