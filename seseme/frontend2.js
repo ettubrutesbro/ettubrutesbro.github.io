@@ -50,7 +50,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 
 	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
-		viewBox: "430 250 550 2040"
+		viewBox: "300 250 550 2040"
 	})
 
 
