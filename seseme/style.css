@@ -1,6 +1,5 @@
 html {
 	background-color: black;
-	overflow: hidden;
 }
 	body {
 		height: 100%;
@@ -64,6 +63,7 @@ html {
 		margin-top: 45px;
 	}
 	#metrics li{
+		margin-top: 40px;
 		padding: 7%;
 		width: auto;
 		background-color: red;
@@ -83,14 +83,13 @@ html {
 	#units {
 		font-family: 'Open Sans Condensed', sans-serif;
 		font-size: 28pt;
-		margin-left: 8px;
+		margin-left: 12px;
 		margin-top: 40px;
 		padding: 0;
-		opacity: 0.7;
 		letter-spacing: 0.1em;
 	}
 	#units li {
-		padding-top: 71%;
+		margin-top: 45px;
 	}
 	figure{
 		width: 150px;
