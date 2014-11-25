@@ -49,9 +49,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	$(firstRed).css('border','3px red solid')
 
 
-	g.attr({ //hacky init transforms make stuff look right...adjust as necessary 
-		
-	})
 
 
 
