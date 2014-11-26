@@ -6,89 +6,69 @@ html {
 		height: 100%;
 		color: white;
 		background-image: url(background.svg);
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Titillium Web', sans-serif;
 		overflow: hidden;
 	}
 
 	#dataoverlay{
 		position: absolute;
-		width: 100%;
+		width: 95%;
+		margin: auto;
+		top: 0; left: 0; right: 0; bottom: 0;
+		z-index: 1;
 	}
 
 	#topdata{
 		margin-right: auto;
-		margin-left: auto;
-		font-size: 31pt;
-		font-weight: 400;
-		letter-spacing: 0.13em;
-		border: 1px white dashed;
-		width: 90%;
 	}
 
 	#bottomdata{
+		border: 0px green solid;
+		width: 85%;
 		margin-top: 100%;
-		margin-left: 27%;
-		font-size: 31pt;
-		position: absolute;
-		font-weight: 400;
-		letter-spacing: 0.13em;
-	}
-
-	#topdata div {
-		
-	}
-
-	#leftcol {
-		float: left;
-		margin-left: 60px;
-		border: 0px red solid;
-		
-		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 32pt;
+		letter-spacing: 0.12em;
 
 	}
-	#rightcol {
-		margin-top: 50px;
-		margin-right: 30px;
-		float: right;
-		border: 0px blue solid;
-		
-	}
-	#overall_data ul { display: inline; border: 0px green solid; float: left;}
+	#overall_data {width: 80%; margin: 0 auto;}
 	#overall_data ul li {
 		list-style-type: none;
 	}
 	#metrics {
+		margin: 0;
+		padding: 0;
 		font-weight: 400;
+		float: left;
 	}
 	#metrics li{
-		margin-top: 20px;
+		display: inline-block;
+		padding: 0 9%;
+		margin-top: 26px;
 		width: auto;
-		color: red;
+		font-size: 28pt;
+		font-weight: 600;
+		background-color: red;
 	}
 	#valuesz {
+		margin: 0;
+		padding: 0;
+		display: block;
+		width: auto;
+		float: right;
 	}
 	#valuesz li{
 		text-align: right;
 		margin-top: 20px;
-		margin-left: 40px;
+		font-weight: 600;
 	}
-	#units {
-		padding-left: 0;
-		margin-left: 25px;
+
+	span.unit {
+		font-size: 24pt;
+		font-weight: 300;
 	}
-	#units li {
-		margin-top: 20px;
-		font-weight: 200;
-	}
-	figure{
-		width: 150px;
-		height: 150px;
-		padding: 0;
-		margin: 0;
-		margin-top: 20px;
-		margin-bottom: 10px;
-		margin-right: 30px;
-	}
+
 
 #svgInside {
 	overflow: hidden;
