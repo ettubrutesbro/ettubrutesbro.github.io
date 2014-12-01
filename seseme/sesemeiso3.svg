@@ -34,6 +34,10 @@
 	<stop  offset="0.5376" style="stop-color:#1A1A1A"/>
 </linearGradient>
 
+<pattern id="nrg" x="40" y="-40" patternUnits="userSpaceOnUse" height="200" width="150">
+      <image x="0" y="0" height="150" width="120" xlink:href="img/nrg1.svg"></image>
+</pattern>
+
 </defs>
 
 
@@ -50,9 +54,9 @@
 <polygon id="d_stroker" fill = "none" points="656,554 540,488 424,554 424,1087 
 	540,1021 655,1087 " stroke = "#FFFFFF" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" clip-path = "url(#maskd)"/>
 
-<rect id = "d_marker" x = "480" y = "557" fill = "#ffffff" width="120" height="150" clip-path = "url(#d_markclip)"/>
+<rect id = "d_marker" x = "450" y = "557" fill = "url(#nrg)" width="160" height="150" clip-path = "url(#d_markclip)"/>
 <clipPath id = "d_markclip">
-	<rect id = "d_mc" x = "475" y = "407" fill = "none" width="130" height="150"/>
+	<rect id = "d_mc" x = "445" y = "407" fill = "none" width="170" height="150"/>
 </clipPath>
 </g>
 
@@ -100,7 +104,7 @@
 <g id = "d_ghost">
 	<polygon id="d_ghosttop" fill="#ffffff" fill-opacity="0.2" stroke-width = "7" stroke-dashoffset = "3" stroke-dasharray = "10 12" stroke = "#ffffff" points="424,555 540,488 655,555 540,621 "/>
 	<path id = "d_ghostbottom" opacity = "0.3" fill = "none" stroke-width = "7" stroke-dasharray = "20 15" d = "M 424 1087 L 540 1021 L 655 1087" stroke = "#ffffff"/>
-</g> 
+</g>  
 
 </g>
 

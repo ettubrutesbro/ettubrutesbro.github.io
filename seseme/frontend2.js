@@ -33,7 +33,7 @@ var wid = window.screen.availWidth
 Snap.load("sesemeiso3.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
-	mainSvg.append(g)
+	mainSvg.append(g) 
 
 	myElement = document.getElementById('mainSvg')
 	//mc.x for touch functions
@@ -44,8 +44,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	var a = g.select("#a"), b = g.select("#b"), c = g.select("#c"), d = g.select("#d")
 	var amarker = g.select("#a_marker"), bmarker = g.select("#b_marker"), cmarker = g.select("#c_marker"), dmarker = g.select("#d_marker"),
 	amarkerclip = g.select("#a_mc"), bmarkerclip = g.select("#b_mc"), cmarkerclip = g.select("#c_mc"), dmarkerclip = g.select("#d_mc")
-	var dghost = g.select("#d_ghost"), dghosttop = g.select("#d_ghosttop"), dAmount, bAmount //overlay for B overlapping D
-	var pillarArray = [a,b,c,d]
+	var dghost = g.select("#d_ghost"), dghosttop = g.select("#d_ghosttop"), dAmount, bAmount 
+	pillarArray = [a,b,c,d]
 	var themasks = g.select("#themasks")
 	//icon highlighting for dataset
 	var firstRed = $("#dataSetIcons li").get(currentTime)
@@ -153,7 +153,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			$(nameSlot).text(dataSet[i].name) //pushes names into li
 
 			var valSlot =  $('#values li').get(i)
-			$(valSlot).text(dataSet[i].value+ " " + dataSet[i].metric) //pushes values into li
+			$(valSlot).html(dataSet[i].value+ " <span class = 'unit'>" + dataSet[i].metric + "</span>") //pushes values into li
 
 			lightv += dataSet[i].height
 		})
