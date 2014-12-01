@@ -11,10 +11,10 @@ html {
 	}
 	#topdata{
 		position:absolute;
-		width: 60%;
+		width: 75%;
 		margin: auto;
 		top: 40px;left:0;right:0;bottom:0;
-		font-size: 36pt;
+		font-size: 42pt;
 	}
 	#timeplace {
 		text-align: center;
@@ -22,9 +22,8 @@ html {
 	}
 	#topdata span {
 		margin-top: -10px;
-		text-align: center;
 		font-weight: 800;
-		letter-spacing: 0.22em;
+		letter-spacing: 0.25em;
 	}
 
 	#tophelper {
@@ -35,23 +34,24 @@ html {
 		padding-bottom: 25;
 	}
 	span#time {
+		text-align: center;
 		border: 8px solid;
 		border-color: white #afddda #6b8db4 #fff996;
-		padding: 1.5% 4%;
+		padding: 1.8% 3.5% 1.8% 5%;
 		float: left;
 	}
 	span#place {
 		border: 8px solid;
 		border-color: #9f9b00 #867b22 #d34f00 #ff9f45;
-		padding: 1.5% 4%;
+		padding: 1.8% 3.5% 1.8% 5%;
 		float: right;
 	}
 
-	#bottomdata{
+	#middata{
 		position: absolute;
-		width: 80%;
+		width: 75%;
 		margin: auto;
-		top: -46%; left: 0; right: 0; bottom: 0;
+		top: -50%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
 		height: 270px;
@@ -62,10 +62,10 @@ html {
 	}
 
 	#overall_data{
-		width: 75%;
+		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 40pt;
+		font-size: 46pt;
 		letter-spacing: 0.12em;
 	}
 	#overall_data ul li {
@@ -82,7 +82,7 @@ html {
 		padding: 5% 12%;
 		margin-top: 24px;
 		width: auto;
-		font-size:26pt;
+		font-size:28pt;
 		font-weight: 600;
 		letter-spacing: 0.15em;
 		
