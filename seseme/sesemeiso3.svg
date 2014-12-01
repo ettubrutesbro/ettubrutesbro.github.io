@@ -40,44 +40,68 @@
 
 <rect x="0" fill="url(#bggradient)" width="100%" height="100%"/>
 
-<g id = "all" transform = "translate(-40 -430)">
+<g id = "all" transform = "translate(-40 -410)">
 
-<g id = "d" clip-path = "url(#maskd)">
+<g id = "d">
 
 <polygon id="d_body" fill="url(#D_body_1_)" points="656,554 540,488 424,554 424,1087 
-	540,1021 655,1087"/>
+	540,1021 655,1087" clip-path = "url(#maskd)"/>
 <polygon id="d_top" opacity="0.4" fill="#FFFFFF" points="424,555 540,488 655,555 540,621 "/>
 <polygon id="d_stroker" fill = "none" points="656,554 540,488 424,554 424,1087 
-	540,1021 655,1087 " stroke = "#FFFFFF" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" mask = "url(#strokemaskd)"/>
+	540,1021 655,1087 " stroke = "#FFFFFF" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" clip-path = "url(#maskd)"/>
+
+<rect id = "d_marker" x = "480" y = "557" fill = "#ffffff" width="120" height="150" clip-path = "url(#d_markclip)"/>
+<clipPath id = "d_markclip">
+	<rect id = "d_mc" x = "475" y = "407" fill = "none" width="130" height="150"/>
+</clipPath>
 </g>
 
-
-<g id = "a" clip-path = "url(#maska)">
+ 
+<g id = "a">
 
 <polygon id="a_body" fill="url(#a_body_1_)" points="270,643 386,577 501,643 386,710
-	386.288,1243 270,1176 " />
+	386.288,1243 270,1176 "  clip-path = "url(#maska)"/>
 <polygon id="a_top" opacity="0.3" fill="#FFFFFF" points="270,643 386,577 501,643 386,710
 	"/>
 <polygon id="a_stroker" opacity = "100" fill = "none" points="270,643 386,577 501,643 386,710
-	386.288,1243 270,1176 " stroke = "#34A849" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "-1600" mask = "url(#strokemaska)"/>
+	386.288,1243 270,1176 " stroke = "#34A849" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "-1600" clip-path = "url(#maska)"/> 
+<rect id = "a_marker" x = "325" y = "650" fill = "#ffffff" width="120" height="150" clip-path = "url(#a_markclip)"/>
+<clipPath id = "a_markclip">
+	<rect id = "a_mc" x = "320" y = "500" fill = "none" width="130" height="150"/>
+</clipPath>
 </g>
 
 
 
-<g id = "c" clip-path = "url(#maskc)">
+<g id = "c" >
 <polygon id="c_body" fill="url(#sidepillar)" points="809,643 693,577 578,643 693,710
-	693,1243 809,1176 "/>
+	693,1243 809,1176 " clip-path = "url(#maskc)"/>
 <polygon id="C_top" opacity="0.2" fill="#FFFFFF" points="578,643 693,577 809,643 693,710"/>
 <polygon id="c_stroker" fill = "none" points="809,643 693,577 578,643 693,710
-	693,1243 809,1176 " stroke = "#F8A71A" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" mask = "url(#strokemaskc)" />
+	693,1243 809,1176 " stroke = "#F8A71A" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "1600" clip-path = "url(#maskc)" />
+<rect id = "c_marker" x = "635" y = "650" fill = "#ffffff" width="120" height="150" clip-path = "url(#c_markclip)"/>
+<clipPath id = "c_markclip">
+	<rect id = "c_mc" x = "630" y = "500" fill = "none" width="130" height="150"/>
+</clipPath>
 </g>
 
-<g id = "b" clip-path = "url(#maskb)">
+<g id = "b">
 <polygon id="b_body" fill="url(#sidepillar)" points="655,732 539,666 424,732 424,1265
-	539,1332 655,1265"/>
+	539,1332 655,1265"  clip-path = "url(#maskb)"/>
 <polygon id="B_top" opacity="0.1" fill="#FFFFFF" points="424,732 540,666 655,732 540,799 "/>
 <polygon id="b_stroker" fill = "none" points="655,732 539,666 424,732 424,1265
-	539,1332 655,1265" stroke = "#0FA1C5" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "-1600" mask = "url(#strokemaskb)"/>
+	539,1332 655,1265" stroke = "#0FA1C5" stroke-width = "20" stroke-dasharray = "1600" stroke-dashoffset = "-1600" clip-path = "url(#maskb)"/>
+<rect id = "b_marker" x = "480" y = "735" fill = "#ffffff" width="120" height="150" clip-path = "url(#b_markclip)"/>
+<clipPath id = "b_markclip">
+	<rect id = "b_mc" x = "475" y = "585" fill = "none" width="130" height="150"/>
+</clipPath>
+</g>
+
+<g id = "d_ghost">
+	<polygon id="d_ghosttop" fill="#ffffff" fill-opacity="0.2" stroke-width = "7" stroke-dashoffset = "3" stroke-dasharray = "10 12" stroke = "#ffffff" points="424,555 540,488 655,555 540,621 "/>
+	<path id = "d_ghostbottom" opacity = "0.3" fill = "none" stroke-width = "7" stroke-dasharray = "20 15" d = "M 424 1087 L 540 1021 L 655 1087" stroke = "#ffffff"/>
+</g> 
+
 </g>
 
 
@@ -121,7 +145,7 @@
 </mask>
 
 </g>
-</g>
+
 
 </svg>
 

@@ -42,18 +42,26 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	var all = g.select('#all') //entirety select
 	//the pillars and their masks
 	var a = g.select("#a"), b = g.select("#b"), c = g.select("#c"), d = g.select("#d")
+	var amarker = g.select("#a_marker"), bmarker = g.select("#b_marker"), cmarker = g.select("#c_marker"), dmarker = g.select("#d_marker"),
+	amarkerclip = g.select("#a_mc"), bmarkerclip = g.select("#b_mc"), cmarkerclip = g.select("#c_mc"), dmarkerclip = g.select("#d_mc")
+	var dghost = g.select("#d_ghost"), dghosttop = g.select("#d_ghosttop"), dAmount, bAmount //overlay for B overlapping D
 	var pillarArray = [a,b,c,d]
 	var themasks = g.select("#themasks")
 	//icon highlighting for dataset
 	var firstRed = $("#dataSetIcons li").get(currentTime)
 	$(firstRed).css('border','3px red solid')
 
+	all.attr({
+		transform: "t -50 -420 s 0.9"
+	})
 
 	themasks.attr({ //these are just off, so this transform fixes their positioning
 		transform: "t 200 120"
 	})
 	moveToData(scaleSet[currentScale][currentTime]) //right away, go to dataset
 
+	helperFly()
+	setTimeout(function(){markerMove(true)},1000)
 
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
 		ele.click(function(){
@@ -127,7 +135,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			}
 
 		var listSelect = $("#dataSetIcons li").get(currentTime) //highlights icons
-		$("#dataSetIcons li").not($(listSelect)).css('border','0px red solid')
+		$("#dataSetIcons li").not($(listSelect )).css('border','0px red solid')
 		$(listSelect).css('border','3px red solid')
 	
 	} //end function metricSwipe
@@ -176,6 +184,29 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		strokemask.animate({
 			transform: "t 0 " + -amount
 		},(amount*2.5)+500,mina.easeinout)
+
+		console.log(ltr + "moved to" + amount)
+		if(ltr == "b"){
+			bAmount = amount
+		}
+		if(ltr == "d"){
+			dghosttop.animate({
+				transform: "t 0 " + amount
+			},(amount*2.5)+500,mina.easeinout)
+			dAmount = amount
+			if(dAmount>bAmount+100){
+				console.log(dAmount +" "+ bAmount)
+				dghost.animate({
+					opacity: 0.5
+				},800)
+			}else{
+				dghost.animate({
+					opacity: 0
+				}, 800)
+			}
+		}
+
+
 
 	}//end function movePillar
 
@@ -244,8 +275,35 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	} //end function unselectPillars
 
 
+	function helperFly(){ //tophelpertext flies in and goes away
+		$('#tophelper').velocity({
+			translateX: "60%",
+			opacity: 1
+		},1800, "easeOutCubic", function(){
+			$('#tophelper').velocity({
+				translateX: "135%",
+				opacity: -0.5
+			},400,"easeInSine")
+		})	
+	} // end function helperFly
 
-
+	function markerMove(updown){ //false == go down/hide, true == show
+		var updownval = 150
+		if(!updown){
+			updownval !=updownval
+			console.log(updownval)
+		}
+		var markerArray = [amarker,bmarker,cmarker,dmarker]
+		var markerclipArray = [amarkerclip,bmarkerclip,cmarkerclip,dmarkerclip]
+		markerArray.forEach(function(ele,i,arr){
+			ele.animate({
+				transform: "t 0 " + -updownval
+			},600)
+			markerclipArray[i].animate({
+				transform: "t 0 " + updownval
+			},600)
+		})
+	} // end function markerMove	
 	
 })
 

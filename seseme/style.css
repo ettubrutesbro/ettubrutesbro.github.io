@@ -12,7 +12,7 @@ html {
 		position:absolute;
 		width: 70%;
 		margin: auto;
-		top: 40%;left:0;right:0;bottom:0;
+		top: 33%;left:0;right:0;bottom:0;
 		font-size: 42pt;
 		z-index: 1;
 		height: 200px;
@@ -28,11 +28,13 @@ html {
 	}
 
 	#tophelper {
-		text-align: right;
+		text-align: left;
 		font-size: 24pt;
 		font-family: 'Libre Baskerville', serif;
+		font-style:italic;
 		letter-spacing: 0.1em;
 		padding-bottom: 35px;
+		opacity: 0;
 	}
 	span#time {
 		text-align: center;
@@ -52,7 +54,7 @@ html {
 		position: absolute;
 		width: 70%;
 		margin: auto;
-		top: 70%; left: 0; right: 0; bottom: 0;
+		top: 63%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
 		height: 270px;
@@ -98,7 +100,7 @@ html {
 	#valuesz li{
 		font-family: 'Source Sans Pro', sans-serif;
 		text-align: right;
-		margin-top: 12px;
+		margin-top: 8px;
 		font-weight: 600;
 	}
 
