@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: adobe Illustrator 16.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="-85" y="480" viewBox = "20 450 900 1500"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="-50" y="-100" viewBox = "00 0 1100 1400"
 >
 
 <style>
@@ -28,10 +28,17 @@
 	<stop  offset="0.5" style="stop-color:#FFFFFF"/>
 	<stop  offset="1" style="stop-color:#4F4F4F"/>
 </linearGradient>
+
+<linearGradient id="bggradient" gradientUnits="userSpaceOnUse" x1="540.1689" y1="0" x2="540.1689" y2="1911.6676">
+	<stop  offset="0" style="stop-color:#525252"/>
+	<stop  offset="0.5376" style="stop-color:#1A1A1A"/>
+</linearGradient>
+
 </defs>
 
 <g id = "all">
 
+<rect x="0" fill="url(#bggradient)" width="1080" height="1920"/>
 
 
 <g id = "d" clip-path = "url(#maskd)">

@@ -5,16 +5,17 @@ html {
 	body {
 		height: 100%;
 		color: white;
-		background-image: url(background.svg);
 		font-family: 'Raleway', sans-serif;
 		overflow: hidden;
 	}
 	#topdata{
 		position:absolute;
-		width: 75%;
+		width: 70%;
 		margin: auto;
-		top: 40px;left:0;right:0;bottom:0;
+		top:-75%;left:0;right:0;bottom:0;
 		font-size: 42pt;
+		z-index: 1;
+		height: 200px;
 	}
 	#timeplace {
 		text-align: center;
@@ -31,7 +32,7 @@ html {
 		font-size: 24pt;
 		font-family: 'Libre Baskerville', serif;
 		letter-spacing: 0.1em;
-		padding-bottom: 25;
+		padding-bottom: 35px;
 	}
 	span#time {
 		text-align: center;
@@ -49,9 +50,9 @@ html {
 
 	#middata{
 		position: absolute;
-		width: 75%;
+		width: 70%;
 		margin: auto;
-		top: -50%; left: 0; right: 0; bottom: 0;
+		top: -43%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
 		height: 270px;
