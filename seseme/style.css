@@ -12,11 +12,10 @@ html {
 		position:absolute;
 		width: 70%;
 		margin: auto;
-		top: 31%;left:0;right:0;bottom:0;
+		top: 30%;left:0;right:0;bottom:0;
 		font-size: 42pt;
 		z-index: 1;
 		height: 200px;
-
 	}
 	#timeplace {
 		text-align: center;
@@ -57,11 +56,10 @@ html {
 	}
 
 	#middata{
-		
 		position: absolute;
 		width: 70%;
 		margin: auto;
-		top: 66%; left: 0; right: 0; bottom: 0;
+		top: 65%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
 		height: 360px;
@@ -79,16 +77,15 @@ html {
 	} 
 	#namesz {
 		margin: 0;
+		margin-top: -10px;
 		padding: 0;
 		font-weight: 400;
 		float: left;
 		text-transform: uppercase;
 	}
 	#namesz li{
-	
-		
-		padding: 6% 10% 6% 0%;
-		margin-top: 17px;
+		display: inline-block;
+		margin-top: 40px;
 		width: auto;
 		font-size:28pt;
 		font-weight: 600;
@@ -106,7 +103,7 @@ html {
 	#valuesz li{
 		font-family: 'Source Sans Pro', sans-serif;
 		text-align: right;
-		margin-top: 8px;
+		margin-top: 6px;
 		font-weight: 600;
 
 	}
