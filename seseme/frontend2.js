@@ -20,7 +20,7 @@ switch(new Date().getHours()) { //currentTime depends on current hour
 		break;
 }
 
-document.ontouchstart = function(e){
+document.ontouchmove = function(e){
 	e.preventDefault()
 } //for preventing mobile pan?
 
