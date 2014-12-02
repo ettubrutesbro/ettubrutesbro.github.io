@@ -34,7 +34,7 @@
 	<stop  offset="0.5376" style="stop-color:#1A1A1A"/>
 </linearGradient>
 
-<pattern id="nrg" x="0" y="-30" patternUnits="userSpaceOnUse" height="150" width="120">
+<pattern id="nrg" x="0" y="-40" patternUnits="userSpaceOnUse" height="150" width="120">
       <image x="0" y="0" height="150" width="120" xlink:href="img/nrg.svg"></image>
 </pattern>
 
