@@ -20,6 +20,10 @@ switch(new Date().getHours()) { //currentTime depends on current hour
 		break;
 }
 
+document.ontouchstart = function(e){
+	e.preventDefault()
+} //for preventing mobile pan?
+
 //console.log(scaleSet[currentScale][currentTime][0].value)
 
 var valueArray = [[500],[500],[500],[500]]
