@@ -38,7 +38,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g) 
-
+ 
 	myElement = document.getElementById('mainSvg')
 	//mc.x for touch functions
 	var mc = new Hammer(myElement)
@@ -283,7 +283,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		$('#tophelper').velocity({
 			translateX: "60%",
 			opacity: 1
-		},1800, "easeOutCubic", function(){
+		},2400, "easeOutQuad", function(){
 			$('#tophelper').velocity({
 				translateX: "135%",
 				opacity: -0.5

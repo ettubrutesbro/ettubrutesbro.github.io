@@ -12,10 +12,11 @@ html {
 		position:absolute;
 		width: 70%;
 		margin: auto;
-		top: 33%;left:0;right:0;bottom:0;
+		top: 31%;left:0;right:0;bottom:0;
 		font-size: 42pt;
 		z-index: 1;
 		height: 200px;
+
 	}
 	#timeplace {
 		text-align: center;
@@ -56,17 +57,14 @@ html {
 	}
 
 	#middata{
+		
 		position: absolute;
 		width: 70%;
 		margin: auto;
-		top: 63%; left: 0; right: 0; bottom: 0;
+		top: 66%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
-		height: 270px;
-	}
-
-	#topdata{
-		margin-right: auto;
+		height: 360px;
 	}
 
 	#overall_data{
@@ -87,9 +85,10 @@ html {
 		text-transform: uppercase;
 	}
 	#namesz li{
-		display: inline-block;
-		padding: 5% 12%;
-		margin-top: 19px;
+	
+		
+		padding: 6% 10% 6% 0%;
+		margin-top: 17px;
 		width: auto;
 		font-size:28pt;
 		font-weight: 600;
