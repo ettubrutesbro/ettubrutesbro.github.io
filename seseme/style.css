@@ -20,11 +20,14 @@ html {
 	#timeplace {
 		text-align: center;
 		margin: auto;
+		font-family: 'Source Sans Pro', sans-serif;
 	}
 	#topdata span {
 		margin-top: -10px;
 		font-weight: 800;
 		letter-spacing: 0.25em;
+		font-family: 'Raleway', sans-serif;
+		
 	}
 
 	#tophelper {
@@ -37,6 +40,7 @@ html {
 		opacity: 0;
 	}
 	span#time {
+		
 		text-align: center;
 		border: 8px solid;
 		border-color: white #afddda #6b8db4 #fff996;
@@ -44,6 +48,7 @@ html {
 		float: left;
 	}
 	span#place {
+	
 		border: 8px solid;
 		border-color: #9f9b00 #867b22 #d34f00 #ff9f45;
 		padding: 1.8% 3.5% 1.8% 5%;
