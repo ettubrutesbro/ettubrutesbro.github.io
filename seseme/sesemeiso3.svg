@@ -116,6 +116,7 @@
 <g id = "d_ghost">
 	<polygon id="d_ghosttop" fill="#ffffff" fill-opacity="0.2" stroke-width = "7" stroke-dashoffset = "3" stroke-dasharray = "10 12" stroke = "#ffffff" points="424,555 540,488 655,555 540,621 "/>
 	<path id = "d_ghostbottom" opacity = "0.3" fill = "none" stroke-width = "7" stroke-dasharray = "20 15" d = "M 424 1087 L 540 1021 L 655 1087" stroke = "#ffffff"/>
+
 </g>  
 
 </g>

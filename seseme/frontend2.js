@@ -56,7 +56,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	$(firstRed).css('border','3px red solid')
 
 	all.attr({
-		transform: "t -50 -230 s 0.75"
+		transform: "t -50 -485 s 0.75"
 	})
 
 	themasks.attr({ //these are just off, so this transform fixes their positioning

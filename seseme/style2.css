@@ -12,7 +12,7 @@ html {
 		position:absolute;
 		width: 70%;
 		margin: auto;
-		top: 23%;left:0;right:0;bottom:0;
+		top: -80%;left:0;right:0;bottom:0;
 		font-size: 42pt;
 		z-index: 1;
 		height: 200px;
@@ -59,7 +59,7 @@ html {
 		position: absolute;
 		width: 70%;
 		margin: auto;
-		top: 65%; left: 0; right: 0; bottom: 0;
+		top: 75%; left: 0; right: 0; bottom: 0;
 		z-index: 1;
 		padding: 0;
 		height: 360px;
@@ -69,44 +69,32 @@ html {
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 46pt;
 		letter-spacing: 0.12em;
 	}
 	#overall_data ul li {
 		list-style-type: none;
 	} 
-	#namesz {
+	#breakdown {
 		margin: 0;
-		margin-top: -10px;
+		margin-top: 0px;
 		padding: 0;
 		font-weight: 400;
 		float: left;
 		text-transform: uppercase;
-	}
-	#namesz li{
 		
-		margin-top: 40px;
+	}
+	#breakdown li{
+		display: inline-block;
+		font-family: 'Source Sans Pro', sans-serif;
+		margin-top: 30px;
 		width: auto;
-		font-size:28pt;
+		font-size:32pt;
 		font-weight: 600;
 		letter-spacing: 0.15em;
 		/*line-height: 0.98em;*/
 		
 	}
-	#valuesz {
-		margin: 0;
-		padding: 0;
-		display: block;
-		width: auto;
-		float: right;
-	}
-	#valuesz li{
-		font-family: 'Source Sans Pro', sans-serif;
-		text-align: right;
-		margin-top: 6px;
-		font-weight: 600;
-
-	}
+	
 
 	span.unit {
 		font-size: 30pt;
@@ -120,7 +108,7 @@ html {
 		padding: 0;
 		margin: 0;
 		margin-left: 10px;
-		opacity: 0.4;
+		opacity: 0.7;
 	}
 
 
@@ -128,14 +116,17 @@ html {
 	overflow: hidden;
 }
 
-#names li:nth-of-type(1) {
-
+#breakdown li:nth-of-type(1) {
+	color: #f7ec2f;
 }
-#metrics li:nth-of-type(2) {
-
+#breakdown li:nth-of-type(2) {
+	color: #f47945;
 }
-#metrics li:nth-of-type(3) {
-
+#breakdown li:nth-of-type(3) {
+	color: #71b6e4;
+}
+#breakdown li:nth-of-type(4) {
+	color: #5dba47;
 }
 
 
