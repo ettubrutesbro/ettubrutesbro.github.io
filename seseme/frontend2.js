@@ -30,11 +30,17 @@ var valueArray = [[500],[500],[500],[500]]
 
 var mainSvg = Snap("#mainSvg")
 
+var background = mainSvg.rect(0,0,"100%","100%")
+background.attr({
+	fill: "url(#bggradient)"
+})
+
 var ht = window.screen.availHeight
 var wid = window.screen.availWidth
 
 
 Snap.load("sesemeiso3.svg", function(svgFile){
+
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g) 
@@ -50,10 +56,15 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	amarkerclip = g.select("#a_mc"), bmarkerclip = g.select("#b_mc"), cmarkerclip = g.select("#c_mc"), dmarkerclip = g.select("#d_mc")
 	var dghost = g.select("#d_ghost"), dghosttop = g.select("#d_ghosttop"), dAmount, bAmount 
 	pillarArray = [a,b,c,d]
+
+	//to add: currentCoords for a,b,c,d for preserving position amidst data change
+
 	var themasks = g.select("#themasks")
 	//icon highlighting for dataset
-	var firstRed = $("#dataSetIcons li").get(currentTime)
-	$(firstRed).css('border','3px red solid')
+
+	//*****************************************************
+	// INIT / SETUP FUNCTIONS GO HERE
+	//#####################################################
 
 	all.attr({
 		transform: "t -50 -500 s 0.75"
@@ -65,7 +76,16 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	moveToData(scaleSet[currentScale][currentTime]) //right away, go to dataset
 
 	helperFly()
-	setTimeout(function(){markerMove(true)},1000)
+	setTimeout(function(){markerMove(true)},1000) //stopgap
+
+
+	
+
+	//**********************************************
+	// EVENTS
+	//**********************************************
+
+
 
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
 		ele.click(function(){
@@ -86,6 +106,20 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	mc.on("swipedown", function(ev){
 		scaleChange("bigger")
 	})
+
+
+	$(document).click(function(){
+		console.log('do it ya shit')
+		unselectPillars(450);
+		//move a,b,c,d to t 0 0 and reset all currentCoords
+
+	})
+
+
+
+	//**************************************
+	// CUSTOM FUNCTION DEFINITIONS
+	//*****************************************
 
 	function scaleChange(direction){
 		if(direction == "bigger"){
@@ -152,7 +186,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			//console.log(dataSet[i])
 			valueArray[i].unshift(500-((dataSet[i].height)*5))
 			var translation = valueArray[i][0]
-			movePillar(ele,translation,0)
+			movePillar(ele,translation,0,false)
 			var nameSlot =  $('#names li').get(i)
 			$(nameSlot).text(dataSet[i].name) //pushes names into li
 
@@ -171,43 +205,47 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	} //end function moveToData
 
-	function movePillar(pillar, amount, delay){ //pillar motion function
-		//set delay 
-		var ltr = pillar.attr('id')
-		var mask = g.select("#mask" + ltr ).select("#m" + ltr)
-		var strokemask = themasks.select("#strokemask" + ltr).select('rect')
+	function movePillar(pillar, amount, delay, horizontal){ //pillar motion function
+		if(!horizontal){ //vertical translation:
+			//set delay 
+			var ltr = pillar.attr('id')
+			var mask = g.select("#mask" + ltr ).select("#m" + ltr)
+			var strokemask = themasks.select("#strokemask" + ltr).select('rect')
 
-		pillar.animate({
-			transform: "t 0 " + amount
-		},(amount*2.5)+500,mina.easeinout)
-		
-		mask.animate({
-			transform: "t 0 " + -amount
-		},(amount*2.5)+500,mina.easeinout)
-
-		strokemask.animate({
-			transform: "t 0 " + -amount
-		},(amount*2.5)+500,mina.easeinout)
-
-		console.log(ltr + "moved to" + amount)
-		if(ltr == "b"){
-			bAmount = amount
-		}
-		if(ltr == "d"){
-			dghosttop.animate({
+			pillar.animate({
 				transform: "t 0 " + amount
 			},(amount*2.5)+500,mina.easeinout)
-			dAmount = amount
-			if(dAmount>bAmount+100){
-				console.log(dAmount +" "+ bAmount)
-				dghost.animate({
-					opacity: 0.5
-				},800)
-			}else{
-				dghost.animate({
-					opacity: 0
-				}, 800)
+			
+			mask.animate({
+				transform: "t 0 " + -amount
+			},(amount*2.5)+500,mina.easeinout)
+
+			strokemask.animate({
+				transform: "t 0 " + -amount
+			},(amount*2.5)+500,mina.easeinout)
+
+			console.log(ltr + "moved to" + amount)
+			if(ltr == "b"){
+				bAmount = amount
 			}
+			if(ltr == "d"){
+				dghosttop.animate({
+					transform: "t 0 " + amount
+				},(amount*2.5)+500,mina.easeinout)
+				dAmount = amount
+				if(dAmount>bAmount+100){
+					dghost.animate({
+						opacity: 0.5
+					},800)
+				}else{
+					dghost.animate({
+						opacity: 0
+					}, 800)
+				}
+			}
+		}else{ //horizontal movement: 
+
+
 		}
 
 
@@ -225,38 +263,66 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		}, speed)
 
 		//hacky workaround --------------------------------------
+		// SELECTING SHOULD: 1. separate pillar spatially 2. color highlight
+		//  3. dim other pillars (incl. icon) opacity 4. highlight data text
+		// 5. remove pillar specific features (overlay for D)
 		if(ltr=='a'){
-			console.log('lets go')
 			var listHilight1 = $('#names li').get(0)
 			var listHilight2 = $('#values li').get(0)
 			$('#names li').css('background-color','rgba(255,0,0,0)')
 			$('#values li').css('background-color','rgba(255,0,0,0)')
 			$(listHilight1).css('background-color','#34A849')
 			$(listHilight2).css('background-color','#34A849')
+
+			a.animate({
+				transform: "t -75 -20"
+			}, 400, mina.easeinout)
+
+			g.animate({
+				transform: "t 170 0"
+			}, 400, mina.easeinout)
+
 		}
 
 		if(ltr=='b'){
-			console.log('lets go')
 			var listHilight1 = $('#names li').get(1)
 			var listHilight2 = $('#values li').get(1)
 			$('#names li').css('background-color','rgba(255,0,0,0)')
 			$('#values li').css('background-color','rgba(255,0,0,0)')
 			$(listHilight1).css('background-color','#0FA1C5')
 			$(listHilight2).css('background-color','#0FA1C5')
+
+			b.animate({
+				transform: "t 0 300"
+			}, 400, mina.easeinout)
+
+			g.animate({
+				transform: "t 0 -200"
+			}, 400, mina.easeinout)
+
+			dghost.animate({
+				opacity: 0
+			}, 400)
 		}
 
 		if(ltr=='c'){
-			console.log('lets go')
 			var listHilight1 = $('#names li').get(2)
 			var listHilight2 = $('#values li').get(2)
 			$('#names li').css('background-color','rgba(255,0,0,0)')
 			$('#values li').css('background-color','rgba(255,0,0,0)')
 			$(listHilight1).css('background-color','#F8A71A')
 			$(listHilight2).css('background-color','#F8A71A')
+
+			c.animate({
+				transform: "T 105 300"
+			},400, mina.easeinout)
+
+			g.animate({
+				transform: "t -220 0"
+			}, 400, mina.easeinout)
 		}
 
 		if(ltr=='d'){
-			console.log('lets go')
 			var listHilight1 = $('#names li').get(3)
 			var listHilight2 = $('#values li').get(3)
 			$('#names li').css('background-color','rgba(255,0,0,0)')
@@ -275,6 +341,9 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				strokeDashoffset: offsetArray[i]
 			})			
 		})
+		
+
+		
 
 	} //end function unselectPillars
 
@@ -309,5 +378,16 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		})
 	} // end function markerMove	
 	
+	function sesemeTransform(direction,speed,scale){ // move & scale g
+
+	}
+
+	function colorPulse(target,color,speed){ //color pulsing for qual.comm
+
+	}
+
+
+
+
 })
 
