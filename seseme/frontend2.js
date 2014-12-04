@@ -66,7 +66,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	// INIT / SETUP FUNCTIONS GO HERE
 	//#####################################################
 
-	all.attr({
+	g.attr({
 		transform: "t -50 -500 s 0.75"
 	})
 
@@ -278,7 +278,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				transform: "t -75 -20"
 			}, 400, mina.easeinout)
 
-			g.animate({
+			all.animate({
 				transform: "t 170 0"
 			}, 400, mina.easeinout)
 
@@ -296,7 +296,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				transform: "t 0 300"
 			}, 400, mina.easeinout)
 
-			g.animate({
+			all.animate({
 				transform: "t 0 -200"
 			}, 400, mina.easeinout)
 
@@ -317,7 +317,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				transform: "T 105 300"
 			},400, mina.easeinout)
 
-			g.animate({
+			all.animate({
 				transform: "t -220 0"
 			}, 400, mina.easeinout)
 		}
