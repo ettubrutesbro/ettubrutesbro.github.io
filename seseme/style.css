@@ -40,13 +40,15 @@ html {
 		opacity: 0;
 	}
 	span#time {
-		
 		text-align: center;
-		border: 8px solid;
+		border: solid;
+		border-width: 8px;
 		border-color: white #afddda #6b8db4 #fff996;
 		padding: 1.8% 3.5% 1.8% 5%;
 		float: left;
 	}
+
+
 	span#place {
 	
 		border: 8px solid;

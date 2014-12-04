@@ -1,6 +1,9 @@
 
 var socket = io('10.0.1.241:5000')
 
+var viewState=1 //0 - pause, 1 = normal, 2 = detail, 3 = detail
+var selectedPillar 
+
 var tag = [tagMorn, tagNoon, tagNite, tagLate], building = [buildingMorn, buildingNoon, buildingNite, buildingLate], school = [schoolMorn, schoolNoon, schoolNite, schoolLate]
 var scaleSet = [tag, building, school]
 var currentScale = 0, currentTime
@@ -25,7 +28,6 @@ background.attr({
 var ht = window.screen.availHeight
 var wid = window.screen.availWidth
 
-//time calculations
 if(theHour>=0&&theHour<6){
 	currentTime = 3 //late 
 }else if(theHour>=6&&theHour<12){
@@ -36,7 +38,6 @@ if(theHour>=0&&theHour<6){
 	currentTime = 2 //nite
 }
 
-console.log("the timeset is " +currentTime)
 Snap.load("sesemeiso3.svg", function(svgFile){
 
 	var g
@@ -96,39 +97,87 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
 		ele.click(function(e){
-			selectPillar(ele,450)
-			e.stopPropagation()
+			if(viewState==1||viewState==2){
+				selectPillar(ele)
+				e.stopPropagation()
+			}
 		})
 	})	
 
 	dghost.click(function(e){ //clicking the overlay for pillar D also works
-		selectPillar(d,450)
-		e.stopPropagation()
+		if(viewState==1||viewState==2){
+			selectPillar(d)
+			e.stopPropagation()
+		}
 	})
 
 	$("#names li, #values li").click(function(e){ //clicking data also highlights assoc. pillar
-		var i = $(this).index()
-		selectPillar(pillarArray[i],450)
-		e.stopPropagation()
+		if(viewState==1||viewState==2){
+			var i = $(this).index()
+			selectPillar(pillarArray[i])
+			e.stopPropagation()
+		}
 	})
+
+	mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
 	//swiping in directions changes the displayed data set
 	mc.on("swipeleft", function(ev){
-		timeChange("later")
+		if(viewState==1){
+			selectPillar(c)
+			expandMetric(c)
+		}
+		else if(viewState==2&&selectedPillar!="c"){
+			selectPillar(c)
+		}
+		else if(viewState==2&&selectedPillar=="c"){
+			expandMetric(c)
+		}
 	})
 	mc.on("swiperight", function(ev){
-		timeChange("earlier")
+		if(viewState==1){
+			selectPillar(a)
+			expandMetric(a)
+		}
+		else if(viewState==2&&selectedPillar!="a"){
+			selectPillar(a)
+		}
+		else if(viewState==2&&selectedPillar=="a"){
+			expandMetric(a)
+		}
 	})
 	mc.on("swipeup", function(ev){
-		scaleChange("smaller")
+		if(viewState==1){
+			selectPillar(b)
+			expandMetric(b)
+		}
+		else if(viewState==2&&selectedPillar!="b"){
+			selectPillar(b)
+		}
+		else if(viewState==2&&selectedPillar=="b"){
+			expandMetric(b)
+		}
 	})
 	mc.on("swipedown", function(ev){
-		scaleChange("bigger")
+		if(viewState==1){
+			selectPillar(d)
+			expandMetric(d)
+		}
+		else if(viewState==2&&selectedPillar!="d"){
+			selectPillar(d)
+		}
+		else if(viewState==2&&selectedPillar=="d"){
+			expandMetric(d)
+		}
+
 	})
 
 
 	$(document).click(function(){
-		unselectPillars(450)
+		console.log('do an unselect' + viewState)
+		if(viewState==2){
+			unselectPillars()
+		}
 	})
 
 
@@ -269,13 +318,15 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}//end function movePillar
 
 
-	function selectPillar(pillar, speed){ //pillar highlighting function
+	function selectPillar(pillar){ //pillar highlighting function
+
 		var ltr = pillar.attr('id')
-		unselectPillars(450)
+		selectedPillar = ltr
+		unselectPillars()
 		var stroker = pillar.select('#' + ltr + '_stroker')
 		stroker.animate({
 			strokeDashoffset: 0
-		}, speed)
+		}, 450)
 
 		var index = pillarArray.indexOf(pillar)
 		console.log(index)
@@ -322,6 +373,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			opacity: 1
 		}, 400)
 		
+				viewState=2
+		console.log('selected pillar ' + viewState)
 
 		// SELECTING SHOULD: 1. separate pillar spatially 2. color highlight
 		//  3. dim other pillars (incl. icon) opacity 4. highlight data text
@@ -330,7 +383,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	}//end function selectPillar
 
-	function unselectPillars(speed){ //generic deselect for selecting new pillars
+	function unselectPillars(){ //generic deselect for selecting new pillars
+	
 		$('#awrapper, #bwrapper, #cwrapper, #dwrapper, #dgwrapper').velocity({
 			translateX: 0,
 			translateY: 0,
@@ -347,10 +401,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				strokeDashoffset: offsetArray[i]
 			})			
 		})
-		
-	
-		
-		
+			viewState = 1
+			console.log('unselected pillars')
 
 	} //end function unselectPillars
 
@@ -388,31 +440,43 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	}
 
-	function transformPopulate(target){
+	function expandMetric(pillar){
+		viewState = 3 
+		var directionArray = [[150,0,350,0,350,0,100,0],[0,0,0,-150,0,-100,0,-100],[-200,0,-350,0],[]],
+		wrapperList = ['#awrapper','#bwrapper','#cwrapper','#dwrapper','#dgwrapper'],
+		index = pillarArray.indexOf(pillar)
 
+		$(wrapperList[index]).velocity({
+			translateX: directionArray[index][0],
+			translateY: directionArray[index][1],
+		},400,"easeOutQuad")
 
-		 if(target.attr('transform').string !== ''){
+		wrapperList.splice(index,1)
 
-		 	
+		wrapperList.forEach(function(ele,i,arr){
+			$(ele).velocity({
+				translateX: directionArray[index][2],
+				translateY: directionArray[index][3],
+				opacity: 0
+			},400, "easeOutQuad")
+		})
 
-		 	
-		 	var transformarray = target.attr('transform').string.split(/[ ,]+/)
-		 	
-		 	transformarray.forEach(function(ele,i,arr){
-		 		ele = ele.replace(/[^\d.-]/g, '');
-		 		console.log(ele)
-		 		arr[i] = ele
-		 	})
+		$("#names li").velocity({
+			translateX: directionArray[index][4],
+			translateY: directionArray[index][5],
+			opacity: 0
+		},400, "easeOutQuad")
+		$("#values li").velocity({
+			translateX: directionArray[index][6],
+			translateY: directionArray[index][7],
+			opacity: 0
+		},400, "easeOutQuad", function(){
+			$("#topdata").velocity({
+				translateY: 400
+			},600)
 
+		})
 
-
-
-		 	pillarTransformArray[pillarArray.indexOf(target)].xval = transformarray[0] 
-		 	pillarTransformArray[pillarArray.indexOf(target)].yval = transformarray[1]
-		 	pillarTransformArray[pillarArray.indexOf(target)].scaleval = transformarray[2]
-
-		 	console.log(transformarray)
-		 }
 	}
 
 

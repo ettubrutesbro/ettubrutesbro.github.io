@@ -11,17 +11,16 @@ tagMorn.push({
 
 tagMorn.push({
 	pillar:'b',
-	name:'H2O',
-	value: 18, 
-	metric:'gal/min',
-	height: 55} )
-
-tagMorn.push({
-	pillar:'c',
 	name:'Temp',
 	value: 1290, 
 	metric:'BTU',
 	height: 100} )
+tagMorn.push({
+	pillar:'c',
+	name:'H2O',
+	value: 18, 
+	metric:'gal/min',
+	height: 55} )
 
 tagMorn.push({
 	pillar:'d',
@@ -45,17 +44,17 @@ tagNoon.push({
 
 tagNoon.push({
 	pillar:'b',
-	name:'H2O',
-	value: 33, 
-	metric:'gal/min',
-	height: 100} )
-
-tagNoon.push({
-	pillar:'c',
 	name:'Temp',
 	value: 920, 
 	metric:'BTU',
 	height: 71} )
+
+tagNoon.push({
+	pillar:'c',
+	name:'H2O',
+	value: 33, 
+	metric:'gal/min',
+	height: 100} )
 
 
 tagNoon.push({
@@ -78,17 +77,17 @@ tagNite.push({
 
 tagNite.push({
 	pillar:'b',
-	name:'H2O',
-	value: 26, 
-	metric:'gal/min',
-	height: 80} )
-
-tagNite.push({
-	pillar:'c',
 	name:'Temp',
 	value: 701, 
 	metric:'BTU',
 	height: 54} )
+
+tagNite.push({
+	pillar:'c',
+	name:'H2O',
+	value: 26, 
+	metric:'gal/min',
+	height: 80} )
 
 
 tagNite.push({
@@ -111,17 +110,17 @@ tagLate.push({
 
 tagLate.push({
 	pillar:'b',
-	name:'H2O',
-	value: 7, 
-	metric:'gal/min',
-	height: 22} )
-
-tagLate.push({
-	pillar:'c',
 	name:'Temp',
 	value: 980, 
 	metric:'BTU',
 	height: 76} )
+
+tagLate.push({
+	pillar:'c',
+	name:'H2O',
+	value: 7, 
+	metric:'gal/min',
+	height: 22} )
 
 tagLate.push({
 	pillar:'d',
