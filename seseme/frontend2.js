@@ -5,20 +5,7 @@ var tag = [tagMorn, tagNoon, tagNite, tagLate], building = [buildingMorn, buildi
 var scaleSet = [tag, building, school]
 var currentScale = 0, currentTime
 
-switch(new Date().getHours()) { //currentTime depends on current hour
-	case 0: case 1: case 2: case 3: case 4: case 5:
-		currentTime = 3
-		break;
-	case 6: case 7: case 8: case 9: case 10: case 11:
-		currentTime = 0
-		break;
-	case 12: case 13: case 14: case 15: case 16: case 17: case 18:
-		currentTime = 1
-		break;
-	case 19: case 20: case 21: case 22: case 23:
-		currentTime = 2
-		break;
-}
+var theHour = new Date().getHours()
 
 document.ontouchmove = function(e){
 	e.preventDefault()
@@ -38,14 +25,25 @@ background.attr({
 var ht = window.screen.availHeight
 var wid = window.screen.availWidth
 
+//time calculations
+if(theHour>=0&&theHour<6){
+	currentTime = 3 //late 
+}else if(theHour>=6&&theHour<12){
+	currentTime = 0 //morn
+}else if(theHour>=12&&theHour<19){
+	currentTime = 1 //noon
+}else{
+	currentTime = 2 //nite
+}
 
+console.log("the timeset is " +currentTime)
 Snap.load("sesemeiso3.svg", function(svgFile){
 
 	var g
 	g = svgFile.select("svg")
 	mainSvg.append(g) 
  
-	myElement = document.getElementById('mainSvg')
+	myElement = document.getElementById('svgInside')
 	//mc.x for touch functions
 	var mc = new Hammer(myElement)
 
@@ -55,9 +53,12 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	var amarker = g.select("#a_marker"), bmarker = g.select("#b_marker"), cmarker = g.select("#c_marker"), dmarker = g.select("#d_marker"),
 	amarkerclip = g.select("#a_mc"), bmarkerclip = g.select("#b_mc"), cmarkerclip = g.select("#c_mc"), dmarkerclip = g.select("#d_mc")
 	var dghost = g.select("#d_ghost"), dghosttop = g.select("#d_ghosttop"), dAmount, bAmount 
+	var awrapper = g.select("#awrapper"), bwrapper = g.select("#bwrapper"), cwrapper = g.select("#cwrapper"), dwrapper = g.select("#dwrapper")
 	pillarArray = [a,b,c,d]
 
 	//to add: currentCoords for a,b,c,d for preserving position amidst data change
+
+	//var pillarTransformArray = [{xval:0,yval:0,scaleval:0},{xval:0,yval:0,scaleval:0},{xval:0,yval:0,scaleval:0},{xval:0,yval:0,scaleval:0}]
 
 	var themasks = g.select("#themasks")
 	//icon highlighting for dataset
@@ -66,17 +67,24 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	// INIT / SETUP FUNCTIONS GO HERE
 	//#####################################################
 
-	g.attr({
-		transform: "t -50 -500 s 0.75"
-	})
+	 all.attr({
+	 	transform: "t -50 -500 s 0.75"
+	 })
 
 	themasks.attr({ //these are just off, so this transform fixes their positioning
 		transform: "t 200 120"
 	})
+
+	// $("#velowrapper").velocity({
+	// 	translateY: 300,
+	// 	scale: 0.4
+	// },400)
+
+	//delay here, hopefully through a callback function of anim setup, will allow intro to work
 	moveToData(scaleSet[currentScale][currentTime]) //right away, go to dataset
 
-	helperFly()
-	setTimeout(function(){markerMove(true)},1000) //stopgap
+	//helperFly()
+	setTimeout(function(){markerMove(true)},1200) //stopgap
 
 
 	
@@ -86,12 +94,23 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	//**********************************************
 
 
-
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
-		ele.click(function(){
+		ele.click(function(e){
 			selectPillar(ele,450)
+			e.stopPropagation()
 		})
 	})	
+
+	dghost.click(function(e){ //clicking the overlay for pillar D also works
+		selectPillar(d,450)
+		e.stopPropagation()
+	})
+
+	$("#names li, #values li").click(function(e){ //clicking data also highlights assoc. pillar
+		var i = $(this).index()
+		selectPillar(pillarArray[i],450)
+		e.stopPropagation()
+	})
 
 	//swiping in directions changes the displayed data set
 	mc.on("swipeleft", function(ev){
@@ -109,10 +128,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 
 	$(document).click(function(){
-		console.log('do it ya shit')
-		unselectPillars(450);
-		//move a,b,c,d to t 0 0 and reset all currentCoords
-
+		unselectPillars(450)
 	})
 
 
@@ -156,7 +172,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				currentTime = 0
 			} else{
 			currentTime+=1
-			console.log(currentTime)
 			}
 		} //end of direction conditionals
 
@@ -212,8 +227,10 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			var mask = g.select("#mask" + ltr ).select("#m" + ltr)
 			var strokemask = themasks.select("#strokemask" + ltr).select('rect')
 
+
+
 			pillar.animate({
-				transform: "t 0 " + amount
+				transform: "t 0 " + amount 
 			},(amount*2.5)+500,mina.easeinout)
 			
 			mask.animate({
@@ -224,7 +241,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				transform: "t 0 " + -amount
 			},(amount*2.5)+500,mina.easeinout)
 
-			console.log(ltr + "moved to" + amount)
 			if(ltr == "b"){
 				bAmount = amount
 			}
@@ -253,7 +269,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}//end function movePillar
 
 
-
 	function selectPillar(pillar, speed){ //pillar highlighting function
 		var ltr = pillar.attr('id')
 		unselectPillars(450)
@@ -262,78 +277,69 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			strokeDashoffset: 0
 		}, speed)
 
-		//hacky workaround --------------------------------------
+		var index = pillarArray.indexOf(pillar)
+		console.log(index)
+		//corresponding colors, list items, etc.
+		var colorArray =['#ffffff','red','yellow','blue']
+		var translations = [[-100,0,150,0],[0,100,0,-100],[100,0,-150,0],[0,0,0,200]]
+
+		var wrapperList = ['#awrapper','#bwrapper','#cwrapper','#dwrapper','#dgwrapper']
+
+		var listHilight1 = $('#names li').get(index)
+		var listHilight2 = $('#values li').get(index)
+
+		$(wrapperList[index]).velocity({
+			translateX: translations[index][0],
+			translateY: translations[index][1]
+		}, 400)
+
+		wrapperList.splice(index,1)
+		console.log(wrapperList)
+
+		wrapperList.forEach(function(ele,i,arr){
+			$(ele).velocity({
+				translateX: translations[index][2],
+				translateY: translations[index][3],
+				opacity: 0.5
+			},400)
+		})
+
+		$('#names li:nth-of-type(n+'+(index+2)+'), #values li:nth-of-type(n+'+(index+2)+')').velocity({
+			translateY: 20,
+			opacity: 0.4
+		}, 250)
+		$('#names li:nth-of-type(-n+'+index+'), #values li:nth-of-type(-n+'+index+')').velocity({
+			translateY: -20,
+			opacity: 0.4
+		}, 250)
+
+
+
+		$(listHilight1).velocity({
+			opacity: 1
+		}, 400)
+		$(listHilight2).velocity({
+			opacity: 1
+		}, 400)
+		
+
 		// SELECTING SHOULD: 1. separate pillar spatially 2. color highlight
 		//  3. dim other pillars (incl. icon) opacity 4. highlight data text
 		// 5. remove pillar specific features (overlay for D)
-		if(ltr=='a'){
-			var listHilight1 = $('#names li').get(0)
-			var listHilight2 = $('#values li').get(0)
-			$('#names li').css('background-color','rgba(255,0,0,0)')
-			$('#values li').css('background-color','rgba(255,0,0,0)')
-			$(listHilight1).css('background-color','#34A849')
-			$(listHilight2).css('background-color','#34A849')
 
-			a.animate({
-				transform: "t -75 -20"
-			}, 400, mina.easeinout)
-
-			all.animate({
-				transform: "t 170 0"
-			}, 400, mina.easeinout)
-
-		}
-
-		if(ltr=='b'){
-			var listHilight1 = $('#names li').get(1)
-			var listHilight2 = $('#values li').get(1)
-			$('#names li').css('background-color','rgba(255,0,0,0)')
-			$('#values li').css('background-color','rgba(255,0,0,0)')
-			$(listHilight1).css('background-color','#0FA1C5')
-			$(listHilight2).css('background-color','#0FA1C5')
-
-			b.animate({
-				transform: "t 0 300"
-			}, 400, mina.easeinout)
-
-			all.animate({
-				transform: "t 0 -200"
-			}, 400, mina.easeinout)
-
-			dghost.animate({
-				opacity: 0
-			}, 400)
-		}
-
-		if(ltr=='c'){
-			var listHilight1 = $('#names li').get(2)
-			var listHilight2 = $('#values li').get(2)
-			$('#names li').css('background-color','rgba(255,0,0,0)')
-			$('#values li').css('background-color','rgba(255,0,0,0)')
-			$(listHilight1).css('background-color','#F8A71A')
-			$(listHilight2).css('background-color','#F8A71A')
-
-			c.animate({
-				transform: "T 105 300"
-			},400, mina.easeinout)
-
-			all.animate({
-				transform: "t -220 0"
-			}, 400, mina.easeinout)
-		}
-
-		if(ltr=='d'){
-			var listHilight1 = $('#names li').get(3)
-			var listHilight2 = $('#values li').get(3)
-			$('#names li').css('background-color','rgba(255,0,0,0)')
-			$('#values li').css('background-color','rgba(255,0,0,0)')
-			$(listHilight1).css('background-color','rgba(255,255,255,0.1)')
-			$(listHilight2).css('background-color','rgba(255,255,255,0.1)')
-		}
 
 	}//end function selectPillar
 
 	function unselectPillars(speed){ //generic deselect for selecting new pillars
+		$('#awrapper, #bwrapper, #cwrapper, #dwrapper, #dgwrapper').velocity({
+			translateX: 0,
+			translateY: 0,
+			opacity: 1
+		},400)
+		$('#names li, #values li').velocity({
+			opacity: 1,
+			translateY: 0
+		},400)	
 		strokerArray = [a.select('#a_stroker'),b.select('#b_stroker'),c.select('#c_stroker'),d.select('#d_stroker')]
 		offsetArray = [1600,1600,1600,1600]
 		strokerArray.forEach(function(ele,i){
@@ -342,7 +348,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			})			
 		})
 		
-
+	
+		
 		
 
 	} //end function unselectPillars
@@ -364,7 +371,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		var updownval = 150
 		if(!updown){
 			updownval !=updownval
-			console.log(updownval)
 		}
 		var markerArray = [amarker,bmarker,cmarker,dmarker]
 		var markerclipArray = [amarkerclip,bmarkerclip,cmarkerclip,dmarkerclip]
@@ -377,15 +383,37 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			},600)
 		})
 	} // end function markerMove	
-	
-	function sesemeTransform(direction,speed,scale){ // move & scale g
-
-	}
 
 	function colorPulse(target,color,speed){ //color pulsing for qual.comm
 
 	}
 
+	function transformPopulate(target){
+
+
+		 if(target.attr('transform').string !== ''){
+
+		 	
+
+		 	
+		 	var transformarray = target.attr('transform').string.split(/[ ,]+/)
+		 	
+		 	transformarray.forEach(function(ele,i,arr){
+		 		ele = ele.replace(/[^\d.-]/g, '');
+		 		console.log(ele)
+		 		arr[i] = ele
+		 	})
+
+
+
+
+		 	pillarTransformArray[pillarArray.indexOf(target)].xval = transformarray[0] 
+		 	pillarTransformArray[pillarArray.indexOf(target)].yval = transformarray[1]
+		 	pillarTransformArray[pillarArray.indexOf(target)].scaleval = transformarray[2]
+
+		 	console.log(transformarray)
+		 }
+	}
 
 
 
