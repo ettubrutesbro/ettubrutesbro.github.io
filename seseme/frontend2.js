@@ -6,6 +6,8 @@ var selectedPillar
 
 var tag = [tagMorn, tagNoon, tagNite, tagLate], building = [buildingMorn, buildingNoon, buildingNite, buildingLate], school = [schoolMorn, schoolNoon, schoolNite, schoolLate]
 var scaleSet = [tag, building, school]
+var semanticScaleSet = ["SCC","UCD","CALI"]
+var semanticTimeSet = ["A.M.","NOON","NITE","LATE"]
 var currentScale = 0, currentTime
 
 var theHour = new Date().getHours()
@@ -87,6 +89,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	//helperFly()
 	setTimeout(function(){markerMove(true)},1200) //stopgap
 
+	$("span#time").text(semanticTimeSet[currentTime])
 
 	
 
@@ -182,9 +185,11 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	$("span#time").click(function(){
 		timeChange("later")
+		$("span#time").text(semanticTimeSet[currentTime])
 	})
 	$("span#place").click(function(){
 		scaleChange("bigger")
+		$("span#place").text(semanticScaleSet[currentScale])
 	})
 
 
@@ -454,6 +459,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}
 
 	function expandMetric(pillar){
+		var infoArray = [sccArray, buildingArray, schoolArray]
+		var info = infoArray[currentScale]
 		var dataSet = scaleSet[currentScale][currentTime]
 		viewState = 3 
 		var directionArray = [[150,0,350,0,350,0,100,0],[0,0,0,-150,0,-100,0,-100],[-200,0,-350,0],[]],
@@ -489,8 +496,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 				translateY: 400
 			},600, function(){
 				$('#expandedInfo').css('display','block')
-				$('#expandedTitle').text(infoArray[index].title)
-				$('#description').text(infoArray[index].description)
+				$('#expandedTitle').text(info[index].title)
+				$('#description').text(info[index].description)
 				$('#bigValue').html(dataSet[index].value+ " <span>" + dataSet[index].metric + "</span>")
 				console.log('height is'+ dataSet[index].height)
 				var qual = dataSet[index].height

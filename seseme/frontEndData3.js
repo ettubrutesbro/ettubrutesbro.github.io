@@ -11,23 +11,17 @@ tagMorn.push({
 
 tagMorn.push({
 	pillar:'b',
+	name:'Gas',
+	value: 181, 
+	metric:'BTU',
+	height: 55} )
+
+tagMorn.push({
+	pillar:'c',
 	name:'Temp',
 	value: 1290, 
 	metric:'BTU',
 	height: 100} )
-tagMorn.push({
-	pillar:'c',
-	name:'H2O',
-	value: 18, 
-	metric:'gal/min',
-	height: 55} )
-
-tagMorn.push({
-	pillar:'d',
-	name:'#NRG',
-	value: 10, 
-	metric:'pts',
-	height: 25} )
 
 
 
@@ -44,25 +38,19 @@ tagNoon.push({
 
 tagNoon.push({
 	pillar:'b',
+	name:'Gas',
+	value: 333, 
+	metric:'BTU',
+	height: 100} )
+
+tagNoon.push({
+	pillar:'c',
 	name:'Temp',
 	value: 920, 
 	metric:'BTU',
 	height: 71} )
 
-tagNoon.push({
-	pillar:'c',
-	name:'H2O',
-	value: 33, 
-	metric:'gal/min',
-	height: 100} )
 
-
-tagNoon.push({
-	pillar:'d',
-	name:'#NRG',
-	value: 10, 
-	metric:'pts',
-	height: 25} )
 
 // ****
 // TAG: Nite data 
@@ -77,25 +65,19 @@ tagNite.push({
 
 tagNite.push({
 	pillar:'b',
+	name:'Gas',
+	value: 266, 
+	metric:'BTU',
+	height: 80} )
+
+tagNite.push({
+	pillar:'c',
 	name:'Temp',
 	value: 701, 
 	metric:'BTU',
 	height: 54} )
 
-tagNite.push({
-	pillar:'c',
-	name:'H2O',
-	value: 26, 
-	metric:'gal/min',
-	height: 80} )
 
-
-tagNite.push({
-	pillar:'d',
-	name:'#NRG',
-	value: 10, 
-	metric:'pts',
-	height: 25} )
 
 // ****
 // TAG: Late data 
@@ -110,24 +92,17 @@ tagLate.push({
 
 tagLate.push({
 	pillar:'b',
+	name:'Gas',
+	value: 73, 
+	metric:'BTU',
+	height: 22} )
+
+tagLate.push({
+	pillar:'c',
 	name:'Temp',
 	value: 980, 
 	metric:'BTU',
 	height: 76} )
-
-tagLate.push({
-	pillar:'c',
-	name:'H2O',
-	value: 7, 
-	metric:'gal/min',
-	height: 22} )
-
-tagLate.push({
-	pillar:'d',
-	name:'#NRG',
-	value: 10, 
-	metric:'pts',
-	height: 25} )
 
 
 // ****
@@ -143,21 +118,21 @@ buildingMorn.push({
 
 buildingMorn.push({
 	pillar:'b',
-	name:'Mrak',
+	name:'Mrak Hall',
 	value: 181, 
 	metric:'kw',
 	height: 55} )
 
 buildingMorn.push({
 	pillar:'c',
-	name:'Ghausi',
+	name:'Ghausi Hall',
 	value: 1111, 
 	metric:'kw',
 	height: 100} )
 
 buildingMorn.push({
 	pillar:'d',
-	name:'Giedt',
+	name:'Giedt Hall',
 	value: 1875, 
 	metric:'kw',
 	height: 7} )
@@ -175,21 +150,21 @@ buildingNoon.push({
 
 buildingNoon.push({
 	pillar:'b',
-	name:'Mrak',
+	name:'Mrak Hall',
 	value: 333, 
 	metric:'kw',
 	height: 100} )
 
 buildingNoon.push({
 	pillar:'c',
-	name:'Ghausi',
+	name:'Ghausi Hall',
 	value: 588, 
 	metric:'kw',
 	height: 53} )
 
 buildingNoon.push({
 	pillar:'d',
-	name:'Giedt',
+	name:'Giedt Hall',
 	value: 27368, 
 	metric:'kw',
 	height: 100} )
@@ -207,21 +182,21 @@ buildingNite.push({
 
 buildingNite.push({
 	pillar:'b',
-	name:'Mrak',
+	name:'Mrak Hall',
 	value: 266, 
 	metric:'kw',
 	height: 80} )
 
 buildingNite.push({
 	pillar:'c',
-	name:'Ghausi',
+	name:'Ghausi Hall',
 	value: 434, 
 	metric:'kw',
 	height: 39} )
 
 buildingNite.push({
 	pillar:'d',
-	name:'Giedt',
+	name:'Giedt Hall',
 	value: 5945, 
 	metric:'kw',
 	height: 22} )
@@ -239,21 +214,21 @@ buildingLate.push({
 
 buildingLate.push({
 	pillar:'b',
-	name:'Mrak',
+	name:'Mrak Hall',
 	value: 73, 
 	metric:'kw',
 	height: 22} )
 
 buildingLate.push({
 	pillar:'c',
-	name:'Ghausi',
+	name:'Ghausi Hall',
 	value: 908, 
 	metric:'kw',
 	height: 82} )
 
 buildingLate.push({
 	pillar:'d',
-	name:'Giedt',
+	name:'Giedt Hall',
 	value: 1875, 
 	metric:'kw',
 	height: 20} )
