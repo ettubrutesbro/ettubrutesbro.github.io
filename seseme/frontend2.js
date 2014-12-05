@@ -1,7 +1,7 @@
 
 var socket = io('10.0.1.241:5000')
 
-var viewState=1 //0 - pause, 1 = normal, 2 = detail, 3 = detail
+var viewState=1 //0 - pause, 1 = normal, 2 = detail, 3 = detail 4 = detail done anim
 var selectedPillar 
 
 var tag = [tagMorn, tagNoon, tagNite, tagLate], building = [buildingMorn, buildingNoon, buildingNite, buildingLate], school = [schoolMorn, schoolNoon, schoolNite, schoolLate]
@@ -175,11 +175,17 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	$(document).click(function(){
 		console.log('do an unselect' + viewState)
-		if(viewState==2){
+		if(viewState==2||viewState==4){
 			unselectPillars()
 		}
 	})
 
+	$("span#time").click(function(){
+		timeChange("later")
+	})
+	$("span#place").click(function(){
+		scaleChange("bigger")
+	})
 
 
 	//**************************************
@@ -275,8 +281,6 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			var ltr = pillar.attr('id')
 			var mask = g.select("#mask" + ltr ).select("#m" + ltr)
 			var strokemask = themasks.select("#strokemask" + ltr).select('rect')
-
-
 
 			pillar.animate({
 				transform: "t 0 " + amount 
@@ -385,6 +389,14 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	function unselectPillars(){ //generic deselect for selecting new pillars
 	
+		if(viewState==4){
+			$("#topdata, #values li, #names li").velocity({
+				translateX: 0, translateY: 0
+			},400)
+			$('#expandedInfo div').velocity('transition.slideLeftOut', {stagger : 20, duration: 300})
+
+		}
+
 		$('#awrapper, #bwrapper, #cwrapper, #dwrapper, #dgwrapper').velocity({
 			translateX: 0,
 			translateY: 0,
@@ -402,6 +414,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 			})			
 		})
 			viewState = 1
+			$('#expandedInfo').css('display','none')
 			console.log('unselected pillars')
 
 	} //end function unselectPillars
@@ -441,6 +454,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}
 
 	function expandMetric(pillar){
+		var dataSet = scaleSet[currentScale][currentTime]
 		viewState = 3 
 		var directionArray = [[150,0,350,0,350,0,100,0],[0,0,0,-150,0,-100,0,-100],[-200,0,-350,0],[]],
 		wrapperList = ['#awrapper','#bwrapper','#cwrapper','#dwrapper','#dgwrapper'],
@@ -473,11 +487,28 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		},400, "easeOutQuad", function(){
 			$("#topdata").velocity({
 				translateY: 400
-			},600)
-
+			},600, function(){
+				$('#expandedInfo').css('display','block')
+				$('#expandedTitle').text(infoArray[index].title)
+				$('#description').text(infoArray[index].description)
+				$('#bigValue').html(dataSet[index].value+ " <span>" + dataSet[index].metric + "</span>")
+				console.log('height is'+ dataSet[index].height)
+				var qual = dataSet[index].height
+				if(qual>75){ //red
+					$("#bigValue").css('color','red')
+				}else if(qual<75&&qual>50){ //orange
+					$("#bigValue").css('color','orange')
+				}else if(qual<50&&qual>25){ //yellow
+					$("#bigValue").css('color','yellow')
+				}else if(qual<25){ //green
+					$("#bigValue").css('color','green')
+				}
+				//$('#bigValue').css('color',)
+				viewState = 4 //callback state change for anim purposes
+				$('#expandedInfo div').velocity('transition.slideLeftIn', {stagger : 40, duration: 500})
+			})
 		})
-
-	}
+	}//end function expandMetric
 
 
 
