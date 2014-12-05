@@ -185,12 +185,12 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	})
 
 
-	$(document).click(function(){
-		console.log('do an unselect' + viewState)
-		if(viewState==2||viewState==4){
-			unselectPillars()
-		}
-	})
+	 $(document).click(function(){
+	 	console.log('do an unselect' + viewState)
+	 	if(viewState==2||viewState==4){
+	 		unselectPillars()
+	 	}
+	 })
 
 	$("span#time").click(function(evt){
 		evt.stopPropagation
