@@ -91,6 +91,9 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 
 	$("span#time").text(semanticTimeSet[currentTime])
 
+	setInterval(function(){
+		console.log('viestate is' + viewState + " selecetd is" + selectedPillar)
+	},1000)
 	
 
 	//**********************************************
@@ -101,8 +104,14 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	pillarArray.forEach(function(ele,i){ //every pillar when clicked does selectPillar
 		ele.click(function(e){
 			if(viewState==1||viewState==2){
-				selectPillar(ele)
-				e.stopPropagation()
+				if(selectedPillar == ele.attr('id')){
+					if(viewState==2){
+						expandMetric(ele)
+					}
+				}else{
+					selectPillar(ele)
+					e.stopPropagation()
+				}	
 			}
 		})
 	})	
@@ -183,11 +192,13 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		}
 	})
 
-	$("span#time").click(function(){
+	$("span#time").click(function(evt){
+		evt.stopPropagation
 		timeChange("later")
 		$("span#time").text(semanticTimeSet[currentTime])
 	})
-	$("span#place").click(function(){
+	$("span#place").click(function(evt){
+		evt.stopPropagation
 		scaleChange("bigger")
 		$("span#place").text(semanticScaleSet[currentScale])
 	})
@@ -381,8 +392,12 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		$(listHilight2).velocity({
 			opacity: 1
 		}, 400)
+
+		var tooltip = $('#tooltips div').get(index)
+
+		$(tooltip).velocity('transition.slideLeftIn', {duration: 400})
 		
-				viewState=2
+		viewState=2
 		console.log('selected pillar ' + viewState)
 
 		// SELECTING SHOULD: 1. separate pillar spatially 2. color highlight
@@ -393,13 +408,13 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}//end function selectPillar
 
 	function unselectPillars(){ //generic deselect for selecting new pillars
-	
+		
 		if(viewState==4){
 			$("#topdata, #values li, #names li").velocity({
 				translateX: 0, translateY: 0
 			},400)
 			$('#expandedInfo div').velocity('transition.slideLeftOut', {stagger : 20, duration: 300})
-
+			selectedPillar = ''
 		}
 
 		$('#awrapper, #bwrapper, #cwrapper, #dwrapper, #dgwrapper').velocity({
@@ -420,6 +435,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		})
 			viewState = 1
 			$('#expandedInfo').css('display','none')
+			$('#tooltips div').css('display','none')
+			
 			console.log('unselected pillars')
 
 	} //end function unselectPillars
@@ -459,6 +476,7 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}
 
 	function expandMetric(pillar){
+		$('#tooltips div').velocity('transition.slideLeftOut', {duration: 400})
 		var infoArray = [sccArray, buildingArray, schoolArray]
 		var info = infoArray[currentScale]
 		var dataSet = scaleSet[currentScale][currentTime]

@@ -51,7 +51,6 @@ html {
 		cursor: pointer;
 	}
 
-
 	span#place {
 		width: 160px;
 		height: 65px;
@@ -143,7 +142,6 @@ html {
 	height: 470px;
 	display: none;
 	
-	
 }
 
 #expandedTitle{
@@ -164,7 +162,8 @@ html {
 }
 
 #bigMetric {
-	display:
+	display:
+
  none;
 
 }
@@ -172,7 +171,8 @@ html {
 #expandedTime {
 	display: none;
 	margin-top: 45px;
-	float: right;
+	float: right;
+
 
 	font-size: 32pt;
 	letter-spacing: 0.13em;
@@ -191,4 +191,45 @@ html {
 
 #bigValue span {
 	font-size: 36pt;
+}
+
+#tooltips {
+	position: absolute;
+	z-index: 3;
+	font-size: 30pt;
+	font-family: 'Source Sans Pro', sans-serif;
+	letter-spacing : 0.05em;
+	font-weight: 600;
+}
+
+#tooltips div {
+	width: 300px;
+	display: none;
+
+}
+
+#tooltips #top{
+	position: absolute;
+	left: 320px;
+	top: 70px;
+	text-align: center;
+}
+
+#tooltips #bottom {
+	position: absolute;
+	left: 320px;
+	top: 650px;
+	text-align: center;
+}
+
+#tooltips #left {
+	position: absolute;
+	top: 400px;
+	left: 60px;
+}
+
+#tooltips #right {
+	position: absolute;
+	top: 400px;
+	left: 650px;
 }
