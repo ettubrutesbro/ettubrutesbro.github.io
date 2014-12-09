@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<!-- portfolio website written by Jack Leng with JQuery and Sweet Justice !-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CEIL @ UCD</title>
+
+	<script type = "text/javascript" src = "js/jquery-2.1.0.min.js"></script>
+  <script type = "text/javascript" src = "js/my3.js"></script>
+  <script type = "text/javascript" src = "js/sweet-justice.min.js"></script>
+ 
+	<link rel = "stylesheet" href="css/style2.css" media="screen" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400,700' rel='stylesheet' type='text/css'>
+
+  <!-- project stylesheets for individual item styles !-->
+ 
+  <link rel = "stylesheet" href="css/tempr.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/obdenergy.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/seseme.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/ceed.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/evexplorer.css" media="screen" type="text/css" />
+
+</head>
+<body>
+
+  <section>
+    <header>
+      <div id = "jl"> CEI Lab @ UC Davis </div>
+      <div id = "selected">Consumer Energy Interfaces</div>
+    </header>
+    <nav>
+        <ul>
+        <li><a id = "abt">about</a></li>
+        <li><a id = "con">contact</a></li>
+      </ul>
+    </nav>
+  </section>
+  <div id = "cont">
+  <span id = "contact">
+    principal investigator: <a href = "mailto:tsturrentine@ucdavis.edu">TOM TURRENTINE &nbsp;&nbsp;&nbsp;</a>
+    head graduate student: <a href = "mailto:jwoodjack@ucdavis.edu">JUSTIN WOODJACK &nbsp;&nbsp;&nbsp;</a>
+    designer: <a href = "mailto:jack.leng@gmail.com">JACK LENG</a>
+
+  </span>
+</div>
+
+  <span class = "about">we're a multidisciplinary research group at UC Davis:<br> computer scientists, transportation students, visual designers, mechanical engineers, environmental policy students, and behavioral psychologists.<br> we're together to study interfaces, feedback, and how they might be better made and used to change consumers' perceptions and behaviors surrounding energy. 
+  </span>  
+	 
+
+  <section id = "portfolio">
+
+<!-- MODULAR CONTENT ADDITION: a new article with 1. specific title 2. filtration categories for classes
+      - divs class quad0-x with "x,y" data-dimension attribute
+      - even numbered quads are floated left, odd numbered quads are floated right
+      - quad0 is always the title image (specific styling)....title and text classes for text divs
+  !-->
+
+<!-- PROJECT 8: cenergi !-->
+    <article class = "seseme experimental realtime reflexive" data-sort="5" data-itemheights = "1200, 1070, 1670, 2780">
+      <div class = "quad0 playme" data-dimension = "400,470,300,352,300,352,470" data-margin = "650 0 0 60,50 0 0 30,0 0 0 -70,-20 0 0 0"><video loop = "true" preload poster = "assets/seseme/rotate0000.png">
+            <source src="assets/seseme/rotateloop.webm" type="video/webm" />
+            <source src="assets/seseme/rotateloop.flv" type="video/flv" />
+            <source src="assets/seseme/rotateloop.mp4" type="video/mp4" />
+         </video> </div>
+      <div class = "quad1 title text" data-dimension = "680,220,750,200,470,310,400" data-margin = "650 180 0 0,20 0 0 0,50 80 0 0,40 0 0 0">Social Energy Sensing Monument <p class = "sweet-justice">
+        Eco-feedback has traditionally focused on the provision of information about electricity use of devices to the member(s) of a household, in the form of text or graphics.  Recently, applications have extended to include (A) information about other types of resource use behaviors (e.g., water use), (B) the resource use behaviors of communities of inhabitants of both residential and commercial sector buildings, (C) via more creative interfaces that seek to engage consumers (such as public art or games).  We are designing and implementating a tangible community eco-feedback system on a university campus. 
+        Tentatively titled SESEME (Social Energy Sensing Monument), the installation is a human-scale (4'-7'6" tall) physical data visualization object that uses networked microcontrollers, motors, and variable-color LED light to communicate energy information to members of the public. When nearby, students with smartphones will be able to access an online interface that allows them to explore energy data and play with the monument, and experimentation with the design of this interface is also a major component of the study. Prior to final installation at the Student Community Center (estimated to be in early 2015), we will be using multiple small focus groups of students to A) test reactions to the monument's physical presence and the resultant effect of novelty on student curiosity, B) ascertain the role that surface finish and material play in public reception of our design, and C) analyze how layout, narrative, and language can encourage users to interact, explore, and learn in the digital interface, especially vis-a-vis more conventional energy feedback systems (such as the university's Campus Energy Education Dashboard). </p>
+      </div>
+
+      <div class = "quad2" data-dimension = "1174,623,1174,623,1174,623,1174,623" data-margin = "-1120 0 0 70,110 0 0 50,[],[]"
+
+    </article>
+
+      <article class = "obdenergy realtime reflexive" data-itemheights = "850,950,660,1140" data-sort = "3">
+        <div class = "quad0" data-dimension = "900,505,900,505,320,625,597" data-margin = "0 0 0 220,0 0 0 130,[],[]"> </div>
+        <div class = "quad1" data-dimension = "480,250,420,300,400,500,500" data-margin = "50 200 0 0,40 80 0 0,0 50 0 0,40 0 0 0">
+            <p class = "sweet-justice">
+            The project is currently undergoing beta testing with recruited students and residents from Davis and surrounding areas. Participants use the supplied OBD plugin and Android app for one month to receive feedback on their driving and correlated energy footprint. Participants provide feedback on the usability of the mobile interface and platform, and the effectiveness of the app in enriching their perceptions of their own energy footprint. This app will undergo refining iterations post-beta testing and eventually be released on Android’s app store.
+          </p>
+          </div>
+          <div class = "quad2 title" data-dimension = "500,250,420,300,400,500,500" data-margin = "50 0 0 180,40 0 0 140,0 50 0 0,40 0 0 0" data-sort = "2">
+            Vehicle-Mobile Efficiency Integration
+          <p class = "sweet-justice">
+            cEnergi’s Computer Science GSR, Sumayyah Ahmed (Advisor: Nina Amenta), has developed an app that integrates the Android mobile plotform with vehicle on-board diagnostics to provide immediate eco-driving feedback. An Android app created for this project communicates with an OBD-II Bluetooth plug-in transmitter to retrieve real-time fuel data from the engine, and displays fuel use and carbon footprint data back to the driver. Data is also collected in our cloud database. The purpose is to utilize integrated technology and interface design to effectively impact people’s perception of energy use. </p>
+      
+         </div>
+      </article>
+      <article class = "evexplorer preemptive" data-sort="2" data-itemheights="740,930,1590,1950">
+      <div class = "quad0" data-dimension = "950,710,950,510,650,325,230" 
+      data-margin = "0 0 0 0,0 0 0 110,0 0 0 10,[]"></div>
+      <div class = "quad1 title" data-dimension = "390,500,600,350,500,220,230" 
+      data-margin = "100 0 0 0,20 200 0 0,40 210 0 0,20 0 0 0">Consumer EV Cost Analysis
+      <p class = "sweet-justice">One of the primary challenges consumers face with novel sustainable technology is whether it can benefit their lives. Consumers often lack the knowledge to make such appropriate purchase decisions, until the creation of the EV Explorer. The EV Explorer is is an innovative consumer feedback tool, that lets people explore if an electric vehicle is right for them. It provides future possible energy consumption and costs of different vehicles based on a consumers actual commuting behavior. Using a sophisticated web-map interface it lets consumers have contextual feedback relevant to their lives, rather than average estimates of vehicle. Users simply input home location and a travel destination and the web app reports a comparison of fuel costs for up to four vehicles that the user selects. The calculation will incorporate the price of charging at work or charging at any other destination to get costs as close as possible to what one might encounter in the real world.
+      </p>
+
+      <p class = "sweet-justice" style = "text-align: right;">
+        <a href = "http://gis.its.ucdavis.edu/evexplorer/">Visit EVExplorer</a>
+      </p>
+    </div>
+
+      </article>
+
+      <article class = "ceed realtime reflexive" data-sort="4" data-itemheights="740,560,1590,1950">
+        <div class = "quad0" data-dimension = "797,605,637,605,500,455,230" 
+      data-margin = "0 0 0 0,0 0 0 30,0 0 0 10,[]"></div>
+
+      <div class = "quad1 title text" data-dimension = "500,340,430,350,500,220,230" 
+      data-margin = "150 30 0 0,50 -10 0 0,40 210 0 0,20 0 0 0">
+        Campus Energy Education Dashboard
+      <p class = "sweet-justice">
+        There are 1,682 buildings associated with the UC Davis (UCD) campus. There are over 120 buildings over 20,000 square feet, and most of these are metered for the electricity, steam and chilled water*.
+
+This data is collected, stored and analyzed by the Utilities and Facilities Management departments on campus. Previously, only a handful of staff could view this data on a regular basis, until now… With the Campus Energy Education Dashboard (CEED), students, staff and faculty can view their building’s energy use in real time.
+
+CEED is a platform for the campus to learn more about our own energy use: what types of energy are used, how they are used and what we can all do to waste less energy.
+      </p>
+
+<p style = "text-align: center; margin-top: 30px;">
+<a href = "http://eco.ucdavis.edu">Visit CEED</a>
+</p>
+
+      </div>
+      </article>
+    
+
+
+
+<!-- PROJECT 4: TEMPR !-->
+    <article class = "tempr" data-sort="1" data-itemheights="750,750,660,1140">
+      <div class = "quad0" data-dimension = "357,675,357,675,320,625,597" data-margin = "0 0 0 250,0 0 0 70,[],[]">
+        </div>
+      <div class = "quad1 title" data-dimension = "500,430,500,430,400,500,500" data-margin = "50 210 0 0,40 120 0 0,0 50 0 0,40 0 0 0">Gamifying Campus Climate Control
+        <p class = "sweet-justice">
+          Second-year interactive design project: climate control and energy use feedback app prototype. Members of a campus community could use it to provide feedback about air conditioning to building administrators, who could then make energy-saving or comfort improving adjustments accordingly. The design aims to make submitting feedback intuitive while encouraging further exploration of energy data and the implications of A/C use. In-app rewards personalize the experience and incentivize repeat usage. Building comparisons and leaderboards introduce social competition (i.e. chemists vs. artists vs. administrators) and get the community involved. We tried to take an "irreverent" approach to app design, using graphics that reflect the hyperbole often used for temperature complaints, poking fun at the school (the cow loading icon references UCD's renowned bovine scent), and allowing users to express themselves through a random crowd-sourced "building announcements" ticker. 
+        </p>
+      </div>
+      <div class = "quad2" data-dimension = "500,200,500,200,415,150,415,150,120" data-margin = "-20 0 0 60,-10 0 0 50,-10 0 0 10,[]"></div>
+
+      <div class = "quad3 playme nonsize" data-dimension = "305,458,305,458,270,408,400,268" data-margin = "-580 800 0 0,-580 700 0 0,-543 506 0 0,-1470 67 0 0">   <video loop = "true" preload>
+            <source src="assets/tempr/tempr_webm.webm" type="video/webm">
+            <source src="assets/tempr/tempr_flv.flv" type="video/flv">
+            <source src="assets/tempr/tempr_mp4.mp4" type="video/mp4">
+         </video></div>
+
+    </article>
+  </section>
+
+  </body>
+
+</body>
+
+</html>

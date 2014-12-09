@@ -1,0 +1,9 @@
+.obdenergy .quad0 {
+	background-image: url(../assets/obdenergy/obdthumb.png);
+	background-repeat: no-repeat;
+}
+
+.obdenergy .expanded {
+	background-image: url(../assets/obdenergy/obdslide.png);
+	background-repeat: no-repeat;
+}

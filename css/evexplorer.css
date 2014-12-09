@@ -1,0 +1,9 @@
+.evexplorer .quad0 {
+	background-image: url(../assets/evthumb.png);
+}
+
+.evexplorer .expanded {
+	background-image: url(../assets/evexplorer/evexplorerbig.png);
+	background-repeat: no-repeat;
+}
+

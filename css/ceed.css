@@ -1,0 +1,9 @@
+.ceed .quad0{
+	background-image: url(../assets/ceedthumb.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.ceed .expanded {
+	background-image: url(../assets/ceed/ceedbig.png);
+}

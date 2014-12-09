@@ -1,0 +1,311 @@
+
+html {overflow-y: scroll;
+overflow-x: hidden;}
+
+body {
+	width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: 'Roboto'; sans-serif;
+	font-weight: 300;
+	border: 0px solid green;
+}
+
+header {
+	margin-top: 2em;
+  margin-left: 30px;
+	width: 450px;
+	display: inline-block;
+	border: 0px solid black;
+  float: left;
+}
+
+#jl {
+	font-family: 'Ropa Sans', sans-serif;
+	font-size: 28pt;
+	cursor: pointer;
+}
+#selected{
+	font-weight: 400;
+	letter-spacing: 2.5px;
+	font-size: 12pt;
+}
+
+nav {
+	margin-top: 2em;
+  	margin-right: 30px;
+	float: right;
+	display: inline-block;
+	text-align: right;
+	letter-spacing: 2px;
+	font-weight: 500;
+
+	font-size: 14pt;
+	height: 60px;
+	vertical-align: text-bottom;
+
+
+}
+
+.mobileNav {
+	margin-top: -0.7em;
+	margin-left: 20px;
+	float: left;
+	font-size: 11pt;
+	letter-spacing: 2px;
+	font-weight: 500;
+	width: 300px;
+
+}
+
+#cvp{
+	vertical-align: top;
+	display: none;
+	opacity: 0;
+	position: relative;
+	left: 120px;
+	top: 20px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+
+}
+#cont {
+	float: right;
+	margin-right: 380px;
+}
+#contact{
+	float: right;
+	text-align: right;
+	width: 950px;
+	margin-right: 300px;
+	margin-left: 30px;
+	/*display: block;*/
+	display: none;
+	opacity: 0;
+	position: absolute;
+	margin-left: -600px;
+	margin-top: -30px;
+}
+
+#contact em{
+	font-size: 10pt;
+}
+
+ul {
+	display: inline;
+	position: relative;
+	top: 20px;
+	margin: 0px;
+	list-style: none;
+	padding: 0px 0px 0px 0px;
+	
+}
+
+em{
+	font-size: 11pt;
+	color: gray;
+	font-style: normal;
+	letter-spacing: 0em;
+}
+
+
+nav ul li {
+	height: 22px;
+	margin-left: 10px;
+	display: inline;
+	
+}
+a:link{
+  text-decoration: none;
+  color: gray;
+}
+
+.about a:link{
+	font-weight: 500;
+}
+a:visited{
+  text-decoration: none;
+  color: gray;
+}
+a:hover{
+  color: black;
+}
+
+a.filter {
+	font-weight: 500;
+}
+
+#cvp a {
+	color: red;
+}
+
+#cvp a:hover {
+	color: firebrick;
+}
+
+
+
+section{
+  display: inline-block;
+  border: 0px solid red;
+  width: 100%;
+  margin-top: -5px;
+}
+
+.about{
+	padding-top: 20px;
+	display: none;
+	height: 0px;
+	padding-bottom: 0px;
+	text-align: right;
+	font-size: 14pt;
+	opacity: 0;
+
+}
+
+.about a:hover {
+	color: red;
+}
+
+article{
+  
+  width: 320px;
+  height: 230px;
+  margin-left: 30px;
+  margin-top: 30px;
+  float: left;
+  overflow: hidden;
+}
+
+.quad0 {
+	float: left;
+	width: 100%;
+	height: 200px;
+	
+	cursor: pointer;
+}
+
+/* instead of applying to just quad1 this styling should be applied to 2nd child of article
+it shouldn't be in itemexpand, maybe init
+.quad1 {
+	margin-top: 5px;
+	width: 100%;
+	text-align: center;
+}
+*/
+.quad2, .quad4, .quad6, .quad8, .quad10 {
+	float: left;
+}
+
+.quad1, .quad3, .quad5, .quad7, .quad9 {
+	float: right;
+}
+
+article div{
+	border: 1px solid rgba(0,0,0,0);
+	display: block;
+	
+}
+
+article div p {
+	text-align: left;
+	font-size: 12pt;
+	font-weight: 350;
+	letter-spacing: normal;
+	padding: 0% 3% 0% 3%;
+	hyphens: auto;
+}
+	/* settings for expanded articles....
+	width: 49%;
+	margin: 5px;
+	height: 45%;
+	
+	display: inline;
+}
+.quadOne, .quadThree{
+	float: left;
+}
+.quadTwo, .quadFour{
+	float: right;
+}*/
+
+
+.exit {
+	font-weight: 400;
+	color: grey;
+	position: relative;
+	top: 1.3em;
+	display: block;
+	float: right;
+	vertical-align: bottom;
+	cursor: pointer;
+}
+
+.exit:hover{
+	color:red;
+}
+
+.about figure{
+margin: 0;
+padding: 0;
+margin-top: -0.7em;
+margin-left: 30px;
+	float: left;
+	display: inline;
+	height: 100px;
+	z-index: -1;
+	
+}
+
+#contact .ico {
+	line-height: 0px;
+	position: relative;
+	top: 5px;
+	display: inline;
+	margin-left: 10px;
+	width: 18px;
+	height: 18px;
+	border: 0px black solid;
+}
+
+a {
+	cursor: pointer;
+	target-name: new;
+	target-new: tab;
+}
+
+h3{
+	display: inline;
+	line-height: 0px;
+}
+
+.about video{
+	position: absolute;
+	z-index: -1;
+	width: 400px;
+}
+
+
+#abouttext {
+	display: inline;
+	float: right;
+
+	
+}
+
+#int, #anim, #model, #ill{
+
+}
+
+#reel {
+	letter-spacing: 0.1em;
+	color: red;
+	padding-left: 0.2em;
+	padding-right: 0em;
+}
+
+#reel:hover {
+	color: blue;
+}
+
+
