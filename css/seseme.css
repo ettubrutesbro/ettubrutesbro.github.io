@@ -3,7 +3,7 @@
 }
 
 .seseme .quad0.expanded {
-	background: none;
+	background-image: url(../assets/seseme/bigmock.png);
 }
 
 .seseme .quad0 video {
@@ -12,10 +12,12 @@
 
 .seseme .expanded video {
 	display: block;
+	border: none;
+	outline: none;
 }
 
 .seseme .quad2 {
-	background-image: url(../assets/seseme/iphone5.png);
+	background-image: url(../assets/seseme/bigmock.png);
 }
 
 .seseme .quad3 {

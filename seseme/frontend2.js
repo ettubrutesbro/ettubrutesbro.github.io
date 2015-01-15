@@ -40,7 +40,7 @@ if(theHour>=0&&theHour<6){
 	currentTime = 2 //nite
 }
 
-Snap.load("sesemeiso3.svg", function(svgFile){
+Snap.load("sesemeiso4.svg", function(svgFile){
 
 	var g
 	g = svgFile.select("svg")
@@ -94,6 +94,8 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	setInterval(function(){
 		console.log('viestate is' + viewState + " selecetd is" + selectedPillar)
 	},1000)
+
+	pillarRelax()
 	
 
 	//**********************************************
@@ -134,6 +136,26 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
 	//swiping in directions changes the displayed data set
+
+	// mc.on('swipe', function(ev){ //attempt at writing generi function for all swipes
+	// 	console.log(direction)
+	// 	var dirArr = [right, up, left, down]
+	// 	var index = dirArr.indexOf(direction)
+	// 	var pillar = pillarArray[index] //might need to use "ltr"
+
+	// 	if(viewState==1){
+	// 		selectPillar(pillar)
+	// 		expandMetric(pillar)
+	// 	}else if(viewState==2&&selectedPillar!=pillar){
+	// 		selectPillar(pillar)
+	// 	}else if(viewState==2&&selectedPillar==pillar){
+	// 		expandMetric(pillar)
+	// 	}else if(viewState==3&&selectedPillar!=pillar){
+	// 		unselectPillars()
+	//  		selectedPillar = ''
+	// 	}
+	// })
+
 	mc.on("swipeleft", function(ev){
 		if(viewState==1){
 			selectPillar(c)
@@ -395,8 +417,9 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		}, 400)
 
 		var tooltip = $('#tooltips div').get(index)
+		var dirArr = ["Left","Up","Right","Down"]
 
-		$(tooltip).velocity('transition.slideLeftIn', {duration: 400})
+		$(tooltip).velocity('transition.slide'+ dirArr[index] +'In', {duration: 400})
 		
 		viewState=2
 		console.log('selected pillar ' + viewState)
@@ -477,7 +500,13 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 	}
 
 	function expandMetric(pillar){
-		$('#tooltips div').velocity('transition.slideLeftOut', {duration: 400})
+
+		var index = pillarArray.indexOf(pillar)
+		var dirArr = ["Right","Up","Left","Down"]
+
+		console.log(dirArr[index])
+
+		$('#tooltips div').velocity('transition.slide' +dirArr[index]+'Out', {duration: 400})
 		var infoArray = [sccArray, buildingArray, schoolArray]
 		var info = infoArray[currentScale]
 		var dataSet = scaleSet[currentScale][currentTime]
@@ -536,7 +565,25 @@ Snap.load("sesemeiso3.svg", function(svgFile){
 		})
 	}//end function expandMetric
 
+	function pillarClench(){
 
+	} //end function pillarClench
+
+	function pillarRelax(){
+		console.log('relaxing...')
+		$('#awrapper').velocity({
+			translateX: [0,50]
+		},500)
+		$('#bwrapper').velocity({
+			translateY: [0,-25]
+		},500)
+		$('#cwrapper').velocity({
+			translateX: [0,-50]
+		},500)
+		$('#dwrapper').velocity({ //this means you should move the overlay....
+			translateY: [0,35]
+		},500)
+	}//end function pillarRelax
 
 })
 
