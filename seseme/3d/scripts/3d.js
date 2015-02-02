@@ -99,9 +99,19 @@
 
       loader.load("assets/pillarA.js", function(geometry,evt){
 
-        // var outTgt = geometry.vertices
+         var outTgt = geometry.vertices
          // var outlineGeometry = new THREE.Geometry()
          // outlineGeometry.vertices.push(outTgt[2], outTgt[3], outTgt[0], outTgt[8])
+        // var outlineGeometry2 = new THREE.Geometry()
+        // outlineGeometry2.vertices.push(outTgt[2], outTgt[1], outTgt[0])
+        // var outlineGeometry3 = new THREE.Geometry()
+        // outlineGeometry3.vertices.push(outTgt[3], outTgt[5], outTgt[4])
+        // var outlineGeometry4 = new THREE.Geometry()
+        // outlineGeometry4.vertices.push(outTgt[1], outTgt[6], outTgt[7])
+        // var outlineGeometry5 = new THREE.Geometry()
+        // outlineGeometry5.vertices.push(outTgt[2], outTgt[9], outTgt[5]) 
+        // var outlineGeometry6 = new THREE.Geometry()
+        // outlineGeometry6.vertices.push(outTgt[9], outTgt[6])
 
         pillar1 = new THREE.Mesh(geometry, sesememtl)
         pillar1.applyMatrix( new THREE.Matrix4().makeTranslation( -5, 0, -5 ) )
@@ -109,6 +119,18 @@
         pillar1.overdraw = true
         pillar1.name = "pillar1"
         pillargroup.add(pillar1)
+
+         var outlineGeometry = new THREE.Geometry()
+         outlineGeometry.vertices = [outTgt[2], outTgt[3], outTgt[3],
+         outTgt[0], outTgt[0], outTgt[1], outTgt[2],outTgt[1],outTgt[0],outTgt[8],outTgt[8],outTgt[4],
+         outTgt[4],outTgt[5], outTgt[5], outTgt[3], outTgt[1],outTgt[6],outTgt[6],outTgt[7]]
+         var line = new THREE.Line(outlineGeometry, outlinemtl)
+         line.type = THREE.LinePieces
+         line.name = "line1"
+         pillar1.add(line)
+
+        
+        
 
         pillar3 = new THREE.Mesh(geometry, sesememtl)
         pillar3.applyMatrix( new THREE.Matrix4().makeTranslation( 5, 0, -5 ) )
