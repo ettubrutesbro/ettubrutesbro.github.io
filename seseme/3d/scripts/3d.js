@@ -16,7 +16,6 @@
     //dividing loaded model into manipulable groups 
     var seseme = new THREE.Group()
     var pedestal, orb
-    var pillar1, pillar2, pillar3, pillar4
     var pillargroup = new THREE.Group()
 
     //data array stores all data
@@ -31,11 +30,18 @@
     //variables for INTERACT functions
     var raycaster
     var mouseLocation = new THREE.Vector2()
-    var clickTarget
+    var mouseTarget
+    var myElement //hammer target variable
+    var rotationTargetArray = [0, -90, 90, -180]
+    var oldSelection //for determining rotation direction
+
 
     //variables for ANIMATION
     var currentPosition = {x: 0, y: 0, z: 0, rx: 0, ry: 0, rz: 0}
     var targetPosition = {x: 0, y: 0, z: 0, rx: 0, ry: 0, rz: 0}
+
+    var pillarHeights = [{y:0},{y:0},{y:0},{y:0}]
+    var pillarTargets = [{y:2},{y:5},{y:1},{y:3}]
 
     //-----------------------------------------------
     // END GLOBAL VARIABLE DECLARATION
@@ -45,7 +51,7 @@
     //core functions setup scene and draw it every frame
     setup()
     animate() //render() is nested in here
-
+    initTouchEvents()
 
     function setup(){
       camera.position.set( -20, 20, 20 )
@@ -57,12 +63,12 @@
       container = document.createElement("div")
       document.body.appendChild(container)
       container.id = "containerSESEME"
-      renderer = new THREE.WebGLRenderer()
+      renderer = new THREE.WebGLRenderer({antialias: true})
       renderer.setSize( window.innerWidth, window.innerHeight )
       container.appendChild( renderer.domElement )
 
       //materials for seseme & orb (eventually need multiples for seseme?)
-      var sesememtl = new THREE.MeshPhongMaterial(0x0000ff)
+      var sesememtl = new THREE.MeshLambertMaterial(0x0000ff)
       //var sesememtl = new THREE.MeshNormalMaterial(0x0000ff)
       var orbmtl = new THREE.MeshPhongMaterial(0xffffff)
       var outlinemtl = new THREE.MeshBasicMaterial( { color: 0xff0000, linewidth: 4} )
@@ -77,9 +83,11 @@
       // INTERACT setup -- event listener, initializing interact vars
       window.addEventListener( 'mousemove', onMouseMove, false)
       window.addEventListener( 'mouseup', onMouseUp, false)
+      window.addEventListener( 'mousedown', onMouseDown, false)
+      window.addEventListener( 'deviceorientation', onDeviceOrient, false)
+
       mouseLocation = { x:0, y:0, z:1 }
       raycaster = new THREE.Raycaster()
-
       //outline attempts
 
       
@@ -113,26 +121,26 @@
         // var outlineGeometry6 = new THREE.Geometry()
         // outlineGeometry6.vertices.push(outTgt[9], outTgt[6])
 
-        pillar1 = new THREE.Mesh(geometry, sesememtl)
+       var pillar1 = new THREE.Mesh(geometry, sesememtl)
         pillar1.applyMatrix( new THREE.Matrix4().makeTranslation( -5, 0, -5 ) )
         pillar1.scale.set(0.5,0.5,0.5)
         pillar1.overdraw = true
         pillar1.name = "pillar1"
         pillargroup.add(pillar1)
 
-         var outlineGeometry = new THREE.Geometry()
-         outlineGeometry.vertices = [outTgt[2], outTgt[3], outTgt[3],
-         outTgt[0], outTgt[0], outTgt[1], outTgt[2],outTgt[1],outTgt[0],outTgt[8],outTgt[8],outTgt[4],
-         outTgt[4],outTgt[5], outTgt[5], outTgt[3], outTgt[1],outTgt[6],outTgt[6],outTgt[7]]
-         var line = new THREE.Line(outlineGeometry, outlinemtl)
-         line.type = THREE.LinePieces
-         line.name = "line1"
-         pillar1.add(line)
+         // var outlineGeometry = new THREE.Geometry()
+         // outlineGeometry.vertices = [outTgt[2], outTgt[3], outTgt[3],
+         // outTgt[0], outTgt[0], outTgt[1], outTgt[2],outTgt[1],outTgt[0],outTgt[8],outTgt[8],outTgt[4],
+         // outTgt[4],outTgt[5], outTgt[5], outTgt[3], outTgt[1],outTgt[6],outTgt[6],outTgt[7]]
+         // var line = new THREE.Line(outlineGeometry, outlinemtl)
+         // line.type = THREE.LinePieces
+         // line.name = "line1"
+         // pillar1.add(line)
 
         
         
 
-        pillar3 = new THREE.Mesh(geometry, sesememtl)
+      var pillar3 = new THREE.Mesh(geometry, sesememtl)
         pillar3.applyMatrix( new THREE.Matrix4().makeTranslation( 5, 0, -5 ) )
         pillar3.scale.set(0.5,0.5,0.5)
         pillar3.rotation.y = -90 * Math.PI / 180
@@ -142,14 +150,14 @@
       })
 
       loader.load("assets/pillarB.js", function(geometry,evt){
-        pillar2 = new THREE.Mesh(geometry, sesememtl)
+      var pillar2 = new THREE.Mesh(geometry, sesememtl)
         pillar2.applyMatrix( new THREE.Matrix4().makeTranslation( -5, 0, -5 ) )
         pillar2.scale.set(0.5,0.5,0.5)
         pillar2.overdraw = true
         pillar2.name = "pillar2"
         pillargroup.add(pillar2)
 
-        pillar4 = new THREE.Mesh(geometry, sesememtl)
+      var pillar4 = new THREE.Mesh(geometry, sesememtl)
         pillar4.applyMatrix( new THREE.Matrix4().makeTranslation( -5, 0, 5 ) )
         pillar4.scale.set(0.5,0.5,0.5)
         pillar4.rotation.y = 90 * Math.PI / 180
@@ -167,65 +175,32 @@
       seseme.add(pillargroup)
       scene.add (seseme)
 
-      updateValues(1,10,100)
-      updateValues(2,5,30)
-      updateValues(3,9,90)
-      updateValues(4,0,80)
-    
+        // updateValues(1,8,100)
+        // updateValues(2,5,50)
+        // updateValues(3,1,80)
+        // updateValues(4,3,100)
 
-      // updateValues(A,X,Y) targets pillar A, moves it X, over Y time (ms)
-      // eventually, we'll query server for currentScale and currentMetric,
-      // then call updateValues to all 4 pillars
+        if(window.DeviceOrientationEvent){
+          console.log('shit be supported')
+        }
+        setTimeout(function(){updateValues()},1000) //no idea why, but this only
+        // works with a setTimeout that waits (even 10ms is enough) to fire it
+
     } //end setup
 
     function animate(){ //put 3d animations here
         requestAnimationFrame( animate )
+     
         render()
 
-        //PILLAR ANIMATION FUNCTION
-        //pillars are always going to strive towards valarray values
-
-        //this is a pretty broken function, mathematically.....
-        //it has this weird simultaneous addition / subtraction and
-        //produces insanely granular decimal values (hence the 
-        // weird < 0.01 conditional....)
-
-        pillargroup.children.forEach(function(ele,i,array){
-          if(valarray[i].value > 0.01 || valarray[i].value < -0.01 ){
-            var s = valarray[i].value / valarray[i].duration
-            ele.position.y += s
-            valarray[i].value -= s
-          }else{
-            valarray[i].value=0
-          }
-        })
-
         TWEEN.update()
-        //seseme.rotation.y = 
-
-     
-
-      
 
       } // end animate
 
     function render() { //put frame-by-frame checks and operations here
       //such as RENDERING or checking
-
         //DISPLAY
         renderer.render( scene, camera )
-        
-        //DEBUG functions
-        //seseme.rotation.y += 0.01
-        // if(intersects.length > 0){ //intersection diagnostic: what's in front?
-        //   console.log(intersects[0].object.name)
-        // }
-      
-
-        //INTERACT functions
-        //INTERACT functions
-        //INTERACT functions
-     
 
     } // end render
 
@@ -233,56 +208,113 @@
       evt.preventDefault()
       mouseLocation.x = ( evt.clientX / window.innerWidth ) * 2 - 1;
       mouseLocation.y = - ( evt.clientY / window.innerHeight ) * 2 + 1;
-     } // end onMouseMove
 
+     } // end onMouseMove
+     function onMouseDown(evt){
+      raycaster.setFromCamera(mouseLocation, camera)
+      var intersects = raycaster.intersectObjects(pillargroup.children)
+      mouseTarget = intersects[0].object.name
+     }
      function onMouseUp(evt){
       raycaster.setFromCamera(mouseLocation, camera)
-   
       var intersects = raycaster.intersectObjects(pillargroup.children)
-      console.log('moused up on ' + intersects[0].object.name)
-
-      //prototype seseme rotation script
-      //get current rotation (global), set target based on selection 
-      //(local) [corresponding arrays], new tween b/w rotation/target,
-      //then outside functions for tween.onUpdate etc.
- 
-     // if mouseUp'd over a pillar: 
-      var index = (intersects[0].object.name).replace('pillar','') 
-      var rotationTargetArray = [0, -90, 90, -180]
-      console.log(rotationTargetArray[index-1])
+      if(intersects[0].object.name == mouseTarget){ //did you let go on the same pillar you started on?
+        var index = (intersects[0].object.name).replace('pillar','') 
+        var oldRotation, newRotation, realRotation 
+        //old / new to determine direction, then realRot to make relevant to (>360? rotations)
+      currentPosition.ry = scene.rotation.y
 
       targetPosition.ry = rotationTargetArray[index-1]*(Math.PI / 180)
 
+      console.log('began at ' + scene.rotation.y*(180/Math.PI))
+      oldRotation = scene.rotation.y*(180/Math.PI)
 
-      var tween = new TWEEN.Tween(currentPosition)
+      var rotationTween = new TWEEN.Tween(currentPosition)
 
       var update = function(){
         scene.rotation.y = currentPosition.ry
-        console.log(currentPosition.ry)
       }
 
-      tween.to(targetPosition,750) 
-      tween.easing(TWEEN.Easing.Quadratic.Out)
-      tween.onUpdate(update)
+      rotationTween.to(targetPosition,750) 
+      rotationTween.easing(TWEEN.Easing.Quadratic.Out)
+      rotationTween.onUpdate(update)
+      rotationTween.onComplete(function(){
+        console.log('finished at ' + scene.rotation.y*(180/Math.PI))
+        newRotation = scene.rotation.y*(180/Math.PI)
+         if(oldRotation>newRotation){ //1>2, 2>4, etc
+            console.log('you rotated backwards') //reconf. array to go neg
+          } else {
+            console.log('you rotated forwards')//reconf. array to go pos
+          }
+      })
+      rotationTween.start()
 
-      tween.start()
+      //>2: -90 to 4, -180 to 3, 90 to 0
+      //>3: 90 to 4, 180 to 2, -90 to 0 
+      //>4: -90 to 3, 90 to 2, 180 to 0       
+      
+    
+      
+
+
+      } else { //didn't mousedown on a pillar to begin with
+        console.log('no')
+      }
+      
 
      }
 
 
-    function updateValues(index, change, duration){ //valarray[index] is updated,
+    function updateValues(){ //valarray[index] is updated,
       // causing pillar[index] to move by change over duration
-      // causing pillar[index] to move by change over duration
-      // causing pillar[index] to move by change over duration
+        console.log('updating values...')
+        pillargroup.children.forEach(function(e,i){
+        var index = (e.name).replace('pillar','')
+        console.log(index)
+        //need to convert the above into a number
+        var pillarUpd = function(){
+          e.position.y = pillarHeights[index-1].y
+        }
 
-      valarray[index-1] = {"value": change, "duration": duration}
-      //console.log(valarray[index-1])
+        var pillarTween = new TWEEN.Tween(pillarHeights[index-1])
+        pillarTween.to(pillarTargets[index-1],1200)
+        pillarTween.onUpdate(pillarUpd)
+        pillarTween.easing(TWEEN.Easing.Quadratic.InOut)
+
+        pillarTween.start()
+      })
 
     }
 
-   function lineDraw(){
-    
+    function onDeviceOrient(evt){
+      console.log(evt.gamma) 
+      console.log(evt.beta) 
+      console.log(evt.alpha) 
+    }
 
-   }
+    function initTouchEvents(){
+      myElement = document.getElementById('containerSESEME')
+      touchEvts = new Hammer(myElement)
+      touchEvts.on('pan',function(evt){
+        scene.rotation.y-=(evt.velocity)*(Math.PI/90)
+      })
+      touchEvts.on('panend',function(evt){
+       
+        var currentSpeed = {speed: evt.velocity}
+        var update = function(){
+          scene.rotation.y-=currentSpeed.speed * (Math.PI/90)
+        }
+        rotationDeceleration = new TWEEN.Tween(currentSpeed)
+        rotationDeceleration.to({speed: 0},1000)
+        rotationDeceleration.onUpdate(update)
+        rotationDeceleration.easing(TWEEN.Easing.Exponential.Out)
+        rotationDeceleration.onComplete(function(){
+           console.log(scene.rotation.y*(180/Math.PI))
+        })
+        rotationDeceleration.start()
+      })
+    }
+
+
 
     

@@ -43,6 +43,7 @@ navs.forEach(function(ele,i,arr){
 	function stickerDrawer(){
 		var categories = [].slice.call(document.querySelectorAll('.stickerCat'))
 		var target = document.querySelectorAll('#stickerDrawer .row')
+		//var section = document.getElementById('talk')
 
 		categories.forEach(function(ele,i,arr){
 			ele.addEventListener('click',function(){
@@ -50,6 +51,7 @@ navs.forEach(function(ele,i,arr){
 					//this will eventually be key to pulling the correct sticker drawer out
 					//load in the correct stickers per category, then run the below anim
 					Velocity(target, {height: '2em'},{duration: 500})
+					//Velocity(section, {height: +2},{duration: 500})
 					//this would be even better with a stagger....
 					stickerDrawerOpen = true
 				}else if(stickerDrawerOpen){

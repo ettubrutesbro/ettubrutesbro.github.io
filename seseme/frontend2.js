@@ -40,7 +40,7 @@ if(theHour>=0&&theHour<6){
 	currentTime = 2 //nite
 }
 
-Snap.load("sesemeiso4.svg", function(svgFile){
+Snap.load("sesemeiso3.svg", function(svgFile){
 
 	var g
 	g = svgFile.select("svg")
@@ -95,7 +95,7 @@ Snap.load("sesemeiso4.svg", function(svgFile){
 		console.log('viestate is' + viewState + " selecetd is" + selectedPillar)
 	},1000)
 
-	pillarRelax()
+	//pillarRelax()
 	
 
 	//**********************************************
@@ -569,21 +569,21 @@ Snap.load("sesemeiso4.svg", function(svgFile){
 
 	} //end function pillarClench
 
-	function pillarRelax(){
-		console.log('relaxing...')
-		$('#awrapper').velocity({
-			translateX: [0,50]
-		},500)
-		$('#bwrapper').velocity({
-			translateY: [0,-25]
-		},500)
-		$('#cwrapper').velocity({
-			translateX: [0,-50]
-		},500)
-		$('#dwrapper').velocity({ //this means you should move the overlay....
-			translateY: [0,35]
-		},500)
-	}//end function pillarRelax
+	// function pillarRelax(){
+	// 	console.log('relaxing...')
+	// 	$('#awrapper').velocity({
+	// 		translateX: [0,50]
+	// 	},500)
+	// 	$('#bwrapper').velocity({
+	// 		translateY: [0,-25]
+	// 	},500)
+	// 	$('#cwrapper').velocity({
+	// 		translateX: [0,-50]
+	// 	},500)
+	// 	$('#dwrapper').velocity({ //this means you should move the overlay....
+	// 		translateY: [0,35]
+	// 	},500)
+	// }//end function pillarRelax
 
 })
 
