@@ -1,3 +1,35 @@
+html {
+	overflow: hidden;
+	background-color: black;
+}
+
+.label {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.spelled {
+	font-family: 'Source Serif Pro', serif;
+}
+
+#top {
+	margin-top: 7%;
+	position: absolute;
+	width: 100%;
+}
+	#topInfo{
+		font-family: 'Fira Sans', sans-serif;
+		font-size: 18pt;
+		letter-spacing: 0.13em;
+		color: white;
+	}
+	#resource{ text-align: right;}
+	#atText{ text-align: center; font-weight: 300; letter-spacing: 0.08em;}
+	#scale{ text-align: left;}
+
+	#debugEtc{
+		text-align: center;
+	}
+
 
 #uiNav /* holds fixed UI nav at bottom */ {
 	position: fixed;
@@ -10,27 +42,21 @@
 	position: absolute;
 	z-index: 2;
 	width: 100%;
-	bottom: 4em;
+	bottom: 8%;
+	font-family: 'Source Serif Pro', serif;
+	letter-spacing: 0.03em;
+	color: white;
 }
 
 #uiBodyTitle {
-	background-color: white;
 	text-align: center;
+	font-size: 36pt;
+	font-weight: 600;
 }
 
-section{
-	display: none;
-	overflow: hidden;
-	height: 0;
-}
-section#view .columns, section#view .column {
-	background-color: yellow;
-	text-align: center;
-}
 
-section#data td {
-	background-color: blue;
-	padding: 0.5em;
+.navbutt {
+
 }
 
 #viewnav {
@@ -46,6 +72,27 @@ section#data td {
 	background-color: violet;
 }
 
+
+section{
+	display: none;
+	overflow: hidden;
+	height: 0;
+}
+section#view .columns, section#view .column {
+	
+}
+
+#viewNum{ font-size: 50pt; line-height: .95em; font-weight: 300; text-align: right;}
+#viewUnit{ font-size: 18pt; font-weight: 300; padding-left: 0.1em; letter-spacing: 0.05em;
+line-height: 1.3em;}
+#optButton{font-size: 36pt; border: 1px white solid; line-height: 1.25em; height: 55px;}
+#assessment{height: 55px; border: 1px white solid;}
+
+section#data td {
+	background-color: blue;
+	padding: 0.5em;
+}
+
 section#talk {
 }
 
@@ -53,8 +100,16 @@ section#talk .column, section#talk .columns{
 	background-color: green;
 	height: 100%;
 }
+
+#stickerSelect {
+}
 section#talk input{
 	width: 100%;
+	font-size: 25pt;
+	padding: 0.25em;
+	padding-left: 0.35em;
+	color: black;
+	letter-spacing: 0;
 }
 
 section#talk ul {
@@ -66,14 +121,43 @@ section#talk ul {
 	text-align: right;
 }
 
-#stickerDrawer {	
-	border: 1px red solid;
+#stickerLabel {
+	border: 1px rgba(255,0,0,0) solid;
+}
+#stickerLabel th{
+	width: 120px;
 }
 
-#stickerDrawer .row {
+#stickerDrawer{
 	height: 0;
 	overflow: hidden;
 }
+
+#stickerDrawer tr{
+	display: none;
+}
+thead, tr, table {
+	width: 100%;
+}
+#stickerLabel th, #stickerLabel td{
+	font-size: 14pt;
+	text-align: left;
+	letter-spacing: 0.1em;
+	padding: 0.5em;
+	border: 1px white solid;
+}
+
+table#stickers {
+
+}
+
+#stickers td {
+	text-align: center;
+	width: 25%;
+	height: 90px;
+	border: 1px white solid;
+}
+
 
 #conversate {
 	overflow: hidden;
@@ -96,4 +180,6 @@ section#talk ul {
 	display: none;
 }
 
+#containerSESEME {
+}
 
