@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Narrative Diagram (Linear)</title>
+	<title>SESEME</title>
 
 <script src="snap.svg-min.js"></script>
 <script src="jquery-2.1.0.min.js"></script>
@@ -16,6 +16,7 @@
 html {
 	font-family: 'Muli', sans-serif;
 	overflow: scroll;
+	height: 500px;
 }
 	h1 {
 		display: inline;
@@ -50,17 +51,43 @@ html {
 		transform: translateY(-20px);
 	}
 	#bigImg{
-		margin-top: 40px;
-		height: 490px;
+		margin-top: 25px;
+		height: 365px;
 		background-size: 100%;
 		background-image: url('bigmock.png');
+	}
+
+	h3{
+		font-weight: 300;
+		letter-spacing: 0.03em;
+		font-size: 16pt;
+		line-height: 0.4em;
+	}
+
+	a:visited{
+		text-decoration: none;
+		color: black;
+	}
+	a{
+		text-decoration: none;
+	}
+	a:hover {
+		color: darkorange;
+	}
+
+	span{
 	}
 
 </style>
 </head>
 
 <body>
+
 <div class = "container">
+	<span>
+	<h3><a href = "http://cenergi.github.io">
+		< back to cEnergi lab page</a></h3>
+</span>
 	<div class = "u-max-full-width" id ="bigImg">
 
 	</div>
@@ -96,9 +123,18 @@ html {
 <script>
 $(document).ready(function(){
 
+	var cols = document.querySelectorAll(".columns")
+
+	//$('div').velocity("transition.slideLeftIn",{stagger:100})
+
+	if(window.innerWidth < 1370){
+		alert('Please reload this page in fullscreen.')
+	}
+
      svgWidth = $('#svgContainer').width();
      svgHeight = svgWidth / 2
-     console.log(svgWidth / 2)
+
+     console.log(window.innerWidth)
 
     
 
