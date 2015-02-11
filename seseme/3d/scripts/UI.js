@@ -144,6 +144,8 @@ navs.forEach(function(ele,i,arr){
 	window.onload = function(){
 		stickerDrawer()
 		voteConv()
+
+		alert('screen stats: ' + window.innerWidth)
 		
 	}
 
