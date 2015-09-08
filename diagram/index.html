@@ -7,98 +7,29 @@
 <script src="snap.svg-min.js"></script>
 <script src="jquery-2.1.0.min.js"></script>
 
-<link href='http://fonts.googleapis.com/css?family=Muli:400,300,400italic' rel='stylesheet' type='text/css'>
-
-<link rel = "stylesheet" type = "text/css" href = "normalize.css" />
-<link rel = "stylesheet" type = "text/css" href = "skeleton.css" />  
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
 
 <style>
-html {
-	font-family: 'Muli', sans-serif;
-	overflow: scroll;
-}
-	h1 {
-		display: inline;
-		letter-spacing: 0.03em;
-		font-size: 18pt;
-	}
-	h2{
-		display: inline;
-		font-size: 18pt;
-		font-weight: 300;
-	}
-	#svgContainer{
-		transform: translateY(-250px);
-	}
-	hr {
-		transform: translateY(5px);
-		display: inline-block;
-		width: 100%;
-		border-width: 1px;
-		padding: 0;
-		margin-top: 15px;
-	}
-	#textvid {
-		margin-top: 70px;
-	}
-	#title {
-		padding-bottom: 5px;
-		margin-top: 60px;
-	}
+	div{
+		width: 80%;
 
-	#title2{
-		transform: translateY(-20px);
-	}
-	#bigImg{
-		margin-top: 40px;
-		height: 490px;
-		background-size: 100%;
-		background-image: url('bigmock.png');
+
 	}
 
 </style>
 </head>
 
 <body>
-<div class = "container">
-	<div class = "u-max-full-width" id ="bigImg">
 
-	</div>
-
-<div class = 'row' id = "title">
-	<div class = "eight columns">
-		<h2>about project </h2> <h1>SESEME <em>(Social Energy Sensing Monument)</em></h1>
-	</div>
-	<div class = "four columns">
-		<hr />
-	</div>
-</div>
-
-<div id = "textvid" class = "row">
-	<div class = "eight columns">Eco-feedback has traditionally focused on the provision of information about electricity use of devices to the member(s) of a household, in the form of text or graphics. Recently, applications have extended to include (A) information about other types of resource use behaviors (e.g., water use), (B) the resource use behaviors of communities of inhabitants of both residential and commercial sector buildings, (C) via more creative interfaces that seek to engage consumers (such as public art or games). We are designing and implementating a tangible community eco-feedback system on a university campus. Tentatively titled SESEME (Social Energy Sensing Monument), the installation is a human-scale (4'-7'6" tall) physical data visualization object that uses networked microcontrollers, motors, and variable-color LED light to communicate energy information to members of the public. When nearby, students with smartphones will be able to access an online interface that allows them to explore energy data and play with the monument, and experimentation with the design of this interface is also a major component of the study. Prior to final installation at the Student Community Center (estimated to be in early 2015), we will be using multiple small focus groups of students to A) test reactions to the monument's physical presence and the resultant effect of novelty on student curiosity, B) ascertain the role that surface finish and material play in public reception of our design, and C) analyze how layout, narrative, and language can encourage users to interact, explore, and learn in the digital interface, especially vis-a-vis more conventional energy feedback systems (such as the university's Campus Energy Education Dashboard). </div>
-	<div class = "four columns">
-		<video loop = "true" preload autoplay poster = "rotate0000.png">
-            <source src="rotateloop.webm" type="video/webm" />
-        </video>
-    </div>
-
-
-    <div class = "u-max-full-width" id = "title2">
-    	<h2>from circuits to </h2><h1>consumers</h1>
-    </div>
-
-    <div class = "u-max-full-width" id = "svgContainer">
+<div id = "svgContainer">
 	<svg id = "diagram_big"></svg>
-</div>
-</div>
 </div>
 
 <script>
 $(document).ready(function(){
 
-     svgWidth = $('#svgContainer').width();
-     svgHeight = svgWidth / 2
-     console.log(svgWidth / 2)
+	 var windowHeight = $(window).height(),
+     windowWidth = $(window).width();
 
     
 
@@ -109,8 +40,8 @@ $(document).ready(function(){
 			s.append(g);
 
 			s.attr({
-				width: svgWidth + "px",
-				height: svgHeight + "px",
+				width: windowWidth + "px",
+				height: windowHeight*(2/3) + "px",
 			})
 
 			var building = g.select('#building'), //item level

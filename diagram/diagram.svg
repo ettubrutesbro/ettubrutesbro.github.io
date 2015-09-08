@@ -9,10 +9,6 @@
 		font-family: 'Open Sans', sans-serif;
 	}
 
-	#seseme, #brains, #phone, #social, #building {
-		cursor: pointer;
-	}
-
 
 </style>
 <defs>
