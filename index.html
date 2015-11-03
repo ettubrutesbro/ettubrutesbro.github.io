@@ -13,7 +13,7 @@
   <script type = "text/javascript" src = "js/sweet-justice.min.js"></script>
   <script type = "text/javascript" src = "js/snap.svg-min.js"></script>
   <script type = "text/javascript" src = "js/seseme_diagram.js"></script>
- 
+
 	<link rel = "stylesheet" href="css/style.css" media="screen" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,300,400,700' rel='stylesheet' type='text/css'>
@@ -27,6 +27,8 @@
   <link rel = "stylesheet" href="css/fnric.css" media="screen" type="text/css" />
   <link rel = "stylesheet" href="css/eclipse.css" media="screen" type="text/css" />
   <link rel = "stylesheet" href="css/seseme.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/wake.css" media="screen" type="text/css" />
+  <link rel = "stylesheet" href="css/reel.css" media="screen" type="text/css" />
 
 </head>
 <body>
@@ -61,8 +63,8 @@
   <img src = "assets/about/backup.png" title = "HTML5 video won't work in your browser, so here's an image of me instead." alt = "jack leng" />
 </video>
 
-</figure><div id = "abouttext"> i <a class = "interactive filter">design and code interfaces</a>, <a class = "3d filter">make 3d models</a>, <a class = "illustration filter">illustrate</a>, and <a class = "animation filter">animate</a> <br>but i'm happiest when i get to <a id = "reel" href = "http://vimeo.com/109364257"> do many things </a> for a project. <br> i like to play hoops and get emotional about video games</div> 
-  </span>  
+</figure><div id = "abouttext"> i <a class = "interactive filter">design and code interfaces</a>, <a class = "3d filter">make 3d models</a>, <a class = "illustration filter">illustrate</a>, and <a class = "animation filter">animate</a> <br>but i'm happiest when i get to <a id = "reel" href = "http://vimeo.com/109364257"> do many things </a> for a project. <br> i like to play hoops and get emotional about video games</div>
+  </span>
 
 
   <section id = "portfolio">
@@ -72,6 +74,28 @@
       - even numbered quads are floated left, odd numbered quads are floated right
       - quad0 is always the title image (specific styling)....title and text classes for text divs
   !-->
+
+    <article class = "reel animation illustration 3d interactive" data-sort="10" data-itemheights = "400, 400, 1000, 1000">
+      <div class = "quad0" data-dimension = "660,390,940,530,640,360,225" data-margin = "[],0 0 0 40,0 0 0 18,[]">
+        <iframe src="https://player.vimeo.com/video/109364257?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+     </div>
+     <div class = "quad1 title" data-dimension = "590,380,750,250,520,200,325" data-margin = "80 90 0 0,60 205 0 0,50 195 0 0,50 0 0 250">
+       2014 Portfolio Reel <p class = "sweet-justice">
+         Video showcasing my design work and process from 2005 to 2014. Song is Fujiya & Miyagi - Uh (Lightbulbs, 2008).
+         </p>
+     </div>
+    </article>
+
+    <article class = "wake animation illustration 3d" data-sort="9" data-itemheights = "400, 400, 1000, 1000">
+      <div class = "quad0" data-dimension = "660,390,940,530,640,360,225" data-margin = "[],0 0 0 40,0 0 0 18,[]">
+       <iframe src="https://player.vimeo.com/video/120422460?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+    </div>
+    <div class = "quad1 title" data-dimension = "590,380,750,250,520,200,325" data-margin = "80 90 0 0,60 205 0 0,50 195 0 0,50 0 0 250">
+      IoT Alarm Clock Animation <p class = "sweet-justice">
+        Isometric animation demonstrating the functionality of an IoT alarm clock that uses an IR sensor, directional light, and parabolic speaker to wake a sleeping person without rousing their partner(s?).      <a href = "https://www.kickstarter.com/projects/58395680/wake-welcome-to-the-dawn-of-bedroom-robotics">The Kickstarter pitch </a> the animation was used for exceeded its funding target, raising $160,000.
+      </p>
+    </div>
+    </article>
 
 <!-- PROJECT 8: cenergi !-->
     <article class = "seseme interactive 3d" data-sort="8" data-itemheights = "1550, 1420, 1670, 2780">
@@ -84,19 +108,19 @@
       </div>
       <div class = "quad2" data-dimension = "250,470,300,352,300,352,470" data-margin = "40 0 0 0,50 0 0 -30,30 0 0 -70,-90 0 0 0">
       </div>
-      <div class = "quad3" data-dimension = "530,350,480,310,470,350,300" data-margin = "140 100 0 0,105 30 0 0,-40 80 0 0,250 0 0 0"></div>   
+      <div class = "quad3" data-dimension = "530,350,480,310,470,350,300" data-margin = "140 100 0 0,105 30 0 0,-40 80 0 0,250 0 0 0"></div>
       <div class = "quad4 text" data-dimension = "300,300,250,350,350,300" data-margin = "30 0 0 120,-20 0 0 0,60 80 0 -245,-510 0 0 0"><p class = "sweet-justice">As users browse through data, SESEME rearranges itself to reflect the queried information. Multiple simultaneous users can unlock new features together while the physical object will exhibit new behaviors. We think that this will turn even attention-deficit interactions into a highly visible public spectacle - drawing in others to speculate about the purpose and capabilities of this device while being exposed to energy information. </p>
       </div>
 
       <div class = "quad5 text" data-dimension = "280,300,250,300,370,300" data-margin = "30 20 0 0,20 35 0 0,-360 60 0 0,[]">
       <p class = "sweet-justice">We believe SESEME can be a more emotive, engaging energy experience and capture the attentions of people otherwise disinterested in energy/environment while enlivening public spaces on campus. Progress is currently underway, requiring extensive web and database programming, mechanical design, and behavioral / experimental study. It is slated for installation at the UC Davis Student Community Center during Fall 2014.</p>
-      </div>   
+      </div>
       <div class = "quad6" data-dimension = "1230,380,1090,320,795,270" data-margin = "-50 0 0 90,[],-120 0 0 -30,[]"<svg id = "diagram_big"></svg></div>
       <div class = "quad7" data-dimension = "450,350,450,337,350,300,300" data-margin = "0 140 0 0,0 50 0 0,0 40 0 0,30 0 0 0"></div>
       <div class = "quad8" data-dimension = "540,380,540,380,340,450" data-margin = "20 0 0 180,0 0 0 40,0 0 0 20,[]"> <p class = "sweet-justice"> I lead the team with Justin Woodjack and work on conceptual, industrial, and experiential design. We will be speaking about the design and the experimental results it produces at the 2014 Behavior, Energy, and Climate Change conference in Washington, D.C. in December. </p>
         <p class = "sweet-justice">
         SESEME is a project of the Consumer Energy Interfaces research group (cENERGI), and the acquisition of space and personnel in the process of building it has also led to cENERGI's development as a diverse, multidisciplinary center for energy interface innovations at UC Davis.</p>
-        <p>TEAM: 
+        <p>TEAM:
           <a href = "http://www.its.ucdavis.edu/students/current-student/?id=852">Justin Woodjack</a>,
           <a href = "https://github.com/shwoobie"> Armante Washington</a>, Drew Ferguson, Jason Yu, Carlos Hernandez, Jordan Ramalingam, Timothy Stapleton.
         </p>
@@ -107,7 +131,7 @@
             <source src="assets/seseme/oldfrontend.webm" type="video/webm" />
             <source src="assets/seseme/oldfrontend_3.flv" type="video/flv" />
             <source src="assets/seseme/oldfrontend_2.mp4" type="video/mp4" />
-         </video>  
+         </video>
        </div>
 
 
@@ -116,70 +140,70 @@
     <!-- PROJECT 7: eclipse rockets-->
     <article class = "eclipse animation 3d" data-sort="7" data-itemheights="1750, 1860, 3140, 2100">
       <div class = "quad0" data-dimension = "660,390,940,530,640,360,225" data-margin = "[],0 0 0 40,0 0 0 18,[]">
-         <iframe src="http://player.vimeo.com/video/100790047?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> 
+         <iframe src="http://player.vimeo.com/video/117697276?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
-      
+
       <div class = "quad1 title" data-dimension = "590,380,750,250,520,200,325" data-margin = "80 90 0 0,60 205 0 0,50 195 0 0,50 0 0 250">Mars Mission Design Presentation
         <p class = "sweet-justice">
-        Presentation (video + powerpoint) explaining comprehensive design for a 2018 mission to Mars, from module selection and trajectory to mental stress reduction measures. Created in concert with an interdisciplinary team of students in aeronautics, physics, biology, etc. and designed to seamlessly complement 20-minute presentation in international mission design contest (placed 4th/37). It will also be shown at the NASA Ames Research Center in October.</p> 
+        Presentation (video + powerpoint) explaining comprehensive design for a 2018 mission to Mars, from module selection and trajectory to mental stress reduction measures. Created in concert with an interdisciplinary team of students in aeronautics, physics, biology, etc. and designed to seamlessly complement 20-minute presentation in international mission design contest (placed 4th/37). It will also be shown at the NASA Ames Research Center in October.</p>
         <p>
         * vimeo link and examples here are works-in-progress <br>
         ** ISS is not in the final presentation (berthing found to be unfeasible)
       </p>
         <br> </div>
-    
+
       <div class = "quad2" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,30 0 0 0,80 0 0 18,0 0 0 0">
-          
+
       </div>
       <div class = "quad3" data-dimension = "660,390,500,281,640,360,225" data-margin = "-30 0 0 0,30 50 0 0,40 140 0 0,20 0 0 0">
-    
+
      </div>
       <div class = "quad4" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 0 0 0,40 0 0 18,20 0 0 0">
-           
+
       </div>
       <div class = "quad5" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 50 0 0,40 140 0 0,20 0 0 0">
-       
+
       </div>
       <div class = "quad6" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 0 0 0,40 0 0 18,20 0 0 0">
-    
-           
+
+
       </div>
       <div class = "quad7" data-dimension = "660,390,500,281,640,360,225" data-margin = "40 0 0 0,40 50 0 0,40 140 0 0,20 0 0 0">
-           
+
       </div>
-      
+
     </article>
- 
+
  <!-- PROJECT 6: fruit and nut center shit !-->
     <article class = "fnric illustration" data-sort="6" data-itemheights="940,1050,810,1330">
       <div class = "quad0" data-dimension = "650,435,681,435,484,309,300" data-margin = "[],[],[],[]"></div>
-      
+
       <div class = "quad1 title" data-dimension = "350,160,300,180,300,180,120" data-margin = "80 20 0 0,475 70 0 0,35 60 0 0,20 0 0 0">Fruit & Nut Center Outreach
         <p>Sample of graphic design and illustration work from my time at the UC Fruit and Nut Research and Information Center. </p> </div>
 
       <div class = "quad2" data-dimension = "301,435,301,435,215,310,560" data-margin = "0 0 0 30,-655 0 0 730,-528 0 0 520,20 0 0 0"></div>
       <div class = "quad3" data-dimension = "370,100,660,180,385,105,110" data-margin = "90 0 0 0,-180 435 0 0,-150 400 0 0,30 0 0 0"></div>
-      <div class = "quad4" data-dimension = "1380,445,1025,337,730,240,180" data-margin = "25 0 0 0,40 0 0 0,25 0 0 0,[]"></div>   
+      <div class = "quad4" data-dimension = "1380,445,1025,337,730,240,180" data-margin = "25 0 0 0,40 0 0 0,25 0 0 0,[]"></div>
     </article>
 
 <!-- PROJECT 5: stories of solidarity !-->
     <article class = "sos interactive illustration" data-sort="5" data-itemheights="1000,1260,1590,1950">
-      <div class = "quad0" data-dimension = "950,475,870,435,650,325,230" 
+      <div class = "quad0" data-dimension = "950,475,870,435,650,325,230"
       data-margin = "0 0 0 0,0 0 0 60,0 0 0 10,[]"></div>
-      <div class = "quad1 title" data-dimension = "390,220,420,296,500,220,230" 
+      <div class = "quad1 title" data-dimension = "390,220,420,296,500,220,230"
       data-margin = "100 0 0 0,20 630 0 0,40 210 0 0,20 0 0 0">Stories of Solidarity
       <p class = "sweet-justice">Informational poster design for student research project: proposing a new social media tool for helping low-wage laborers organize and build solidarity. The project started at a hackathon, where I helped prototype concept, visuals, and code. The other members of the team developed the original prototype into a functional service, and I rejoined to help present at the 2013 AFL-CIO Convention and create promotional graphics.
     </p>
     </div>
-      <div class = "quad2 text" data-dimension = "480,250,460,296,500,210,240" 
+      <div class = "quad2 text" data-dimension = "480,250,460,296,500,210,240"
       data-margin = "30 0 0 0,-290 0 0 480,370 0 0 90,[]"><p class = "sweet-justice">SOS is a web based service that lowers barriers for marginalized workers with stories to tell by making electronic submission easy across every platform from SMS to iOS. Stories would be displayed as points on a map, allowing users to see both surveys of labor sentiment at large as well as stories at human-scale. The goal is to allow workers who would otherwise be disconnected to build solidarity through awareness, and also expand labor advocacy organizations' ability to rally and organize.</p> </div>
       <div class = "quad3" data-dimension = "390,250,390,200,0,0,230" data-margin = "30 0 0 0,60 270 0 0,[],40 0 0 0"></div>
       <div class = "quad4" data-dimension = "444,250,444,215,600,330,230" data-margin = "30 0 0 28,-255 0 0 30,-570 0 0 40,30 0 0 0"></div>
         <div class = "quad5" data-dimension = "360,180,360,180,360,180,230" data-margin = "30 0 0 0,30 160 0 0,80 175 0 0,20 0 0 0"></div>
-          <div class = "quad6" data-dimension = "290,180,240,180,400,80,160" data-margin = "75 0 0 485,-20 0 0 60,20 0 0 160,[]"> <p class = "sweet-justice">I worked on Stories of Solidarity with Profs. Glenda Drew and Jesse Drew, <a href = "http://katfukui.com"> Katherine Fukui</a>, <a href = "http://vvnho.com"> Vivian Ho</a>, Joyce Lue, Liz Shigetoshi, and Ashish Subedy.</p> <a href = "http://sos.ucdavis.edu"> visit informational portal</a></div>  
+          <div class = "quad6" data-dimension = "290,180,240,180,400,80,160" data-margin = "75 0 0 485,-20 0 0 60,20 0 0 160,[]"> <p class = "sweet-justice">I worked on Stories of Solidarity with Profs. Glenda Drew and Jesse Drew, <a href = "http://katfukui.com"> Katherine Fukui</a>, <a href = "http://vvnho.com"> Vivian Ho</a>, Joyce Lue, Liz Shigetoshi, and Ashish Subedy.</p> <a href = "http://sos.ucdavis.edu"> visit informational portal</a></div>
           <div class = "quad7" data-dimension = "180,180,180,180,180,180,230" data-margin = "30 30 0 0,30 30 0 0,-280 550 0 0,[]"></div>
 
-    
+
     </article>
 
 <!-- PROJECT 4: TEMPR !-->
@@ -188,7 +212,7 @@
         </div>
       <div class = "quad1 title" data-dimension = "500,430,500,430,400,500,500" data-margin = "50 210 0 0,40 120 0 0,0 50 0 0,40 0 0 0">157: Gamifying Campus Climate Control
         <p class = "sweet-justice">
-          Second-year interactive design project: climate control and energy use feedback app prototype. Members of a campus community could use it to provide feedback about air conditioning to building administrators, who could then make energy-saving or comfort improving adjustments accordingly. The design aims to make submitting feedback intuitive while encouraging further exploration of energy data and the implications of A/C use. In-app rewards personalize the experience and incentivize repeat usage. Building comparisons and leaderboards introduce social competition (i.e. chemists vs. artists vs. administrators) and get the community involved. We tried to take an "irreverent" approach to app design, using graphics that reflect the hyperbole often used for temperature complaints, poking fun at the school (the cow loading icon references UCD's renowned bovine scent), and allowing users to express themselves through a random crowd-sourced "building announcements" ticker. 
+          Second-year interactive design project: climate control and energy use feedback app prototype. Members of a campus community could use it to provide feedback about air conditioning to building administrators, who could then make energy-saving or comfort improving adjustments accordingly. The design aims to make submitting feedback intuitive while encouraging further exploration of energy data and the implications of A/C use. In-app rewards personalize the experience and incentivize repeat usage. Building comparisons and leaderboards introduce social competition (i.e. chemists vs. artists vs. administrators) and get the community involved. We tried to take an "irreverent" approach to app design, using graphics that reflect the hyperbole often used for temperature complaints, poking fun at the school (the cow loading icon references UCD's renowned bovine scent), and allowing users to express themselves through a random crowd-sourced "building announcements" ticker.
         </p>
       </div>
       <div class = "quad2" data-dimension = "500,200,500,200,415,150,415,150,120" data-margin = "-20 0 0 60,-10 0 0 50,-10 0 0 10,[]"></div>
@@ -207,19 +231,19 @@
       <div class = "quad1" data-dimension = "670,377,540,284,670,377,225" data-margin = "0 30 0 0,0 80 0 0,230 125 0 0,30 0 0 0"></div>
 
       <div class = "quad2 title text" data-dimension = "490,215,330,280,470,215,225" data-margin = "100 0 0 80,70 0 0 30,-575 0 0 95,30 0 0 0">180A: Art Museum Design
-         <p class = "sweet-justice">  
+         <p class = "sweet-justice">
         Art museum design proposal & renderings, for institutional interiors class project. The design proceeds from intersecting 30-60-90 and equilateral triangles, with 3 large columns marking spatial progress, providing structural support, and drawing wind cooling as solar chimneys. </p>
        </div>
       <div class = "quad3" data-dimension = "670,377,670,377,670,377,180" data-margin = "0 0 0 0,-10 30 0 0,-40 125 0 0,-15 0 0 0"></div>
       <div class = "quad4" data-dimension = "670,359,450,241,670,359,205" data-margin = "50 0 0 0,0 0 0 0,15 0 0 2,30 0 0 0"></div>
-      <div class = "quad5" data-dimension = "670,315,500,250,670,315,205" data-margin = "10 0 0 0,0 100 0 0,-20 125 0 0,[]"></div>  
-      <div class = "quad6" data-dimension = "1300,250,1000,192,670,129,100" data-margin = "30 0 0 0,15 0 0 0,0 0 0 2,[]"></div> 
+      <div class = "quad5" data-dimension = "670,315,500,250,670,315,205" data-margin = "10 0 0 0,0 100 0 0,-20 125 0 0,[]"></div>
+      <div class = "quad6" data-dimension = "1300,250,1000,192,670,129,100" data-margin = "30 0 0 0,15 0 0 0,0 0 0 2,[]"></div>
     </article>
 
 <!--PROJECT 2: STUFFRAGE !-->
     <article class = "stuffrage interactive animation illustration" data-sort="2" data-itemheights = "900,1360,1080,1560">
       <div class = "quad0" data-dimension = "900,507,900,507,700,394,235" data-margin = "[],0 0 0 65,[],[]">
-        <iframe src="http://player.vimeo.com/video/63406830?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe> 
+        <iframe src="http://player.vimeo.com/video/63406830?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
       </div>
 
       <div class = "quad1 title text" data-dimension = "400,170,400,170,350,170,100" data-margin = "100 50 0 0,40 150 0 0,40 100 0 0,50 0 0 0">Stuffrage UI and Animation
@@ -230,13 +254,13 @@
       <div class = "quad2" data-dimension = "400,515,400,515,300,386,500" data-margin = "30 0 0 70,20 0 0 65,40 0 0 0,30 0 0 0"></div>
       <div class = "quad3" data-dimension = "292,315,292,315,292,315,300" data-margin = "-280 440 0 0,20 260 0 0,40 100 0 0,40 0 0 0"></div>
       <div class = "quad4" data-dimension = "610,335,610,335,350,192,300" data-margin = "-280 0 0 0,30 0 0 230,40 0 0 0,[]"></div>
-  
+
     </article>
 
 
     <article class = "blkfriday interactive" data-sort="1" data-itemheights = "750,900,1130,1370">
 
-     
+
        <div class = "quad0 playme" data-dimension = "654,392,500,300,654,392,240" data-margin = "[],[],[],[]">
            <video loop = "true" preload poster = "assets/walmart/horde.png">
             <source src="assets/walmart/shortvid.webm" type="video/webm">
@@ -249,7 +273,7 @@
         <p class = "sweet-justice">
           An interactive faux-simulation, created for an intro to Processing class in my second year.  Inspired by videos captured from Wal-Marts on Black Friday, stories of Foxconn (Chinese manufacturer of electronics) workers committing suicide, and Jonatan Söderström's Norrland. Clicking creates goods and generate demand - consumers consume, workers work harder. </p>
         </p>
-       
+
       </div>
 
     <div class = "quad2" data-dimension = "380,305,380,305,380,305,305" data-margin = "445 0 0 -500,30 0 0 30,80 0 0 0,[]"></div>
@@ -264,10 +288,10 @@
       <img src = "assets/walmart/foxconn3.gif" />
       <img src = "assets/walmart/cartlady.gif" />
     </div>
-       
-   
 
-       
+
+
+
 
     </article>
   </section>
