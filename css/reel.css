@@ -1,3 +1,7 @@
 .reel .quad0 {
   background-image: url(../assets/reelthumb.png);
 }
+
+.reel .expanded {
+  background-image: none;
+}
