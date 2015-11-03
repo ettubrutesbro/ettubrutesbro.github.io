@@ -1,15 +1,8 @@
 .seseme .quad0 {
 	background-image: url(../assets/sesemethumb.png);
 }
-
-.seseme .quad0 video {
-	display: none;
-}
-
-.seseme .expanded video {
-	display: block;
-	border: none;
-	outline: none;
+.seseme .quad0.expanded {
+	background-image: url(../assets/seseme/sesemenme.png);
 }
 
 .seseme .quad2 {
@@ -18,9 +11,6 @@
 
 .seseme .quad3 {
 	background-image: url(../assets/seseme/sketch2.png);
-}
-
-.seseme .quad6 {
 }
 
 .seseme .quad7 {
